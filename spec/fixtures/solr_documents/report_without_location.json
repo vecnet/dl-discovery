@@ -1,0 +1,16 @@
+{
+  "uuid": "vecnet:xs55mc11m",
+  "dc_title_s": "World Population Prospects: The 2010 Revision, Volume II: Demographic Profiles",
+  "dc_description_s": "The 2010 Revision of World Population Prospects represents global demographic estimates and projections prepared by the Population Division of the Department of Economic and Social Affairs of the United Nations Secretariat. The full results of the 2010 Revision are presented in a series of two PDF volumes. The second volume contains demographic profiles presenting time series and plots covering the period from 1950 to 2100 for selected indicators for each country with at least 100,000 inhabitants in 2010 as well as for development groups, major areas and regions. This volume provides, for each country and area, a brief description of the data sources and demographic methods used to make the base-year estimates for each country or area. Key findings of the 2010 Revision are also included in each volume together with the projections assumptions. The first volume provides comprehensive tables displaying key demographic indicators for each development group, major area, region and country for selected periods or dates within 1950-2100 . More WPP files are available here and online. Those included here are those used to calculate values in World Malaria Reports and potentially by VECNet applications.",
+  "dc_creator_sm": [
+    "United Nations, Department of Economic and Social Affairs, Population Division (2011)",
+    "DESA",
+    "UN"
+  ],
+  "dc_type_s": "Report",
+  "layer_id_s": "xs55mc11m",
+  "layer_slug_s": "xs55mc11m",
+  "layer_geom_type_s": "Point",
+  "dct_provenance_s": "Digital Library",
+  "dc_rights_s": "public"
+}
