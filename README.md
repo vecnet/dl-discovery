@@ -1,10 +1,9 @@
-[![Build Status](https://travis-ci.org/sul-dlss/earthworks.svg?branch=master)](https://travis-ci.org/sul-dlss/earthworks)
-[![Coverage Status](https://coveralls.io/repos/sul-dlss/earthworks/badge.png)](https://coveralls.io/r/sul-dlss/earthworks)
 
-## EarthWorks
+## VecNET Discovery
 
-Geospatial discovery application for Stanford University Libraries. Built using:
+Geospatial discovery application for VecNET Digital Library. Built using:
 
+* [Earthworks](https://github.com/sul-dlss/earthworks)
 * [GeoBlacklight](https://github.com/geoblacklight)
 * [GeoHydra](https://github.com/sul-dlss/geohydra)
 * [gis-robot-suite](https://github.com/sul-dlss/gis-robot-suite)
@@ -14,10 +13,19 @@ Geospatial discovery application for Stanford University Libraries. Built using:
 
 ```
 # Clone repository
-$ git clone git@github.com:sul-dlss/earthworks.git
+$ git clone git@github.com:vecnet/dl-discovery.git
+
+# Install ruby dependencies
+$ bundle install
 
 # Install for development
 $ rake earthworks:install
+
+# Start up Solr instance through Jetty server
+$ rake jetty:start
+
+# Start Rails application
+$ rails server
 ```
 
 ### Running tests
