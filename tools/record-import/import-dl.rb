@@ -3,14 +3,14 @@
 require 'rsolr'
 
 # usage:
-#   copy-dl-to-solr.rb [source solr url] [target solr url]
+#   import-dl.rb [source solr url] [target solr url]
 #
 # e.g.
-#   copy-dl-to-solr.rb http://localhost:8081/solr43/vecnet 'http://localhost:8983/solr/#/blacklight-core'
+#   import-dl.rb http://localhost:8081/solr43/vecnet 'http://localhost:8983/solr/#/blacklight-core'
 
 if ARGV.length != 2
   puts "USAGE:"
-  puts "copy-dl-to-solr.rb [source solr url] [target solr url]"
+  puts "import-dl.rb [source solr url] [target solr url]"
   exit 1
 end
 
@@ -20,7 +20,7 @@ puts "Target is #{ARGV[1]}"
 source = RSolr.connect url: ARGV[0]
 target = RSolr.connect url: ARGV[1]
 
-response = source.get 'select', params: {q: '*:vecnet', rows: 1000}
+response = source.get 'select', params: {q: '*:vecnet'}
 
 def first_or_nil(lst)
   return nil if lst.nil?
