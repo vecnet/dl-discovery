@@ -34,4 +34,11 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  config.pubtkt_public_key = OpenSSL::PKey.read(IO.read(Rails.root.join('config/pubtkt-development.pem')))
+  config.pubtkt_login_url = '/development_sessions/log_in'
+  config.pubtkt_logout_url = '/development_sessions/log_out'
+  # private_key only needed by DevelopmentSessionsController
+  config.pubtkt_private_key = OpenSSL::PKey.read(IO.read(Rails.root.join('config/pubtkt-development-private.pem')))
+
 end
