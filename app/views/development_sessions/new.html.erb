@@ -1,0 +1,27 @@
+<h1>Log In</h1>
+
+Enter a uid and other information.
+
+<%= form_tag development_sessions_path do %>
+  <p>
+    <%= label_tag :uid %>
+    <%= text_field_tag :uid %>
+  </p>
+  <p>
+    <%= label_tag :tokens, 'Groups' %>
+    <%= text_field_tag :tokens, 'people,dl_write,dl_librarian'%>
+  </p>
+  <p>
+    <%= label_tag :ip, 'IP Address' %>
+    <%= text_field_tag :ip, request.ip %>
+  </p>
+  <p>
+    <%= label_tag :validuntil, 'Valid Until' %>
+    <%= number_field_tag :validuntil, 3456789012 %>
+  </p>
+  <p>
+    <%= label_tag :back %>
+    <%= text_field_tag 'back', params[:back] %>
+  </p>
+  <p class="button"><%= submit_tag "Log in" %></p>
+<% end %>
