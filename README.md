@@ -28,7 +28,7 @@ $ bundle install
 $ bundle exec rake earthworks:install
 
 # Start up Solr instance through Jetty server
-$ rake jetty:start
+$ bundle exec rake jetty:start
 
 # Start Rails application
 $ rails server
