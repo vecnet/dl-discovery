@@ -1,0 +1,156 @@
+Routes used in both discovery app and digital library app.
+==========================================================
+
+Lines starting with "DL" are routes from digital library, others are from
+discovery app. This will eventually show which routes nginx should route to
+which app.
+
+
+                                Prefix Verb   URI Pattern                              Controller#Action
+                         download_file GET    /download/file/:id(.:format)             download#file
+                          download_hgl GET    /download/hgl/:id(.:format)              download#hgl
+                              download GET    /download/:id(.:format)                  download#show
+                            wms_handle POST   /wms/handle(.:format)                    wms#handle
+                                  root GET    /                                        catalog#index
+                   catalog_range_limit GET    /catalog/range_limit(.:format)           catalog#range_limit
+                       clear_bookmarks DELETE /bookmarks/clear(.:format)               bookmarks#clear
+                       email_bookmarks GET    /bookmarks/email(.:format)               bookmarks#email
+                       bookmarks_email POST   /bookmarks/email(.:format)               bookmarks#email
+                         sms_bookmarks GET    /bookmarks/sms(.:format)                 bookmarks#sms
+                         bookmarks_sms POST   /bookmarks/sms(.:format)                 bookmarks#sms
+                    citation_bookmarks GET    /bookmarks/citation(.:format)            bookmarks#citation
+                             bookmarks GET    /bookmarks(.:format)                     bookmarks#index
+                                       POST   /bookmarks(.:format)                     bookmarks#create
+                          new_bookmark GET    /bookmarks/new(.:format)                 bookmarks#new
+                         edit_bookmark GET    /bookmarks/:id/edit(.:format)            bookmarks#edit
+                              bookmark GET    /bookmarks/:id(.:format)                 bookmarks#show
+                                       PATCH  /bookmarks/:id(.:format)                 bookmarks#update
+                                       PUT    /bookmarks/:id(.:format)                 bookmarks#update
+                                       DELETE /bookmarks/:id(.:format)                 bookmarks#destroy
+                        search_history GET    /search_history(.:format)                search_history#index
+                  clear_search_history DELETE /search_history/clear(.:format)          search_history#clear
+                  clear_saved_searches DELETE /saved_searches/clear(.:format)          saved_searches#clear
+                        saved_searches GET    /saved_searches(.:format)                saved_searches#index
+                           save_search PUT    /saved_searches/save/:id(.:format)       saved_searches#save
+                         forget_search DELETE /saved_searches/forget/:id(.:format)     saved_searches#forget
+                                       POST   /saved_searches/forget/:id(.:format)     saved_searches#forget
+                    opensearch_catalog GET    /catalog/opensearch(.:format)            catalog#opensearch
+                      citation_catalog GET    /catalog/citation(.:format)              catalog#citation
+                         email_catalog GET    /catalog/email(.:format)                 catalog#email
+                         catalog_email POST   /catalog/email(.:format)                 catalog#email
+                           sms_catalog GET    /catalog/sms(.:format)                   catalog#sms
+                           catalog_sms POST   /catalog/sms(.:format)                   catalog#sms
+                   track_solr_document POST   /catalog/:id/track(.:format)             catalog#track
+                         solr_document GET    /catalog/:id(.:format)                   catalog#show
+                               catalog GET    /catalog/:id(.:format)                   catalog#show
+                         catalog_facet GET    /catalog/facet/:id(.:format)             catalog#facet
+                         catalog_index GET    /catalog(.:format)                       catalog#index
+                         feedback_form POST   /feedback(.:format)                      feedback_forms#create
+                     new_feedback_form GET    /feedback/new(.:format)                  feedback_forms#new
+                              feedback GET    /feedback(.:format)                      feedback_forms#new
+           development_sessions_log_in GET    /development_sessions/log_in(.:format)   development_sessions#new
+          development_sessions_log_out GET    /development_sessions/log_out(.:format)  development_sessions#invalidate
+                                       POST   /development_sessions(.:format)          development_sessions#create
+    === Item Display and Editing ===
+DL        curation_concern_collections GET    /concern/collections(.:format)                             curation_concern/collections#index
+DL                                     POST   /concern/collections(.:format)                             curation_concern/collections#create
+DL     new_curation_concern_collection GET    /concern/collections/new(.:format)                         curation_concern/collections#new
+DL    edit_curation_concern_collection GET    /concern/collections/:id/edit(.:format)                    curation_concern/collections#edit
+DL         curation_concern_collection GET    /concern/collections/:id(.:format)                         curation_concern/collections#show
+DL                                     PUT    /concern/collections/:id(.:format)                         curation_concern/collections#update
+DL                                     DELETE /concern/collections/:id(.:format)                         curation_concern/collections#destroy
+DL          curation_concern_citations GET    /concern/citations(.:format)                               curation_concern/citations#index
+DL                                     POST   /concern/citations(.:format)                               curation_concern/citations#create
+DL       new_curation_concern_citation GET    /concern/citations/new(.:format)                           curation_concern/citations#new
+DL      edit_curation_concern_citation GET    /concern/citations/:id/edit(.:format)                      curation_concern/citations#edit
+DL           curation_concern_citation GET    /concern/citations/:id(.:format)                           curation_concern/citations#show
+DL                                     PUT    /concern/citations/:id(.:format)                           curation_concern/citations#update
+DL                                     DELETE /concern/citations/:id(.:format)                           curation_concern/citations#destroy
+DL edit_curation_concern_citation_file GET    /concern/citation_files/:id/edit(.:format)                 curation_concern/citation_files#edit
+DL      curation_concern_citation_file GET    /concern/citation_files/:id(.:format)                      curation_concern/citation_files#show
+DL                                     PUT    /concern/citation_files/:id(.:format)                      curation_concern/citation_files#update
+DL                                     DELETE /concern/citation_files/:id(.:format)                      curation_concern/citation_files#destroy
+DL     curation_concern_citation_files POST   /concern/container/:parent_id/citation_files(.:format)     curation_concern/citation_files#create
+DL  new_curation_concern_citation_file GET    /concern/container/:parent_id/citation_files/new(.:format) curation_concern/citation_files#new
+DL      curation_concern_generic_files POST   /concern/container/:parent_id/generic_files(.:format)      curation_concern/generic_files#create
+DL   new_curation_concern_generic_file GET    /concern/container/:parent_id/generic_files/new(.:format)  curation_concern/generic_files#new
+DL versions_curation_concern_generic_file GET /concern/generic_files/:id/versions(.:format)              curation_concern/generic_files#versions
+DL rollback_curation_concern_generic_file PUT /concern/generic_files/:id/rollback(.:format)              curation_concern/generic_files#rollback
+DL  edit_curation_concern_generic_file GET    /concern/generic_files/:id/edit(.:format)                  curation_concern/generic_files#edit
+DL       curation_concern_generic_file GET    /concern/generic_files/:id(.:format)                       curation_concern/generic_files#show
+DL                                     PUT    /concern/generic_files/:id(.:format)                       curation_concern/generic_files#update
+DL                                     DELETE /concern/generic_files/:id(.:format)                       curation_concern/generic_files#destroy
+DL                   classify_concerns POST   /classify_concerns(.:format)                               classify_concerns#create
+DL                new_classify_concern GET    /classify_concerns/new(.:format)                           classify_concerns#new
+DL                               files GET    /files/:id(/:version)(.:format)                            curation_concern/generic_files#show
+DL                       common_object GET    /show/:id(.:format)                                        common_objects#show
+DL      common_object_stub_information GET    /show/stub/:id(.:format)                                   common_objects#show_stub_information
+DL                           citations GET    /citations/:id(.:format)                                   curation_concern/citations#show
+    === Download routes (rerouted in production to disadis service) ===
+DL                            download GET    /downloads/:id(/:version)(.:format)                        downloads#show
+DL                                     GET    /downloads/:id(.:format)                                   downloads#show
+    === Dashboards ===
+DL                                     GET    /role_dashboard/page/:page(.:format)                       role_dashboard#index
+DL    roles_facet_role_dashboard_index GET    /role_dashboard/facet/:id(.:format)                        role_dashboard#facet
+DL                role_dashboard_index GET    /role_dashboard(.:format)                                  role_dashboard#index
+DL                                     GET    /admin_dashboard/page/:page(.:format)                      admin_dashboard#index
+DL   admin_facet_admin_dashboard_index GET    /admin_dashboard/facet/:id(.:format)                       admin_dashboard#facet
+DL               admin_dashboard_index GET    /admin_dashboard(.:format)                                 admin_dashboard#index
+DL                                     GET    /dashboard/page/:page(.:format)                            dashboard#index
+DL     dashboard_facet_dashboard_index GET    /dashboard/facet/:id(.:format)                             dashboard#facet
+DL        related_file_dashboard_index GET    /dashboard/related/:id(.:format)                           dashboard#get_related_file
+DL                     dashboard_index GET    /dashboard(.:format)                                       dashboard#index
+    === Utility routes ===
+DL                     authority_query GET    /authorities/:model/:term(.:format)                        authorities#query
+DL                                root        /                                                          catalog#index
+DL               catalog_subject_facet        /catalog/subject/facet(.:format)                           catalog#subject_facet
+DL              catalog_location_facet        /catalog/location/facet(.:format)                          catalog#location_facet
+DL               catalog_species_facet        /catalog/species/facet(.:format)                           catalog#species_facet
+DL                 admin_resque_server        /admin/queues                                              Resque::Server
+DL                              roboto        /robots.txt                                                Roboto::Engine
+    === Blacklight routes ===
+DL                     clear_bookmarks        /bookmarks/clear(.:format)                                 bookmarks#clear
+DL                           bookmarks GET    /bookmarks(.:format)                                       bookmarks#index
+DL                                     POST   /bookmarks(.:format)                                       bookmarks#create
+DL                        new_bookmark GET    /bookmarks/new(.:format)                                   bookmarks#new
+DL                       edit_bookmark GET    /bookmarks/:id/edit(.:format)                              bookmarks#edit
+DL                            bookmark GET    /bookmarks/:id(.:format)                                   bookmarks#show
+DL                                     PUT    /bookmarks/:id(.:format)                                   bookmarks#update
+DL                                     DELETE /bookmarks/:id(.:format)                                   bookmarks#destroy
+DL                      search_history        /search_history(.:format)                                  search_history#index
+DL                clear_search_history        /search_history/clear(.:format)                            search_history#clear
+DL                clear_saved_searches        /saved_searches/clear(.:format)                            saved_searches#clear
+DL                      saved_searches        /saved_searches(.:format)                                  saved_searches#index
+DL                         save_search        /saved_searches/save/:id(.:format)                         saved_searches#save
+DL                       forget_search        /saved_searches/forget/:id(.:format)                       saved_searches#forget
+DL                  opensearch_catalog        /catalog/opensearch(.:format)                              catalog#opensearch
+DL                    citation_catalog        /catalog/citation(.:format)                                catalog#citation
+DL                       email_catalog        /catalog/email(.:format)                                   catalog#email
+DL                         sms_catalog        /catalog/sms(.:format)                                     catalog#sms
+DL                     endnote_catalog        /catalog/endnote(.:format)                                 catalog#endnote
+DL           send_email_record_catalog        /catalog/send_email_record(.:format)                       catalog#send_email_record
+DL                       catalog_facet        /catalog/facet/:id(.:format)                               catalog#facet
+DL                       catalog_index        /catalog(.:format)                                         catalog#index
+DL              librarian_view_catalog        /catalog/:id/librarian_view(.:format)                      catalog#librarian_view
+DL                       solr_document GET    /catalog/:id(.:format)                                     catalog#show
+DL                                     PUT    /catalog/:id(.:format)                                     catalog#update
+DL                             catalog GET    /catalog/:id(.:format)                                     catalog#show
+DL                                     PUT    /catalog/:id(.:format)                                     catalog#update
+DL                            feedback        /feedback(.:format)                                        feedback#show
+DL                   feedback_complete        /feedback/complete(.:format)                               feedback#complete
+    === Curate/Sufia routes ===
+DL         terms_of_service_agreements POST   /terms_of_service_agreements(.:format)                     terms_of_service_agreements#create
+DL      new_terms_of_service_agreement GET    /terms_of_service_agreements/new(.:format)                 terms_of_service_agreements#new
+DL                       help_requests POST   /help_requests(.:format)                                   help_requests#create
+DL                    new_help_request GET    /help_requests/new(.:format)                               help_requests#new
+DL                       welcome_index GET    /welcome(.:format)                                         welcome#index
+DL                         new_welcome GET    /welcome/new(.:format)                                     welcome#new
+DL                                root        /                                                          welcome#index
+DL                            advanced GET    /advanced(.:format)                                        advanced#index
+    === Development only routes ===
+DL         development_sessions_log_in GET    /development_sessions/log_in(.:format)                     development_sessions#new
+DL        development_sessions_log_out GET    /development_sessions/log_out(.:format)                    development_sessions#invalidate
+DL                                     POST   /development_sessions(.:format)                            development_sessions#create
+DL                        rails_routes        /rails/routes(.:format)                                    sextant/routes#index
+DL                      sextant_engine        /sextant                                                   Sextant::Engine
+
