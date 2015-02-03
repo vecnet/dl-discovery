@@ -11,6 +11,12 @@ Geospatial discovery application for VecNET Digital Library. Built using:
 
 ## Installation
 
+Install PostgreSQL if you don't have it already.
+```
+brew update
+brew install postgresql
+```
+
 ```
 # Clone repository
 $ git clone git@github.com:vecnet/dl-discovery.git
