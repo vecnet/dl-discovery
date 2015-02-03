@@ -77,6 +77,6 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
   
   config.action_mailer.default_options = {
-    :from => 'no-reply@earthworks.stanford.edu'
+    :from => 'no-reply@vecnet.org'
   }
 end

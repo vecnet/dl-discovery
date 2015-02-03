@@ -20,7 +20,7 @@ class FeedbackMailer < ActionMailer::Base
 
     mail(to: Settings.EMAIL_TO,
          subject: 'Feedback from EarthWorks',
-         from: 'feedback@earthworks.stanford.edu',
+         from: 'feedback@vecnet.org',
          reply_to: Settings.EMAIL_TO)
   end
 end
