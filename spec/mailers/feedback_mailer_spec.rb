@@ -25,7 +25,7 @@ describe FeedbackMailer do
       end
 
       it 'has the correct from field' do
-        expect(mail.from).to eq ['feedback@earthworks.stanford.edu']
+        expect(mail.from).to eq ['feedback@vecnet.org']
       end
 
       it 'has the correct reply to field' do

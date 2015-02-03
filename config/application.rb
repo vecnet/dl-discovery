@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Earthworks
   class Application < Rails::Application
-    config.application_name = 'EarthWorks'
+    config.application_name = 'Vecnet'
 
     require 'rights_metadata'
     # Settings in config/environments/* take precedence over those specified here.
