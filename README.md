@@ -25,7 +25,7 @@ $ git clone git@github.com:vecnet/dl-discovery.git
 $ bundle install
 
 # Install for development
-$ rake earthworks:install
+$ bundle exec rake earthworks:install
 
 # Start up Solr instance through Jetty server
 $ rake jetty:start
