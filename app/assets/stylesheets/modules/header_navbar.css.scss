@@ -5,12 +5,13 @@
   .navbar-brand {
     background: transparent;
     padding: 22px 0 5px 15px;
-    width: 236px;
+    width: 276px;
+    height: 70px;
     
     img {
-      height: 28px;
+      height: 38px;
       margin-right: 10px;
-      margin-left: -45px;
+      margin-left: -50px;
       vertical-align: middle;
       @media screen and (max-width: $screen-sm) {
         height: 26px;
