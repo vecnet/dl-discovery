@@ -3,42 +3,78 @@
     <header id="topnav" class="header-logo" role="banner">
       <%= link_to 'http://vecnet.org' do %>
         <%= content_tag :span, "Vecnet", class: "sr-only" %>
-        <%= image_tag "vecnet-logo.png", :title => "VecNet", class: "hidden-xs", alt: "", height: 25 %>
-        <%= image_tag "vecnet-logo-small.png", :title => "VecNet", class: "visible-xs", alt: "", height: 25 %>
+
 
       <% end -%>
       <div class='topnav-links'>
         <% if has_user_authentication_provider? -%>
           <ul class="navbar-nav">
-            <% if current_user -%>
-              <% unless current_user.to_s.blank? -%>
-                <li>
-                  <%= current_user %>
-                </li>
-                <li class='dropdown'>
-                  <a href='#' class='dropdown-toggle' role='button' data-toggle='dropdown' aria-expanded='false'>
-                    <span class='caret'></span>
-                  </a>
-                  <ul class="login-dropdown dropdown-menu dropdown-menu-right" role="menu">
-                    <li>
-                      <%= link_to t('blacklight.header_links.logout'), user_logout_url %>
-                    </li>
-                  </ul>
-                </li>
-              <% end -%>
-            <% else -%>
-              <li>
-                <%= link_to t('blacklight.header_links.login'), user_login_url(request.original_url) %>
-              </li>
-            <% end -%>
-            <li>
-              <span class='nav-element-divider'>|</span>
-            </li>
+
             <li>
               <%= link_to feedback_path, data: { toggle: 'collapse', target: '#feedback-form' } do %>
                 Feedback
               <% end -%>
             </li>
+
+            <li>
+              <span class='nav-element-divider'>|</span>
+            </li>
+
+            <li class="dropdown">
+              <% vecnet_domain = 'https://www.vecnet.org'
+                 ci_domain = 'https://ci.vecnet.org'
+              -%>
+              <a href="#" class="menu-dropdown dropdown-toggle" data-toggle="dropdown">About<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "About VecNet", "#{vecnet_domain}/index.php/about-vecnet" %></li>
+                <li><%= link_to "Information Sharing", "#{vecnet_domain}/index.php/about-vecnet/information-sharing" %></li>
+                <li><%= link_to "Collaborations", "#{vecnet_domain}/index.php/about-vecnet/collaborations" %></li>
+                <li><%= link_to "FAQ", "#{vecnet_domain}/index.php/about-vecnet/faq" %></li>
+                <li><%= link_to "VecNet How To", "#{vecnet_domain}/index.php/about-vecnet/vecnet-how-to" %></li>
+              </ul>
+            </li>
+
+
+            <li>
+              <span class='nav-element-divider'>|</span>
+            </li>
+
+
+            <li class="dropdown">
+              <a href="#" class="menu-dropdown dropdown-toggle" data-toggle="dropdown">Tools<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "Data Warehouse Browser", "#{ci_domain}/datawarehouse/" %></li>
+                <li><%= link_to "Digital Library", root_path %></li>
+                <li><%= link_to "Transmission Simulator", "#{ci_domain}/ts/" %></li>
+                <% if current_user -%>
+                    <li class="divider"></li>
+                    <li><%= link_to "My Uploads", dashboard_index_path %></li>
+                    <% if current_user.admin? -%>
+                        <li><%= link_to "Admin Dashboard", admin_dashboard_index_path %></li>
+                    <% end -%>
+                <% end -%>
+              </ul>
+            </li>
+
+            <li>
+              <span class='nav-element-divider'>|</span>
+            </li>
+
+
+            <li><%= link_to "Contact", "#{vecnet_domain}/index.php/contact-us" %></li>
+
+            <li>
+              <span class='nav-element-divider'>|</span>
+            </li>
+
+
+
+            <% if current_user -%>
+                <li><%= link_to "Logout (#{current_user.name})", user_logout_url %></li>
+            <% else -%>
+                <li><%= link_to "Login", user_login_url(request.original_url) %></li>
+            <% end -%>
+
           </ul>
         <% end -%>
       </div>
