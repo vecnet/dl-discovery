@@ -1,0 +1,40 @@
+<ul class="nav pull-right">
+  <% if Rails.env == 'production'
+       vecnet_domain = 'https://www.vecnet.org'
+       ci_domain = 'https://ci.vecnet.org'
+     else
+       vecnet_domain = 'https://www.dev.vecnet.org'
+       ci_domain = 'https://vecnet-qa.crc.nd.edu'
+     end -%>
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Work<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><%= link_to "About VecNet", "#{vecnet_domain}/index.php/about-vecnet" %></li>
+      <li><%= link_to "Information Sharing", "#{vecnet_domain}/index.php/about-vecnet/information-sharing" %></li>
+      <li><%= link_to "Collaborations", "#{vecnet_domain}/index.php/about-vecnet/collaborations" %></li>
+      <li><%= link_to "FAQ", "#{vecnet_domain}/index.php/about-vecnet/faq" %></li>
+      <li><%= link_to "VecNet How To", "#{vecnet_domain}/index.php/about-vecnet/vecnet-how-to" %></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><%= link_to "Data Warehouse Browser", "#{ci_domain}/datawarehouse/" %></li>
+      <li><%= link_to "Digital Library", root_path %></li>
+      <li><%= link_to "Transmission Simulator", "#{ci_domain}/ts/" %></li>
+      <% if current_user -%>
+          <li class="divider"></li>
+          <li><%= link_to "My Uploads", dashboard_index_path %></li>
+          <% if current_user.admin? -%>
+              <li><%= link_to "Admin Dashboard", admin_dashboard_index_path %></li>
+          <% end -%>
+      <% end -%>
+    </ul>
+  </li>
+  <li><%= link_to "Contact Us", "#{vecnet_domain}/index.php/contact-us" %></li>
+  <% if current_user -%>
+      <li><%= link_to "Logout (#{current_user.name})", user_logout_url %></li>
+  <% else -%>
+      <li><%= link_to "Login", user_login_url(request.original_url) %></li>
+  <% end -%>
+</ul><!-- /.nav /.pull-right -->
