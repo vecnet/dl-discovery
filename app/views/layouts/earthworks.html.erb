@@ -26,7 +26,12 @@
 <body class="<%= render_body_class %>">
   <div id="su-wrap"> <!-- #su-wrap start -->
     <div id="su-content"> <!-- #su-content start -->
-      <%= render 'shared/top_navbar' %>
+
+
+      <!--TODO-->
+      <!--Make permananent? REMOVED render 'shared/top_navbar'-->
+
+
       <%= render 'shared/header_navbar' %>
       <%= render partial: 'shared/ajax_modal' %>
       <div id='main-container' role='main' class='container' data-analytics-id="<%= Settings.GOOGLE_ANALYTICS_ID %>">
