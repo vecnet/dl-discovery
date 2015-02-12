@@ -1,12 +1,19 @@
+<% comment do %>
+
 <div class='jumbotron'>
   <div class='home-search-area'>
     <%= content_tag :h2, t('geoblacklight.home.headline') %>
     <%= content_tag :h3, t('geoblacklight.home.search_heading') %>
-    <%= content_tag :h4, t('geoblacklight.home.search_heading') %>
     <div class='col-md-6 col-md-offset-3'>
       <%= render_search_form_no_navbar %>
     </div>
   </div>
+</div>
+
+<% comment end %>
+
+<div class='col-md-6 col-md-offset-3'>
+  <%= render_search_form_no_navbar %>
 </div>
 
 <div class='container'>
