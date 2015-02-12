@@ -264,6 +264,7 @@ DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
   coveralls
+  font-awesome-rails
   geoblacklight (~> 0.5.1)
   is_it_working
   jbuilder (~> 2.0)
