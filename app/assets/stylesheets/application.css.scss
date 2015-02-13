@@ -2,9 +2,14 @@
 
 // Import font first
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
-@import 'sul-variables';
+
 // used to override bootstrap variables
-@import 'blacklight';
+@import 'sul-variables';
 // blacklight pulls in bootstrap sass
+@import 'blacklight';
 @import 'geoblacklight';
 @import 'earthworks';
+<<<<<<< HEAD
+=======
+
+>>>>>>> Move sketch assets into js/modules and home.css.scss
