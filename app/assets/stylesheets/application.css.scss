@@ -2,9 +2,10 @@
 
 // Import font first
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
-
 @import 'sul-variables';
+// used to override bootstrap variables
 @import 'blacklight';
+// blacklight pulls in bootstrap sass
 @import 'geoblacklight';
 @import 'earthworks';
 @import 'font-awesome';
