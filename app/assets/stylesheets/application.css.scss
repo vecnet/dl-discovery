@@ -4,10 +4,19 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
 // used to override bootstrap variables
-@import 'sul-variables';
+@import 'vndl-variables';
+
 // blacklight pulls in bootstrap sass
 @import 'blacklight';
+
 @import 'geoblacklight';
 @import 'earthworks';
 @import 'font-awesome';
 
+@import 'vndl-styles';
+
+
+// debug
+.contentwrapper, .content {
+	// outline: solid 3px red;
+}

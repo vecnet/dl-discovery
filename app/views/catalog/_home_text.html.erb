@@ -12,159 +12,153 @@
 
 <% comment end %>
 
+<div class="contentwrapper">
+
+  <div class="mapwrapper">
+
+    <div id="map" class="map"></div>
+  </div>
+
+  <div class="content">
 
 
-<div class='container'>
-
-
-  <div class="contentwrapper">
-
-    <div class="mapwrapper">
-
-      <%= content_tag :div, '', id: 'map', class: 'map', data: {map: 'home', 'catalog-path' => catalog_index_path, 'map-bbox' => params[:bbox]} %>
-      <!-- <div class="oldmn"></div> -->
+    <div class='col-md-6 col-md-offset-3'>
+      <%= render_search_form_no_navbar %>
     </div>
 
-    <div class="content">
+    <form class="vndl-search">
 
+      <!-- text search -->
+      <fieldset>
+        <div class="form-group">
+          <legend class="sr-only">Text searching</legend>
+          <label class="sr-only" for="catalog_search">search for text</label>
 
-      <div class='col-md-6 col-md-offset-3'>
-        <%= render_search_form_no_navbar %>
-      </div>
+          <div class="input-group">
+            <input class="form-control input-lg" id="catalog_search" name="q" placeholder="search for text" tabindex="1" type="text"/>
 
-      <form class="vndl-search">
-
-        <!-- text search -->
-        <fieldset>
-          <div class="form-group">
-            <legend class="sr-only">Text searching</legend>
-            <label class="sr-only" for="catalog_search">search for text</label>
-
-            <div class="input-group">
-              <input class="form-control input-lg" id="catalog_search" name="q" placeholder="search for text" tabindex="1" type="text"/>
-
-              <div class="input-group-btn">
-                <button type="submit" class="search-submit btn-lg btn btn-primary" id="search-submit-header" tabindex="2">
-                  <i class="icon-search icon-white"></i> Search
-                </button>
-              </div>
+            <div class="input-group-btn">
+              <button type="submit" class="search-submit btn-lg btn btn-primary" id="search-submit-header" tabindex="2">
+                <i class="icon-search icon-white"></i> Search
+              </button>
             </div>
           </div>
-        </fieldset>
+        </div>
+      </fieldset>
 
-        <!-- map search -->
-        <fieldset id="mapfieldset">
-          <legend class="sr-only">Geographic searching</legend>
-          <div class="mapnotch"></div>
-          <div class="form-group">
-            <div class="checkbox"><label>
-              <input type="checkbox" name="showmap" value="showmap"/> show results on a map
-            </label></div>
-            <div class="checkbox"><label>
-              <input type="checkbox" name="searchmap" value="searchmap"/> search only the area shown on the map
-            </label></div>
-          </div>
-        </fieldset>
+      <!-- map search -->
+      <fieldset id="mapfieldset">
+        <legend class="sr-only">Geographic searching</legend>
+        <div class="mapnotch"></div>
+        <div class="form-group">
+          <div class="checkbox"><label>
+            <input type="checkbox" name="showmap" value="showmap"/> show results on a map
+          </label></div>
+          <div class="checkbox"><label>
+            <input type="checkbox" name="searchmap" value="searchmap"/> search only the area shown on the map
+          </label></div>
+        </div>
+      </fieldset>
 
-        <!-- applied facets -->
-        <fieldset>
-          <legend class="sr-only">Search filters applied</legend>
-          <div class="form-group">
-            <!--
-             <span class="appliedFilter constraint filter filter-location_hierarchy_facet">
-                <span class="filterName">Location</span>
-                <span class="filterValue">Asia:Kingdom of Cambodia</span>
-                <a href="#" class="btnRemove imgReplace">Remove constraint Location: Asia:Kingdom of Cambodia</a>
-            </span>
-            -->
-            <div class="btn-group" role="group" aria-label="location filter">
-              <div class="btn-group" role="group">
-                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                  Location
-                </button>
-                <ul class="dropdown-menu dropdown-menu" role="menu">
-                  <li><a href="#">Add another location filter</a></li>
-                  <li><a href="#">Remove this filter</a></li>
-                </ul>
-              </div>
-              <div class="btn-group" role="group">
-                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                  Asia: Kingdom of Cambodia
-                  <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                  <li><a href="#">Add another location filter</a></li>
-                  <li><a href="#">Remove this filter</a></li>
-                </ul>
-              </div>
+      <!-- applied facets -->
+      <fieldset>
+        <legend class="sr-only">Search filters applied</legend>
+        <div class="form-group">
+          <!--
+           <span class="appliedFilter constraint filter filter-location_hierarchy_facet">
+              <span class="filterName">Location</span>
+              <span class="filterValue">Asia:Kingdom of Cambodia</span>
+              <a href="#" class="btnRemove imgReplace">Remove constraint Location: Asia:Kingdom of Cambodia</a>
+          </span>
+          -->
+          <div class="btn-group" role="group" aria-label="location filter">
+            <div class="btn-group" role="group">
+              <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                Location
+              </button>
+              <ul class="dropdown-menu dropdown-menu" role="menu">
+                <li><a href="#">Add another location filter</a></li>
+                <li><a href="#">Remove this filter</a></li>
+              </ul>
             </div>
-
-            <div class="btn-group" role="group" aria-label="location filter">
-              <div class="btn-group" role="group">
-                <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                  Author
-                </button>
-                <ul class="dropdown-menu dropdown-menu" role="menu">
-                  <li><a href="#">Add another author filter</a></li>
-                  <li><a href="#">Remove this filter</a></li>
-                </ul>
-              </div>
-              <div class="btn-group" role="group">
-                <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                  Donatien François
-                  <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-right" role="menu">
-                  <li><a href="#">Add another author filter</a></li>
-                  <li><a href="#">Remove this filter</a></li>
-                </ul>
-              </div>
+            <div class="btn-group" role="group">
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                Asia: Kingdom of Cambodia
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li><a href="#">Add another location filter</a></li>
+                <li><a href="#">Remove this filter</a></li>
+              </ul>
             </div>
-
           </div>
-        </fieldset>
 
-        <!-- available facets -->
-        <fieldset style="display: none">
-          <legend class="sr-only">Search filters available</legend>
-          <div class="form-group">
-
-            <li class="expandable_new grey">
-              <a class="accordion-toggle grey collapsed" data-toggle="collapse" data-parent="#facet_group" data-target="#collapse_Author">
-                Author<i class="icon-angle-right grey"></i>
-              </a>
-
-              <div style="height: 0px;" id="collapse_Author" class="accordion-body collapse">
-                <ul class="slide-list">
-                  <li>
-                    <a href="/?_=1422421726732&amp;f%5Bdesc_metadata__creator_facet%5D%5B%5D=Chow%2C+CY&amp;f%5Blocation_hierarchy_facet%5D%5B%5D=Asia%3AKingdom+of+Cambodia&amp;path_only=true" class="facet_select">Chow,
-                      CY</a> <span class="count">1</span>
-                  </li>
-                </ul>
-                <!-- /slide-list -->
-              </div>
-            </li>
-
+          <div class="btn-group" role="group" aria-label="location filter">
+            <div class="btn-group" role="group">
+              <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                Author
+              </button>
+              <ul class="dropdown-menu dropdown-menu" role="menu">
+                <li><a href="#">Add another author filter</a></li>
+                <li><a href="#">Remove this filter</a></li>
+              </ul>
+            </div>
+            <div class="btn-group" role="group">
+              <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                Donatien François
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                <li><a href="#">Add another author filter</a></li>
+                <li><a href="#">Remove this filter</a></li>
+              </ul>
+            </div>
           </div>
-        </fieldset>
 
-        <!-- search now -->
-        <fieldset>
-          <div class="form-group">
-            <button type="button" id="gosearch">do a fake search</button>
-          </div>
-        </fieldset>
+        </div>
+      </fieldset>
+
+      <!-- available facets -->
+      <fieldset style="display: none">
+        <legend class="sr-only">Search filters available</legend>
+        <div class="form-group">
+
+          <li class="expandable_new grey">
+            <a class="accordion-toggle grey collapsed" data-toggle="collapse" data-parent="#facet_group" data-target="#collapse_Author">
+              Author<i class="icon-angle-right grey"></i>
+            </a>
+
+            <div style="height: 0px;" id="collapse_Author" class="accordion-body collapse">
+              <ul class="slide-list">
+                <li>
+                  <a href="/?_=1422421726732&amp;f%5Bdesc_metadata__creator_facet%5D%5B%5D=Chow%2C+CY&amp;f%5Blocation_hierarchy_facet%5D%5B%5D=Asia%3AKingdom+of+Cambodia&amp;path_only=true" class="facet_select">Chow,
+                    CY</a> <span class="count">1</span>
+                </li>
+              </ul>
+              <!-- /slide-list -->
+            </div>
+          </li>
+
+        </div>
+      </fieldset>
+
+      <!-- search now -->
+      <fieldset>
+        <div class="form-group">
+          <button type="button" id="gosearch">do a fake search</button>
+        </div>
+      </fieldset>
 
 
-      </form>
-      <footer id="footer" class="footer">
-        footer &hearts; &amp; &copy; &mdash; using .container-fluid rather than .container to go full width
-      </footer>
-    </div>
-    <!-- end of .content -->
+    </form>
+    <footer id="footer" class="footer">
+      footer &hearts; &amp; &copy; &mdash; using .container-fluid rather than .container to go full width
+    </footer>
   </div>
-  <!-- end of .contentwrapper -->
-  </div>
+  <!-- end of .content -->
+</div>
+<!-- end of .contentwrapper -->
+</div>
 
 
 

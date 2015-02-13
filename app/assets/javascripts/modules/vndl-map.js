@@ -3,6 +3,8 @@
 
 // ------------------------------------------------------------------
 
+console.log('running vndlmap source');
+
 window.VndlMap = function (mapDomId, options) {
     // this.l is the leaflet map reference
     this.l = L.map(mapDomId, {
