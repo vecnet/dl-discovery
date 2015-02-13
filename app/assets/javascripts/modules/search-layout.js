@@ -33,7 +33,7 @@ function getResultsPage(start, length) {
 }
 // ------------------------------------------------------------------
 // ------------------------------------------------------------------
-(function () {
+$(function () {
 
     // store the map reference in a global
     window.vndl = {};
@@ -71,5 +71,5 @@ function getResultsPage(start, length) {
         getResultsPage();
     });
 
-})();
+});
 

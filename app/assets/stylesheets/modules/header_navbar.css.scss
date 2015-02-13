@@ -1,13 +1,13 @@
 #header-navbar {
   box-shadow: 0 4px 8px -2px rgba(0, 0, 0, .2);
-
+  margin-bottom: 0;
 
   .navbar-brand {
     background: transparent;
     padding: 22px 0 5px 15px;
     width: 376px;
     height: 80px;
-    
+
     img {
       height: 50px;
       margin-right: 10px;
@@ -28,7 +28,7 @@
   padding-right: 0;
   text-decoration: none;
   text-transform: uppercase;
-  
+
   &:hover,
   &:focus {
     border-bottom: 2px solid white;

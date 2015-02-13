@@ -1,0 +1,22 @@
+//Colors
+$pantone-405: #5f574f;
+$beige-20-percent: #e9e6df;
+$cardinal-red: #8c1515;
+$beige-10-percent: #f2f1eb;
+$dark-red: #820000;
+$gray-90-percent: #565347;
+$white: #F8F8FF;
+
+// map and page layout vars
+$result-column-width: 700px;
+$inactive-map-width: 60px;
+$map-notch-width: ceil(0.33 * $inactive-map-width);
+$content-bg: #fff;
+$header-bg: #00a3bb;
+$line-color: #f8f8f8;
+
+
+.map-active #main-container.container {
+  width: 100%;
+}
+

@@ -4,12 +4,18 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
 
 // used to override bootstrap variables
-@import 'sul-variables';
+@import 'vndl-variables';
+
 // blacklight pulls in bootstrap sass
 @import 'blacklight';
+
 @import 'geoblacklight';
 @import 'earthworks';
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> Move sketch assets into js/modules and home.css.scss
+=======
+@import 'vndl-styles';
+>>>>>>> integrating top level map and column layout into Rails app
