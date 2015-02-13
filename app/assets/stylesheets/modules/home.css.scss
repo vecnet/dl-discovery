@@ -1,8 +1,4 @@
 
-.map-active #main-container.container {
-  width: 100%;
-}
-
 
 
 ////////////////////////////////////////////// some unimportant stuff
@@ -41,7 +37,7 @@ header.jumbotron {
 }
 
 .map-inactive header {
-  width: ($result-column-width + $inactive-map-width);
+  // width: ($result-column-width + $inactive-map-width);
 }
 
 .map-active header {
@@ -60,11 +56,16 @@ header {
 }
 
 .mapwrapper {
+  padding: 0;
   position: relative;
   z-index: $map-z;
+  // background-image: image_url('OrteliusWorldMap1570.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 .content {
+  padding: 0;
   position: relative;
   z-index: $content-z;
 }
@@ -81,17 +82,17 @@ header {
 
 /* the body has a class that determines if the map is showing */
 .map-inactive .contentwrapper {
-  width: ($result-column-width + $inactive-map-width - $map-notch-width);
+  // the map JS toggles the wrapper's CSS classes between .container and .container-fluid
 }
 .map-active .contentwrapper {
-  width: 100%;
+  // width: 100%;
 }
 
 /* the content has a fixed width */
 .content {
   float: right;
   /* TODO: this bit should be responsive */
-  width: $result-column-width;
+  // width: $result-column-width;
   // overlap the map so we can make the map notch
   margin-left: (-1 * $map-notch-width);
   // gotta be transparent so the map can be seen through the notch
@@ -108,20 +109,24 @@ header {
   top: 0;
   bottom: 0;
   left: 0;
-  right: ($result-column-width - $map-notch-width);
-  overflow: hidden;
-  transition: opacity 1.5s ease-in-out;
+  // width is set by the bookstrap column width class (e.g. col-md-1)
 }
 
 .map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: (-1 * $map-notch-width);
+  transition: opacity 1.5s ease-in-out;
   height: 100%;
 }
 
-.map-inactive .mapwrapper {
+.map-inactive .map {
   opacity: 0.25;
 }
 
-.map-active .mapwrapper {
+.map-active .map {
   opacity: 1;
 }
 

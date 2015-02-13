@@ -84,11 +84,21 @@ VndlMap.prototype.resizeFor = function (duration) {
 // ------------------------------------------------------------------
 VndlMap.prototype.show = function () {
     $('body').removeClass('map-inactive').addClass('map-active');
+    $('#main-container').removeClass('container').addClass('container-fluid');
+    $('.mapwrapper').removeClass('col-xs-1 col-sm-1 col-md-1 col-lg-1');
+    $('.mapwrapper').addClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
+    $('.content').removeClass('col-xs-11 col-sm-11 col-md-11 col-lg-11');
+    $('.content').addClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
     this.resizeFor(2);
 }
 // ------------------------------------------------------------------
 VndlMap.prototype.hide = function () {
     $('body').removeClass('map-active').addClass('map-inactive');
+    $('#main-container').removeClass('container-fluid').addClass('container');
+    $('.mapwrapper').removeClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
+    $('.mapwrapper').addClass('col-xs-1 col-sm-1 col-md-1 col-lg-1');
+    $('.content').removeClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
+    $('.content').addClass('col-xs-11 col-sm-11 col-md-11 col-lg-11');
     this.resizeFor(2);
 }
 // ------------------------------------------------------------------
