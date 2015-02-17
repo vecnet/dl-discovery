@@ -152,8 +152,33 @@
 
     </form>
     <footer id="footer" class="footer">
+      <%= image_tag 'vecnet_logo_footer.jpg' %>
+
+      <div class="row">
+
+
+        <% vecnet_host = Rails.env == 'production' ? 'https://vecnet.org' : 'https://dev.vecnet.org' -%>
+        <p>
+          | <%= link_to "FAQ", "#{vecnet_host}/index.php/about-vecnet/faq" %>
+          | <%= link_to "User Privacy Policy", "#{vecnet_host}/index.php/user-privacy-policy" %>
+          | <%= link_to "Terms of Use", "#{vecnet_host}/index.php/terms-of-use" %>
+          <br/>
+          <span class="fine-print">Copyright &copy;
+            2014 <%= link_to "Vector-Borne Disease Network (VecNet)", "#{vecnet_host}/" %></span>
+          <br/>
+
+          <footer id="footer" class="footer container">
+
+          </footer>
+
+
+          <!-- #bottom-logo end -->
+
+      </div>
+
       footer &hearts; &amp; &copy; &mdash; using .container-fluid rather than .container to go full width
     </footer>
+
   </div>
   <!-- end of .content -->
 </div>

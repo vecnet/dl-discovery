@@ -24,8 +24,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body class="map-active <%= render_body_class %>">
+
+
+<!--header_navbar start-->
   <%= render 'shared/header_navbar' %>
+<!--header_navbar end-->
+
+<!--ajax_modal start-->
   <%= render partial: 'shared/ajax_modal' %>
+<!--ajax_modal end-->
+
+<!--main-container start-->
   <div id='main-container' role='main' class='container' data-analytics-id="<%= Settings.GOOGLE_ANALYTICS_ID %>">
     <h1 class="sr-only">VecNET Digital Library beta</h1>
     <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
@@ -33,5 +42,6 @@
       <%= yield %>
     </div>
   </div>
+<!--main-container end-->
 </body>
 </html>
