@@ -148,6 +148,22 @@ $content-v-pad: ceil(1 * $content-pad-unit);
 
 $disabled-color: #aaa;
 
+///////////////////////////////////////////////////////// search result fieldset
+
+.result-title {
+  margin-top: 0px;
+}
+
+.search-result {
+  border-bottom: 1px solid $line-color;
+  padding: $content-v-pad;
+  padding-left: 0px;
+}
+
+.meta-search {
+  list-style-type: none;
+  line-height: 2em;
+}
 ///////////////////////////////////////////////////////// search form
 .vndl-search {
   margin: 0;
