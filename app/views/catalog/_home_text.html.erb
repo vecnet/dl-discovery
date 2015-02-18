@@ -140,7 +140,59 @@
           </li>
 
         </div>
+
       </fieldset>
+
+
+      <!--expandable extras thing start -->
+
+
+      <div id="filter-panel" class="collapse filter-panel">
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <form class="form-inline" role="form">
+              <div class="form-group">
+                <label class="filter-col" style="margin-right:0;" for="pref-perpage">Rows per page:</label>
+                <select id="pref-perpage" class="form-control">
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option selected="selected" value="10">10</option>
+
+                </select>
+              </div>
+              <!-- form group [rows] -->
+              <div class="form-group">
+                <label class="filter-col" style="margin-right:0;" for="pref-search">Search:</label>
+                <input type="text" class="form-control input-sm" id="pref-search">
+              </div>
+              <!-- form group [search] -->
+              <div class="form-group">
+                <label class="filter-col" style="margin-right:0;" for="pref-orderby">Order by:</label>
+                <select id="pref-orderby" class="form-control">
+                  <option>Descendent</option>
+                </select>
+              </div>
+              <!-- form group [order by] -->
+              <div class="form-group">
+                <div class="checkbox" style="margin-left:10px; margin-right:10px;">
+                  <label><input type="checkbox"> Remember parameters</label>
+                </div>
+                <button type="submit" class="btn btn-default filter-col">
+                  <span class="glyphicon glyphicon-record"></span> Save Settings
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+      <button type="button" class="btn btn-default" data-toggle="collapse" data-target="#filter-panel">
+        <span class="glyphicon glyphicon-list"></span> More filters
+      </button>
+
+
+      <!--expandable extra filters end-->
 
       <!-- search now -->
       <fieldset>
@@ -151,6 +203,92 @@
 
 
     </form>
+
+    <!--results list groups start-->
+
+    <fieldset>
+
+
+      <hgroup class="mb20">
+        <h2>Results</h2>
+
+        <h3 class="lead"><strong class="text-danger">3</strong> results were found for the search for
+          <strong class="text-danger">Lorem</strong></h3>
+      </hgroup>
+
+      <section class="col-xs-12 col-sm-6 col-md-12">
+        <article class="search-result row">
+          <div class="col-xs-12 col-sm-12 col-md-3">
+            <a href="#" title="Lorem ipsum" class="thumbnail"><img src="http://lorempixel.com/250/140/people" alt="Lorem ipsum"/></a>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-2">
+            <ul class="meta-search">
+              <li><i class="glyphicon glyphicon-calendar"></i> <span>02/15/2014</span></li>
+              <li><i class="glyphicon glyphicon-time"></i> <span>4:28 pm</span></li>
+              <li><i class="glyphicon glyphicon-tags"></i> <span>People</span></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+            <h3><a href="#" title="">Voluptatem, exercitationem, suscipit, distinctio</a></h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, exercitationem, suscipit,
+              distinctio, qui sapiente aspernatur molestiae non corporis magni sit sequi iusto debitis delectus
+              doloremque.</p>
+            <span class="plus"><a href="#" title="Lorem ipsum"><i class="glyphicon glyphicon-plus"></i></a></span>
+          </div>
+          <span class="clearfix borda"></span>
+        </article>
+
+        <article class="search-result row">
+          <div class="col-xs-12 col-sm-12 col-md-3">
+            <a href="#" title="Lorem ipsum" class="thumbnail"><img src="http://lorempixel.com/250/140/food" alt="Lorem ipsum"/></a>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-2">
+            <ul class="meta-search">
+              <li><i class="glyphicon glyphicon-calendar"></i> <span>02/13/2014</span></li>
+              <li><i class="glyphicon glyphicon-time"></i> <span>8:32 pm</span></li>
+              <li><i class="glyphicon glyphicon-tags"></i> <span>Food</span></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-7">
+            <h3><a href="#" title="">Voluptatem, exercitationem, suscipit, distinctio</a></h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, exercitationem, suscipit,
+              distinctio, qui sapiente aspernatur molestiae non corporis magni sit sequi iusto debitis delectus
+              doloremque.</p>
+            <span class="plus"><a href="#" title="Lorem ipsum"><i class="glyphicon glyphicon-plus"></i></a></span>
+          </div>
+          <span class="clearfix borda"></span>
+        </article>
+
+        <article class="search-result row">
+          <div class="col-xs-12 col-sm-12 col-md-3">
+            <a href="#" title="Lorem ipsum" class="thumbnail"><img src="http://lorempixel.com/250/140/sports" alt="Lorem ipsum"/></a>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-2">
+            <ul class="meta-search">
+              <li><i class="glyphicon glyphicon-calendar"></i> <span>01/11/2014</span></li>
+              <li><i class="glyphicon glyphicon-time"></i> <span>10:13 am</span></li>
+              <li><i class="glyphicon glyphicon-tags"></i> <span>Sport</span></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-7">
+            <h3><a href="#" title="">Voluptatem, exercitationem, suscipit, distinctio</a></h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem, exercitationem, suscipit,
+              distinctio, qui sapiente aspernatur molestiae non corporis magni sit sequi iusto debitis delectus
+              doloremque.</p>
+            <span class="plus"><a href="#" title="Lorem ipsum"><i class="glyphicon glyphicon-plus"></i></a></span>
+          </div>
+          <span class="clearfix border"></span>
+        </article>
+
+      </section>
+    </fieldset>
+
+    <!--results list groups end-->
+
+
     <!--footer start-->
     <footer id="footer" class="footer">
       <%= image_tag 'vecnet_logo_footer.jpg' %>
