@@ -5,7 +5,7 @@
 rails_root = ENV["RAILS_ROOT"] || "."
 working_directory rails_root
 worker_processes 2
-listen 3001
+listen 5000
 timeout 30
 
 pid "#{rails_root}/tmp/pids/unicorn.pid"
