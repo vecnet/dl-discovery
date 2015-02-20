@@ -18,8 +18,11 @@ function enable(element) {
 function getResultsPage(start, length) {
     // lol ignore the start/length paging info.
 
-    // make a url
-    var url = 'results1.html';
+    // make a url ;
+    // TODO NO STOP THE submit event from the search bar
+    // and take the URL and put into url
+
+    var url = '';
 
     // normally this would be a post of the form.  but for now
     // just fetch the url
