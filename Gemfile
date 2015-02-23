@@ -65,4 +65,3 @@ gem "blacklight"
 gem "geoblacklight", '~> 0.5.1'
 gem "jettywrapper"
 gem 'is_it_working'
-gem "font-awesome-rails"
