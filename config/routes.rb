@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'feedback' => 'feedback_forms#new'
 
   # since there is no pubtkt login for development
-  if Rails.env.development?
+  if Rails.env.development? || Rails.env.jcu?
     match 'development_sessions/log_in' => "development_sessions#new", via: :get
     match 'development_sessions' => "development_sessions#create", via: :post
     # morally the next should be a delete action, but is a get to match how the
