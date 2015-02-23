@@ -17,5 +17,6 @@
 // Required by Blacklight
 //= require blacklight/blacklight
 
+// Discovery beta map related js needs to be loaded first
 //= require modules/vndl-map
 //= require_tree .
