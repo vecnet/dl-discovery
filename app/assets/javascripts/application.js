@@ -17,5 +17,8 @@
 // Required by Blacklight
 //= require blacklight/blacklight
 
+//= require leaflet
 //= require modules/vndl-map
+//= require modules/search-layout
+
 //= require_tree .
