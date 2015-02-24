@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  get 'download/file/:id' => 'download#file', as: :download_file
-  get 'download/hgl/:id' => 'download#hgl', as: :download_hgl
+
   resources :download, only: [:show, :file]
   post "wms/handle"
   root :to => "vndl_search#index"

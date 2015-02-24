@@ -61,6 +61,6 @@ gem 'unicorn'
 
 
 gem "blacklight"
-gem "geoblacklight", '~> 0.6.2'
+gem "geoblacklight"
 gem "jettywrapper"
 gem 'is_it_working'
