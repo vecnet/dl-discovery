@@ -10,6 +10,8 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+
+
 //= require jquery
 //= require jquery_ujs
 
@@ -17,8 +19,6 @@
 // Required by Blacklight
 //= require blacklight/blacklight
 
-//= require leaflet
 //= require modules/vndl-map
-//= require modules/search-layout
 
 //= require_tree .
