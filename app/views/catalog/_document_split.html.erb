@@ -1,0 +1,11 @@
+
+<% comment do %>
+
+    this partial renders each search result document and then the map with the params
+
+    <% comment end %>
+
+<div id="documents" class="docView col-md-6">
+  <%= render documents, :as => :document %>
+</div>
+<%= content_tag :div, '', id: 'map', data: { map: 'index', 'catalog-path'=> catalog_index_path , 'map-bbox' => params[:bbox] } %>
