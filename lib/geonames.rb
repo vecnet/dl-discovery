@@ -1,21 +1,25 @@
-
 require 'json'
 require 'rest_client'
 
 #
 # Convert place names to geoname ids and coordinates.
-# While geonames does most of the work, we try to cache data
-# as much as possible to decrease the number of lookups.
+# While GeoNames does most of the work, we try to cache data
+# as much as possible to decrease the number of API hits.
 # Our cache stores both items of the form 'place name' => 'geoname id'
 # as well as 'geoname id' => 'hash of location information'.
-# This way we don't rely on the original place name as being a cannonical
-# lookup for the geoname id.
+# This way we don't rely on the original place name being a canonical
+# lookup for the GeoName id.
 #
 # usage:
 #
-
+# g = Geonames.new(cache_filename_or_nil)
+# geoname_record = g.lookup_name("Kenya")
+# g.save # when processing is finished, to persist the cache to disk
+#
 class Geonames
-  class Cache
+  class FileBackedCache
+    # Load the cache from disk when started and save it when asked to.
+    # Otherwise, this cache operates completely in memory.
     def initialize(cache_filename=nil)
       @cache_filename = cache_filename
       @cache = {}
@@ -46,15 +50,18 @@ class Geonames
   end
 
   class Bbox
-    # we store the west and east in a normalized form satisfying the
+    # Store the west and east in a normalized form satisfying the
     # invariant west <= east <= west + 360
     # (unless we are uninitialized, in which case east < west).
-    # We will keep west in the range [-180, 180], and east
-    # in the range [-180, 540]. The values > 180 indicate this bbox
-    # crosses the anti-meridian.
+    # We keep west in the range [-180, 180], and east in the range [-180, 540].
+    # East values > 180 indicate this bbox crosses the anti-meridian.
     #
-    # This comes about since we are really dealing with representatives from
-    # an equivalence class, and we don't know which one to pick.
+    # The need for a normal form comes about since we are really dealing with
+    # equivalence classes of rectangles, and all are equally valid.
+    # We pick the normal form as our representative of the class.
+    # But this means we have to work a little to add a point or another bbox
+    # to this one since we want to ensure we always choose the _smallest_
+    # possible bbox with respect to area.
     attr_accessor :north, :east, :south, :west
 
     def initialize
@@ -70,7 +77,7 @@ class Geonames
       @north = [@north, bbox["north"]].max
       @south = [@south, bbox["south"]].min
       # we don't know whether to add the other_bbox "to the left"
-      # or "to the right". So we do three and choose which ever has a
+      # or "to the right". So we do three and choose whichever has a
       # smaller result (by side length). The three are: as is, moved
       # right by 360 degrees and moved left by 360 degrees.
       other_east = bbox["east"]
@@ -146,7 +153,7 @@ class Geonames
   end
 
   def initialize(cache_filename=nil)
-    @cache = Cache.new(cache_filename)
+    @cache = FileBackedCache.new(cache_filename)
   end
 
   def save
@@ -180,7 +187,8 @@ class Geonames
       id = result['geonames'].first['geonameId']
     else
       # We could try to find the result with the best feature class and type.
-      # Instead we take the first result geonames gives us. Lets see how well that does.
+      # Instead we take the first result geonames gives us.
+      # Lets see how well that does.
       STDERR.puts "More than one result for: '#{place_name}'"
       id = result['geonames'].first['geonameId']
     end
