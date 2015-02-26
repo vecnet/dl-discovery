@@ -9692,7 +9692,7 @@
     "fcl": "A",
     "continentCode": "AS"
   },
-  "France": 3570675,
+  "France": 3017382,
   "3570675": {
     "adminCode3": "9721",
     "alternateNames": [
@@ -31414,5 +31414,830 @@
     "toponymName": "Southern Province",
     "fcl": "A",
     "continentCode": "AF"
+  },
+  "3017382": {
+    "timezone": {
+      "gmtOffset": 1,
+      "timeZoneId": "Europe/Paris",
+      "dstOffset": 2
+    },
+    "bbox": {
+      "east": 9.561556,
+      "south": 41.338779,
+      "north": 51.092804,
+      "west": -5.142222
+    },
+    "asciiName": "Republic of France",
+    "countryId": "3017382",
+    "fcl": "A",
+    "srtm3": 543,
+    "countryCode": "FR",
+    "lat": "46",
+    "fcode": "PCLI",
+    "continentCode": "EU",
+    "adminCode1": "00",
+    "lng": "2",
+    "geonameId": 3017382,
+    "toponymName": "Republic of France",
+    "population": 64768389,
+    "wikipediaURL": "en.wikipedia.org/wiki/France",
+    "adminName5": "",
+    "adminName4": "",
+    "adminName3": "",
+    "alternateNames": [
+      {
+        "isPreferredName": true,
+        "name": "ꃔꇩ",
+        "lang": "ii"
+      },
+      {
+        "name": "프랑스",
+        "lang": "ko"
+      },
+      {
+        "name": "ܦܪܢܣܐ",
+        "lang": "arc"
+      },
+      {
+        "name": "フランス",
+        "lang": "ja"
+      },
+      {
+        "name": "ຝລັ່ງ",
+        "lang": "lo"
+      },
+      {
+        "name": "ፈረንሣይ",
+        "lang": "am"
+      },
+      {
+        "name": "ፈረንሳይ",
+        "lang": "am"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ፈረንሳይ",
+        "lang": "ti"
+      },
+      {
+        "name": "បារាំង",
+        "lang": "km"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ଫ୍ରାନ୍ସ",
+        "lang": "or"
+      },
+      {
+        "name": "ฝรั่งเศส",
+        "lang": "th"
+      },
+      {
+        "name": "ފަރަންސޭސިވިލާތް",
+        "lang": "dv"
+      },
+      {
+        "name": "ประเทศฝรั่งเศส",
+        "lang": "th"
+      },
+      {
+        "name": "An Fhrainc",
+        "lang": "ga"
+      },
+      {
+        "name": "An Fhraing",
+        "lang": "gd"
+      },
+      {
+        "name": "Bro-C'hall",
+        "lang": "br"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Bufalansa",
+        "lang": "lg"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Falanisē",
+        "lang": "to"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Falánsɛ",
+        "lang": "ln"
+      },
+      {
+        "name": "Falansia",
+        "lang": "ln"
+      },
+      {
+        "name": "Farāni",
+        "lang": "ty"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Faransa",
+        "lang": "ha"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Faransi",
+        "lang": "bm"
+      },
+      {
+        "name": "Faransiis",
+        "lang": "so"
+      },
+      {
+        "name": "Faransiiska",
+        "lang": "so"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Farânzi",
+        "lang": "sg"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Farayse",
+        "lang": "ff"
+      },
+      {
+        "name": "fasygu'e",
+        "lang": "jbo"
+      },
+      {
+        "name": "Ffrainc",
+        "lang": "cy"
+      },
+      {
+        "name": "Frakkland",
+        "lang": "is"
+      },
+      {
+        "name": "Frakland",
+        "lang": "fo"
+      },
+      {
+        "name": "Franca",
+        "lang": "sq"
+      },
+      {
+        "name": "França",
+        "lang": "ca"
+      },
+      {
+        "name": "França",
+        "lang": "oc"
+      },
+      {
+        "name": "França",
+        "lang": "pt"
+      },
+      {
+        "name": "France",
+        "lang": "aa"
+      },
+      {
+        "name": "France",
+        "lang": "en"
+      },
+      {
+        "isPreferredName": true,
+        "name": "France",
+        "lang": "fr"
+      },
+      {
+        "name": "France",
+        "lang": "frp"
+      },
+      {
+        "name": "France",
+        "lang": "fur"
+      },
+      {
+        "name": "France",
+        "lang": "na"
+      },
+      {
+        "name": "France",
+        "lang": "nrm"
+      },
+      {
+        "name": "France",
+        "lang": "om"
+      },
+      {
+        "name": "France",
+        "lang": "pam"
+      },
+      {
+        "isPreferredName": true,
+        "name": "France",
+        "lang": "sn"
+      },
+      {
+        "name": "France",
+        "lang": "st"
+      },
+      {
+        "isPreferredName": true,
+        "name": "France"
+      },
+      {
+        "name": "Francë",
+        "lang": "sq"
+      },
+      {
+        "name": "Francëjô",
+        "lang": "csb"
+      },
+      {
+        "name": "Franchiya",
+        "lang": "rmy"
+      },
+      {
+        "name": "Francia",
+        "lang": "ast"
+      },
+      {
+        "name": "Francia",
+        "lang": "co"
+      },
+      {
+        "isShortName": true,
+        "isPreferredName": true,
+        "name": "Francia",
+        "lang": "es"
+      },
+      {
+        "name": "Francia",
+        "lang": "gl"
+      },
+      {
+        "name": "Francia",
+        "lang": "ia"
+      },
+      {
+        "name": "Francia",
+        "lang": "ilo"
+      },
+      {
+        "name": "Francia",
+        "lang": "io"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Francia",
+        "lang": "it"
+      },
+      {
+        "name": "Francia",
+        "lang": "la"
+      },
+      {
+        "name": "Francia",
+        "lang": "scn"
+      },
+      {
+        "name": "Franciaország",
+        "lang": "hu"
+      },
+      {
+        "name": "Francie",
+        "lang": "cs"
+      },
+      {
+        "name": "Francija",
+        "lang": "lv"
+      },
+      {
+        "name": "Francija",
+        "lang": "sl"
+      },
+      {
+        "name": "Francio",
+        "lang": "eo"
+      },
+      {
+        "name": "Francja",
+        "lang": "lmo"
+      },
+      {
+        "name": "Francja",
+        "lang": "pl"
+      },
+      {
+        "name": "Francland",
+        "lang": "ang"
+      },
+      {
+        "name": "Francogallia",
+        "lang": "la"
+      },
+      {
+        "name": "Francoska",
+        "lang": "hsb"
+      },
+      {
+        "name": "Francujo",
+        "lang": "eo"
+      },
+      {
+        "name": "Francuska",
+        "lang": "bs"
+      },
+      {
+        "name": "Francuska",
+        "lang": "hbs"
+      },
+      {
+        "name": "Francuska",
+        "lang": "hr"
+      },
+      {
+        "name": "Francúzsko",
+        "lang": "sk"
+      },
+      {
+        "name": "Frankräich",
+        "lang": "lb"
+      },
+      {
+        "name": "Frankreich",
+        "lang": "bar"
+      },
+      {
+        "name": "Frankreich",
+        "lang": "de"
+      },
+      {
+        "name": "Frankriek",
+        "lang": "li"
+      },
+      {
+        "name": "Frankriek",
+        "lang": "nds"
+      },
+      {
+        "name": "Frankrig",
+        "lang": "da"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Frankrigi",
+        "lang": "kl"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Frankriika",
+        "lang": "se"
+      },
+      {
+        "name": "Frankrijk",
+        "lang": "nl"
+      },
+      {
+        "name": "Frankrike",
+        "lang": "nb"
+      },
+      {
+        "name": "Frankrike",
+        "lang": "nn"
+      },
+      {
+        "name": "Frankrike",
+        "lang": "no"
+      },
+      {
+        "name": "Frankrike",
+        "lang": "sv"
+      },
+      {
+        "name": "Frankrish",
+        "lang": "ksh"
+      },
+      {
+        "name": "Frankryk",
+        "lang": "af"
+      },
+      {
+        "name": "Frankryk",
+        "lang": "fy"
+      },
+      {
+        "name": "Frans",
+        "lang": "ht"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Frañs",
+        "lang": "br"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Fransa",
+        "lang": "az"
+      },
+      {
+        "name": "Fransa",
+        "lang": "ku"
+      },
+      {
+        "name": "Fransa",
+        "lang": "pms"
+      },
+      {
+        "name": "Fransa",
+        "lang": "tet"
+      },
+      {
+        "name": "Fransa",
+        "lang": "tr"
+      },
+      {
+        "name": "Fransän",
+        "lang": "vo"
+      },
+      {
+        "name": "Fransia",
+        "lang": "lad"
+      },
+      {
+        "name": "Fransia",
+        "lang": "nov"
+      },
+      {
+        "name": "Fransiya",
+        "lang": "qu"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Frans nutome",
+        "lang": "ee"
+      },
+      {
+        "name": "Fransya",
+        "lang": "qu"
+      },
+      {
+        "name": "Fransya",
+        "lang": "war"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Franța",
+        "lang": "ro"
+      },
+      {
+        "name": "Frantsa",
+        "lang": "mg"
+      },
+      {
+        "name": "Frantscha",
+        "lang": "rm"
+      },
+      {
+        "name": "Frantza",
+        "lang": "sc"
+      },
+      {
+        "name": "Frantzia",
+        "lang": "eu"
+      },
+      {
+        "name": "Franza",
+        "lang": "mt"
+      },
+      {
+        "name": "Franzia",
+        "lang": "an"
+      },
+      {
+        "name": "Franzsa",
+        "lang": "vec"
+      },
+      {
+        "name": "Fraunce",
+        "lang": "sco"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Frɛnkyeman",
+        "lang": "ak"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Furansi",
+        "lang": "nd"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/France",
+        "lang": "link"
+      },
+      {
+        "name": "http://id.loc.gov/authorities/names/n79006404",
+        "lang": "link"
+      },
+      {
+        "name": "http://ru.wikipedia.org/wiki/%D0%A4%D1%80%D0%B0%D0%BD%D1%86%D0%B8%D1%8F",
+        "lang": "link"
+      },
+      {
+        "name": "Huák-guók",
+        "lang": "cdo"
+      },
+      {
+        "isPreferredName": true,
+        "name": "i-France",
+        "lang": "zu"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Nfalanse",
+        "lang": "lu"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Orílẹ́ède Faranse",
+        "lang": "yo"
+      },
+      {
+        "name": "Perancis",
+        "lang": "id"
+      },
+      {
+        "name": "Perancis",
+        "lang": "ms"
+      },
+      {
+        "name": "Pháp",
+        "lang": "vi"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Pow Frenk",
+        "lang": "kw"
+      },
+      {
+        "name": "Pow Frynk",
+        "lang": "kw"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Prancis",
+        "lang": "id"
+      },
+      {
+        "name": "Prancūzija",
+        "lang": "lt"
+      },
+      {
+        "name": "Pranis",
+        "lang": "tpi"
+      },
+      {
+        "name": "Pransiya",
+        "lang": "ceb"
+      },
+      {
+        "name": "Pransya",
+        "lang": "tl"
+      },
+      {
+        "name": "Prantsusmaa",
+        "lang": "et"
+      },
+      {
+        "name": "Ranska",
+        "lang": "fi"
+      },
+      {
+        "name": "Republic of France"
+      },
+      {
+        "name": "République Française",
+        "lang": "fr"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Ubaranja",
+        "lang": "ki"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Ubufaransa",
+        "lang": "rn"
+      },
+      {
+        "name": "Ufaransa",
+        "lang": "sw"
+      },
+      {
+        "name": "Vrankriek",
+        "lang": "vls"
+      },
+      {
+        "name": "Yn Rank",
+        "lang": "gv"
+      },
+      {
+        "name": "فرانس",
+        "lang": "ur"
+      },
+      {
+        "name": "فرانسه",
+        "lang": "fa"
+      },
+      {
+        "name": "فرانسه",
+        "lang": "ps"
+      },
+      {
+        "name": "فرانسىيە",
+        "lang": "ug"
+      },
+      {
+        "name": "فرنسا",
+        "lang": "ar"
+      },
+      {
+        "isPreferredName": true,
+        "name": "فەڕەنسا",
+        "lang": "ku"
+      },
+      {
+        "name": "צרפת",
+        "lang": "he"
+      },
+      {
+        "name": "Γαλλία",
+        "lang": "el"
+      },
+      {
+        "name": "Фаронса",
+        "lang": "tg"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Франц",
+        "lang": "mn"
+      },
+      {
+        "name": "Франц",
+        "lang": "os"
+      },
+      {
+        "name": "Франци",
+        "lang": "cv"
+      },
+      {
+        "name": "Франција",
+        "lang": "mk"
+      },
+      {
+        "name": "Франция",
+        "lang": "bg"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Франция",
+        "lang": "kk"
+      },
+      {
+        "name": "Франция",
+        "lang": "ru"
+      },
+      {
+        "name": "Франция",
+        "lang": "udm"
+      },
+      {
+        "name": "Франция",
+        "lang": "uz"
+      },
+      {
+        "name": "Франція",
+        "lang": "uk"
+      },
+      {
+        "name": "Франц улс",
+        "lang": "mn"
+      },
+      {
+        "name": "Француска",
+        "lang": "sr"
+      },
+      {
+        "name": "Францыя",
+        "lang": "be"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ཕ་རཱན་སི།",
+        "lang": "bo"
+      },
+      {
+        "name": "ཕརཱནསི",
+        "lang": "dz"
+      },
+      {
+        "name": "Ֆրանսիա",
+        "lang": "hy"
+      },
+      {
+        "name": "საფრანგეთი",
+        "lang": "ka"
+      },
+      {
+        "name": "फ्रान्स",
+        "lang": "mr"
+      },
+      {
+        "name": "फ्रान्स",
+        "lang": "ne"
+      },
+      {
+        "name": "फ्रांस",
+        "lang": "hi"
+      },
+      {
+        "name": "फ्रांस",
+        "lang": "ks"
+      },
+      {
+        "name": "फ्रांस",
+        "lang": "sa"
+      },
+      {
+        "isPreferredName": true,
+        "name": "फ़्रांस",
+        "lang": "hi"
+      },
+      {
+        "name": "फ़्राँस",
+        "lang": "hi"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ફ્રાંસ",
+        "lang": "gu"
+      },
+      {
+        "name": "ફ્રાઁસ",
+        "lang": "gu"
+      },
+      {
+        "name": "ఫ్రాన్స్‌",
+        "lang": "te"
+      },
+      {
+        "name": "ಫ್ರಾನ್ಸ್",
+        "lang": "kn"
+      },
+      {
+        "name": "பிரான்ஸ்",
+        "lang": "ta"
+      },
+      {
+        "name": "ഫ്രാന്‍സ്",
+        "lang": "ml"
+      },
+      {
+        "name": "ফ্রান্স",
+        "lang": "bn"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ফ্ৰান্স",
+        "lang": "as"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ပြင်သစ်",
+        "lang": "my"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ප්‍රංශය",
+        "lang": "si"
+      },
+      {
+        "isPreferredName": true,
+        "name": "フランス共和国",
+        "lang": "ja"
+      },
+      {
+        "name": "法国",
+        "lang": "zh"
+      }
+    ],
+    "adminName2": "",
+    "name": "France",
+    "fclName": "country, state, region,...",
+    "countryName": "France",
+    "fcodeName": "independent political entity",
+    "adminName1": ""
   }
 }
