@@ -52,3 +52,10 @@ $ TEST_SOLR_URL=http://example.com:8080/solr/core_name rake integration
 ```
 $ rails s
 ```
+
+# Uploading sample data
+
+To upload the sample records into your local jetty solr, run the following.
+
+    ./script/upload-to-solr.rb vecnet-solr-sample.json http://localhost:8983/solr/blacklight-core
+
