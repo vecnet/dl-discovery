@@ -32827,5 +32827,689 @@
     "countryName": "Mayotte",
     "fcodeName": "dependent political entity",
     "adminName1": ""
+  },
+  "Philippines": 1694008,
+  "1694008": {
+    "alternateNames": [
+      {
+        "name": "필리핀",
+        "lang": "ko"
+      },
+      {
+        "name": "ፊሊፒንስ",
+        "lang": "am"
+      },
+      {
+        "name": "ፊሊፒንስ",
+        "isPreferredName": true,
+        "lang": "ti"
+      },
+      {
+        "name": "フィリピン",
+        "lang": "ja"
+      },
+      {
+        "name": "ຟິລິປິນ",
+        "lang": "lo"
+      },
+      {
+        "name": "ଫିଲିପାଇନସ୍",
+        "isPreferredName": true,
+        "lang": "or"
+      },
+      {
+        "name": "ฟิลิปปินส์",
+        "lang": "th"
+      },
+      {
+        "name": "ហ្វ៉ីលីពីន",
+        "lang": "km"
+      },
+      {
+        "name": "பிலிப்பைன்ஸ்",
+        "lang": "ta"
+      },
+      {
+        "name": "ཕི་ལི་པིནས྄།",
+        "isPreferredName": true,
+        "lang": "bo"
+      },
+      {
+        "name": "ประเทศฟิลิปปินส์",
+        "lang": "th"
+      },
+      {
+        "name": "Amazinga ya Filipine",
+        "isPreferredName": true,
+        "lang": "rn"
+      },
+      {
+        "name": "Bizinga bya Firipino",
+        "isPreferredName": true,
+        "lang": "lg"
+      },
+      {
+        "name": "Commonwealth of the Philippines"
+      },
+      {
+        "name": "Felipines",
+        "lang": "frp"
+      },
+      {
+        "name": "Filibiin",
+        "lang": "so"
+      },
+      {
+        "name": "Filipaina",
+        "lang": "sm"
+      },
+      {
+        "name": "Filipaini",
+        "isPreferredName": true,
+        "lang": "to"
+      },
+      {
+        "name": "Filipiene",
+        "lang": "li"
+      },
+      {
+        "name": "Filipiin",
+        "isPreferredName": true,
+        "lang": "ff"
+      },
+      {
+        "name": "Filipiinid",
+        "lang": "et"
+      },
+      {
+        "name": "Filipijnen",
+        "isPreferredName": true,
+        "lang": "nl"
+      },
+      {
+        "name": "Filipin",
+        "isPreferredName": true,
+        "lang": "az"
+      },
+      {
+        "name": "Filipin",
+        "isPreferredName": true,
+        "lang": "ha"
+      },
+      {
+        "name": "Filipin",
+        "lang": "ht"
+      },
+      {
+        "name": "Filîpîn",
+        "lang": "ku"
+      },
+      {
+        "name": "Filipina",
+        "lang": "id"
+      },
+      {
+        "name": "Filipina",
+        "isPreferredName": true,
+        "lang": "mg"
+      },
+      {
+        "name": "Filipina",
+        "lang": "ms"
+      },
+      {
+        "name": "Filipinai",
+        "lang": "lt"
+      },
+      {
+        "name": "Filipinak",
+        "lang": "eu"
+      },
+      {
+        "name": "Filipinas",
+        "lang": "an"
+      },
+      {
+        "isShortName": true,
+        "name": "Filipinas",
+        "isPreferredName": true,
+        "lang": "es"
+      },
+      {
+        "name": "Filipinas",
+        "isPreferredName": true,
+        "lang": "gl"
+      },
+      {
+        "name": "Filipinas",
+        "lang": "oc"
+      },
+      {
+        "name": "Filipinas",
+        "lang": "pam"
+      },
+      {
+        "name": "Filipinas",
+        "lang": "pt"
+      },
+      {
+        "name": "Filipinas"
+      },
+      {
+        "name": "Filipīnas",
+        "lang": "lv"
+      },
+      {
+        "name": "Filipinas - Pilipinas",
+        "lang": "gl"
+      },
+      {
+        "name": "Filipine",
+        "lang": "ro"
+      },
+      {
+        "name": "Filipine",
+        "lang": "sq"
+      },
+      {
+        "name": "Filipinɛ",
+        "isPreferredName": true,
+        "lang": "ln"
+      },
+      {
+        "name": "Filipinen",
+        "lang": "fy"
+      },
+      {
+        "name": "Filipines",
+        "lang": "ast"
+      },
+      {
+        "name": "Filipines",
+        "lang": "ca"
+      },
+      {
+        "name": "Filipinet",
+        "lang": "sq"
+      },
+      {
+        "name": "Filipinez",
+        "lang": "br"
+      },
+      {
+        "name": "Filipini",
+        "isPreferredName": true,
+        "lang": "bm"
+      },
+      {
+        "name": "Filipini",
+        "lang": "bs"
+      },
+      {
+        "name": "Filipini",
+        "lang": "hbs"
+      },
+      {
+        "name": "Filipini",
+        "lang": "hr"
+      },
+      {
+        "name": "Filipini",
+        "lang": "io"
+      },
+      {
+        "name": "Filipini",
+        "lang": "sl"
+      },
+      {
+        "name": "Filipîni",
+        "isPreferredName": true,
+        "lang": "sg"
+      },
+      {
+        "name": "Filipini nutome",
+        "isPreferredName": true,
+        "lang": "ee"
+      },
+      {
+        "name": "Filipinler",
+        "lang": "tr"
+      },
+      {
+        "name": "Filipinler Cumhuriyeti",
+        "lang": "tr"
+      },
+      {
+        "name": "Filipino",
+        "isPreferredName": true,
+        "lang": "ki"
+      },
+      {
+        "name": "Filipino",
+        "lang": "sw"
+      },
+      {
+        "name": "Filipinoj",
+        "lang": "eo"
+      },
+      {
+        "name": "Filipiny",
+        "lang": "hsb"
+      },
+      {
+        "name": "Filipiny",
+        "lang": "pl"
+      },
+      {
+        "name": "Filipíny",
+        "lang": "cs"
+      },
+      {
+        "name": "Filipíny",
+        "lang": "sk"
+      },
+      {
+        "name": "Filipinys",
+        "lang": "kw"
+      },
+      {
+        "name": "Filippiinit",
+        "lang": "fi"
+      },
+      {
+        "name": "Filippiinnat",
+        "isPreferredName": true,
+        "lang": "se"
+      },
+      {
+        "name": "Filippijnen",
+        "lang": "nl"
+      },
+      {
+        "name": "Filippinane",
+        "lang": "nn"
+      },
+      {
+        "name": "Filippinas",
+        "isPreferredName": true,
+        "lang": "rm"
+      },
+      {
+        "name": "Filippine",
+        "lang": "it"
+      },
+      {
+        "name": "Filippinene",
+        "lang": "nb"
+      },
+      {
+        "name": "Filippinene",
+        "lang": "nn"
+      },
+      {
+        "name": "Filippinene",
+        "lang": "no"
+      },
+      {
+        "name": "Filippinerna",
+        "lang": "sv"
+      },
+      {
+        "name": "Filippinerne",
+        "lang": "da"
+      },
+      {
+        "name": "Filippini",
+        "lang": "mt"
+      },
+      {
+        "name": "Filippseyjar",
+        "lang": "is"
+      },
+      {
+        "name": "Filippyne",
+        "lang": "af"
+      },
+      {
+        "name": "Filipsoyggjar",
+        "lang": "fo"
+      },
+      {
+        "name": "Filipuäns",
+        "lang": "vo"
+      },
+      {
+        "name": "Fülöp-szigetek",
+        "lang": "hu"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Philippines",
+        "lang": "link"
+      },
+      {
+        "name": "http://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D0%BB%D0%B8%D0%BF%D0%BF%D0%B8%D0%BD%D1%8B",
+        "lang": "link"
+      },
+      {
+        "name": "i-Philippines",
+        "isPreferredName": true,
+        "lang": "zu"
+      },
+      {
+        "name": "Las Islas Felipenas"
+      },
+      {
+        "name": "Na hOileáin Fhilipíneacha",
+        "lang": "ga"
+      },
+      {
+        "name": "Nfilipi",
+        "isPreferredName": true,
+        "lang": "lu"
+      },
+      {
+        "name": "Orílẹ́ède filipini",
+        "isPreferredName": true,
+        "lang": "yo"
+      },
+      {
+        "name": "Philipinau",
+        "lang": "cy"
+      },
+      {
+        "name": "Phi-lip-pin",
+        "lang": "vi"
+      },
+      {
+        "name": "Philippinae",
+        "lang": "la"
+      },
+      {
+        "name": "Philippinas",
+        "lang": "ia"
+      },
+      {
+        "name": "Philippine Islands"
+      },
+      {
+        "name": "Philippinen",
+        "lang": "de"
+      },
+      {
+        "name": "Philippinen",
+        "lang": "lb"
+      },
+      {
+        "name": "Philippinen",
+        "lang": "nds"
+      },
+      {
+        "name": "Philippines",
+        "isPreferredName": true,
+        "lang": "ak"
+      },
+      {
+        "isShortName": true,
+        "name": "Philippines",
+        "isPreferredName": true,
+        "lang": "en"
+      },
+      {
+        "name": "Philippines",
+        "lang": "fr"
+      },
+      {
+        "name": "Philippines",
+        "isPreferredName": true,
+        "lang": "nd"
+      },
+      {
+        "name": "Philippines",
+        "isPreferredName": true,
+        "lang": "sn"
+      },
+      {
+        "name": "Philippines",
+        "lang": "vi"
+      },
+      {
+        "name": "Phi-líp-pin (Phi Luật Tân)",
+        "isPreferredName": true,
+        "lang": "vi"
+      },
+      {
+        "name": "Pilipinas",
+        "lang": "ceb"
+      },
+      {
+        "name": "Pilipinas",
+        "lang": "fil"
+      },
+      {
+        "name": "Pilipinas",
+        "lang": "ilo"
+      },
+      {
+        "name": "Pilipinas",
+        "lang": "tl"
+      },
+      {
+        "name": "Pilipinas",
+        "lang": "war"
+      },
+      {
+        "name": "República de Filipinas",
+        "lang": "fil"
+      },
+      {
+        "name": "República de las Filipinas"
+      },
+      {
+        "name": "República de las Islas Filipinas"
+      },
+      {
+        "name": "Republic of the Philippines",
+        "lang": "en"
+      },
+      {
+        "name": "Republika ng Pilipinas",
+        "lang": "fil"
+      },
+      {
+        "name": "Republika ng Pilipinas"
+      },
+      {
+        "name": "Y Philipinau",
+        "lang": "cy"
+      },
+      {
+        "name": "الفلبين",
+        "lang": "ar"
+      },
+      {
+        "name": "الفيلبين",
+        "lang": "ar"
+      },
+      {
+        "name": "فلپائنی",
+        "isPreferredName": true,
+        "lang": "ur"
+      },
+      {
+        "name": "فیلیپین",
+        "lang": "fa"
+      },
+      {
+        "name": "فلیپین",
+        "isPreferredName": true,
+        "lang": "ku"
+      },
+      {
+        "name": "فىلىپپىن",
+        "lang": "ug"
+      },
+      {
+        "name": "הפיליפינים",
+        "lang": "he"
+      },
+      {
+        "name": "פיליפינים",
+        "lang": "he"
+      },
+      {
+        "name": "פיליפינען",
+        "lang": "yi"
+      },
+      {
+        "name": "Φιλιππίνες",
+        "lang": "el"
+      },
+      {
+        "name": "Филипини",
+        "lang": "bg"
+      },
+      {
+        "name": "Филипини",
+        "lang": "mk"
+      },
+      {
+        "name": "Филипини",
+        "lang": "sr"
+      },
+      {
+        "name": "Филиппины",
+        "lang": "ru"
+      },
+      {
+        "name": "Філіпіни",
+        "isPreferredName": true,
+        "lang": "uk"
+      },
+      {
+        "name": "Філіпіны",
+        "lang": "be"
+      },
+      {
+        "name": "Філіппіни",
+        "lang": "uk"
+      },
+      {
+        "name": "Ֆիլիպիններ",
+        "lang": "hy"
+      },
+      {
+        "name": "ფილიპინები",
+        "lang": "ka"
+      },
+      {
+        "name": "फिलिपाईन्स",
+        "lang": "mr"
+      },
+      {
+        "name": "फिलिपिन्स",
+        "isPreferredName": true,
+        "lang": "ne"
+      },
+      {
+        "name": "फिलिपींस",
+        "isPreferredName": true,
+        "lang": "hi"
+      },
+      {
+        "name": "फिलीपिन्स",
+        "isPreferredName": true,
+        "lang": "mr"
+      },
+      {
+        "name": "फिलीपिंस",
+        "lang": "hi"
+      },
+      {
+        "name": "ફિલિપિન્સ",
+        "isPreferredName": true,
+        "lang": "gu"
+      },
+      {
+        "name": "ఫిలి పైన్స్",
+        "isPreferredName": true,
+        "lang": "te"
+      },
+      {
+        "name": "ಫಿಲಿಪ್ಪೀನ್ಸ್",
+        "lang": "kn"
+      },
+      {
+        "name": "ಫಿಲಿಫೈನ್ಸ್",
+        "isPreferredName": true,
+        "lang": "kn"
+      },
+      {
+        "name": "ഫിലിപ്പൈന്‍സ്",
+        "isPreferredName": true,
+        "lang": "ml"
+      },
+      {
+        "name": "ফিলিপাইন",
+        "lang": "bn"
+      },
+      {
+        "name": "ফিলিপিন্স",
+        "isPreferredName": true,
+        "lang": "bn"
+      },
+      {
+        "name": "ဖိလစ်ပိုင်",
+        "isPreferredName": true,
+        "lang": "my"
+      },
+      {
+        "name": "පිලිපීනය",
+        "isPreferredName": true,
+        "lang": "si"
+      },
+      {
+        "name": "フィリピン共和国",
+        "isPreferredName": true,
+        "lang": "ja"
+      },
+      {
+        "name": "菲律宾",
+        "lang": "zh"
+      }
+    ],
+    "countryName": "Philippines",
+    "adminCode1": "00",
+    "lng": "122",
+    "adminName2": "",
+    "fcodeName": "independent political entity",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 8,
+      "gmtOffset": 8,
+      "timeZoneId": "Asia/Manila"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 4.613444,
+      "east": 126.601524,
+      "north": 21.120611,
+      "west": 115.766304
+    },
+    "name": "Philippines",
+    "fcode": "PCLI",
+    "geonameId": 1694008,
+    "asciiName": "Republic of the Philippines",
+    "lat": "13",
+    "population": 99900177,
+    "adminName1": "",
+    "countryId": "1694008",
+    "fclName": "country, state, region,...",
+    "countryCode": "PH",
+    "srtm3": -32768,
+    "wikipediaURL": "en.wikipedia.org/wiki/Philippines",
+    "toponymName": "Republic of the Philippines",
+    "fcl": "A",
+    "continentCode": "AS"
   }
 }
