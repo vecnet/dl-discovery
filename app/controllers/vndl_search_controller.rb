@@ -10,7 +10,7 @@ class VndlSearchController < CatalogController
     if has_search_parameters?
       return 'vndl-search-results'
     else
-      "vndl"
+      'vndl'
     end
   end
 

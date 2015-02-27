@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :download, only: [:show, :file]
   post "wms/handle"
-  root :to => "vndl_search#index"
+  root :to => "catalog#index"
   blacklight_for :catalog
 
   resource :feedback_form, path: 'feedback', only: [:new, :create]
