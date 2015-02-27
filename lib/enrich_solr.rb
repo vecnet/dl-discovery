@@ -64,12 +64,21 @@ class EnrichSolr
       # nothing was added to this bounding box
       new_record = {}
     else
-      west = bbox.west
+      north = bbox.north
       south = bbox.south
+      west = bbox.west
       east = bbox.east
       # solr does not like coordinates > 180 :(
       east -= 360 if east > 180
-      north = bbox.north
+      # if Bbox is a point, enlarge it slightly so it is nicer.
+      if north == south
+        north += 0.1 if north <= 89.9
+        south -= 0.1 if south >= -89.9
+      end
+      if east == west
+        east += 0.1 if east <= 179.9
+        west -= 0.1 if west >= -179.9
+      end
       new_record = {
         "solr_bbox" => "#{west} #{south} #{east} #{north}",
         "solr_geom" => "ENVELOPE(#{west}, #{east}, #{north}, #{south})",

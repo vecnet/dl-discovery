@@ -32239,5 +32239,593 @@
     "countryName": "France",
     "fcodeName": "independent political entity",
     "adminName1": ""
+  },
+  "Mayotte": 1024031,
+  "1024031": {
+    "timezone": {
+      "gmtOffset": 3,
+      "timeZoneId": "Indian/Mayotte",
+      "dstOffset": 3
+    },
+    "bbox": {
+      "east": 45.29295,
+      "south": -13.000132,
+      "north": -12.633837,
+      "west": 45.014618
+    },
+    "asciiName": "Mayotte",
+    "countryId": "1024031",
+    "fcl": "A",
+    "srtm3": 140,
+    "cc2": "FR",
+    "countryCode": "YT",
+    "lat": "-12.83333",
+    "fcode": "PCLD",
+    "continentCode": "AF",
+    "adminCode1": "00",
+    "lng": "45.16667",
+    "geonameId": 1024031,
+    "toponymName": "Mayotte",
+    "population": 159042,
+    "wikipediaURL": "en.wikipedia.org/wiki/Mayotte",
+    "adminName5": "",
+    "adminName4": "",
+    "adminName3": "",
+    "alternateNames": [
+      {
+        "name": "마요트",
+        "lang": "ko"
+      },
+      {
+        "isPreferredName": true,
+        "name": "마요티",
+        "lang": "ko"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ሜይኦቴ",
+        "lang": "am"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ሜይኦቴ",
+        "lang": "ti"
+      },
+      {
+        "name": "マヨット",
+        "lang": "ja"
+      },
+      {
+        "isPreferredName": true,
+        "name": "มายอต",
+        "lang": "th"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ມາຢອດ",
+        "lang": "lo"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ମାୟୋଟେ",
+        "lang": "or"
+      },
+      {
+        "name": "Collectivité Territoriale de Mayotte"
+      },
+      {
+        "name": "Departement Mayotte",
+        "lang": "lb"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Mayotte",
+        "lang": "link"
+      },
+      {
+        "name": "http://id.loc.gov/authorities/names/n81141395",
+        "lang": "link"
+      },
+      {
+        "isPreferredName": true,
+        "name": "i-Mayotte",
+        "lang": "zu"
+      },
+      {
+        "name": "Maiòta",
+        "lang": "oc"
+      },
+      {
+        "name": "Maiotta",
+        "lang": "la"
+      },
+      {
+        "name": "Majot",
+        "lang": "fy"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Majota",
+        "lang": "lv"
+      },
+      {
+        "name": "Majotas",
+        "lang": "lt"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Majote",
+        "lang": "bs"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Majote",
+        "lang": "hr"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Majoto",
+        "lang": "eo"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Majotta",
+        "lang": "pl"
+      },
+      {
+        "name": "Majotte",
+        "lang": "lij"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Majotte",
+        "lang": "mt"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayoot",
+        "lang": "ff"
+      },
+      {
+        "name": "Mayoot",
+        "lang": "wo"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayot",
+        "lang": "az"
+      },
+      {
+        "name": "Mayot",
+        "lang": "nov"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayote",
+        "lang": "lu"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayote",
+        "lang": "rn"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mäyôte",
+        "lang": "sg"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayɔte",
+        "lang": "ak"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotɛ",
+        "lang": "ln"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayoti",
+        "lang": "bm"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayoti",
+        "lang": "ha"
+      },
+      {
+        "name": "Mayoti",
+        "lang": "rw"
+      },
+      {
+        "name": "Mayotta",
+        "lang": "az"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "af"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "br"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "ca"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "cs"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "cy"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "da"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "de"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "en"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "es"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "et"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "eu"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "fi"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "fo"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "fr"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "ga"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "gl"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "hu"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "id"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "is"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "it"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "ki"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "kl"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "lg"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "ms"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "nb"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "nd"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "nl"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "nn"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "pt"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "rm"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "ro"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "se"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "sk"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "sl"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "sn"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "so"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "sv"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "sw"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte",
+        "lang": "tr"
+      },
+      {
+        "name": "Mayotte"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte’as",
+        "lang": "lt"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayotte nutome",
+        "lang": "ee"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Mayôty",
+        "lang": "mg"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Meioti",
+        "lang": "to"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Orílẹ́ède Mayote",
+        "lang": "yo"
+      },
+      {
+        "isPreferredName": true,
+        "name": "مایوت",
+        "lang": "fa"
+      },
+      {
+        "isPreferredName": true,
+        "name": "مایوٹ",
+        "lang": "ur"
+      },
+      {
+        "isPreferredName": true,
+        "name": "مايوت",
+        "lang": "ar"
+      },
+      {
+        "isPreferredName": true,
+        "name": "מאיוט",
+        "lang": "he"
+      },
+      {
+        "name": "מיוט",
+        "lang": "he"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Μαγιότ",
+        "lang": "el"
+      },
+      {
+        "name": "Востраў Маёта",
+        "lang": "be"
+      },
+      {
+        "name": "Майот",
+        "lang": "bg"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Майот",
+        "lang": "uk"
+      },
+      {
+        "name": "Майотт",
+        "lang": "kk"
+      },
+      {
+        "name": "Майотта",
+        "lang": "ru"
+      },
+      {
+        "name": "Майотта",
+        "lang": "uk"
+      },
+      {
+        "name": "Мајот",
+        "lang": "mk"
+      },
+      {
+        "name": "Мајот",
+        "lang": "sr"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Мајоте",
+        "lang": "mk"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Мајоте",
+        "lang": "sr"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Мейот",
+        "lang": "bg"
+      },
+      {
+        "name": "მაიოტა",
+        "lang": "ka"
+      },
+      {
+        "isPreferredName": true,
+        "name": "मायोट्ट",
+        "lang": "ne"
+      },
+      {
+        "isPreferredName": true,
+        "name": "मायोट्टे",
+        "lang": "mr"
+      },
+      {
+        "name": "मायोत",
+        "lang": "mr"
+      },
+      {
+        "name": "मेयोट",
+        "lang": "hi"
+      },
+      {
+        "isPreferredName": true,
+        "name": "मैयट",
+        "lang": "hi"
+      },
+      {
+        "isPreferredName": true,
+        "name": "મેયોટ",
+        "lang": "gu"
+      },
+      {
+        "isPreferredName": true,
+        "name": "మాయొట్టి",
+        "lang": "te"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ಮಯೊಟ್ಟೆ",
+        "lang": "kn"
+      },
+      {
+        "name": "மயோட்டே",
+        "lang": "ta"
+      },
+      {
+        "isPreferredName": true,
+        "name": "மயோத்",
+        "lang": "ta"
+      },
+      {
+        "isPreferredName": true,
+        "name": "മയോട്ട്",
+        "lang": "ml"
+      },
+      {
+        "name": "মায়োটি",
+        "lang": "bpy"
+      },
+      {
+        "name": "মায়োত",
+        "lang": "bn"
+      },
+      {
+        "isPreferredName": true,
+        "name": "মায়োত্তে",
+        "lang": "bn"
+      },
+      {
+        "isPreferredName": true,
+        "name": "マヨット島",
+        "lang": "ja"
+      },
+      {
+        "isPreferredName": true,
+        "name": "马约特",
+        "lang": "zh"
+      }
+    ],
+    "adminName2": "",
+    "name": "Mayotte",
+    "fclName": "country, state, region,...",
+    "countryName": "Mayotte",
+    "fcodeName": "dependent political entity",
+    "adminName1": ""
   }
 }
