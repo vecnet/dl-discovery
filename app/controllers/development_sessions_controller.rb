@@ -1,9 +1,9 @@
 class DevelopmentSessionsController < ApplicationController
 
-  before_filter :ensure_development_env
+  before_filter :ensure_nonproduction_env
 
-  def ensure_development_env
-    raise ActionController::RoutingError unless Rails.env.development?
+  def ensure_nonproduction_env
+    raise ActionController::RoutingError unless (Rails.env.development? || Rails.env.jcu?)
   end
 
   def new

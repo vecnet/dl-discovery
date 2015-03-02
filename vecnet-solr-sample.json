@@ -1,0 +1,1731 @@
+[
+  {
+    "uuid": "vecnet:sb397829v",
+    "dc_title_s": "Western Kenya VECNet Expert Opinion Table",
+    "dc_description_s": "Expert Opinion Lookup table covering Siaya District in Nyanza Province of Western Kenya provided by John E Gimnig at the request of VECNet.",
+    "dc_creator_sm": [
+      "Gimnig, John E"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]",
+      "Siaya (Kenya) [180320/ADM1]"
+    ],
+    "layer_id_s": "sb397829v",
+    "layer_slug_s": "sb397829v",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.311022202320769",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.311022202320769, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.311022202320769 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:x059c7397",
+    "dc_title_s": "VECNet Malaria Vector Species Parameters for look-up: AFRICA",
+    "dc_description_s": "Lookup table of parameter values for use in VECNet applications that require bionomic input.",
+    "dc_creator_sm": [
+      "VECNet"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "An. arabiensis",
+      "An. funestus",
+      "An. gambiae",
+      "An. melas",
+      "An. merus",
+      "An. moucheti",
+      "An. nili",
+      "Adult Survival Rate",
+      "Larval Survival Rate",
+      "Indoor Feeding Rate",
+      "Human Blood Index",
+      "Peak Biting Time",
+      "Length of Feeding Cycle",
+      "Pre-Feeding Resting Habits",
+      "Flight Range",
+      "Sugar Meal Frequency",
+      "Sugar Sources",
+      "Post-feeding Resting Habits"
+    ],
+    "dct_spatial_sm": [
+      "Africa  [6255146/CONT]"
+    ],
+    "layer_id_s": "x059c7397",
+    "layer_slug_s": "x059c7397",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "-18.1574885778138 -46.9697265625 51.412635803222656 37.53944396972656",
+    "solr_geom": "ENVELOPE(-18.1574885778138, 51.412635803222656, 37.53944396972656, -46.9697265625)",
+    "georss_box_s": "-46.9697265625 -18.1574885778138 37.53944396972656 51.412635803222656"
+  },
+  {
+    "uuid": "vecnet:1544c0741",
+    "dc_title_s": "Vector-Borne Disease Network Digital Library",
+    "dc_description_s": "Vector-Borne Disease Network (VecNet)’s digital library provides part of a common analytical framework to assemble data on malaria transmission and make it accessible for the purposes of computational modeling. This poster reports on VecNet digital library development, key decisions related to metadata standards, design, the central role of metadata and authority files in its architecture, and future directions of this Hydra/Fedora based repository solution.",
+    "dc_creator_sm": [
+      "Barker, Michelle",
+      "Brower, Donald",
+      "Meyers, Natalie",
+      "natalie.meyers@nd.edu"
+    ],
+    "dc_type_s": "Poster",
+    "dc_subject_sm": [
+      "Metadata",
+      "Hydra technology",
+      "Dublin Core",
+      "Darwin Core",
+      "Digital library"
+    ],
+    "dct_spatial_sm": [
+      "South Bend (United States) [4926563/PPLA2]"
+    ],
+    "layer_id_s": "1544c0741",
+    "layer_slug_s": "1544c0741",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "-86.30522725744922 41.64216722382274 -86.1947859425508 41.72459537617726",
+    "solr_geom": "ENVELOPE(-86.30522725744922, -86.1947859425508, 41.72459537617726, 41.64216722382274)",
+    "georss_box_s": "41.64216722382274 -86.30522725744922 41.72459537617726 -86.1947859425508"
+  },
+  {
+    "uuid": "vecnet:7m01bk70j",
+    "dc_title_s": "Solomon Islands Rainfall data from Henderson Archive",
+    "dc_description_s": "Zip Archive of Rainfall from weather station NZ52000 11 -0925 16003 9 ? -9999 19980101 20061029 40 Solomon Islands Henderson",
+    "dc_creator_sm": [
+      "PACRAIN",
+      "NZ52000"
+    ],
+    "dc_type_s": "Dataset: Climate/Weather",
+    "dc_subject_sm": [
+      "rainfall"
+    ],
+    "dct_spatial_sm": [
+      "Solomon Islands (Solomon Islands) [2103350/PCLI]"
+    ],
+    "layer_id_s": "7m01bk70j",
+    "layer_slug_s": "7m01bk70j",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "155.508606 -12.291889 168.843506 -5.0785",
+    "solr_geom": "ENVELOPE(155.508606, 168.843506, -5.0785, -12.291889)",
+    "georss_box_s": "-12.291889 155.508606 -5.0785 168.843506"
+  },
+  {
+    "uuid": "vecnet:sb3978279",
+    "dc_title_s": "Asembo Bay Tagged Bibliographic Citations",
+    "dc_description_s": "A bibliographic citation database in MS Access format where articles related to the study of malaria in the Asembo Bay area of Kenya are tagged by bionomic parameter.",
+    "dc_creator_sm": [
+      "Russell, Tanya"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]",
+      "Asembo Location (Kenya) [200827/ADMD]"
+    ],
+    "layer_id_s": "sb3978279",
+    "layer_slug_s": "sb3978279",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:4j03cz808",
+    "dc_title_s": "Solomon Islands 1999 Population and Housing Census Archive",
+    "dc_description_s": null,
+    "dc_creator_sm": [
+      "Solomon Islands National Statistics Office"
+    ],
+    "dc_type_s": "Dataset: Demography",
+    "dc_subject_sm": [
+      "Censuses",
+      "Statistics"
+    ],
+    "dct_spatial_sm": [
+      "Solomon Islands (Solomon Islands) [2103350/PCLI]"
+    ],
+    "layer_id_s": "4j03cz808",
+    "layer_slug_s": "4j03cz808",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "155.508606 -12.291889 168.843506 -5.0785",
+    "solr_geom": "ENVELOPE(155.508606, 168.843506, -5.0785, -12.291889)",
+    "georss_box_s": "-12.291889 155.508606 -5.0785 168.843506"
+  },
+  {
+    "uuid": "vecnet:1n79h441z",
+    "dc_title_s": "EMOD Data Input Files Bundle (v1.5)",
+    "dc_description_s": "EMOD Data Input Files Bundle (v1.5) Climate and Demography Data Set(s) for running EMOD DTK simulations.",
+    "dc_creator_sm": [
+      "Institute for Disease Modeling"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Muheza District (Tanzania) [152629/ADM2]",
+      "Garki (Nigeria) [8634242/ADM2]",
+      "Namawala River (Tanzania) [151982/STM]",
+      "Namawala River (Tanzania) [151982/STM]"
+    ],
+    "layer_id_s": "1n79h441z",
+    "layer_slug_s": "1n79h441z",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "8.721031074000052 -8.23333 38.923 12.587234598000066",
+    "solr_geom": "ENVELOPE(8.721031074000052, 38.923, 12.587234598000066, -8.23333)",
+    "georss_box_s": "-8.23333 8.721031074000052 12.587234598000066 38.923"
+  },
+  {
+    "uuid": "vecnet:ht24wj427",
+    "dc_title_s": "Tanzania_Region_EA_2002_region.zip",
+    "dc_description_s": "Administrative Unit Boundaries for Tanzania.",
+    "dc_creator_sm": [
+      "GAUL"
+    ],
+    "dc_type_s": "Dataset: GIS",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Tanzania (Tanzania) [149590/PCLI]"
+    ],
+    "layer_id_s": "ht24wj427",
+    "layer_slug_s": "ht24wj427",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "29.327168 -11.745696 40.443222 -0.990736",
+    "solr_geom": "ENVELOPE(29.327168, 40.443222, -0.990736, -11.745696)",
+    "georss_box_s": "-11.745696 29.327168 -0.990736 40.443222"
+  },
+  {
+    "uuid": "vecnet:ws859f64s",
+    "dc_title_s": "Tanzania_Region_EA_2002_region.prj",
+    "dc_description_s": "Administrative Unit Boundaries for Tanzania.",
+    "dc_creator_sm": [
+      "GAUL"
+    ],
+    "dc_type_s": "Dataset: GIS",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Tanzania (Tanzania) [149590/PCLI]"
+    ],
+    "layer_id_s": "ws859f64s",
+    "layer_slug_s": "ws859f64s",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "29.327168 -11.745696 40.443222 -0.990736",
+    "solr_geom": "ENVELOPE(29.327168, 40.443222, -0.990736, -11.745696)",
+    "georss_box_s": "-11.745696 29.327168 -0.990736 40.443222"
+  },
+  {
+    "uuid": "vecnet:ws859f68w",
+    "dc_title_s": "Tanzania_Region_EA_2002_region.dbf",
+    "dc_description_s": "Administrative Unit Boundaries for Tanzania.",
+    "dc_creator_sm": [
+      "GAUL"
+    ],
+    "dc_type_s": "Dataset: GIS",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Tanzania (Tanzania) [149590/PCLI]"
+    ],
+    "layer_id_s": "ws859f68w",
+    "layer_slug_s": "ws859f68w",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "29.327168 -11.745696 40.443222 -0.990736",
+    "solr_geom": "ENVELOPE(29.327168, 40.443222, -0.990736, -11.745696)",
+    "georss_box_s": "-11.745696 29.327168 -0.990736 40.443222"
+  },
+  {
+    "uuid": "vecnet:ws859f66b",
+    "dc_title_s": "Tanzania_Region_EA_2002_region.shp.xml",
+    "dc_description_s": "Administrative Unit Boundaries for Tanzania.",
+    "dc_creator_sm": [
+      "GAUL"
+    ],
+    "dc_type_s": "Dataset: GIS",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Tanzania (Tanzania) [149590/PCLI]"
+    ],
+    "layer_id_s": "ws859f66b",
+    "layer_slug_s": "ws859f66b",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "29.327168 -11.745696 40.443222 -0.990736",
+    "solr_geom": "ENVELOPE(29.327168, 40.443222, -0.990736, -11.745696)",
+    "georss_box_s": "-11.745696 29.327168 -0.990736 40.443222"
+  },
+  {
+    "uuid": "vecnet:7m01bk723",
+    "dc_title_s": "Kisumu_single_node_relative_humidity_daily.bin",
+    "dc_description_s": "Climate files for EMOD DTK 1.5 from GSOD data for Kisumu airport. Gridded world grump2.5arcmin",
+    "dc_creator_sm": [
+      "Philip Eckhoff"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Kisumu International Airport (Kenya) [6297309/AIRP]"
+    ],
+    "layer_id_s": "7m01bk723",
+    "layer_slug_s": "7m01bk723",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "34.62889 -0.18614 34.82889 0.013860000000000011",
+    "solr_geom": "ENVELOPE(34.62889, 34.82889, 0.013860000000000011, -0.18614)",
+    "georss_box_s": "-0.18614 34.62889 0.013860000000000011 34.82889"
+  },
+  {
+    "uuid": "vecnet:7m01bk73c",
+    "dc_title_s": "Kisumu_single_node_rainfall_daily.bin",
+    "dc_description_s": "Climate files for EMOD DTK 1.5 from GSOD data for Kisumu airport. Gridded world grump2.5arcmin",
+    "dc_creator_sm": [
+      "Philip Eckhoff"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Kisumu International Airport (Kenya) [6297309/AIRP]"
+    ],
+    "layer_id_s": "7m01bk73c",
+    "layer_slug_s": "7m01bk73c",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "34.62889 -0.18614 34.82889 0.013860000000000011",
+    "solr_geom": "ENVELOPE(34.62889, 34.82889, 0.013860000000000011, -0.18614)",
+    "georss_box_s": "-0.18614 34.62889 0.013860000000000011 34.82889"
+  },
+  {
+    "uuid": "vecnet:7m01bk77g",
+    "dc_title_s": "Kisumu_single_node_relative_humidity_daily.bin.json",
+    "dc_description_s": "Climate files for EMOD DTK 1.5 from GSOD data for Kisumu airport. Gridded world grump2.5arcmin",
+    "dc_creator_sm": [
+      "Philip Eckhoff"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Kisumu International Airport (Kenya) [6297309/AIRP]"
+    ],
+    "layer_id_s": "7m01bk77g",
+    "layer_slug_s": "7m01bk77g",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "34.62889 -0.18614 34.82889 0.013860000000000011",
+    "solr_geom": "ENVELOPE(34.62889, 34.82889, 0.013860000000000011, -0.18614)",
+    "georss_box_s": "-0.18614 34.62889 0.013860000000000011 34.82889"
+  },
+  {
+    "uuid": "vecnet:7m01bk74n",
+    "dc_title_s": "Kisumu_single_node_air_temperature_daily.bin.json",
+    "dc_description_s": "Climate files for EMOD DTK 1.5 from GSOD data for Kisumu airport. Gridded world grump2.5arcmin",
+    "dc_creator_sm": [
+      "Philip Eckhoff"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Kisumu International Airport (Kenya) [6297309/AIRP]"
+    ],
+    "layer_id_s": "7m01bk74n",
+    "layer_slug_s": "7m01bk74n",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "34.62889 -0.18614 34.82889 0.013860000000000011",
+    "solr_geom": "ENVELOPE(34.62889, 34.82889, 0.013860000000000011, -0.18614)",
+    "georss_box_s": "-0.18614 34.62889 0.013860000000000011 34.82889"
+  },
+  {
+    "uuid": "vecnet:7m01bk75x",
+    "dc_title_s": "Kisumu_single_node_land_temperature_daily.bin.json",
+    "dc_description_s": "Climate files for EMOD DTK 1.5 from GSOD data for Kisumu airport. Gridded world grump2.5arcmin",
+    "dc_creator_sm": [
+      "Philip Eckhoff"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Kisumu International Airport (Kenya) [6297309/AIRP]"
+    ],
+    "layer_id_s": "7m01bk75x",
+    "layer_slug_s": "7m01bk75x",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "34.62889 -0.18614 34.82889 0.013860000000000011",
+    "solr_geom": "ENVELOPE(34.62889, 34.82889, 0.013860000000000011, -0.18614)",
+    "georss_box_s": "-0.18614 34.62889 0.013860000000000011 34.82889"
+  },
+  {
+    "uuid": "vecnet:7m01bk766",
+    "dc_title_s": "Kisumu_single_node_rainfall_daily.bin.json",
+    "dc_description_s": "Climate files for EMOD DTK 1.5 from GSOD data for Kisumu airport. Gridded world grump2.5arcmin",
+    "dc_creator_sm": [
+      "Philip Eckhoff"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Kisumu International Airport (Kenya) [6297309/AIRP]"
+    ],
+    "layer_id_s": "7m01bk766",
+    "layer_slug_s": "7m01bk766",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "34.62889 -0.18614 34.82889 0.013860000000000011",
+    "solr_geom": "ENVELOPE(34.62889, 34.82889, 0.013860000000000011, -0.18614)",
+    "georss_box_s": "-0.18614 34.62889 0.013860000000000011 34.82889"
+  },
+  {
+    "uuid": "vecnet:z316q156s",
+    "dc_title_s": "NZ52000 Solomon Islands HendersonWeather station site description",
+    "dc_description_s": "Weather Station Site Description File for Rainfall from weather station NZ52000 11 -0925 16003 9 ? -9999 19980101 20061029 40 Solomon Islands Henderson .",
+    "dc_creator_sm": [
+      "PACRAIN",
+      "NZ52000"
+    ],
+    "dc_type_s": "Dataset: Climate/Weather",
+    "dc_subject_sm": [
+      "rainfall"
+    ],
+    "dct_spatial_sm": [
+      "Solomon Islands (Solomon Islands) [2103350/PCLI]"
+    ],
+    "layer_id_s": "z316q156s",
+    "layer_slug_s": "z316q156s",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "155.508606 -12.291889 168.843506 -5.0785",
+    "solr_geom": "ENVELOPE(155.508606, 168.843506, -5.0785, -12.291889)",
+    "georss_box_s": "-12.291889 155.508606 -5.0785 168.843506"
+  },
+  {
+    "uuid": "vecnet:ws859f67m",
+    "dc_title_s": "Tanzania_Region_EA_2002_region.shx",
+    "dc_description_s": "Administrative Unit Boundaries for Tanzania.",
+    "dc_creator_sm": [
+      "GAUL"
+    ],
+    "dc_type_s": "Dataset: GIS",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Tanzania (Tanzania) [149590/PCLI]"
+    ],
+    "layer_id_s": "ws859f67m",
+    "layer_slug_s": "ws859f67m",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "29.327168 -11.745696 40.443222 -0.990736",
+    "solr_geom": "ENVELOPE(29.327168, 40.443222, -0.990736, -11.745696)",
+    "georss_box_s": "-11.745696 29.327168 -0.990736 40.443222"
+  },
+  {
+    "uuid": "vecnet:z316q1572",
+    "dc_title_s": "Solomon Islands Rainfall Data from Henderson",
+    "dc_description_s": "Rainfall from weather station NZ52000 11 -0925 16003 9 ? -9999 19980101 20061029 40 Solomon Islands Henderson aka NZ52000.txt",
+    "dc_creator_sm": [
+      "PACRAIN",
+      "NZ52000"
+    ],
+    "dc_type_s": "Dataset: Climate/Weather",
+    "dc_subject_sm": [
+      "rainfall"
+    ],
+    "dct_spatial_sm": [
+      "Solomon Islands (Solomon Islands) [2103350/PCLI]"
+    ],
+    "layer_id_s": "z316q1572",
+    "layer_slug_s": "z316q1572",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "155.508606 -12.291889 168.843506 -5.0785",
+    "solr_geom": "ENVELOPE(155.508606, 168.843506, -5.0785, -12.291889)",
+    "georss_box_s": "-12.291889 155.508606 -5.0785 168.843506"
+  },
+  {
+    "uuid": "vecnet:ws859f652",
+    "dc_title_s": "Tanzania_Region_EA_2002_region.shp",
+    "dc_description_s": "Administrative Unit Boundaries for Tanzania.",
+    "dc_creator_sm": [
+      "GAUL"
+    ],
+    "dc_type_s": "Dataset: GIS",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Tanzania (Tanzania) [149590/PCLI]"
+    ],
+    "layer_id_s": "ws859f652",
+    "layer_slug_s": "ws859f652",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "29.327168 -11.745696 40.443222 -0.990736",
+    "solr_geom": "ENVELOPE(29.327168, 40.443222, -0.990736, -11.745696)",
+    "georss_box_s": "-11.745696 29.327168 -0.990736 40.443222"
+  },
+  {
+    "uuid": "vecnet:0p096721v",
+    "dc_title_s": "KilomberoMalariaProject/WELL.DBF",
+    "dc_description_s": "Wells in Namawala WELL.DBF 79 records last updated 06/06/93. This file contains measurements of the distance from the surface of water in wells in Namawala. Assuming the water table is horizontal, this can be used to obtain relative altitudes for different parts of the village. This file is part of: Individual parasitological, entomological and clinical data from observational studies and field trials from Kilombero Malaria project (Tanzania) (Smith et al. 1993; Smith et al. 1995; Charlwood et al. 1995) .",
+    "dc_creator_sm": [
+      "Smith, T.",
+      "Charlwood, J.D.",
+      "Killeen, G.F.",
+      "Swiss Tropical Public Health Institute",
+      "Ifakara Health Institute"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "malaria"
+    ],
+    "dct_spatial_sm": [
+      "Kilombero District (Tanzania) [157408/ADM2]",
+      "Namawala River (Tanzania) [151982/STM]",
+      "Idete (Tanzania) [159516/PPL]"
+    ],
+    "layer_id_s": "0p096721v",
+    "layer_slug_s": "0p096721v",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "36.41667 -8.25 36.53333 -8.091006351248573",
+    "solr_geom": "ENVELOPE(36.41667, 36.53333, -8.091006351248573, -8.25)",
+    "georss_box_s": "-8.25 36.41667 -8.091006351248573 36.53333"
+  },
+  {
+    "uuid": "vecnet:7p88cg64w",
+    "dc_title_s": "Solomon Islands Malaria Treatment Protocol",
+    "dc_description_s": "This protocol introduces the use of artemisinin-based combination therapy (ACT) as the first-line treatment for the 2 malaria species in the country. It contains condensed drug information from the Standard Treatment Guideline for Malaria, the larger document being intended to guide clinical management. This drug protocol only aims to provide a quick reference for medical officers & nurses on the use of drugs in treating malaria.",
+    "dc_creator_sm": [
+      "Ministry of Health and Medical Services, Solomon Islands"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Solomon Islands (Solomon Islands) [2103350/PCLI]"
+    ],
+    "layer_id_s": "7p88cg64w",
+    "layer_slug_s": "7p88cg64w",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "155.508606 -12.291889 168.843506 -5.0785",
+    "solr_geom": "ENVELOPE(155.508606, 168.843506, -5.0785, -12.291889)",
+    "georss_box_s": "-12.291889 155.508606 -5.0785 168.843506"
+  },
+  {
+    "uuid": "vecnet:1n79h443h",
+    "dc_title_s": "Kenya Nyanza, EMOD DTK Input Files 30 arc Seconds Archive",
+    "dc_description_s": "What is in this release archive: DTK Input Files: Demographic and Weather files(tmean,rain, humidity) for 30 arc seconds for Nyanza Province, Kenya. The demographic file is an input data file in JSON format (e.g kenya.nyanza_DemographicsAt30arcsec.json) (or “compiled” JSON file format schema -e.g. kenya.nyanza_DemographicsAt30arcsec.compiled.json) containing information on the demographics of the geographical region to simulate. The types of climate input data are temperature, rainfall, and relative humidity. The DTK uses two types of files for the input of climate by data, one for metadata and one for binary data. A binary file (here for example, EMOD-Kenya_Nyanza_30arcsectmean_1365109863.json.bin) contains the climate data itself. The corresponding JSON file (for example, EMOD-Kenya_Nyanza_30arcsectmean_1365109863_climateheader.json) contains metadata that describes the binary data. One set comprised of these two input files is required for each of the basic climate by data types used in the simulation configuration file. Kenya Nyanza Input file release notes: This distribution contains the pre-release version of the DTK input files for use by Notre Dame in a joint collaboration VECNET program. These files have gone through a preliminary review by research and a smoke test for opperation. They have not been through an official review, test and signoff process.",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Weather"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]",
+      "Asembo Location (Kenya) [200827/ADMD]"
+    ],
+    "layer_id_s": "1n79h443h",
+    "layer_slug_s": "1n79h443h",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:7m01bk69s",
+    "dc_title_s": "Kisumu_single_node_air_temperature_daily.bin",
+    "dc_description_s": "Climate files for EMOD DTK 1.5 from GSOD data for Kisumu airport. Gridded world grump2.5arcmin",
+    "dc_creator_sm": [
+      "Philip Eckhoff"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Kisumu International Airport (Kenya) [6297309/AIRP]"
+    ],
+    "layer_id_s": "7m01bk69s",
+    "layer_slug_s": "7m01bk69s",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "34.62889 -0.18614 34.82889 0.013860000000000011",
+    "solr_geom": "ENVELOPE(34.62889, 34.82889, 0.013860000000000011, -0.18614)",
+    "georss_box_s": "-0.18614 34.62889 0.013860000000000011 34.82889"
+  },
+  {
+    "uuid": "vecnet:7m01bk71t",
+    "dc_title_s": "Kisumu_single_node_land_temperature_daily.bin",
+    "dc_description_s": "Climate files for EMOD DTK 1.5 from GSOD data for Kisumu airport. Gridded world grump2.5arcmin",
+    "dc_creator_sm": [
+      "Philip Eckhoff"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Kisumu International Airport (Kenya) [6297309/AIRP]"
+    ],
+    "layer_id_s": "7m01bk71t",
+    "layer_slug_s": "7m01bk71t",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "34.62889 -0.18614 34.82889 0.013860000000000011",
+    "solr_geom": "ENVELOPE(34.62889, 34.82889, 0.013860000000000011, -0.18614)",
+    "georss_box_s": "-0.18614 34.62889 0.013860000000000011 34.82889"
+  },
+  {
+    "uuid": "vecnet:st74cq441",
+    "dc_title_s": "Common Insecticides used in Vector control",
+    "dc_description_s": "A data set of Common Insecticides used in vector control including: products used for Indoor residual sprays, products used for mosquito larvae control, products used for LLIN, products used for space sprays. The data set includes the product's active ingredient, trade name, chemical class, manufacturing company, and country of origin/manufacture.",
+    "dc_creator_sm": [
+      "R. Farlow Consulting, LLC",
+      "VecNet"
+    ],
+    "dc_type_s": "Dataset: Intervention data",
+    "dc_subject_sm": [
+      "Insecticides",
+      "Insecticide-Treated Bednets",
+      "Mosquito Control",
+      "Mosquito Nets",
+      "Carbamates",
+      "Pyrethrins",
+      "Organophosphates",
+      "Benzoylureas",
+      "Permethrin",
+      "Malathion",
+      "Bacillus thuringiensis israelensis",
+      "Diflubenzuron",
+      "Fenthion"
+    ],
+    "dct_spatial_sm": [
+      "India (India) [1269750/PCLI]",
+      "India (India) [1269750/PCLI]",
+      "Denmark (Australia) [7839499/ADM2]",
+      "Japan (Japan) [1861060/PCLI]",
+      "Switzerland (Switzerland) [2658434/PCLI]",
+      "Germany (Germany) [2921044/PCLI]",
+      "China (China) [1814991/PCLI]",
+      "United States (United States) [6252001/PCLI]",
+      "Israel (Israel) [294640/PCLI]",
+      "Thailand (Thailand) [1605651/PCLI]",
+      "France (France) [3017382/PCLI]"
+    ],
+    "layer_id_s": "st74cq441",
+    "layer_slug_s": "st74cq441",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "-5.142222 -35.0678427475 -66.954811 71.390656",
+    "solr_geom": "ENVELOPE(-5.142222, -66.954811, 71.390656, -35.0678427475)",
+    "georss_box_s": "-35.0678427475 -5.142222 71.390656 -66.954811"
+  },
+  {
+    "uuid": "vecnet:hd76s006h",
+    "dc_title_s": "Africa - ITN Susceptibility Map",
+    "dc_description_s": "From a series of maps created for VECNet to show continental scale zoning in Africa, Americas, and Asia related to intervention susceptibility. This map depicts zones where there is an exophagic malaria vector species present and where ITNs are likely to be a suitable or unsuitable intervention.",
+    "dc_creator_sm": [
+      "Malaria Atlas Project",
+      "MAP",
+      "Marianne Sinka"
+    ],
+    "dc_type_s": "Map or Cartographic Material",
+    "dc_subject_sm": [
+      "Insecticide-Treated Bednets",
+      "Intervention Suitability"
+    ],
+    "dct_spatial_sm": [
+      "Africa  [6255146/CONT]"
+    ],
+    "layer_id_s": "hd76s006h",
+    "layer_slug_s": "hd76s006h",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "-18.1574885778138 -46.9697265625 51.412635803222656 37.53944396972656",
+    "solr_geom": "ENVELOPE(-18.1574885778138, 51.412635803222656, 37.53944396972656, -46.9697265625)",
+    "georss_box_s": "-46.9697265625 -18.1574885778138 37.53944396972656 51.412635803222656"
+  },
+  {
+    "uuid": "vecnet:hd76s007s",
+    "dc_title_s": "Americas - IRS Susceptibility Map",
+    "dc_description_s": "From a series of maps created for VECNet to show continental scale zoning in Africa, Americas, and Asia related to intervention susceptibility. This map depicts zones where there is are endophilic malaria vector species present and where IRS is likely to be a suitable or unsuitable intervention.",
+    "dc_creator_sm": [
+      "Malaria Atlas Project",
+      "MAP",
+      "Marianne Sinka"
+    ],
+    "dc_type_s": "Map or Cartographic Material",
+    "dc_subject_sm": [
+      "Indoor Residual Spray",
+      "Intervention Suitability"
+    ],
+    "dct_spatial_sm": [
+      "Las Américas International Airport (Dominican Republic) [3500854/AIRP]"
+    ],
+    "layer_id_s": "hd76s007s",
+    "layer_slug_s": "hd76s007s",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "-69.76892 18.329659999999997 -69.56892 18.52966",
+    "solr_geom": "ENVELOPE(-69.76892, -69.56892, 18.52966, 18.329659999999997)",
+    "georss_box_s": "18.329659999999997 -69.76892 18.52966 -69.56892"
+  },
+  {
+    "uuid": "vecnet:4j03cz85n",
+    "dc_title_s": "Kenya Population and Housing Census 2009: Constituency Population by Sex, Number of Households, Area and Density",
+    "dc_description_s": "Kenya Population and Housing Census 2009: Constituency Population by Sex, Number of Households, Area and Density",
+    "dc_creator_sm": [
+      "Kenya National Bureau of Statistics"
+    ],
+    "dc_type_s": "Dataset: Demography",
+    "dc_subject_sm": [
+      "Censuses"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "4j03cz85n",
+    "layer_slug_s": "4j03cz85n",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:hd76s0057",
+    "dc_title_s": "Africa - IRS Susceptibility Map",
+    "dc_description_s": "From a series of maps created for VECNet to show continental scale zoning in Africa, Americas, and Asia related to intervention susceptibility. This map depicts zones where there is are endophilic malaria vector species present and where IRS is likely to be a suitable or unsuitable intervention.",
+    "dc_creator_sm": [
+      "Malaria Atlas Project",
+      "MAP",
+      "Marianne Sinka"
+    ],
+    "dc_type_s": "Map or Cartographic Material",
+    "dc_subject_sm": [
+      "Indoor Residual Spray",
+      "Intervention Suitability"
+    ],
+    "dct_spatial_sm": [
+      "Africa  [6255146/CONT]"
+    ],
+    "layer_id_s": "hd76s0057",
+    "layer_slug_s": "hd76s0057",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "-18.1574885778138 -46.9697265625 51.412635803222656 37.53944396972656",
+    "solr_geom": "ENVELOPE(-18.1574885778138, 51.412635803222656, 37.53944396972656, -46.9697265625)",
+    "georss_box_s": "-46.9697265625 -18.1574885778138 37.53944396972656 51.412635803222656"
+  },
+  {
+    "uuid": "vecnet:tx31qh70j",
+    "dc_title_s": "Henderson Airport Rainfall Record",
+    "dc_description_s": "Monthly rainfall data from Henderson Airport on Guadalcanal, Solomon Islands",
+    "dc_creator_sm": [
+      "Hugo Bugoro",
+      "Jeffery Hii",
+      "Charles Butafa",
+      "Charlie Iro'ofa",
+      "Allen Apairamo",
+      "Robert Cooper",
+      "Cheng-Chen Chen",
+      "Tanya Russell"
+    ],
+    "dc_type_s": "Dataset: Climate/Weather",
+    "dc_subject_sm": [
+      "Weather"
+    ],
+    "dct_spatial_sm": [
+      "Honiara International Airport (Solomon Islands) [6295679/AIRP]"
+    ],
+    "layer_id_s": "tx31qh70j",
+    "layer_slug_s": "tx31qh70j",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "159.95479 -9.528 160.15479 -9.328000000000001",
+    "solr_geom": "ENVELOPE(159.95479, 160.15479, -9.328000000000001, -9.528)",
+    "georss_box_s": "-9.528 159.95479 -9.328000000000001 160.15479"
+  },
+  {
+    "uuid": "vecnet:5712mj241",
+    "dc_title_s": "Insecticide susceptibility of Anopheles flavirostris in the Philippines",
+    "dc_description_s": null,
+    "dc_creator_sm": [
+      "Das, M. L.",
+      "Cardona, E. V.",
+      "Ligat, B. S.",
+      "Damian, L. V."
+    ],
+    "dc_type_s": "Article",
+    "dc_subject_sm": [
+      "Animals",
+      "*Anopheles",
+      "*Carbamates",
+      "*Ddt",
+      "Female",
+      "*Insect Vectors",
+      "*Insecticides",
+      "*Phenylcarbamates",
+      "Philippines"
+    ],
+    "dct_spatial_sm": [
+      "Philippines (Philippines) [1694008/PCLI]"
+    ],
+    "layer_id_s": "5712mj241",
+    "layer_slug_s": "5712mj241",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "115.766304 4.613444 126.601524 21.120611",
+    "solr_geom": "ENVELOPE(115.766304, 126.601524, 21.120611, 4.613444)",
+    "georss_box_s": "4.613444 115.766304 21.120611 126.601524"
+  },
+  {
+    "uuid": "vecnet:7p88cg57g",
+    "dc_title_s": "Malaria Operational Plan: Kenya, 2013",
+    "dc_description_s": "President's Malaria Initiative Malaria Operational Plans (MOPs) present a detailed one-year country-wide implementation plan. Each plan briefly reviews the current status of a country's malaria control and prevention policies and interventions, identifies challenges and unmet needs if the goals of the PMI are to be achieved, and provides a description of planned activities under the PMI. These Malaria Operational Plans have been endorsed by the U.S. Global Malaria Coordinator and reflect collaborative discussions with the national malaria control programs and partners in country.",
+    "dc_creator_sm": [
+      "United States. Agency for International Development",
+      "President’s Malaria Initiative (U.S.)",
+      "USAID",
+      "Centers for Disease Control and Prevention"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": [
+      "Malaria",
+      "Kenya",
+      "Annual Reports"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "7p88cg57g",
+    "layer_slug_s": "7p88cg57g",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:7p88cg612",
+    "dc_title_s": "Malaria Operational Plan: Revised Funding Table - Kenya FY 2012",
+    "dc_description_s": "Malaria Operational Plan: Revised Funding Table - Kenya FY 2012 updates a President's Malaria Initiative Malaria Operational Plan (MOP). MOPs present a detailed one-year country-wide implementation plan. Each plan briefly reviews the current status of a country's malaria control and prevention policies and interventions, identifies challenges and unmet needs if the goals of the PMI are to be achieved, and provides a description of planned activities under the PMI. These Malaria Operational Plans have been endorsed by the U.S. Global Malaria Coordinator and reflect collaborative discussions with the national malaria control programs and partners in country.",
+    "dc_creator_sm": [
+      "United States. Agency for International Development",
+      "USAID",
+      "Centers for Disease Control and Prevention"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": [
+      "Malaria",
+      "Kenya",
+      "Annual Reports"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "7p88cg612",
+    "layer_slug_s": "7p88cg612",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:7p88cg566",
+    "dc_title_s": "Malaria Operational Plan: Kenya, 2012",
+    "dc_description_s": "President's Malaria Initiative Malaria Operational Plans (MOPs) present a detailed one-year country-wide implementation plan. Each plan briefly reviews the current status of a country's malaria control and prevention policies and interventions, identifies challenges and unmet needs if the goals of the PMI are to be achieved, and provides a description of planned activities under the PMI. These Malaria Operational Plans have been endorsed by the U.S. Global Malaria Coordinator and reflect collaborative discussions with the national malaria control programs and partners in country.",
+    "dc_creator_sm": [
+      "United States. Agency for International Development",
+      "President’s Malaria Initiative (U.S.)",
+      "USAID",
+      "Centers for Disease Control and Prevention"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": [
+      "Malaria",
+      "Kenya",
+      "Annual Reports"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "7p88cg566",
+    "layer_slug_s": "7p88cg566",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:7p88cg62b",
+    "dc_title_s": "Malaria Operational Plan: Revised Funding Table - Kenya FY 2011",
+    "dc_description_s": "Malaria Operational Plan: Revised Funding Table - Kenya FY 2011. Updates a President's Malaria Initiative Malaria Operational Plan (MOP). MOPs present a detailed one-year country-wide implementation plan. Each plan briefly reviews the current status of a country's malaria control and prevention policies and interventions, identifies challenges and unmet needs if the goals of the PMI are to be achieved, and provides a description of planned activities under the PMI. These Malaria Operational Plans have been endorsed by the U.S. Global Malaria Coordinator and reflect collaborative discussions with the national malaria control programs and partners in country.",
+    "dc_creator_sm": [
+      "United States. Agency for International Development",
+      "USAID",
+      "Centers for Disease Control and Prevention"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": [
+      "Malaria",
+      "Kenya",
+      "Annual Reports"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "7p88cg62b",
+    "layer_slug_s": "7p88cg62b",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:7p88cg55x",
+    "dc_title_s": "Malaria Operational Plan: Kenya, 2011",
+    "dc_description_s": "A President's Malaria Initiative Malaria Operational Plan (MOP). MOPs present a detailed one-year country-wide implementation plan. Each plan briefly reviews the current status of a country's malaria control and prevention policies and interventions, identifies challenges and unmet needs if the goals of the PMI are to be achieved, and provides a description of planned activities under the PMI. These Malaria Operational Plans have been endorsed by the U.S. Global Malaria Coordinator and reflect collaborative discussions with the national malaria control programs and partners in country.",
+    "dc_creator_sm": [
+      "United States. Agency for International Development",
+      "President’s Malaria Initiative (U.S.)",
+      "USAID",
+      "Centers for Disease Control and Prevention"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": [
+      "Malaria",
+      "Kenya",
+      "Annual Reports"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "7p88cg55x",
+    "layer_slug_s": "7p88cg55x",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:7p88cg60s",
+    "dc_title_s": "Malaria Operational Plan: Revised Funding Table - Kenya FY 2010",
+    "dc_description_s": "Malaria Operational Plan: Revised Funding Table - Kenya FY 2010 updates a President's Malaria Initiative Malaria Operational Plan (MOP). MOPs present a detailed one-year country-wide implementation plan. Each plan briefly reviews the current status of a country's malaria control and prevention policies and interventions, identifies challenges and unmet needs if the goals of the PMI are to be achieved, and provides a description of planned activities under the PMI. These Malaria Operational Plans have been endorsed by the U.S. Global Malaria Coordinator and reflect collaborative discussions with the national malaria control programs and partners in country.",
+    "dc_creator_sm": [
+      "United States. Agency for International Development",
+      "USAID",
+      "Centers for Disease Control and Prevention"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": [
+      "Malaria",
+      "Kenya",
+      "Annual Reports"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "7p88cg60s",
+    "layer_slug_s": "7p88cg60s",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:7p88cg591",
+    "dc_title_s": "Malaria Operational Plan: Revised Funding Table - Kenya FY 2009",
+    "dc_description_s": "Malaria Operational Plan: Revised Funding Table - Kenya FY 2009 updates a President's Malaria Initiative Malaria Operational Plan (MOP). MOPs present a detailed one-year country-wide implementation plan. Each plan briefly reviews the current status of a country's malaria control and prevention policies and interventions, identifies challenges and unmet needs if the goals of the PMI are to be achieved, and provides a description of planned activities under the PMI. These Malaria Operational Plans have been endorsed by the U.S. Global Malaria Coordinator and reflect collaborative discussions with the national malaria control programs and partners in country.",
+    "dc_creator_sm": [
+      "United States. Agency for International Development",
+      "USAID",
+      "Centers for Disease Control and Prevention"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": [
+      "Malaria",
+      "Kenya",
+      "Annual Reports"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "7p88cg591",
+    "layer_slug_s": "7p88cg591",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:7p88cg54n",
+    "dc_title_s": "Malaria Operational Plan: Kenya, 2010",
+    "dc_description_s": "A President's Malaria Initiative Malaria Operational Plan (MOP). MOPs present a detailed one-year country-wide implementation plan. Each plan briefly reviews the current status of a country's malaria control and prevention policies and interventions, identifies challenges and unmet needs if the goals of the PMI are to be achieved, and provides a description of planned activities under the PMI. These Malaria Operational Plans have been endorsed by the U.S. Global Malaria Coordinator and reflect collaborative discussions with the national malaria control programs and partners in country.",
+    "dc_creator_sm": [
+      "United States. Agency for International Development",
+      "President’s Malaria Initiative (U.S.)",
+      "USAID",
+      "Centers for Disease Control and Prevention"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": [
+      "Malaria",
+      "Kenya",
+      "Annual Reports"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "7p88cg54n",
+    "layer_slug_s": "7p88cg54n",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:7p88cg53c",
+    "dc_title_s": "Malaria Operational Plan: Kenya, 2009",
+    "dc_description_s": "A President's Malaria Initiative Malaria Operational Plan (MOP). MOPs present a detailed one-year country-wide implementation plan. Each plan briefly reviews the current status of a country's malaria control and prevention policies and interventions, identifies challenges and unmet needs if the goals of the PMI are to be achieved, and provides a description of planned activities under the PMI. These Malaria Operational Plans have been endorsed by the U.S. Global Malaria Coordinator and reflect collaborative discussions with the national malaria control programs and partners in country.",
+    "dc_creator_sm": [
+      "United States. Agency for International Development",
+      "President’s Malaria Initiative (U.S.)",
+      "USAID",
+      "Centers for Disease Control and Prevention"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": [
+      "Malaria",
+      "Kenya",
+      "Annual Reports"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "7p88cg53c",
+    "layer_slug_s": "7p88cg53c",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:7p88cg58r",
+    "dc_title_s": "Malaria Operational Plan: Revised Funding Table - Kenya FY 2008",
+    "dc_description_s": "Malaria Operational Plan: Revised Funding Table - Kenya FY 2008 updates a President's Malaria Initiative Malaria Operational Plan (MOP). MOPs present a detailed one-year country-wide implementation plan. Each plan briefly reviews the current status of a country's malaria control and prevention policies and interventions, identifies challenges and unmet needs if the goals of the PMI are to be achieved, and provides a description of planned activities under the PMI. These Malaria Operational Plans have been endorsed by the U.S. Global Malaria Coordinator and reflect collaborative discussions with the national malaria control programs and partners in country.",
+    "dc_creator_sm": [
+      "United States. Agency for International Development",
+      "USAID",
+      "Centers for Disease Control and Prevention"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": [
+      "Malaria",
+      "Kenya",
+      "Annual Reports"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "7p88cg58r",
+    "layer_slug_s": "7p88cg58r",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:7p88cg523",
+    "dc_title_s": "Malaria Operational Plan: Kenya, 2008",
+    "dc_description_s": "A President's Malaria Initiative Malaria Operational Plans (MOP). MOPs present a detailed one-year country-wide implementation plan. Each plan briefly reviews the current status of a country's malaria control and prevention policies and interventions, identifies challenges and unmet needs if the goals of the PMI are to be achieved, and provides a description of planned activities under the PMI. These Malaria Operational Plans have been endorsed by the U.S. Global Malaria Coordinator and reflect collaborative discussions with the national malaria control programs and partners in country.",
+    "dc_creator_sm": [
+      "United States. Agency for International Development",
+      "President’s Malaria Initiative (U.S.)",
+      "USAID",
+      "Centers for Disease Control and Prevention"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": [
+      "Malaria",
+      "Kenya",
+      "Annual Reports"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "7p88cg523",
+    "layer_slug_s": "7p88cg523",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:1n79h4427",
+    "dc_title_s": "Kenya Nyanza EMOD DTK 2_5arcmin Data Set Archive",
+    "dc_description_s": "DTK Input Files: Demographic and Weather files(tmean,rain, humidity) for 2.5 arc min for Nyanza Province, Kenya. The demographic file is an input data file in JSON format (e.g kenya.nyanza_DemographicsAt2_5arcMinutes.json) (or “compiled” JSON file format schema -e.g. kenya.nyanza_DemographicsAt2_5arcMinutes.compiled.json) containing information on the demographics of the geographical region to simulate. The types of climate input data are temperature, rainfall, and relative humidity. The DTK uses two types of files for the input of climate by data, one for metadata and one for binary data. A binary file (here for example, EMOD-Kenya_Nyanza_2.5arcmintmean_1365118775.json.bin) contains the climate data itself. The corresponding JSON file (for example, EMOD-Kenya_Nyanza_2.5arcmintmean_1365118775_climateheader.json) contains metadata that describes the binary data. One set comprised of these two input files is required for each of the basic climate by data types used in the simulation configuration file. Kenya Nyanza Input file release notes: This distribution contains the pre-release version of the DTK input files for use by Notre Dame in a joint collaboration VECNET program. These files have gone through a preliminary review by research and a smoke test for opperation. They have not been through an official review, test and signoff process. Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]",
+      "Asembo Location (Kenya) [200827/ADMD]"
+    ],
+    "layer_id_s": "1n79h4427",
+    "layer_slug_s": "1n79h4427",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:70795769f",
+    "dc_title_s": "humid/EMOD-Kenya_Nyanza_2.5arcminhumid_1365118879.json.bin",
+    "dc_description_s": "Data Set(s) for Epidemiological Modeling (EMOD) : Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]"
+    ],
+    "layer_id_s": "70795769f",
+    "layer_slug_s": "70795769f",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:70795772r",
+    "dc_title_s": "rain/EMOD-Kenya_Nyanza_2.5arcminrain_1365118975.json.bin",
+    "dc_description_s": "Data Set(s) for Epidemiological Modeling (EMOD) : Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]"
+    ],
+    "layer_id_s": "70795772r",
+    "layer_slug_s": "70795772r",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:70795775k",
+    "dc_title_s": "tmean/EMOD-Kenya_Nyanza_2.5arcmintmean_1365118775.json.bin",
+    "dc_description_s": "Data Set(s) for Epidemiological Modeling (EMOD) : Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]"
+    ],
+    "layer_id_s": "70795775k",
+    "layer_slug_s": "70795775k",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:707957749",
+    "dc_title_s": "rain/rain_JSON.md5",
+    "dc_description_s": "Data Set(s) for Epidemiological Modeling (EMOD) : Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]"
+    ],
+    "layer_id_s": "707957749",
+    "layer_slug_s": "707957749",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:707957774",
+    "dc_title_s": "tmean/tmean_JSON.md5",
+    "dc_description_s": "Data Set(s) for Epidemiological Modeling (EMOD) : Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]"
+    ],
+    "layer_id_s": "707957774",
+    "layer_slug_s": "707957774",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:70795771g",
+    "dc_title_s": "humid/humid_JSON.md5",
+    "dc_description_s": "Data Set(s) for Epidemiological Modeling (EMOD) : Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]"
+    ],
+    "layer_id_s": "70795771g",
+    "layer_slug_s": "70795771g",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:707957731",
+    "dc_title_s": "rain/EMOD-Kenya_Nyanza_2.5arcminrain_1365118975_climateheader.json",
+    "dc_description_s": "Data Set(s) for Epidemiological Modeling (EMOD) : Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]"
+    ],
+    "layer_id_s": "707957731",
+    "layer_slug_s": "707957731",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:70795780f",
+    "dc_title_s": "Kenya_Nyanza_2_5_JSON.md5",
+    "dc_description_s": "Data Set(s) for Epidemiological Modeling (EMOD) : Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]"
+    ],
+    "layer_id_s": "70795780f",
+    "layer_slug_s": "70795780f",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:70795778d",
+    "dc_title_s": "kenya.nyanza_DemographicsAt2_5arcMinutes.compiled.json",
+    "dc_description_s": "Data Set(s) for Epidemiological Modeling (EMOD) : Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]"
+    ],
+    "layer_id_s": "70795778d",
+    "layer_slug_s": "70795778d",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:70795779p",
+    "dc_title_s": "kenya.nyanza_DemographicsAt2_5arcMinutes.json",
+    "dc_description_s": "Data Set(s) for Epidemiological Modeling (EMOD) : Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]"
+    ],
+    "layer_id_s": "70795779p",
+    "layer_slug_s": "70795779p",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:707957706",
+    "dc_title_s": "humid/EMOD-Kenya_Nyanza_2.5arcminhumid_1365118879_climateheader.json",
+    "dc_description_s": "Data Set(s) for Epidemiological Modeling (EMOD) : Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]"
+    ],
+    "layer_id_s": "707957706",
+    "layer_slug_s": "707957706",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:70795776v",
+    "dc_title_s": "tmean/EMOD-Kenya_Nyanza_2.5arcmintmean_1365118775_climateheader.json",
+    "dc_description_s": "Data Set(s) for Epidemiological Modeling (EMOD) : Abt this data: Tool: \"MergeNodes.exe\", IdReference: \"Gridded world grump2.5arcmin\", NodeCount: 856, DatavalueCount: 3650, UpdateResolution: CLIMATE_UPDATE_DAY, OriginalDataYears\": \"2002-2011\", \"StartDayOfYear\": \"January 1\", DataProvenance: \"Generated by internally-developed [EMOD] algorithm applied to GSOD weather-station data\"",
+    "dc_creator_sm": [
+      "EMOD Global Health"
+    ],
+    "dc_type_s": "Dataset",
+    "dc_subject_sm": [
+      "Climate",
+      "Demography"
+    ],
+    "dct_spatial_sm": [
+      "Nyanza Province (Kenya) [182763/ADM1H]"
+    ],
+    "layer_id_s": "70795776v",
+    "layer_slug_s": "70795776v",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.918609619140625 -1.3988890647888184 35.326385498046875 0.308611124753952",
+    "solr_geom": "ENVELOPE(33.918609619140625, 35.326385498046875, 0.308611124753952, -1.3988890647888184)",
+    "georss_box_s": "-1.3988890647888184 33.918609619140625 0.308611124753952 35.326385498046875"
+  },
+  {
+    "uuid": "vecnet:9z902z875",
+    "dc_title_s": "Kisumu Weather Archive",
+    "dc_description_s": "Archive of 1980-2011 Global Surface Summary of the Day (GSOD) weather data for Kisumu, Kenya (station 637080). Archive includes: GSOD weather data file(CDO5111355911589Kisumu1980-2011.csv), GSOD format description (GSOD_DESC_of_Format.pdf), Availability and Gaps data file for this weather station (GSODAvailabilityANDGaps.xlsx).",
+    "dc_creator_sm": [
+      "National Climatic Data Center",
+      "NOAA",
+      "NCDC",
+      "National Oceanic and Atmospheric Administration"
+    ],
+    "dc_type_s": "Dataset: Climate/Weather",
+    "dc_subject_sm": [
+      "Weather"
+    ],
+    "dct_spatial_sm": [
+      "Kisumu International Airport (Kenya) [6297309/AIRP]"
+    ],
+    "layer_id_s": "9z902z875",
+    "layer_slug_s": "9z902z875",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "34.62889 -0.18614 34.82889 0.013860000000000011",
+    "solr_geom": "ENVELOPE(34.62889, 34.82889, 0.013860000000000011, -0.18614)",
+    "georss_box_s": "-0.18614 34.62889 0.013860000000000011 34.82889"
+  },
+  {
+    "uuid": "vecnet:hd76s009b",
+    "dc_title_s": "Asia - IRS Susceptibility Map",
+    "dc_description_s": "From a series of maps created for VECNet to show continental scale zoning in Africa, Americas, and Asia related to intervention susceptibility. This map depicts zones where there are endophilic malaria vector species present and where IRS is likely to be a suitable or unsuitable intervention.",
+    "dc_creator_sm": [
+      "Malaria Atlas Project",
+      "MAP",
+      "Marianne Sinka"
+    ],
+    "dc_type_s": "Map or Cartographic Material",
+    "dc_subject_sm": [
+      "Insecticide-Treated Bednets",
+      "Indoor Residual Spray",
+      "Intervention Suitability"
+    ],
+    "dct_spatial_sm": [
+      "Asia  [6255147/CONT]"
+    ],
+    "layer_id_s": "hd76s009b",
+    "layer_slug_s": "hd76s009b",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "25.668510437000123 -10.930000305175781 -168.98974609375 81.8519287109375",
+    "solr_geom": "ENVELOPE(25.668510437000123, -168.98974609375, 81.8519287109375, -10.930000305175781)",
+    "georss_box_s": "-10.930000305175781 25.668510437000123 81.8519287109375 -168.98974609375"
+  },
+  {
+    "uuid": "vecnet:hd76s004z",
+    "dc_title_s": "Asia - ITN Susceptibility Map",
+    "dc_description_s": "From a series of maps created for VECNet to show continental scale zoning in Africa, Americas, and Asia related to intervention susceptibility. This map depicts zones where there is an exophagic malaria vector species present and where ITNs are likely to be a suitable or unsuitable intervention.",
+    "dc_creator_sm": [
+      "Malaria Atlas Project",
+      "MAP",
+      "Marianne Sinka"
+    ],
+    "dc_type_s": "Map or Cartographic Material",
+    "dc_subject_sm": [
+      "Insecticide-Treated Bednets",
+      "Indoor Residual Spray",
+      "Intervention Suitability"
+    ],
+    "dct_spatial_sm": [
+      "Asia  [6255147/CONT]"
+    ],
+    "layer_id_s": "hd76s004z",
+    "layer_slug_s": "hd76s004z",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "25.668510437000123 -10.930000305175781 -168.98974609375 81.8519287109375",
+    "solr_geom": "ENVELOPE(25.668510437000123, -168.98974609375, 81.8519287109375, -10.930000305175781)",
+    "georss_box_s": "-10.930000305175781 25.668510437000123 81.8519287109375 -168.98974609375"
+  },
+  {
+    "uuid": "vecnet:jq085k01r",
+    "dc_title_s": "Intervention Susceptibility Maps 2012 Archive",
+    "dc_description_s": "Archive of maps created for VECNet to show continental scale zoning in Africa, Americas, and Asia related to intervention susceptibility. The maps depict zones where there is are endophilic malaria vector species present and where IRS is likely to be a suitable or unsuitable intervention. The maps depict zones where there is an exophagic malaria vector species present and where ITNs are likely to be a suitable or unsuitable intervention.",
+    "dc_creator_sm": [
+      "Malaria Atlas Project",
+      "MAP",
+      "Marianne Sinka"
+    ],
+    "dc_type_s": "Map or Cartographic Material",
+    "dc_subject_sm": [
+      "Insecticide-Treated Bednets",
+      "Indoor Residual Spray",
+      "Intervention Suitability"
+    ],
+    "dct_spatial_sm": [
+      "Africa  [6255146/CONT]",
+      "Asia  [6255147/CONT]",
+      "Las Américas International Airport (Dominican Republic) [3500854/AIRP]"
+    ],
+    "layer_id_s": "jq085k01r",
+    "layer_slug_s": "jq085k01r",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "-69.66892 -46.9697265625 -168.98974609375 81.8519287109375",
+    "solr_geom": "ENVELOPE(-69.66892, -168.98974609375, 81.8519287109375, -46.9697265625)",
+    "georss_box_s": "-46.9697265625 -69.66892 81.8519287109375 -168.98974609375"
+  },
+  {
+    "uuid": "vecnet:hd76s0082",
+    "dc_title_s": "Americas - ITN Susceptibility Map",
+    "dc_description_s": "From a series of maps created for VECNet to show continental scale zoning in Africa, Americas, and Asia related to intervention susceptibility. This map depicts zones where there is an exophagic malaria vector species present and where ITNs are likely to be a suitable or unsuitable intervention.",
+    "dc_creator_sm": [
+      "Malaria Atlas Project",
+      "MAP",
+      "Marianne Sinka"
+    ],
+    "dc_type_s": "Map or Cartographic Material",
+    "dc_subject_sm": [
+      "Insecticide-Treated Bednets",
+      "Indoor Residual Spray",
+      "Intervention Suitability"
+    ],
+    "dct_spatial_sm": [
+      "Africa  [6255146/CONT]",
+      "Asia  [6255147/CONT]",
+      "Las Américas International Airport (Dominican Republic) [3500854/AIRP]"
+    ],
+    "layer_id_s": "hd76s0082",
+    "layer_slug_s": "hd76s0082",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "-69.66892 -46.9697265625 -168.98974609375 81.8519287109375",
+    "solr_geom": "ENVELOPE(-69.66892, -168.98974609375, 81.8519287109375, -46.9697265625)",
+    "georss_box_s": "-46.9697265625 -69.66892 81.8519287109375 -168.98974609375"
+  },
+  {
+    "uuid": "vecnet:tx31qh69s",
+    "dc_title_s": "Bugoro Parity Data",
+    "dc_description_s": "The ovaries of mosquitoes caught in the night landing catches were dissected in physiological saline, allowed to dry and examined under 100-200X for the presence or absence of skeins at the end of the trachea. The number of Nulliparous and Parous females for each collection are detailed in this data table. There are two tabs in this excel spreedsheet: 1) the dataset and 2) the dictionary detailing each attribute in the data table. For more detail see: Bugoro H, Hii J, Butafa C, Iroofa C, Apairamo A, Cooper R, Chen C-C, Russell T: The bionomics of the malaria vector Anopheles farauti in Northern Guadalcanal, Solomon Islands: issues for successful vector control. Malaria Journal 2014, 13:56.",
+    "dc_creator_sm": [
+      "Hugo Bugoro",
+      "Jeffery Hii",
+      "Charles Butafa",
+      "Charlie Iro'ofa",
+      "Allen Apairamo",
+      "Robert Cooper",
+      "Cheng-Chen Chen",
+      "Tanya Russell"
+    ],
+    "dc_type_s": "Dataset: Entomological",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Guadalcanal Island (Solomon Islands) [2108832/ISL]"
+    ],
+    "layer_id_s": "tx31qh69s",
+    "layer_slug_s": "tx31qh69s",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "159.58403 -9.949388 160.833939 -9.24225",
+    "solr_geom": "ENVELOPE(159.58403, 160.833939, -9.24225, -9.949388)",
+    "georss_box_s": "-9.949388 159.58403 -9.24225 160.833939"
+  },
+  {
+    "uuid": "vecnet:8g84mw224",
+    "dc_title_s": "Re-emergence of Anopheles funestus and its possible effect on malaria transmission on Mayotte Island, Indian Ocean",
+    "dc_description_s": "Malaria constitutes a major public health problem on Mayotte Island, with the major vector being Anopheles gambiae s.s. The seeming disappearance of An. funestus, the 2nd vector on the island, was observed 15 years ago. Now, the presence of An. funestus during the biting collections performed in November and December 2004 confirms the re-emergence of this vector, which plays an important role in malaria transmission with An. gambiae.",
+    "dc_creator_sm": [
+      "Elissa, N.",
+      "Karch, S."
+    ],
+    "dc_type_s": "Article",
+    "dc_subject_sm": [
+      "Animals",
+      "Anopheles/ parasitology",
+      "Anopheles gambiae/parasitology",
+      "Humans",
+      "Indian Ocean Islands/epidemiology",
+      "Insect Vectors/parasitology",
+      "Malaria/epidemiology/ transmission",
+      "Seasons"
+    ],
+    "dct_spatial_sm": [
+      "Mayotte (Mayotte) [1024031/PCLD]"
+    ],
+    "layer_id_s": "8g84mw224",
+    "layer_slug_s": "8g84mw224",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "45.014618 -13.000132 45.29295 -12.633837",
+    "solr_geom": "ENVELOPE(45.014618, 45.29295, -12.633837, -13.000132)",
+    "georss_box_s": "-13.000132 45.014618 -12.633837 45.29295"
+  },
+  {
+    "uuid": "vecnet:ht24wj452",
+    "dc_title_s": "Malaria Operational Plan: Kenya Archive 2008 - 2013",
+    "dc_description_s": "An archive of 2008 - 2013 PMI Malaria Operational Plans for Kenya. President's Malaria Initiative Malaria Operational Plans (MOPs) present a detailed one-year country-wide implementation plan. Each plan briefly reviews the current status of a country's malaria control and prevention policies and interventions, identifies challenges and unmet needs if the goals of the PMI are to be achieved, and provides a description of planned activities under the PMI. These Malaria Operational Plans have been endorsed by the U.S. Global Malaria Coordinator and reflect collaborative discussions with the national malaria control programs and partners in country.",
+    "dc_creator_sm": [
+      "United States. Agency for International Development",
+      "USAID",
+      "Centers for Disease Control and Prevention"
+    ],
+    "dc_type_s": "Report",
+    "dc_subject_sm": [
+      "Malaria",
+      "Kenya",
+      "Annual Reports"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "ht24wj452",
+    "layer_slug_s": "ht24wj452",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:qn59q4075",
+    "dc_title_s": "Kenya Child Mortality by Cause",
+    "dc_description_s": "This spreadsheet contains metadata about the following dimensions, including codes, display strings, and reference URLs: - Indicator - Age Group - Country - Sex - Year - GBDCHILDCAUSES - WHO region",
+    "dc_creator_sm": [
+      "Global Health Observatory of the World Health Organization",
+      "WHO"
+    ],
+    "dc_type_s": "Dataset: Epidemiology / Public Health",
+    "dc_subject_sm": [
+      "Child Mortality"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "qn59q4075",
+    "layer_slug_s": "qn59q4075",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:9880vr00j",
+    "dc_title_s": "WHO Life Expectancy Life Tables :Kenya - expectation of life at age x",
+    "dc_description_s": "Life expectancy: Life table Kenya holds data on Expectation of life at the beginning of the age group x in five year increments for ages: <1, 1-4, 5-9, 10-14, 15-19, 20-24, 25-29, 30-34, 35-39, 40-44, 45-49, 50-54, 55-59, 60-64, 65-69, 70-74, 75-79, 80-84, 85-89, 90-94, 95-99, and 100+ . Data is avail for male, female, and Both Sexes combined. From WHO Global Health Observatory",
+    "dc_creator_sm": [
+      "World Health Organization",
+      "WHO"
+    ],
+    "dc_type_s": "Dataset: Demography",
+    "dc_subject_sm": [
+      "Life Expectancy"
+    ],
+    "dct_spatial_sm": [
+      "Kenya (Kenya) [192950/PCLI]"
+    ],
+    "layer_id_s": "9880vr00j",
+    "layer_slug_s": "9880vr00j",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "33.908859 -4.678047 41.899078 5.019938",
+    "solr_geom": "ENVELOPE(33.908859, 41.899078, 5.019938, -4.678047)",
+    "georss_box_s": "-4.678047 33.908859 5.019938 41.899078"
+  },
+  {
+    "uuid": "vecnet:tx31qh68h",
+    "dc_title_s": "Bugoro HLC Data",
+    "dc_description_s": "Seasonality, biting densities and biting behaviour were ascertained by human landing catches (HLC) conducted from 18.00-06.00 at least twice monthly from July 2007 to June 2008 in the three study villages. Sampling was not conducted in February 2008 due to flooding. Catches were made by four collectors, two working indoors and two working outdoors, for 40 min each hour, in two experimental huts. The number of female Anopheles farauti caught during each collection effort is detailed in this data table. Note that for each collection, the data has been pooled across the two experimental huts. There are two tabs in this excel spreedsheet: 1) the dataset and 2) the dictionary detailing each attribute in the data table. For more detail see: Bugoro H, Hii J, Butafa C, Iroofa C, Apairamo A, Cooper R, Chen C-C, Russell T: The bionomics of the malaria vector Anopheles farauti in Northern Guadalcanal, Solomon Islands: issues for successful vector control. Malaria Journal 2014, 13:56.",
+    "dc_creator_sm": [
+      "Hugo Bugoro",
+      "Jeffery Hii",
+      "Charles Butafa",
+      "Charlie Iro'ofa",
+      "Allen Apairamo",
+      "Robert Cooper",
+      "Cheng-Chen Chen",
+      "Tanya Russell"
+    ],
+    "dc_type_s": "Dataset: Entomological",
+    "dc_subject_sm": null,
+    "dct_spatial_sm": [
+      "Guadalcanal Island (Solomon Islands) [2108832/ISL]"
+    ],
+    "layer_id_s": "tx31qh68h",
+    "layer_slug_s": "tx31qh68h",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "159.58403 -9.949388 160.833939 -9.24225",
+    "solr_geom": "ENVELOPE(159.58403, 160.833939, -9.24225, -9.949388)",
+    "georss_box_s": "-9.949388 159.58403 -9.24225 160.833939"
+  }
+]
