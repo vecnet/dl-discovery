@@ -18,4 +18,5 @@
 //= require blacklight/blacklight
 
 //= require modules/vndl-map
+//= require modules/readmore.min
 //= require_tree .
