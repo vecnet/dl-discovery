@@ -22,10 +22,51 @@
         </small>
       </div>
     </div>
+
+
 <% end %>
 
 
+<%= content_tag :field_set, class: 'vndl-results', data: {layer_id: document[:uuid], bbox: document[:solr_bbox], geom: document[:solr_geom]} do %>
 
-<!--results list groups start-->
+    <!--results list groups start-->
+
+    <fieldset class="vndl-results">
+      <section class="col-xs-12">
+        <article class="search-result row">
+
+          <!--Hidden data element to parse with javascript to manipulate leaflet-->
+          <!--Start of data-ptdata-->
+          <%= hidden_field_tag :div, class: 'data-ptdata', tag: 'data-ptdata' do %>
+              <!--TODO change type=primary to :solr_point_type or whatever field is called-->
+              <li data-ptdata="<%= document[:solr_bbox] %>" , type="primary">
+              <li data-ptdata="<%= document[:solr_geom] %>" , type="primary">
+          <% end %>
+          <!--End of data-ptdata-->
+          <div class="col-xs-12 col-sm-12 col-md-3">
+
+            <!--TODO Bootstrap thumbnail class is messing with this not quite right and span sizing is wrong-->
+            <a href="#" title="Lorem ipsum" class="thumbnail"><img src="http://lorempixel.com/250/140/people" alt="Lorem ipsum"/></a>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-2">
+            <ul class="meta-search">
+              <li><i class="glyphicon glyphicon-calendar"></i> <span><%= document['solr_year_i'] %></span></li>
+              <li><i class="glyphicon glyphicon-time"></i> <span>4:28 pm</span></li>
+              <li><i class="glyphicon glyphicon-tags"></i> <span>People</span></li>
+              <li><i class="glyphicon glyphicon-map-marker"></i> <span>Point</span></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+            <h3 class="result-title"><%= link_to_document document, document_show_link_field(document), title: document['dc_title_s'] %></h3>
+
+            <p><%= snippit(document['dc_description_s']) %></p>
+          </div>
+          <span class="clearfix borda"></span>
+        </article>
+      </section>
+    </fieldset>
+
+    <!--results list group end-->
 
 
+<% end %>
