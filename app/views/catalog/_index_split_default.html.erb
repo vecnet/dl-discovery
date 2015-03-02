@@ -1,3 +1,8 @@
+<% comment do %>
+
+    <!--This is the original geoblacklight partial for individual search result documents-->
+    <!--Used as a template and reference for solr document methods-->
+
 <% # header bar for doc items in index view  -%>
 <%= content_tag :div, class: 'documentHeader row', data: {layer_id: document[:uuid], bbox: document[:solr_bbox], geom: document[:solr_geom]} do %>
     <div class='status-icons'>
@@ -26,18 +31,22 @@
 
 <% end %>
 
+<% comment end %>
 
-<%= content_tag :field_set, class: 'vndl-results', data: {layer_id: document[:uuid], bbox: document[:solr_bbox], geom: document[:solr_geom]} do %>
+
+<!--Also possible to parse this field and add :solr_point_type field and change bbox names as seen by ptdata-->
+
+<%= content_tag :data, class: 'vndl-results-index', data: {layer_id: document[:uuid], bbox: document[:solr_bbox], geom: document[:solr_geom], ptdata: document[:solr_bbox]} do %>
 
     <!--results list groups start-->
 
-    <fieldset class="vndl-results">
+    <fieldset class="vndl-results-index">
       <section class="col-xs-12">
         <article class="search-result row">
 
-          <!--Hidden data element to parse with javascript to manipulate leaflet-->
+          <!--TODO Pick which option, li or fieldset above for Hidden data element to parse with javascript to manipulate leaflet-->
           <!--Start of data-ptdata-->
-          <%= hidden_field_tag :div, class: 'data-ptdata', tag: 'data-ptdata' do %>
+          <%= content_tag :div, hidden: true do %>
               <!--TODO change type=primary to :solr_point_type or whatever field is called-->
               <li data-ptdata="<%= document[:solr_bbox] %>" , type="primary">
               <li data-ptdata="<%= document[:solr_geom] %>" , type="primary">
@@ -48,6 +57,9 @@
             <!--TODO Bootstrap thumbnail class is messing with this not quite right and span sizing is wrong-->
             <a href="#" title="Lorem ipsum" class="thumbnail"><img src="http://lorempixel.com/250/140/people" alt="Lorem ipsum"/></a>
           </div>
+
+          <!--<a href="#" title="Lorem ipsum" class="thumbnail"><i class="glyphicon glyphicon-file"></i></a>-->
+          <!--</div>-->
           <div class="col-xs-12 col-sm-12 col-md-2">
             <ul class="meta-search">
               <li><i class="glyphicon glyphicon-calendar"></i> <span><%= document['solr_year_i'] %></span></li>
