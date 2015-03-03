@@ -25,34 +25,45 @@ function getResultsPage(queryString, start, length) {
     // normally this would be a post of the form.  but for now
     // just fetch the url
 
-    // TODO this needs to become a jQUERY AJAX .ajax instead of .load
-
 
     // Assign handlers immediately after making the request,
 // and remember the jqXHR object for this request
-    var jqxhr = $.ajax({url: url, dataType: "xml"})
-        .done(function () {
+    var jqxhr = $.ajax({url: "http://localhost:3000/?q=vecnet", dataType: "text", cache: false})
+        .done(function (data) {
+            //console.log( data );
             console.log("successful ajax search request");
+            console.log("start parsing of html results");
+            console.log($(data).find('#documents'));
+
+            var thingWeWant = $(data).find('#content').html();
+            $('.contentwrapper > .content').html(thingWeWant);
+
+            // TODO make the search results page a partial that instead displayed on the home page as well
+            // the partial needs to include the search form but not the results
+
+
         })
-        .fail(function () {
-            alert("error");
+        .fail(function (jqXHR, textStatus) {
+            console.log("error" + textStatus);
         })
         .always(function () {
-            console.log(" ajax search complete");
+            console.log(" ajax search load finished");
         });
 
 
-    $('.contentwrapper > .content').load(url, function () {
-
-
-        // chuck away the DOM elements of search results that we don't need
-        // ie keep the search results div
-
-        // chuck away the previous map markers
-        window.vndl.theMap.clearMarkers();
-        // parse the inserted content for new map references
-        window.vndl.theMap.findMarkers($('.contentwrapper > .content'));
-    });
+    //$('.contentwrapper > .content').load(jqxhr, function () {
+    //
+    //
+    //    // chuck away the DOM elements of search results that we don't need
+    //    // ie keep the search results div
+    //
+    //
+    //
+    //    // chuck away the previous map markers
+    //    window.vndl.theMap.clearMarkers();
+    //    // parse the inserted content for new map references
+    //    window.vndl.theMap.findMarkers($('.contentwrapper > .content'));
+    //});
 
 }
 // ------------------------------------------------------------------
@@ -90,7 +101,10 @@ $(function () {
     });
 
 
-    // TODO override form submit on the top Search form
+    // TODO extract this js to 'prep the form' to recieve input from user to run after the page loads
+    // Give this js a new file with its name a semantic meaning so can be deciphered by next maintainer
+
+    // override form submit on the top Search form
 
     $('form.vndl-search').on("submit", function (event) {
         event.preventDefault();
