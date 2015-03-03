@@ -15,18 +15,39 @@ function enable(element) {
     $elem.parent().closest('.disabled').removeClass('disabled');
 }
 // ------------------------------------------------------------------
-function getResultsPage(start, length) {
+function getResultsPage(queryString, start, length) {
     // lol ignore the start/length paging info.
 
-    // make a url ;
-    // TODO NO STOP THE submit event from the search bar
-    // and take the URL and put into url
+    // A question mark as is prefixed to queryString
 
-    var url = '';
+    var url = '?' + queryString;
 
     // normally this would be a post of the form.  but for now
     // just fetch the url
+
+    // TODO this needs to become a jQUERY AJAX .ajax instead of .load
+
+
+    // Assign handlers immediately after making the request,
+// and remember the jqXHR object for this request
+    var jqxhr = $.ajax({url: url, dataType: "xml"})
+        .done(function () {
+            console.log("successful ajax search request");
+        })
+        .fail(function () {
+            alert("error");
+        })
+        .always(function () {
+            console.log(" ajax search complete");
+        });
+
+
     $('.contentwrapper > .content').load(url, function () {
+
+
+        // chuck away the DOM elements of search results that we don't need
+        // ie keep the search results div
+
         // chuck away the previous map markers
         window.vndl.theMap.clearMarkers();
         // parse the inserted content for new map references
@@ -67,6 +88,18 @@ $(function () {
             disable($('input[name=searchmap]'));
         }
     });
+
+
+    // TODO override form submit on the top Search form
+
+    $('form.vndl-search').on("submit", function (event) {
+        event.preventDefault();
+        var queryString = $('form.vndl-search').serialize();
+        getResultsPage(queryString);
+
+    });
+
+
 
     // make the submit-search-form work
     $('#gosearch').click(function (event) {
