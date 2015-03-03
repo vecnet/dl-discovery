@@ -1,5 +1,3 @@
-<!--Commenting out the original ruby code-->
-
 <% comment do %>
 
     <!--This is the original geoblacklight partial for individual search result documents-->
@@ -35,10 +33,9 @@
 
 <% comment end %>
 
-<!--End of ruby comment out-->
-
 
 <!--Also possible to parse this field and add :solr_point_type field and change bbox names as seen by ptdata-->
+
 
 <%= content_tag :data, class: 'vndl-results-index', data: {layer_id: document[:uuid], bbox: document[:solr_bbox], geom: document[:solr_geom], ptdata: document[:solr_bbox]} do %>
 

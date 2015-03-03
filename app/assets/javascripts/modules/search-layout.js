@@ -18,9 +18,9 @@ function enable(element) {
 function getResultsPage(queryString, start, length) {
     // lol ignore the start/length paging info.
 
-    // A question mark as is prefixed to queryString
+    // TODO Change to correct path method
 
-    var url = '?' + queryString;
+    var url = 'http://localhost:3000/?' + queryString;
 
     // normally this would be a post of the form.  but for now
     // just fetch the url
@@ -28,7 +28,7 @@ function getResultsPage(queryString, start, length) {
 
     // Assign handlers immediately after making the request,
 // and remember the jqXHR object for this request
-    var jqxhr = $.ajax({url: "http://localhost:3000/?q=vecnet", dataType: "text", cache: false})
+    var jqxhr = $.ajax({url: url, dataType: "text", cache: false})
         .done(function (data) {
             //console.log( data );
             console.log("successful ajax search request");
@@ -36,7 +36,7 @@ function getResultsPage(queryString, start, length) {
             console.log($(data).find('#documents'));
 
 
-            // chuck away the DOM elements of search results HTML that we don't need
+            // throw away the DOM elements of search results HTML that we don't need
             // only keep the search results documents div
             // inject that selected div into the vndl-results section
 
