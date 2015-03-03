@@ -35,8 +35,13 @@ function getResultsPage(queryString, start, length) {
             console.log("start parsing of html results");
             console.log($(data).find('#documents'));
 
-            var thingWeWant = $(data).find('#content').html();
-            $('.contentwrapper > .content').html(thingWeWant);
+
+            // chuck away the DOM elements of search results HTML that we don't need
+            // only keep the search results documents div
+            // inject that selected div into the vndl-results section
+
+            var thingWeWant = $(data).find('#documents').html();
+            $('.contentwrapper > .content > .vndl-results').html(thingWeWant);
 
             // TODO make the search results page a partial that instead displayed on the home page as well
             // the partial needs to include the search form but not the results
@@ -53,9 +58,7 @@ function getResultsPage(queryString, start, length) {
 
     //$('.contentwrapper > .content').load(jqxhr, function () {
     //
-    //
-    //    // chuck away the DOM elements of search results that we don't need
-    //    // ie keep the search results div
+
     //
     //
     //
