@@ -40,11 +40,13 @@ function getResultsPage(queryString, start, length) {
             // only keep the search results documents div
             // inject that selected div into the vndl-results section
 
-            var thingWeWant = $(data).find('#documents').html();
-            $('.contentwrapper > .content > .vndl-results').html(thingWeWant);
+            var thingWeWant = $(data).find('#content').html();
+            $('.contentwrapper > .content').html(thingWeWant);
 
             // TODO make the search results page a partial that instead displayed on the home page as well
             // the partial needs to include the search form but not the results
+
+            // TODO Make search result page
 
 
         })
