@@ -20,7 +20,7 @@ function getResultsPage(queryString, start, length) {
 
     // TODO Change to correct path method
 
-    var url = 'http://localhost:3000/?' + queryString;
+    var url = '/?' + queryString;
 
     // normally this would be a post of the form.  but for now
     // just fetch the url
