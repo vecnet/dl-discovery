@@ -8,7 +8,8 @@ module ApplicationHelper
 
   def get_map_checkbox
 
-    show_map_checkbox = params[:showmap]
+    "checked" if params.include? :showmap
+
 
   end
 
