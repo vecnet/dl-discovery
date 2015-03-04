@@ -1,5 +1,6 @@
 <% # main container for facets/limits menu  -%>
 <% if has_facet_values? %>
+    <fieldset>
     <div id="facets" class="facets sidenav">
 
       <div class="top-panel-heading panel-heading">
@@ -19,4 +20,5 @@
         <%= render_facet_partials %>
       </div>
     </div>
+    </fieldset>
 <% end %>
