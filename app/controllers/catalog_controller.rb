@@ -13,7 +13,7 @@ class CatalogController < ApplicationController
       'q.alt' => '*:*'
     }
 
-    ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
+    ## Default parameters to send on single-document requests to Solr. These settings are the Blacklight defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
     #
     config.default_document_solr_params = {
@@ -214,7 +214,6 @@ class CatalogController < ApplicationController
     # mean") suggestion is offered.
     config.spell_max = 5
   end
-
 
 
 end

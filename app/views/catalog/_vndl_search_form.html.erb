@@ -7,7 +7,7 @@
       <label class="sr-only" for="catalog_search">search for text</label>
 
       <div class="input-group">
-        <input class="form-control input-lg" id="catalog_search" name="q" placeholder="search for text" tabindex="1" type="text"/>
+        <input class="form-control input-lg" id="catalog_search" name="q" placeholder="search for text" value="<%= get_search_query_text %>" tabindex="1" type="text"/>
 
         <div class="input-group-btn">
           <button type="submit" class="search-submit btn-lg btn btn-primary" id="search-submit-header" tabindex="2">
@@ -24,7 +24,7 @@
     <div class="mapnotch"></div>
     <div class="form-group">
       <div class="checkbox"><label>
-        <input type="checkbox" name="showmap" value="yes"/> show results on a map
+        <input type="checkbox" name="showmap" <%= get_map_checkbox %> value="checked"/> show results on a map
       </label></div>
       <div class="checkbox"><label>
         <input type="checkbox" name="searchmap" value="yes"/> search only the area shown on the map
