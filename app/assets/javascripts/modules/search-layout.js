@@ -36,17 +36,23 @@ function getResultsPage(queryString, start, length) {
             console.log($(data).find('#documents'));
 
 
-            // throw away the DOM elements of search results HTML that we don't need
-            // only keep the search results documents div
-            // inject that selected div into the vndl-results section
+            // find and store the search result document element contained in #content
 
-            var thingWeWant = $(data).find('#content').html();
-            $('.contentwrapper > .content').html(thingWeWant);
+            var searchResultDOMElement = $(data).find('#content').html();
 
-            // TODO make the search results page a partial that instead displayed on the home page as well
-            // the partial needs to include the search form but not the results
+            // inject DOMified search results into the vndl-results section of the current page
 
-            // TODO Make search result page
+            $('.contentwrapper > .content').html(searchResultDOMElement);
+
+            // rerun the method to hijack the search form to prevent a new page load
+
+            searchFormSetup($('form.vndl-search'));
+
+            // chuck away the previous map markers
+            window.vndl.theMap.clearMarkers();
+
+            // parse the inserted content for new map references
+            window.vndl.theMap.findMarkers($('.contentwrapper > .content'));
 
 
         })
@@ -57,6 +63,8 @@ function getResultsPage(queryString, start, length) {
             console.log(" ajax search load finished");
         });
 
+
+    //the old jq load method
 
     //$('.contentwrapper > .content').load(jqxhr, function () {
     //
@@ -91,19 +99,7 @@ $(function () {
     window.vndl.theMap.hide();
     disable($('input[name=searchmap]'));
 
-    // set up the "show map" checkbox to switch the map on and off
-    // and also to allow/disallow the "search map area only" check
-    // box.
-    $('input[name=showmap]').change(function () {
-        var showmap = $('input[name=showmap]').prop('checked');
-        if (showmap) {
-            window.vndl.theMap.show();
-            enable($('input[name=searchmap]'));
-        } else {
-            window.vndl.theMap.hide();
-            disable($('input[name=searchmap]'));
-        }
-    });
+
 
 
     // TODO extract this js to 'prep the form' to recieve input from user to run after the page loads
@@ -111,12 +107,14 @@ $(function () {
 
     // override form submit on the top Search form
 
-    $('form.vndl-search').on("submit", function (event) {
-        event.preventDefault();
-        var queryString = $('form.vndl-search').serialize();
-        getResultsPage(queryString);
+    searchFormSetup($('form.vndl-search'));
 
-    });
+    //$('form.vndl-search').on("submit", function (event) {
+    //    event.preventDefault();
+    //    var queryString = $('form.vndl-search').serialize();
+    //    getResultsPage(queryString);
+    //
+    //});
 
 
 
