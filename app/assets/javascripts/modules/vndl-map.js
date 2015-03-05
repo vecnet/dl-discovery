@@ -30,14 +30,14 @@ VndlMap.prototype.clearMarkers = function () {
 VndlMap.prototype.findMarkers = function (domElement) {
     var $elem = $(domElement);
 
-    var $results = $elem.find('.vndl-result');
+    var $results = $elem.find('.vndl-results');
     var markers = this.markers;
     var map = this.l;
 
     // loop through results finding each one's map location
     $results.each(function (index, result) {
-        var $points = $(result).find('[itemtype="http://schema.org/GeoCoordinates"]');
-        // alow multiple points for a single result..
+        var $points = $(result).find('[itemtype="http://schema.org/Dataset"]');
+        // allow multiple points for a single result..
         var pts = [];
         $points.each(function (i, pt) {
             var $pt = $(pt);
