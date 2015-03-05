@@ -100,12 +100,9 @@ $(function () {
     disable($('input[name=searchmap]'));
 
 
-
-
-    // TODO extract this js to 'prep the form' to recieve input from user to run after the page loads
-    // Give this js a new file with its name a semantic meaning so can be deciphered by next maintainer
-
-    // override form submit on the top Search form
+    // overrides the form submit event on the top Search form
+    // gets the user input search terms
+    // calls jqxhr getResultsPage with search terms
 
     searchFormSetup($('form.vndl-search'));
 

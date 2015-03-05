@@ -37,7 +37,7 @@
 <!--Also possible to parse this field and add :solr_point_type field and change bbox names as seen by ptdata-->
 
 
-<%= content_tag :data, class: 'vndl-results-index', data: {layer_id: document[:uuid], bbox: document[:solr_bbox], geom: document[:solr_geom], ptdata: document[:solr_bbox]} do %>
+<%= content_tag :data, class: 'vndl-results', data: {layer_id: document[:uuid], bbox: document[:solr_bbox], geom: document[:solr_geom], ptdata: document[:solr_bbox]} do %>
 
     <!--results list groups start-->
 
@@ -51,6 +51,8 @@
               <!--TODO change type=primary to :solr_point_type or whatever field is called-->
               <li data-ptdata="<%= document[:solr_bbox] %>" , type="primary">
               <li data-ptdata="<%= document[:solr_geom] %>" , type="primary">
+              <li itemprop="latitude" data-ptdata="<%= document[:solr_lat] %>"></li>
+              <li itemprop="longitude" data-ptdata="<%= document[:solr_lng] %>"></li>
           <% end %>
           <!--End of data-ptdata-->
           <div class="col-xs-12 col-sm-12 col-md-3">
