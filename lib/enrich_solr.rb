@@ -33,6 +33,7 @@ class EnrichSolr
       dc_rights_s:      first_or_nil(record['read_access_group_t']) || 'Public'
     }
     new_record.merge!(enrich_bounding_box(record))
+    new_record.merge!(enrich_multipoint(record))
     new_record.merge!(enrich_location_names(record))
 
     new_record
@@ -86,6 +87,27 @@ class EnrichSolr
         #"georss_polygon_s" => "#{north} #{west} #{north} #{east} #{south} #{east} #{south} #{west} #{north} #{west}"
       }
     end
+    new_record
+  end
+
+  def enrich_multipoint(record)
+    point_list = []
+    record.fetch('desc_metadata__based_near_t', []).each do |place|
+      place = place.split(",").first
+      info = @geonames.lookup_name(place)
+      if info.nil?
+        next
+      else
+        point_list << info["lng"] + " " + info["lat"]
+      end
+    end
+
+    new_record = {}
+    if point_list.length > 0
+      point_wkt = "MULTIPOINT (" + point_list.join(", ") + ")"
+      new_record["point_list_s"] = point_wkt
+    end
+
     new_record
   end
 
