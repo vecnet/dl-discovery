@@ -1,87 +1,41 @@
-<% comment do %>
 
-    <!--This is the original geoblacklight partial for individual search result documents-->
-    <!--Used as a template and reference for solr document methods-->
+<!-- results list item start -->
+<article class="vndl-search-result search-result row">
 
-<% # header bar for doc items in index view  -%>
-<%= content_tag :div, class: 'documentHeader row', data: {layer_id: document[:uuid], bbox: document[:solr_bbox], geom: document[:solr_geom]} do %>
-    <div class='status-icons'>
-      <%= geoblacklight_icon(document['layer_geom_type_s']) %>
-      <%= geoblacklight_icon(document['dct_provenance_s']) %>
-      <%= geoblacklight_icon(document['dc_rights_s']) %>
-    </div>
-    <h5 class="index_title col-sm-9s cosl-lg-10 text-span">
-      <% counter = document_counter_with_offset(document_counter) %>
-      <span class="document-counter">
-      <%= t('blacklight.search.documents.counter', :counter => counter) if counter %>
-    </span>
-      <%= link_to_document document, document_show_link_field(document), counter: counter, title: document['dc_title_s'] %>
-    </h5>
+  <!--TODO Pick which option, li or fieldset above for Hidden data element to parse with javascript to manipulate leaflet-->
 
-    <div class='col-md-12 more-info-area'>
-      <div class='collapse' data-collapse-target="<%= document['uuid'] %>">
-        <small>
-          <%= document['solr_year_i'] %>.
-          <i><%= document['dc_creator_sm'].nil? ? '' : document['dc_creator_sm'].join(', ') %></i>. <%= snippit(document['dc_description_s']) %>
-          . <%= document['dc_publisher_s'] %>.
-        </small>
-      </div>
-    </div>
+  <%= content_tag :data, class: 'xvndl-results', data: {layer_id: document[:uuid], bbox: document[:solr_bbox], geom: document[:solr_geom], ptdata: document[:solr_point_list_s]} do %><% end %>
 
+  <!--Start of data-ptdata-->
+  <%= content_tag :div, hidden: true do %>
+      <li data-layer-id="<%= document[:uuid] %>">
+      <!--TODO change type=primary to :solr_point_type or whatever field is called-->
+      <li data-rectangles="<%= document[:solr_bbox] %>" data-ui-type="primary">
+      <li data-dunno="<%= document[:solr_geom] %>" data-ui-type="secondary">
+      <li data-points="<%= document[:point_list_s] %>" data-ui-type="primary">
+  <% end %>
+  <!--End of data-ptdata-->
+  <div class="col-xs-12 col-sm-12 col-md-3">
 
-<% end %>
+    <!--TODO Bootstrap thumbnail class is messing with this not quite right and span sizing is wrong-->
+    <a href="#" title="Lorem ipsum" class="thumbnail"><img src="http://lorempixel.com/250/140/people" alt="Lorem ipsum"/></a>
+  </div>
 
-<% comment end %>
+  <!--<a href="#" title="Lorem ipsum" class="thumbnail"><i class="glyphicon glyphicon-file"></i></a>-->
+  <!--</div>-->
+  <div class="col-xs-12 col-sm-12 col-md-2">
+    <ul class="meta-search">
+      <li><i class="glyphicon glyphicon-calendar"></i> <span>1928</span></li>
+      <li><i class="glyphicon glyphicon-globe"></i> <span>Africa</span></li>
+      <li><i class="glyphicon glyphicon-tags"></i> <span>People</span></li>
+      <li><i class="glyphicon glyphicon-map-marker"></i> <span>Point</span></li>
+    </ul>
+  </div>
+  <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
+    <h3 class="result-title"><%= link_to_document document, document_show_link_field(document), title: document['dc_title_s'] %></h3>
 
-
-<!--Also possible to parse this field and add :solr_point_type field and change bbox names as seen by ptdata-->
-
-
-<%= content_tag :data, class: 'vndl-results', data: {layer_id: document[:uuid], bbox: document[:solr_bbox], geom: document[:solr_geom], ptdata: document[:solr_bbox]} do %>
-
-    <!--results list groups start-->
-
-
-    <section class="col-xs-12">
-        <article class="search-result row">
-
-          <!--TODO Pick which option, li or fieldset above for Hidden data element to parse with javascript to manipulate leaflet-->
-          <!--Start of data-ptdata-->
-          <%= content_tag :div, hidden: true do %>
-              <!--TODO change type=primary to :solr_point_type or whatever field is called-->
-              <li data-ptdata="<%= document[:solr_bbox] %>" , type="primary">
-              <li data-ptdata="<%= document[:solr_geom] %>" , type="primary">
-              <li itemprop="latitude" data-ptdata="<%= document[:solr_lat] %>"></li>
-              <li itemprop="longitude" data-ptdata="<%= document[:solr_lng] %>"></li>
-          <% end %>
-          <!--End of data-ptdata-->
-          <div class="col-xs-12 col-sm-12 col-md-3">
-
-            <!--TODO Bootstrap thumbnail class is messing with this not quite right and span sizing is wrong-->
-            <a href="#" title="Lorem ipsum" class="thumbnail"><img src="http://lorempixel.com/250/140/people" alt="Lorem ipsum"/></a>
-          </div>
-
-          <!--<a href="#" title="Lorem ipsum" class="thumbnail"><i class="glyphicon glyphicon-file"></i></a>-->
-          <!--</div>-->
-          <div class="col-xs-12 col-sm-12 col-md-2">
-            <ul class="meta-search">
-              <li><i class="glyphicon glyphicon-calendar"></i> <span>1928</span></li>
-              <li><i class="glyphicon glyphicon-globe"></i> <span>Africa</span></li>
-              <li><i class="glyphicon glyphicon-tags"></i> <span>People</span></li>
-              <li><i class="glyphicon glyphicon-map-marker"></i> <span>Point</span></li>
-            </ul>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-7 excerpet">
-            <h3 class="result-title"><%= link_to_document document, document_show_link_field(document), title: document['dc_title_s'] %></h3>
-
-            <p><%= snippit(document['dc_description_s']) %></p>
-          </div>
-          <span class="clearfix borda"></span>
-        </article>
-      </section>
-
-
-    <!--results list group end-->
-
-
-<% end %>
+    <p><%= snippit(document['dc_description_s']) %></p>
+  </div>
+  <span class="clearfix borda"></span>
+</article>
+<!-- results list item end -->

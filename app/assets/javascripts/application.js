@@ -17,6 +17,12 @@
 // Required by Blacklight
 //= require blacklight/blacklight
 
-//= require modules/vndl_map.js
+//= require geoblacklight
+
+// Wellknown is a javascript WKT converter that doesn't have a gem.
+// https://github.com/mapbox/wellknown
+//= require modules/wellknown
+
+//= require modules/vndl_map
 //= require modules/readmore.min
 //= require_tree .
