@@ -40,12 +40,15 @@ VndlMap.prototype.getRect = function(text) {
     text = text.replace(/\)/g       , ' ');
     var points = this.getPoints(text);
     if (points.length == 1 && points[0].length == 4) {
+        // TODO: Wrap the pointlist with POINT...([]) as the format
         return [
             [points[0][0], points[0][2]],
             [points[0][1], points[0][3]]
         ];
     } else {
-        return [];
+        // TODO: if no rect found return null because Dan says
+        // return [];
+        return null;
     }
 };
 // ------------------------------------------------------------------
@@ -153,11 +156,11 @@ VndlMap.prototype.findMarkers = function (domElement) {
 // ------------------------------------------------------------------
 VndlMap.prototype.leaflet = function () {
     return this.l;
-}
+};
 // ------------------------------------------------------------------
 VndlMap.prototype.resizeFor = function (duration) {
     // repeatedly tell the map it has resized, for <duration> seconds
-    duration = +duration || 1
+    duration = +duration || 1;
     var interval = 100; // milliseconds
 
     // start resizing repeatedly
@@ -170,7 +173,7 @@ VndlMap.prototype.resizeFor = function (duration) {
     setTimeout(function () {
         clearInterval(resizingId);
     }, duration * 1000);
-}
+};
 // ------------------------------------------------------------------
 VndlMap.prototype.show = function () {
     $('body').removeClass('map-inactive').addClass('map-active');
@@ -180,7 +183,7 @@ VndlMap.prototype.show = function () {
     $('.content').removeClass('col-xs-11 col-sm-11 col-md-11 col-lg-11');
     $('.content').addClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
     this.resizeFor(2);
-}
+};
 // ------------------------------------------------------------------
 VndlMap.prototype.hide = function () {
     $('body').removeClass('map-active').addClass('map-inactive');
@@ -190,6 +193,6 @@ VndlMap.prototype.hide = function () {
     $('.content').removeClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
     $('.content').addClass('col-xs-11 col-sm-11 col-md-11 col-lg-11');
     this.resizeFor(2);
-}
+};
 // ------------------------------------------------------------------
 // ------------------------------------------------------------------
