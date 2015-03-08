@@ -38,16 +38,13 @@ VndlMap.prototype.getRect = function(text) {
     text = text.replace(/ENVELOPE/g , ' ');
     text = text.replace(/\(/g       , ' ');
     text = text.replace(/\)/g       , ' ');
-    var points = this.getPoints(text);
+    var points = this.getPoints( 'POINT(' + text + ')' );
     if (points.length == 1 && points[0].length == 4) {
-        // TODO: Wrap the pointlist with POINT...([]) as the format
         return [
             [points[0][0], points[0][2]],
             [points[0][1], points[0][3]]
         ];
     } else {
-        // TODO: if no rect found return null because Dan says
-        // return [];
         return null;
     }
 };
@@ -134,7 +131,7 @@ VndlMap.prototype.findMarkers = function (domElement) {
 
         // TODO: wtf? why is attr('...') returning undefined?
         var rect = this.getRect($rectElem.attr('data-rectangle'));
-        newItem[uiType].rects.push(
+        newItem[uiType].rectangles.push(
             new L.rectangle(rect)
         );
 
