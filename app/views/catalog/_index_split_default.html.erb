@@ -10,7 +10,7 @@
   <%= content_tag :div, hidden: true do %>
       <li data-layer-id="<%= document[:uuid] %>">
       <!--TODO change type=primary to :solr_point_type or whatever field is called-->
-      <li data-rectangles="<%= document[:solr_bbox] %>" data-ui-type="primary">
+      <li data-rectangle="<%= document[:solr_bbox] %>" data-ui-type="primary">
       <li data-dunno="<%= document[:solr_geom] %>" data-ui-type="secondary">
       <li data-points="<%= document[:point_list_s] %>" data-ui-type="primary">
   <% end %>
