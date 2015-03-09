@@ -142,15 +142,29 @@ VndlMap.prototype.findMarkers = function (domElement) {
             new L.rectangle(rect)
         );
 
-        // TODO: move these temporary loops into a addItemsToMap() func.
-        // temporary: add points to map
+        // TODO: 3.0: make functions here for adding and removing the "highlight"
+        // class on the result element, so you can use those functions as the
+        // event handlers for mouseover
+        // e.g:
+        function highlightResultItem(...) { $r. ... }
+        function unHilightResultItem(...) { $r. ... }
+
+        // add points to map
         $.each(newItem.primary.points, function(index, marker) {
+            // TODO 3.1: hook up events between the leaflet marker and the result element
+            // e.g:
+            marker.on('mouseover', highlightResultItem);
             marker.addTo(map);
         });
-        // temporary: add rects to map
+        // add rects to map
         $.each(newItem.primary.rectangles, function(index, rect) {
+            // TODO 3.2: hook up events between the leaflet marker and the result element
             rect.addTo(map);
         });
+
+        // TODO 4: attach mouseover handler to $r that highlights
+        // ALL primary points
+        // TODO 5: handle secondary points
 
         resultItems.push(newItem);
 
