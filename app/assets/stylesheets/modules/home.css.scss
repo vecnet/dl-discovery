@@ -400,12 +400,19 @@ footer:after {
   background-color: $content-bg;
 }
 
+.vndl-search-result {
+
+  transition: 0.3s;
+
+}
+
 .vndl-results-index {
   background-color: $content-bg;
 }
 
 .vndl-results-highlight {
-  background-color: $content-bg-highlight;
+  background-color: $search-result-highlight;
+
 }
 
 

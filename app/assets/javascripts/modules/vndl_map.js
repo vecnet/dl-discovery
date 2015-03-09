@@ -161,34 +161,47 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 // ------------------------------------------------------------------
 
+    // Creates a yellow marker
+    var yellowMarker = L.AwesomeMarkers.icon({
+        markerColor: 'blue',
+        iconColor: 'yellow',
+        icon: 'heart'
+
+    });
+
+    // Creates a blue marker
+    var blueMarker = L.AwesomeMarkers.icon({
+        markerColor: 'blue',
+        icon: 'heart'
+
+    });
+
+
     // functions to toggle highlight class on search results and map markers
 
-    function highlightResultItem() {
+    function highlightResult() {
+
+        $.each(newItem.primary.points, function (index, marker) {
+
+            marker.setIcon(yellowMarker);
+
+        });
+
         $r.addClass("vndl-results-highlight");
+
     }
 
-    function unHighlightResultItem() {
+    function unHighlightResult() {
+
+
+        $.each(newItem.primary.points, function (index, marker) {
+
+            marker.setIcon(blueMarker);
+
+        });
 
         $r.removeClass("vndl-results-highlight");
-    }
 
-    function highlightMapMarker() {
-
-
-        $.each(newItem.primary.points, function (index, marker) {
-
-            marker.setIcon(redIcon);
-
-        });
-    }
-
-    function unHighlightMapMarker() {
-
-        $.each(newItem.primary.points, function (index, marker) {
-
-            marker.setIcon(defaultIcon);
-
-        });
     }
 
 
@@ -199,10 +212,20 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         // e.g:
         marker.on({
-            mouseover: highlightResultItem,
-            mouseout: unHighlightResultItem
+            mouseover: highlightResult,
+            mouseout: unHighlightResult
         });
         marker.addTo(map);
+
+        var vndlMarker = L.Icon.extend({
+            options: {
+                shadowSize: [50, 94]
+            }
+        });
+
+        //marker.setIcon(vndlMarker);
+
+
     });
 
 
@@ -212,8 +235,8 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         // TODO 3.2: hook up events between the leaflet marker and the result element
 
         rect.on({
-            mouseover: highlightResultItem,
-            mouseout: unHighlightResultItem
+            mouseover: highlightResult,
+            mouseout: unHighlightResult
         });
         rect.addTo(map);
     });
@@ -222,8 +245,8 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     // ALL primary points
     // TODO 5: handle secondary points
 
-    $r.on('mouseover', highlightMapMarker);
-    $r.on('mouseout', unHighlightMapMarker);
+    $r.on('mouseover', highlightResult);
+    $r.on('mouseout', unHighlightResult);
 
 
 
