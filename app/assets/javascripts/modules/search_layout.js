@@ -52,7 +52,7 @@ function getResultsPage(queryString, start, length) {
             window.vndl.theMap.clearMarkers();
 
             // parse the inserted content for new map references
-            window.vndl.theMap.findMarkers($('.contentwrapper > .content'));
+            window.vndl.theMap.discoverGeoDataInResultsHtml($('.contentwrapper > .content'));
 
 
         })
@@ -75,7 +75,7 @@ function getResultsPage(queryString, start, length) {
     //    // chuck away the previous map markers
     //    window.vndl.theMap.clearMarkers();
     //    // parse the inserted content for new map references
-    //    window.vndl.theMap.findMarkers($('.contentwrapper > .content'));
+    //    window.vndl.theMap.discoverGeoDataInResultsHtml($('.contentwrapper > .content'));
     //});
 
 }
