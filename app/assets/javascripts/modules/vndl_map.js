@@ -59,18 +59,17 @@ VndlMap.prototype.getRect = function(text) {
 // and returns a flat array of point(s).
 VndlMap.prototype.getPoints = function(text) {
     var geoObject = this.parseGeoText(text);
+
+    // if there are no points or unparseable from the text
+    // fail gracefully please
+
     if (!geoObject) {
 
-        // if there are no points or unparseable from the text
-        // fail gracefully by not doing anything
-
-        // logging which objects don't parse
+        // show objects that don't parse
         console.debug('expected POINTS but got the following rubbish : <' + text + '>');
 
         return [];
-
     }
-    ;
 
     if (geoObject.type == 'Point') {
 
@@ -98,9 +97,11 @@ VndlMap.prototype.parseGeoText = function(text) {
 };
 // ------------------------------------------------------------------
 
+// ------------------------------------------------------------------
+
 VndlMap.prototype.connectSingleResultToMap = function (result) {
 
-    var map = this.l;  // making it easy to call map
+    var map = this.l;  // saving keystrokes when calling mappy
 
     var $r = $(result);  // jQuery-ify the result element
 
@@ -153,29 +154,77 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     // class on the result element, so you can use those functions as the
     // event handlers for mouseover
     // e.g:
-    //function highlightResultItem(...) { $r. ... }
-    //function unHilightResultItem(...) { $r. ... }
 
-    // add points to map
+    //function highlightResultItem(...) { $r. ... }
+    //function unHighlightResultItem(...) { $r. ... }
+
+
+// ------------------------------------------------------------------
+
+    // functions to toggle highlight class on search results and map markers
+
+    function highlightResultItem() {
+        $r.addClass("vndl-results-highlight");
+    }
+
+    function unHighlightResultItem() {
+
+        $r.removeClass("vndl-results-highlight");
+    }
+
+    function highlightMapMarker() {
+
+
+        $.each(newItem.primary.points, function (index, marker) {
+
+            marker.setIcon(redIcon);
+
+        });
+    }
+
+    function unHighlightMapMarker() {
+
+        $.each(newItem.primary.points, function (index, marker) {
+
+            marker.setIcon(defaultIcon);
+
+        });
+    }
+
+
+    // add points to map and connect highlight functions
     $.each(newItem.primary.points, function (index, marker) {
 
         // TODO 3.1: hook up events between the leaflet marker and the result element
 
         // e.g:
-        //marker.on('mouseover', highlightResultItem);
+        marker.on({
+            mouseover: highlightResultItem,
+            mouseout: unHighlightResultItem
+        });
         marker.addTo(map);
     });
+
+
     // add rects to map
     $.each(newItem.primary.rectangles, function (index, rect) {
 
         // TODO 3.2: hook up events between the leaflet marker and the result element
 
+        rect.on({
+            mouseover: highlightResultItem,
+            mouseout: unHighlightResultItem
+        });
         rect.addTo(map);
     });
 
     // TODO 4: attach mouseover handler to $r that highlights
     // ALL primary points
     // TODO 5: handle secondary points
+
+    $r.on('mouseover', highlightMapMarker);
+    $r.on('mouseout', unHighlightMapMarker);
+
 
 
     // after completing the building of the item, push it to the big list
@@ -184,17 +233,20 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 // ------------------------------------------------------------------
 
-VndlMap.prototype.discoverGeoDataInResultsHtml = function (domElement) {
+VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
+
     var $elem = $(domElement);
 
     var $results = $elem.find('.vndl-search-result');
     this.resultItems = [];
     var map = this.l;
 
-    // loop through results finding each one's map location
+    // loop through results - find each ones map location and adding it to the map
     $results.each(function (index, result) {
 
         this.connectSingleResultToMap(result);
+        // TODO : Add listener to DOM element for search results to highlight markers
+
 
     }.bind(this));
 
