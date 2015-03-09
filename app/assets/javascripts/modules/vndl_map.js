@@ -30,8 +30,9 @@ VndlMap.prototype.clearMarkers = function () {
 };
 // ------------------------------------------------------------------
 // takes not-exactly Well Known Text (the ENVELOPE(...) thing isn't
-// proper WKT, despite Solr's opinion), and returns an array of two
-// points (e.g. [[x1,y1],[x2,y2]]) that are the bounds of a rectangle.
+// proper WKT, despite Solr's opinion), and returns a rect,
+// represented as an array of two points (e.g. [[x1,y1],[x2,y2]])
+// that are the bounds of a rectangle.  No rect, get a null back.
 VndlMap.prototype.getRect = function(text) {
     // WOOT GET RECKT RIGHT AWAY!!
     text = text.replace(/\,/g       , ' ');
@@ -77,6 +78,9 @@ VndlMap.prototype.parseGeoText = function(text) {
     return wellknown.parse(text);
 };
 // ------------------------------------------------------------------
+
+// TODO 1: rename this func to something like "discoverResults"
+
 VndlMap.prototype.findMarkers = function (domElement) {
     var $elem = $(domElement);
 
@@ -87,6 +91,8 @@ VndlMap.prototype.findMarkers = function (domElement) {
     // loop through results finding each one's map location
     $results.each(function (index, result) {
 
+        // TODO 2: take body of this loop into func called connectSingleResult or whatever
+
         // TODO: in theory it's more efficient if we var all these
         // variables into existence outside of this loop body.
         // .. including the Wkt object
@@ -95,6 +101,8 @@ VndlMap.prototype.findMarkers = function (domElement) {
 
         // represents a single result entry (a thing in the Digital Library)
         var newItem = {
+            id: null,
+            element: $r,
             primary:   { points: [], rectangles: [] },
             secondary: { points: [], rectangles: [] },
             tertiary:  { points: [], rectangles: [] }
@@ -129,12 +137,12 @@ VndlMap.prototype.findMarkers = function (domElement) {
         var $rectElem = $r.find('[data-rectangle]');
         var uiType = this.parseUiType($rectElem.attr('data-ui-type'));
 
-        // TODO: wtf? why is attr('...') returning undefined?
         var rect = this.getRect($rectElem.attr('data-rectangle'));
         newItem[uiType].rectangles.push(
             new L.rectangle(rect)
         );
 
+        // TODO: move these temporary loops into a addItemsToMap() func.
         // temporary: add points to map
         $.each(newItem.primary.points, function(index, marker) {
             marker.addTo(map);
