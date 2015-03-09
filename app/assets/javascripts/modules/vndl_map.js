@@ -161,20 +161,35 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 // ------------------------------------------------------------------
 
-    // Creates a yellow marker
-    var yellowMarker = L.AwesomeMarkers.icon({
-        markerColor: 'blue',
-        iconColor: 'yellow',
-        icon: 'heart'
+    // Creates a blue with highlight marker
+    var redMarker = L.AwesomeMarkers.icon({
+        markerColor: 'red',
+        icon: 'circle'
 
     });
 
     // Creates a blue marker
     var blueMarker = L.AwesomeMarkers.icon({
         markerColor: 'blue',
-        icon: 'heart'
+        icon: 'circle'
+
 
     });
+
+
+    // TODO: make a duplicate of this with alterations to color etc
+    // ie highlighted yellow center or with css so can animate
+
+
+    var vndlIcon = L.Icon.extend({
+        options: {
+            iconUrl: 'http://cdn.leafletjs.com/leaflet-0.7/images/marker-icon.png'
+
+
+        }
+    });
+
+    var vndlIcon = new vndlIcon();
 
 
     // functions to toggle highlight class on search results and map markers
@@ -183,7 +198,9 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         $.each(newItem.primary.points, function (index, marker) {
 
-            marker.setIcon(yellowMarker);
+            marker.setIcon(redMarker);
+
+            // TODO : add panTo marker on highlight? to see on map?
 
         });
 
@@ -206,27 +223,27 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
     // add points to map and connect highlight functions
-    $.each(newItem.primary.points, function (index, marker) {
+    if (!$.each(newItem.primary.points, function (index, marker) {
 
-        // TODO 3.1: hook up events between the leaflet marker and the result element
+            // TODO 3.1: hook up events between the leaflet marker and the result element
 
-        // e.g:
-        marker.on({
-            mouseover: highlightResult,
-            mouseout: unHighlightResult
-        });
-        marker.addTo(map);
-
-        var vndlMarker = L.Icon.extend({
-            options: {
-                shadowSize: [50, 94]
-            }
-        });
-
-        //marker.setIcon(vndlMarker);
+            // e.g:
+            marker.on({
+                mouseover: highlightResult,
+                mouseout: unHighlightResult
+            });
+            marker.addTo(map);
 
 
-    });
+            // TODO: messing with the default icon causes various issues
+            // needs to be sorted out to some satisfactory way.
+
+            marker.setIcon(blueMarker);
+
+
+        })) {
+
+    }
 
 
     // add rects to map
