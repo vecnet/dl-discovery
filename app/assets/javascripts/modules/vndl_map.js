@@ -17,7 +17,7 @@ window.VndlMap = function (mapDomId, options) {
 
     this.clearMarkers();
 
-    this.l.setView([-13, 140], 2);
+    this.l.setView([-13, 140], 3);
     // add an OpenStreetMap tile layer
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> contributors'
@@ -101,6 +101,14 @@ VndlMap.prototype.parseGeoText = function(text) {
 
 VndlMap.prototype.connectSingleResultToMap = function (result) {
 
+
+
+
+    // TODO : Break into several methods that accept two params
+    // newItem as the data state
+    // $r is the input for the function to add to the newItem store
+    // the functions alter newItem which can then be passed around in any order
+
     var map = this.l;  // saving keystrokes when calling mappy
 
     var $r = $(result);  // jQuery-ify the result element
@@ -109,9 +117,9 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     var newItem = {
         id: null,
         element: $r,
-        primary: {points: [], rectangles: []},
-        secondary: {points: [], rectangles: []},
-        tertiary: {points: [], rectangles: []}
+        primary: {points: [], rectangles: [], bounds: null},
+        secondary: {points: [], rectangles: [], bounds: null},
+        tertiary: {points: [], rectangles: [], bounds: null}
     };
 
     //
@@ -142,6 +150,9 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         }
     }.bind(this));
 
+
+
+
     //
     // find any rectangles
     //
@@ -160,7 +171,47 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     }
 
 
-// ------------------------------------------------------------------
+    // ------------------------------------------------------------------
+
+
+    // Calculate the BOUNDS for points et al
+    //
+
+    var flavours = ['primary','secondary', 'tertiary'];
+    for (var f=0; f < flavours.length; f++) {
+        var flavourWord = flavours[f];
+        var flavour = newItem[flavourWord];
+
+
+        // loop through each point and extend flavour.bounds by the latlng of each point
+        $.each(flavour.points, function (index, point) {
+            if (!flavour.bounds) {
+                // if there's not already a bound, make one that includes this point
+                flavour.bounds = L.latLngBounds(point.getLatLng(), point.getLatLng());
+            } else {
+                // make the bound object include each point of the results so the final bound object
+                // covers all the points
+                flavour.bounds.extend(point.getLatLng());
+            }
+        });
+
+
+        // loop through each rectangle and extend flavour.bounds by the latlng of each point
+        $.each(flavour.rectangles, function (index, rect) {
+            if (!flavour.bounds) {
+                // if there's not already a bound, make one that includes this point
+                flavour.bounds = L.latLngBounds(rect.getBounds());
+            } else {
+                // make the bound object include each point of the results so the final bound object
+                // covers all the points
+                flavour.bounds.extend(rect.getBounds());
+            }
+        });
+    console.log('the bounds object is hereeee : ' + flavour.bounds );
+    }
+
+
+    // ------------------------------------------------------------------
 
     // Creates a red with highlight marker
     var redMarker = L.AwesomeMarkers.icon({
@@ -201,7 +252,12 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             // TODO : add panTo marker on highlight? to see on map?
             // or do initial map panning based on search results?
 
+
+
         });
+
+
+        map.fitBounds(newItem.primary.bounds);
 
         $r.addClass("vndl-results-highlight");
 
