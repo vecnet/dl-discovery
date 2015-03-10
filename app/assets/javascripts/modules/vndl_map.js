@@ -104,7 +104,8 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
 
-    // TODO : Break into several methods that accept two params
+    // TODO : REFACTOR
+    // Break into several methods that accept two params
     // newItem as the data state
     // $r is the input for the function to add to the newItem store
     // the functions alter newItem which can then be passed around in any order
@@ -256,8 +257,11 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         });
 
+        // in case the bounds are null and prevent leaflet from erroring
+        if (newItem.primary.bounds) {
 
-        map.fitBounds(newItem.primary.bounds);
+            map.fitBounds(newItem.primary.bounds);
+        }
 
         $r.addClass("vndl-results-highlight");
 
