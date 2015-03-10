@@ -9,14 +9,16 @@ window.VndlMap = function (mapDomId, options) {
     // this.l is the leaflet map reference
 
 
+    // TODO: Setup teaspoon js testing framework after feature complete
 
-    // TODO : Rename this.l to this.leafletMap with a refactor
+
+    // TODO : Rename this.l to more expressive this.leafletMap with a refactor
     this.l = L.map(mapDomId, {
         reuseTiles: true,      // cache tiles
         worldCopyJump: true    // keep markers when scroll sideways into a new world
 
     });
-    // this.opts is our options
+    // this.opts is our options, there are many like it but this one is ours
     this.opts = options || {};
 
     this.clearMarkers();
@@ -30,6 +32,14 @@ window.VndlMap = function (mapDomId, options) {
 // ------------------------------------------------------------------
 VndlMap.prototype.clearMarkers = function () {
     // TODO: remove from Leaflet map first?
+
+    // TODO: remove all markers from map
+
+    // when adding use a layer and call layer.delete?  as per
+    // https://groups.google.com/forum/#!topic/leaflet-js/hyN06VUQmG0
+    // http://leafletjs.com/reference.html#layergroup
+
+    // example : https://stackoverflow.com/questions/20751523/removing-leaflet-layers-and-l-marker-method
 
 };
 // ------------------------------------------------------------------
