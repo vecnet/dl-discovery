@@ -17,7 +17,7 @@ window.VndlMap = function (mapDomId, options) {
 
     this.clearMarkers();
 
-    this.l.setView([-13, 140], 4);
+    this.l.setView([-13, 140], 2);
     // add an OpenStreetMap tile layer
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> contributors'
@@ -131,9 +131,14 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         var pts = this.getPoints($ptElem.attr('data-points'));
         for (var p = 0; p < pts.length; p++) {
-            newItem[uiType].points.push(
-                new L.marker([pts[p][1], pts[p][0]])
-            );
+            if (pts) {
+                newItem[uiType].points.push(
+                    new L.marker([pts[p][1], pts[p][0]])
+                );
+            }
+            else {
+                console.log("results that are bad points are : " + $r.find('h3').text())
+            }
         }
     }.bind(this));
 
@@ -144,36 +149,29 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     var uiType = this.parseUiType($rectElem.attr('data-ui-type'));
 
     var rect = this.getRect($rectElem.attr('data-rectangle'));
-    newItem[uiType].rectangles.push(
-        new L.rectangle(rect)
-    );
+    if (rect){
+        newItem[uiType].rectangles.push(
+            new L.rectangle(rect)
+        )
 
-    //return newItem;
-
-    // TODO: 3.0: make functions here for adding and removing the "highlight"
-    // class on the result element, so you can use those functions as the
-    // event handlers for mouseover
-    // e.g:
-
-    //function highlightResultItem(...) { $r. ... }
-    //function unHighlightResultItem(...) { $r. ... }
+    }
+    else {
+        console.log("results that are bad rectangles are : " + $r.find('h3').text())
+    }
 
 
 // ------------------------------------------------------------------
 
-    // Creates a blue with highlight marker
+    // Creates a red with highlight marker
     var redMarker = L.AwesomeMarkers.icon({
-        markerColor: 'red',
-        icon: 'circle'
-
+        icon: 'circle',
+        markerColor: 'red'
     });
 
     // Creates a blue marker
     var blueMarker = L.AwesomeMarkers.icon({
-        markerColor: 'blue',
-        icon: 'circle'
-
-
+        icon: 'circle',
+        markerColor: 'blue'
     });
 
 
@@ -184,8 +182,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     var vndlIcon = L.Icon.extend({
         options: {
             iconUrl: 'http://cdn.leafletjs.com/leaflet-0.7/images/marker-icon.png'
-
-
         }
     });
 
@@ -200,7 +196,10 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
             marker.setIcon(redMarker);
 
+            // TODO : Change highlight method to surround entire search result parent element
+
             // TODO : add panTo marker on highlight? to see on map?
+            // or do initial map panning based on search results?
 
         });
 
@@ -238,6 +237,8 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             // TODO: messing with the default icon causes various issues
             // needs to be sorted out to some satisfactory way.
 
+
+            // set the default marker
             marker.setIcon(blueMarker);
 
 
@@ -249,8 +250,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     // add rects to map
     $.each(newItem.primary.rectangles, function (index, rect) {
 
-        // TODO 3.2: hook up events between the leaflet marker and the result element
-
         rect.on({
             mouseover: highlightResult,
             mouseout: unHighlightResult
@@ -258,14 +257,12 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         rect.addTo(map);
     });
 
-    // TODO 4: attach mouseover handler to $r that highlights
-    // ALL primary points
-    // TODO 5: handle secondary points
+
 
     $r.on('mouseover', highlightResult);
     $r.on('mouseout', unHighlightResult);
 
-
+    // TODO 5: handle secondary points
 
     // after completing the building of the item, push it to the big list
     this.resultItems.push(newItem);
@@ -284,8 +281,9 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
     // loop through results - find each ones map location and adding it to the map
     $results.each(function (index, result) {
 
+        // Add listener to DOM element for search results to highlight markers
+
         this.connectSingleResultToMap(result);
-        // TODO : Add listener to DOM element for search results to highlight markers
 
 
     }.bind(this));
