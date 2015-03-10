@@ -7,6 +7,10 @@ console.log('running vndlmap source');
 
 window.VndlMap = function (mapDomId, options) {
     // this.l is the leaflet map reference
+
+
+
+    // TODO : Rename this.l to this.leafletMap with a refactor
     this.l = L.map(mapDomId, {
         reuseTiles: true,      // cache tiles
         worldCopyJump: true    // keep markers when scroll sideways into a new world
@@ -26,7 +30,7 @@ window.VndlMap = function (mapDomId, options) {
 // ------------------------------------------------------------------
 VndlMap.prototype.clearMarkers = function () {
     // TODO: remove from Leaflet map first?
-    this.markers = [];
+
 };
 // ------------------------------------------------------------------
 // takes not-exactly Well Known Text (the ENVELOPE(...) thing isn't
@@ -326,6 +330,10 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     // after completing the building of the item, push it to the big list
     this.resultItems.push(newItem);
+
+    // return newItem
+
+    return newItem;
 };
 
 // ------------------------------------------------------------------
@@ -333,20 +341,53 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
 
     var $elem = $(domElement);
-
     var $results = $elem.find('.vndl-search-result');
     this.resultItems = [];
-    var map = this.l;
+
+    // to zoom the map to surround all results
+    //var boundsThemAll = L.latLngBounds();
+
+    var boundsThemAll = null;
+
+
+
 
     // loop through results - find each ones map location and adding it to the map
     $results.each(function (index, result) {
 
         // Add listener to DOM element for search results to highlight markers
 
-        this.connectSingleResultToMap(result);
+       var currentResult = this.connectSingleResultToMap(result);
+
+
+        // getting bounds
+
+        // testing if the correct data
+        if (currentResult.primary.bounds) {
+
+            // if a bound already exists
+            if (boundsThemAll) {
+
+                // extend the bound with the new results bounds
+                boundsThemAll.extend(currentResult.primary.bounds);
+
+            }
+
+            // if the bounds object doesn't already exist or is null then create one
+            // matching the current items bound. um ok.
+
+            else {
+                boundsThemAll = L.latLngBounds(currentResult.primary.bounds);
+            }
+        }
 
 
     }.bind(this));
+
+
+    // now pan it like its hot
+
+    this.l.fitBounds(boundsThemAll);
 
 
 };
