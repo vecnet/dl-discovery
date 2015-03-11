@@ -23,7 +23,11 @@ window.VndlMap = function (mapDomId, options) {
 
     markerLayer = new L.FeatureGroup();
 
+    this.l.addLayer(markerLayer);
+
     rectangleLayer = new L.FeatureGroup();
+
+    this.l.addLayer(rectangleLayer);
 
     this.clearMarkers();
 
@@ -341,8 +345,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     }
 
 
-    // add the layer of markers to the map
-    map.addLayer(markerLayer);
+
 
 
 
@@ -359,8 +362,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         rect.addTo(rectangleLayer);
     });
 
-    // TODO: Turn back on rendering of bounding boxes on map later
-    //map.addLayer(rectangleLayer);
+
 
 
 
@@ -429,8 +431,9 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
     // now pan it like its hot
 
     // fit the map bounds to show all the primary markers
-
-    this.l.fitBounds(boundsThemAll);
+    if (boundsThemAll) {
+        this.l.fitBounds(boundsThemAll);
+    }
 
 
 };
