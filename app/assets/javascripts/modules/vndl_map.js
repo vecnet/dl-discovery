@@ -67,6 +67,7 @@ VndlMap.prototype.clearRectangles = function () {
 // proper WKT, despite Solr's opinion), and returns a rectangle,
 // represented as an array of two points (e.g. [[x1,y1],[x2,y2]])
 // that are the bounds of a rectangle.  No rect, get a null back.
+
 VndlMap.prototype.getRect = function(text) {
     // WOOT GET RECKT RIGHT AWAY!!
     text = text.replace(/\,/g       , ' ');
@@ -77,9 +78,14 @@ VndlMap.prototype.getRect = function(text) {
 
 
     if (points && points.length == 1 && points[0].length == 4) {
+
+
+        // compare points 01,00 against 03,02 and if 0302 is to the LEFT/ WEST of 0100
+        // then addsubtract 360 to the value
+        // ie https://www.mapbox.com/mapbox.js/example/v1.0.0/cross-date-line/
         return [
-            [points[0][0], points[0][2]],
-            [points[0][1], points[0][3]]
+            [points[0][1], points[0][0]],
+            [points[0][3], points[0][2]]
         ];
     } else {
 

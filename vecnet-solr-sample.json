@@ -120,6 +120,62 @@
     "point_list_s": "MULTIPOINT (159 -8)"
   },
   {
+    "uuid": "vecnet:1544c0749",
+    "dc_title_s": "Testing reverse bounding box coords",
+    "dc_description_s": "Vector-Borne Disease Network (VecNet)’s digital library provides part of a common analytical framework to assemble data on malaria transmission and make it accessible for the purposes of computational modeling. This poster reports on VecNet digital library development, key decisions related to metadata standards, design, the central role of metadata and authority files in its architecture, and future directions of this Hydra/Fedora based repository solution.",
+    "dc_creator_sm": [
+      "Barker, Michelle",
+      "Brower, Donald",
+      "Meyers, Natalie",
+      "natalie.meyers@nd.edu"
+    ],
+    "dc_type_s": "Poster",
+    "dc_subject_sm": [
+      "Metadata",
+      "Hydra technology",
+      "Dublin Core",
+      "Darwin Core",
+      "Digital library"
+    ],
+    "dct_spatial_sm": [
+      "South Bend (United States) [4926563/PPLA2]"
+    ],
+    "layer_id_s": "1544c0741",
+    "layer_slug_s": "1544c0741",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "41.64216722382274 -86.30522725744922 41.72459537617726 -86.1947859425508",
+    "solr_geom": "ENVELOPE(-86.30522725744922, -86.1947859425508, 41.72459537617726, 41.64216722382274)",
+    "georss_box_s": "41.64216722382274 -86.30522725744922 41.72459537617726 -86.1947859425508",
+    "point_list_s": "MULTIPOINT (-86.25001 41.68338)"
+  },
+  {
+    "uuid": "vecnet:7m01bk70j",
+    "dc_title_s": "Solomon Islands Rainfall data from Henderson Archive",
+    "dc_description_s": "Zip Archive of Rainfall from weather station NZ52000 11 -0925 16003 9 ? -9999 19980101 20061029 40 Solomon Islands Henderson",
+    "dc_creator_sm": [
+      "PACRAIN",
+      "NZ52000"
+    ],
+    "dc_type_s": "Dataset: Climate/Weather",
+    "dc_subject_sm": [
+      "rainfall"
+    ],
+    "dct_spatial_sm": [
+      "Solomon Islands (Solomon Islands) [2103350/PCLI]"
+    ],
+    "layer_id_s": "7m01bk70j",
+    "layer_slug_s": "7m01bk70j",
+    "layer_geom_type_s": "Point",
+    "dct_provenance_s": "Digital Library",
+    "dc_rights_s": "public",
+    "solr_bbox": "155.508606 -12.291889 168.843506 -5.0785",
+    "solr_geom": "ENVELOPE(155.508606, 168.843506, -5.0785, -12.291889)",
+    "georss_box_s": "-12.291889 155.508606 -5.0785 168.843506",
+    "point_list_s": "MULTIPOINT (159 -8)"
+  },
+  {
     "uuid": "vecnet:sb3978279",
     "dc_title_s": "Asembo Bay Tagged Bibliographic Citations",
     "dc_description_s": "A bibliographic citation database in MS Access format where articles related to the study of malaria in the Asembo Bay area of Kenya are tagged by bionomic parameter.",
