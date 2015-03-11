@@ -1,5 +1,5 @@
 .leaflet-container {
-  background: none;
+  background: $map-bg-color;
   
   // Needed to overwrite a font set by Leaflet-Rails
   font-family: 'Source Sans Pro', sans-serif;
