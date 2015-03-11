@@ -15,8 +15,8 @@ window.VndlMap = function (mapDomId, options) {
     // TODO : Rename this.l to more expressive this.leafletMap with a refactor
     this.l = L.map(mapDomId, {
         reuseTiles: true,      // cache tiles
-        worldCopyJump: true    // keep markers when scroll sideways into a new world
-
+        worldCopyJump: true,    // keep markers when scroll sideways into a new world
+        scrollWheelZoom: false  // forced to double-click or use the controls so crazy things don't happen
     });
     // this.opts is our options, there are many like it but this one is ours
     this.opts = options || {};
