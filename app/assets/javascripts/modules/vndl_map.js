@@ -168,22 +168,22 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
 
-    //
+    // TODO: Turn rectangles back on once we do some data QA
     // find any rectangles
     //
-    var $rectElem = $r.find('[data-rectangle]');
-    var uiType = this.parseUiType($rectElem.attr('data-ui-type'));
-
-    var rect = this.getRect($rectElem.attr('data-rectangle'));
-    if (rect){
-        newItem[uiType].rectangles.push(
-            new L.rectangle(rect)
-        )
-
-    }
-    else {
-        console.log("results that are bad rectangles are : " + $r.find('h3').text())
-    }
+    //var $rectElem = $r.find('[data-rectangle]');
+    //var uiType = this.parseUiType($rectElem.attr('data-ui-type'));
+    //
+    //var rect = this.getRect($rectElem.attr('data-rectangle'));
+    //if (rect){
+    //    newItem[uiType].rectangles.push(
+    //        new L.rectangle(rect)
+    //    )
+    //
+    //}
+    //else {
+    //    console.log("results that are bad rectangles are : " + $r.find('h3').text())
+    //}
 
 
     // ------------------------------------------------------------------
@@ -254,7 +254,11 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     var vndlIcon = new vndlIcon();
 
 
-    // functions to toggle highlight class on search results and map markers
+
+
+    //
+    // toggle highlight class on search results and map markers
+    //
 
     function highlightResult() {
 
@@ -264,22 +268,21 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
             // TODO : Change highlight method to surround entire search result parent element
 
-            // TODO : add panTo marker on highlight? to see on map?
-            // or do initial map panning based on search results?
-
-
-
         });
 
         // in case the bounds are null and prevent leaflet from erroring
         if (newItem.primary.bounds) {
 
-            map.fitBounds(newItem.primary.bounds);
+
+            // turn off the map panning to results
+            //map.fitBounds(newItem.primary.bounds);
         }
 
         $r.addClass("vndl-results-highlight");
 
     }
+
+    //---
 
     function unHighlightResult() {
 
@@ -294,11 +297,11 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     }
 
+    // ---
+
 
     // add points to map and connect highlight functions
     if (!$.each(newItem.primary.points, function (index, marker) {
-
-            // TODO 3.1: hook up events between the leaflet marker and the result element
 
             // e.g:
             marker.on({
@@ -396,6 +399,8 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
 
 
     // now pan it like its hot
+
+    // fit the map bounds to show all the primary markers
 
     this.l.fitBounds(boundsThemAll);
 
