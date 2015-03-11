@@ -49,6 +49,7 @@ function getResultsPage(queryString, start, length) {
             searchFormSetup($('form.vndl-search'));
 
             // chuck away the previous map markers
+
             window.vndl.theMap.clearMarkers();
 
             // parse the inserted content for new map references
@@ -60,7 +61,7 @@ function getResultsPage(queryString, start, length) {
             console.log("error" + textStatus);
         })
         .always(function () {
-            console.log(" ajax search load finished");
+            console.log(" ajax search and load finished");
         });
 
 

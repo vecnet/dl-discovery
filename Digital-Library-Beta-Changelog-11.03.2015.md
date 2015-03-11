@@ -5,12 +5,15 @@ Digital Library Changelog
 
 **Changes**
 
-* Turned off the map panning to include only relevant results when mouse over as it was psychedelic and drove people crazy.  Functionality still exists for potential later use.
+* Turn off the map panning to include only relevant results when mouse over as it was psychedelic and drove people crazy.  Functionality still exists for potential later use.
 
-* Turned off rendering of bounding boxes until some more discussion about data and display time are completed.  Make map marker interaction clearer for the moment.
+* Turn off rendering of bounding boxes until some more discussion about data and user are completed.  Makes map marker interaction clearer for the moment.
 
 
 
 **Added**
 
-* Prevented zooming of the map with scroll wheels as sometimes can cause UX problems.
+* Prevent zooming of the map with scroll wheels as sometimes can cause UX problems.
+
+* Add markers and bounding box objects to layers that can be added, removed or edited programmatically
+

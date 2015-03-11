@@ -21,7 +21,13 @@ window.VndlMap = function (mapDomId, options) {
     // this.opts is our options, there are many like it but this one is ours
     this.opts = options || {};
 
+    markerLayer = new L.FeatureGroup();
+
+    rectangleLayer = new L.FeatureGroup();
+
     this.clearMarkers();
+
+    this.clearRectangles();
 
     this.l.setView([-13, 140], 3);
     // add an OpenStreetMap tile layer
@@ -31,9 +37,8 @@ window.VndlMap = function (mapDomId, options) {
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.clearMarkers = function () {
-    // TODO: remove from Leaflet map first?
 
-    // TODO: remove all markers from map
+    markerLayer.clearLayers();
 
     // when adding use a layer and call layer.delete?  as per
     // https://groups.google.com/forum/#!topic/leaflet-js/hyN06VUQmG0
@@ -41,6 +46,17 @@ VndlMap.prototype.clearMarkers = function () {
 
     // example : https://stackoverflow.com/questions/20751523/removing-leaflet-layers-and-l-marker-method
 
+};
+// ------------------------------------------------------------------
+VndlMap.prototype.clearRectangles = function () {
+
+    rectangleLayer.clearLayers();
+
+    // when adding use a layer and call layer.delete?  as per
+    // https://groups.google.com/forum/#!topic/leaflet-js/hyN06VUQmG0
+    // http://leafletjs.com/reference.html#layergroup
+
+    // example : https://stackoverflow.com/questions/20751523/removing-leaflet-layers-and-l-marker-method
 };
 // ------------------------------------------------------------------
 // takes not-exactly Well Known Text (the ENVELOPE(...) thing isn't
@@ -168,22 +184,23 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
 
-    // TODO: Turn rectangles back on once we do some data QA
+    //
     // find any rectangles
     //
-    //var $rectElem = $r.find('[data-rectangle]');
-    //var uiType = this.parseUiType($rectElem.attr('data-ui-type'));
-    //
-    //var rect = this.getRect($rectElem.attr('data-rectangle'));
-    //if (rect){
-    //    newItem[uiType].rectangles.push(
-    //        new L.rectangle(rect)
-    //    )
-    //
-    //}
-    //else {
-    //    console.log("results that are bad rectangles are : " + $r.find('h3').text())
-    //}
+
+    var $rectElem = $r.find('[data-rectangle]');
+    var uiType = this.parseUiType($rectElem.attr('data-ui-type'));
+
+    var rect = this.getRect($rectElem.attr('data-rectangle'));
+    if (rect){
+        newItem[uiType].rectangles.push(
+            new L.rectangle(rect)
+        )
+
+    }
+    else {
+        console.log("results that are bad rectangles are : " + $r.find('h3').text())
+    }
 
 
     // ------------------------------------------------------------------
@@ -222,7 +239,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
                 flavour.bounds.extend(rect.getBounds());
             }
         });
-    console.log('the bounds object is hereeee : ' + flavour.bounds );
+    //console.log('the bounds object is hereeee : ' + flavour.bounds );
     }
 
 
@@ -275,6 +292,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
             // turn off the map panning to results
+
             //map.fitBounds(newItem.primary.bounds);
         }
 
@@ -297,23 +315,22 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     }
 
-    // ---
 
-
-    // add points to map and connect highlight functions
+    // add points to FeatureGroup layer and connect highlight functions
     if (!$.each(newItem.primary.points, function (index, marker) {
 
-            // e.g:
+
+            // add event listeners for mouseover and mouseout
             marker.on({
                 mouseover: highlightResult,
                 mouseout: unHighlightResult
             });
-            marker.addTo(map);
+
+            marker.addTo(markerLayer);
 
 
             // TODO: messing with the default icon causes various issues
             // needs to be sorted out to some satisfactory way.
-
 
             // set the default marker
             marker.setIcon(blueMarker);
@@ -324,6 +341,12 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     }
 
 
+    // add the layer of markers to the map
+    map.addLayer(markerLayer);
+
+
+
+
     // add rects to map
     $.each(newItem.primary.rectangles, function (index, rect) {
 
@@ -331,8 +354,13 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             mouseover: highlightResult,
             mouseout: unHighlightResult
         });
-        rect.addTo(map);
+
+
+        rect.addTo(rectangleLayer);
     });
+
+    // TODO: Turn back on rendering of bounding boxes on map later
+    //map.addLayer(rectangleLayer);
 
 
 
@@ -368,7 +396,7 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
     // loop through results - find each ones map location and adding it to the map
     $results.each(function (index, result) {
 
-        // Add listener to DOM element for search results to highlight markers
+        // the following is a huge function that does most of the map work for the single result
 
        var currentResult = this.connectSingleResultToMap(result);
 
