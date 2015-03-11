@@ -16,7 +16,9 @@ window.VndlMap = function (mapDomId, options) {
     this.l = L.map(mapDomId, {
         reuseTiles: true,      // cache tiles
         worldCopyJump: true,    // keep markers when scroll sideways into a new world
-        scrollWheelZoom: false  // forced to double-click or use the controls so crazy things don't happen
+        scrollWheelZoom: false // forced to double-click or use the controls so no crazy things
+
+
     });
     // this.opts is our options, there are many like it but this one is ours
     this.opts = options || {};
@@ -44,9 +46,7 @@ VndlMap.prototype.clearMarkers = function () {
 
     markerLayer.clearLayers();
 
-    // when adding use a layer and call layer.delete?  as per
-    // https://groups.google.com/forum/#!topic/leaflet-js/hyN06VUQmG0
-    // http://leafletjs.com/reference.html#layergroup
+    // when adding use a layer and call layer.delete
 
     // example : https://stackoverflow.com/questions/20751523/removing-leaflet-layers-and-l-marker-method
 
@@ -56,9 +56,7 @@ VndlMap.prototype.clearRectangles = function () {
 
     rectangleLayer.clearLayers();
 
-    // when adding use a layer and call layer.delete?  as per
-    // https://groups.google.com/forum/#!topic/leaflet-js/hyN06VUQmG0
-    // http://leafletjs.com/reference.html#layergroup
+    // when adding use a layer and call layer.delete
 
     // example : https://stackoverflow.com/questions/20751523/removing-leaflet-layers-and-l-marker-method
 };
@@ -80,9 +78,14 @@ VndlMap.prototype.getRect = function(text) {
     if (points && points.length == 1 && points[0].length == 4) {
 
 
-        // compare points 01,00 against 03,02 and if 0302 is to the LEFT/ WEST of 0100
-        // then addsubtract 360 to the value
-        // ie https://www.mapbox.com/mapbox.js/example/v1.0.0/cross-date-line/
+        // TODO: turn this back on when testing rectangles
+        //// compare points 01,00 against 03,02 and if 0302 is to the LEFT/ WEST of 0100
+        //// then addsubtract 360 to the value
+        //// ie https://www.mapbox.com/mapbox.js/example/v1.0.0/cross-date-line/
+        //if (points[0][0] > points[0][2]){
+        //    points[0][2] = points[0][2] - 360;
+        //}
+
         return [
             [points[0][1], points[0][0]],
             [points[0][3], points[0][2]]
@@ -365,7 +368,8 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         });
 
 
-        rect.addTo(rectangleLayer);
+        // TODO: turn rectangles back on when deal with meridian issue
+        //rect.addTo(rectangleLayer);
     });
 
 
