@@ -10,51 +10,56 @@ function searchFormSetup(formElement) {
 
     $('#search-map-button').on("click", function() {
 
-
-        // get the map bounds
-
-        var currentMapBounds = window.vndl.theMap.l.getBounds();
-
-        // convert it to string
-
+        //
         // TODO : Refactor all of this
+        //
 
-        // TODO: Do some rounding on the output here so can be readable in the UI?
+        var currentMapBounds = window.vndl.theMap.leafletMap.getBounds();
+
+
+
+        // TODO: Do some rounding on the output so can be readable in the UI?
 
         var currentMapBoundsString = currentMapBounds.toBBoxString();
 
         var s = currentMapBoundsString;
 
+        console.log('toBBoxString output : ' + s);
+
         var correctMapBoundsString = (s.split(',')[1] + ',' + s.split(',')[0] + ',' +  s.split(',')[3] + ',' + s.split(',')[2]);
 
+
+
+
+        var envelopeFormatMapBoundsString = (s.split(',')[0] + ',' + s.split(',')[2] + ',' +  s.split(',')[3] + ',' + s.split(',')[1]);
 
         console.log('rearranged string is : ' + s.split(',')[1] + ',' + s.split(',')[0] + ',' +  s.split(',')[3] + ',' + s.split(',')[2]);
 
 
 
-        // debugging start
+        // debugging
 
-        var southWestLatLng = currentMapBounds.getSouthWest();
-
-        console.log('sw bounds are : ' + southWestLatLng.toString());
-
-        var northEastLatLng = currentMapBounds.getNorthEast();
-
-        console.log('ne bounds are : ' + northEastLatLng.toString());
+        //var southWestLatLng = currentMapBounds.getSouthWest();
+        //
+        //console.log('sw bounds are : ' + southWestLatLng.toString());
+        //
+        //var northEastLatLng = currentMapBounds.getNorthEast();
+        //
+        //console.log('ne bounds are : ' + northEastLatLng.toString());
 
 
         console.log('maps bounds are : ' + currentMapBounds.toBBoxString());
 
-
-        // debugging end
-
-        // add fake bounding box value to form
-        $('form.vndl-search').append('<input id="bbox-input-field" type="hidden" name="bbox" value="nothing">');
+        console.log('setting the search bounds to : ' + envelopeFormatMapBoundsString);
 
 
-        // change the bbox input value to the actual bounds of the map
-
-        $('#bbox-input-field').val(correctMapBoundsString);
+        //// add fake bounding box value to form
+        //$('form.vndl-search').append('<input id="bbox-input-field" type="hidden" name="bbox" value="nothing">');
+        //
+        //
+        //// change the bbox input value to the actual bounds of the map
+        //
+        //$('#bbox-input-field').val(currentMapBoundsString);
 
         $(formElement).trigger('submit');
 

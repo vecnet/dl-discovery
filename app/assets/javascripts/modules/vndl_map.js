@@ -368,7 +368,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
         // TODO: turn rectangles back on when deal with meridian issue
-        //rect.addTo(rectangleLayer);
+        rect.addTo(rectangleLayer);
     });
 
 
@@ -459,7 +459,7 @@ VndlMap.prototype.resizeFor = function (duration) {
     // start resizing repeatedly
     var me = this;
     var resizingId = setInterval(function () {
-        me.l.invalidateSize(true);
+        me.leafletMap.invalidateSize(true);
     }, interval);
 
     // stop resizing in <duration> seconds
