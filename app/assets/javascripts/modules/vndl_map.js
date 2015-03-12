@@ -286,7 +286,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
     //
-    // toggle highlight class on search results and map markers
+    // toggle highlight class on search results and map markers and rectangles
     //
 
     function highlightResult() {
@@ -301,6 +301,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         });
 
+        // set each relevant rectangle to the higlight style
         $.each(newItem.primary.rectangles, function (index, rect) {
 
             rect.setStyle({
@@ -332,6 +333,8 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     function unHighlightResult() {
 
+
+        // default leaflet polygon style
         var defaultStyle = {
             color: "#2262CC",
             weight: 2,
