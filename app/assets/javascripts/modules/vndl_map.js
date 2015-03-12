@@ -295,9 +295,25 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
             marker.setIcon(redMarker);
 
+
+
             // TODO : Change highlight method to surround entire search result parent element
 
         });
+
+        $.each(newItem.primary.rectangles, function (index, rect) {
+
+            rect.setStyle({
+                color: '#ffffab',
+                weight: 3,
+                opacity: 0.4,
+                fillOpacity: 0.45,
+                fillColor: '#ffffab'
+            });
+        });
+
+
+
 
         // in case the bounds are null and prevent leaflet from erroring
         if (newItem.primary.bounds) {
@@ -316,11 +332,24 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     function unHighlightResult() {
 
+        var defaultStyle = {
+            color: "#2262CC",
+            weight: 2,
+            opacity: 0.6,
+            fillOpacity: 0.1,
+            fillColor: "#2262CC"
+        };
+
 
         $.each(newItem.primary.points, function (index, marker) {
 
             marker.setIcon(blueMarker);
 
+        });
+
+        $.each(newItem.primary.rectangles, function (index, rect) {
+
+            rect.setStyle(defaultStyle);
         });
 
         $r.removeClass("vndl-results-highlight");
@@ -358,7 +387,8 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
 
-    // add rects to map
+    // add rects to rectangleLayer and connect highlight functions
+
     $.each(newItem.primary.rectangles, function (index, rect) {
 
         rect.on({
