@@ -6,14 +6,13 @@
 console.log('running vndlmap source');
 
 window.VndlMap = function (mapDomId, options) {
-    // this.l is the leaflet map reference
-
 
     // TODO: Setup teaspoon js testing framework after feature complete
 
+    // this.l is the leaflet map reference
 
     // TODO : Rename this.l to more expressive this.leafletMap with a refactor
-    this.l = L.map(mapDomId, {
+    this.leafletMap = L.map(mapDomId, {
         reuseTiles: true,      // cache tiles
         worldCopyJump: true,    // keep markers when scroll sideways into a new world
         scrollWheelZoom: false // forced to double-click or use the controls so no crazy things
@@ -25,21 +24,21 @@ window.VndlMap = function (mapDomId, options) {
 
     markerLayer = new L.FeatureGroup();
 
-    this.l.addLayer(markerLayer);
+    this.leafletMap.addLayer(markerLayer);
 
     rectangleLayer = new L.FeatureGroup();
 
-    this.l.addLayer(rectangleLayer);
+    this.leafletMap.addLayer(rectangleLayer);
 
     this.clearMarkers();
 
     this.clearRectangles();
 
-    this.l.setView([-13, 140], 3);
+    this.leafletMap.setView([-13, 140], 3);
     // add an OpenStreetMap tile layer
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> contributors'
-    }).addTo(this.l);
+    }).addTo(this.leafletMap);
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.clearMarkers = function () {
@@ -153,7 +152,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     // $r is the input for the function to add to the newItem store
     // the functions alter newItem which can then be passed around in any order
 
-    var map = this.l;  // saving keystrokes when calling mappy
+    var map = this.leafletMap;  // saving keystrokes when calling mappy
 
     var $r = $(result);  // jQuery-ify the result element
 
@@ -442,14 +441,14 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
 
     // fit the map bounds to show all the primary markers
     if (boundsThemAll) {
-        this.l.fitBounds(boundsThemAll);
+        this.leafletMap.fitBounds(boundsThemAll);
     }
 
 
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.leaflet = function () {
-    return this.l;
+    return this.leafletMap;
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.resizeFor = function (duration) {

@@ -17,7 +17,7 @@ function searchFormSetup(formElement) {
 
         // convert it to string
 
-        // TODO : Refactor all of this shit
+        // TODO : Refactor all of this
 
         // TODO: Do some rounding on the output here so can be readable in the UI?
 

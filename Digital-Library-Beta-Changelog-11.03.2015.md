@@ -1,5 +1,5 @@
 Digital Library Changelog
-*11.03.2015*
+*13.03.2015*
 
 
 
@@ -7,7 +7,7 @@ Digital Library Changelog
 
 * Turn off the map panning to include only relevant results when mouse over as it was psychedelic and drove people crazy.  Functionality still exists for potential later use.
 
-* Turn off rendering of bounding boxes until some more discussion about data and user are completed.  Makes map marker interaction clearer for the moment.
+* Turn off rendering of bounding boxes until some more discussion about data and use are completed.  Makes map marker interaction clearer for the moment.
 
 
 
@@ -17,7 +17,7 @@ Digital Library Changelog
 
 * Add markers and bounding box objects to layers that can be added, removed or edited programmatically
 
-* Add point massaging for bounding boxes that wrap the anti-meridian
+* Add point massaging for bounding boxes that wrap the anti-meridian.  Still requires splitting into single box as per issue.
 
-* Add map based search button and functionality, needs fixes to UI element and intersection with bounding boxes which are not currently shown due to anti-meridian issues (see issue 12 https://github.com/vecnet/dl-discovery/issues/12)
+* Add map based search button and functionality, needs fixes to UI element(user readable significant digits) and intersection with bounding boxes which are not currently shown due to anti-meridian issues (see above and issue 12 https://github.com/vecnet/dl-discovery/issues/12)
 
