@@ -68,6 +68,7 @@ function searchFormSetup(formElement) {
 
     function makeMapVisible() {
         var showmap = $('input[name=showmap]').prop('checked');
+
         if (showmap) {
             window.vndl.theMap.show();
             enable($('input[name=searchmap]'));

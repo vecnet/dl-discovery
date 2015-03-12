@@ -24,6 +24,7 @@
 //= require modules/wellknown
 
 //= require modules/vndl_map
+//= require modules/buttons.js
 //= require modules/leaflet.awesome-markers
 //= require modules/readmore.min
 //= require_tree .

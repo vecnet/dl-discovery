@@ -162,7 +162,8 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         element: $r,
         primary: {points: [], rectangles: [], bounds: null},
         secondary: {points: [], rectangles: [], bounds: null},
-        tertiary: {points: [], rectangles: [], bounds: null}
+        tertiary: {points: [], rectangles: [], bounds: null},
+        placename:{placenames:[]}
     };
 
     //
@@ -170,6 +171,17 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     //
     var id = $r.find('[data-layer-id]').attr('data-layer-id');
     newItem.id = id;
+
+
+
+
+    // TODO : Sort out placename data structure and add to pop up for marker?
+    
+    //
+    // find the placenames, if there are any
+    //
+    var placenames = $r.find('[data-placename]').attr('data-placename');
+    newItem.placenames = placenames;
 
     //
     // find any points
