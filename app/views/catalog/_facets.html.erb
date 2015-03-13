@@ -12,11 +12,16 @@
         </button>
 
         <h4>
+          <% comment do %>
+
+
           <%= t('blacklight.search.facets.title') %>
+
+              <% comment end %>
         </h4>
       </div>
 
-      <div id="facet-panel-collapse" class="collapse panel-group">
+      <div id="facet-panel-collapse" class="collapse">
         <%= render_facet_partials %>
       </div>
     </div>

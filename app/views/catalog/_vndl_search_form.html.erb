@@ -28,21 +28,17 @@
       </label></div>
 
 
+      <button id="search-map-button" class="btn btn-default" type="button">
+        Search visible map area
+      </button>
 
 
-      <div class=" button-checkbox ui-group-buttons">
-        <button class="btn  btn-primary btn-lg " data-color="primary"> Show results on map</button>
-        <input type="checkbox" class="hidden" checked />
-        <div class="or or-lg"></div>
-        <button class="btn btn-default btn-lg">Search map area only</button>      </div>
+      <!--<div class=" button-checkbox ui-group-buttons">-->
+        <!--<button class="btn  btn-primary btn-lg " data-color="primary"> Show results on map</button>-->
+        <!--<input type="checkbox" class="hidden" checked />-->
+        <!--<div class="or or-lg"></div>-->
+        <!--<button id="search-map-button" class="btn btn-default btn-lg">Search map area only</button>      </div>-->
 
-      <!--<div class="btn-group">    <div class="col-lg-12">  -->
-        <!--<button type="submit" class="btn btn-default btn-lg col-md-5"> -->
-          <!--<span class="glyphicon glyphicon-globe"></span> Show results on map</button>  -->
-        <!--<button type="reset" class="btn btn-default btn-lg col-md-5"> -->
-          <!--<span class="glyphicon glyphicon-search"></span> Search map area only</button>  -->
-      <!--</div>-->
-        <!--</div>-->
 
     <!--<span class="button-checkbox">-->
         <!--<button type="button" class="btn btn-lg" data-color="primary">Primary</button>-->
@@ -113,7 +109,7 @@
   </fieldset>
 
   <!-- available facets -->
-  <fieldset style="display: none">
+  <fieldset style="display:none">
     <legend class="sr-only">Search filters available</legend>
     <div class="form-group">
 
@@ -144,11 +140,7 @@
   <%= render 'constraints' %>
 
 
-  <% comment do
-    TURN OFF FACETS FOR THE MOMENT %>
   <%= render 'facets' %>
-
-  <% comment end %>
 
 
   <%= render 'sort_and_per_page' %>

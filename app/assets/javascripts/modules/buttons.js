@@ -11,7 +11,7 @@ $(function () {
                     icon: 'glyphicon glyphicon-check'
                 },
                 off: {
-                    icon: 'glyphicon glyphicon-map-marker'
+                    icon: 'glyphicon glyphicon-unchecked'
                 }
             };
 

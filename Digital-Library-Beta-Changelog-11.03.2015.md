@@ -13,11 +13,14 @@ Digital Library Changelog
 
 **Added**
 
-* Prevent zooming of the map with scroll wheels as sometimes can cause UX problems.
+* Prevent zooming of the map with scroll wheels as can cause UX problems.
 
-* Add markers and bounding box objects to layers that can be added, removed or edited programmatically
+* Add markers and bounding box objects to map layers that can be added, removed or edited programmatically.  Not exposed in UI yet.
 
 * Add point massaging for bounding boxes that wrap the anti-meridian.  Still requires splitting into single box as per issue.
 
 * Add map based search button and functionality, needs fixes to UI element(user readable significant digits) and intersection with bounding boxes which are not currently shown due to anti-meridian issues (see above and issue 12 https://github.com/vecnet/dl-discovery/issues/12)
+
+* Add highlighting to bounding box on user mouse over of map or search result element
+
 

@@ -22,18 +22,28 @@ function searchFormSetup(formElement) {
 
         var currentMapBoundsString = currentMapBounds.toBBoxString();
 
+        console.log('toBBoxString output : ' + currentMapBoundsString);
+
+
+
+        // lets manipulate this string
+
         var s = currentMapBoundsString;
 
-        console.log('toBBoxString output : ' + s);
 
-        var correctMapBoundsString = (s.split(',')[1] + ',' + s.split(',')[0] + ',' +  s.split(',')[3] + ',' + s.split(',')[2]);
+        var spacedString = currentMapBoundsString.split(',').join(' ');
+
+        console.log('with spaces the map bounds are : ' + spacedString);
 
 
+        var correctMapBoundsString = (s.split(',')[1] + ' ' + s.split(',')[0] + ' ' +  s.split(',')[3] + ' ' + s.split(',')[2]);
 
 
-        var envelopeFormatMapBoundsString = (s.split(',')[0] + ',' + s.split(',')[2] + ',' +  s.split(',')[3] + ',' + s.split(',')[1]);
+        // lets try it making it resemble the ENVELOPE format of SOLR
 
-        console.log('rearranged string is : ' + s.split(',')[1] + ',' + s.split(',')[0] + ',' +  s.split(',')[3] + ',' + s.split(',')[2]);
+        var envelopeFormatMapBoundsString = (s.split(',')[0] + ' ' + s.split(',')[2] + ' ' +  s.split(',')[3] + ' ' + s.split(',')[1]);
+
+        console.log('envelop style string is : ' + s.split(',')[1] + ',' + s.split(',')[0] + ',' +  s.split(',')[3] + ',' + s.split(',')[2]);
 
 
 
@@ -50,16 +60,16 @@ function searchFormSetup(formElement) {
 
         console.log('maps bounds are : ' + currentMapBounds.toBBoxString());
 
-        console.log('setting the search bounds to : ' + envelopeFormatMapBoundsString);
+        console.log('setting the search bounds to : ' + spacedString);
 
 
-        //// add fake bounding box value to form
-        //$('form.vndl-search').append('<input id="bbox-input-field" type="hidden" name="bbox" value="nothing">');
-        //
-        //
-        //// change the bbox input value to the actual bounds of the map
-        //
-        //$('#bbox-input-field').val(currentMapBoundsString);
+        // add fake bounding box value to form
+        $('form.vndl-search').append('<input id="bbox-input-field" type="hidden" name="bbox" value="nothing">');
+
+
+        // change the bbox input value to the actual bounds of the map
+
+        $('#bbox-input-field').val(spacedString);
 
         $(formElement).trigger('submit');
 

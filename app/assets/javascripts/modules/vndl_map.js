@@ -176,7 +176,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
     // TODO : Sort out placename data structure and add to pop up for marker?
-    
+
     //
     // find the placenames, if there are any
     //
@@ -217,9 +217,9 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     var rect = this.getRect($rectElem.attr('data-rectangle'));
     if (rect){
-        newItem[uiType].rectangles.push(
-            new L.rectangle(rect)
-        )
+        var newRect = L.rectangle(rect);
+        newRect.originalString = $rectElem.attr('data-rectangle');
+        newItem[uiType].rectangles.push(newRect);
 
     }
     else {
@@ -323,6 +323,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
                 fillOpacity: 0.45,
                 fillColor: '#ffffab'
             });
+            console.log('original string of rectangle is : ' + rect.originalString);
         });
 
 
@@ -336,6 +337,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
             //map.fitBounds(newItem.primary.bounds);
         }
+
 
         $r.addClass("vndl-results-highlight");
 
