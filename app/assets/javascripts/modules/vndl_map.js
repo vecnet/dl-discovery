@@ -111,19 +111,33 @@ VndlMap.prototype.getRect = function(text, pointOrder) {
     if (points && points.length == 1 && points[0].length == 4) {
 
 
-        // TODO: turn this back on when testing rectangles
-        //// compare points 01,00 against 03,02 and if 0302 is to the LEFT/ WEST of 0100
-        //// then addsubtract 360 to the value
-        //// ie https://www.mapbox.com/mapbox.js/example/v1.0.0/cross-date-line/
-        //if (points[0][0] > points[0][2]){
-        //    points[0][2] = points[0][2] - 360;
-        //}
+        var E = points[0][pointOrder.indexOf('E')];
+        var W = points[0][pointOrder.indexOf('W')];
+        var N = points[0][pointOrder.indexOf('N')];
+        var S = points[0][pointOrder.indexOf('S')];
 
-        return [
 
-            [[points[0][pointOrder.indexOf('S')], points[0][pointOrder.indexOf('W')]],
-            [points[0][pointOrder.indexOf('N')], points[0][pointOrder.indexOf('E')]]]
-        ];
+
+        if (W <= E){
+
+            return [[[S,W],[N,E]]];
+        }
+
+        else {
+
+            // return two rectangles, one for meridian and one for anti-meridian
+            return [
+                [[S,W],[N,180]],
+                [[S,-180],[N,E]]
+            ];
+        }
+
+
+        //return [
+        //
+        //    [[points[0][pointOrder.indexOf('S')], points[0][pointOrder.indexOf('W')]],
+        //    [points[0][pointOrder.indexOf('N')], points[0][pointOrder.indexOf('E')]]]
+        //];
     } else {
 
         // logging which objects don't parse
@@ -257,8 +271,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         var uiType = this.parseUiType($rectElem.attr('data-ui-type'));
 
 
-        // TODO : Correct pluralisation?
-
         var rects = this.getRect($rectElem.attr('data-rectangle'));
 
         for (var r = 0; r < rects.length; r++) {
@@ -282,8 +294,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             }
         }
 
-
-        // TODO : bind(this) as in above?
 
     }.bind(this));
 
