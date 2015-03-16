@@ -1,21 +1,23 @@
 
-<div class="btn-group blacklight-<%= facet_field.field.parameterize %> <%= 'facet_limit-active' if facet_field_in_params?(facet_field.field) %>" role="group" aria-label="location filter">
-  <div class="btn-group" >
-    <button class="btn btn-default " type="button">
+<%= link_to catalog_facet_path(display_facet.name), class: 'more_facets_link' do %>
+    <div class="btn-group blacklight-<%= facet_field.field.parameterize %> <%= 'facet_limit-active' if facet_field_in_params?(facet_field.field) %>" role="group" aria-label="location filter">
 
-      <%= link_to facet_field_label(facet_field.field), catalog_facet_path(display_facet.name), class: 'more_facets_link' %>
-    </button>
-    <ul class="dropdown-menu dropdown-menu" role="menu">
-      <li><a href="#">Add another location filter</a></li>
-      <li><a href="#">Remove this filter</a></li>
-    </ul>
-  </div>
+        <div class="btn-group" >
+            <button class="btn btn-default " type="button">
 
-  <div class="btn-group appliedFilter constraint" role="group">
-    <button class="btn fa fa-plus btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-      <%= link_to t('blacklight.search.facets.more'), catalog_facet_path(display_facet.name), class: 'more_facets_link' %>
+                <%= facet_field_label(facet_field.field)%>
 
-    </button>
+            </button>
 
-  </div>
-</div>
+        </div>
+
+        <div class="btn-group " role="group">
+
+            <button class="btn fa fa-plus btn-default" type="button">
+
+            </button>
+
+        </div>
+
+    </div>
+<% end %>
