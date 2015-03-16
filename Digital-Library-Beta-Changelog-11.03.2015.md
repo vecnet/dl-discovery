@@ -23,4 +23,6 @@ Digital Library Changelog
 
 * Add highlighting to bounding box on user mouse over of map or search result element
 
+* Add first draft of facets to home page search, needs user feedback on UX.
+
 

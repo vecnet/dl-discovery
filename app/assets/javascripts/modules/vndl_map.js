@@ -65,8 +65,42 @@ VndlMap.prototype.clearRectangles = function () {
 // represented as an array of two points (e.g. [[x1,y1],[x2,y2]])
 // that are the bounds of a rectangle.  No rect, get a null back.
 
-VndlMap.prototype.getRect = function(text) {
+
+// pointOrder optionally specifies the bounds for the rectangle
+// i.e. "WSEN" means (W)est then (S)outh then (E)ast then (N)orth
+// this is because solr varys the bound directions order
+
+// e.g
+
+// "solr_bbox" is "#{west} #{south} #{east} #{north}"
+// "solr_geom" is "ENVELOPE(#{west}, #{east}, #{north}, #{south})"
+// "georss_box_s" is "#{south} #{west} #{north} #{east}"
+
+
+// can pass in four letters as pointOrder to specify the point order
+// otherwise defaults to "WSEN" which is solr_bbox
+VndlMap.prototype.getRect = function(text, pointOrder) {
     // WOOT GET RECKT RIGHT AWAY!!
+
+
+
+
+
+    if (!pointOrder){
+
+        pointOrder = "WSEN";
+
+
+    }
+
+    // regardless of where we get the string, make it uniform
+
+    pointOrder.toUpperCase();
+
+
+
+    // regex fun
+
     text = text.replace(/\,/g       , ' ');
     text = text.replace(/ENVELOPE/g , ' ');
     text = text.replace(/\(/g       , ' ');
@@ -86,14 +120,15 @@ VndlMap.prototype.getRect = function(text) {
         //}
 
         return [
-            [points[0][1], points[0][0]],
-            [points[0][3], points[0][2]]
+
+            [[points[0][pointOrder.indexOf('S')], points[0][pointOrder.indexOf('W')]],
+            [points[0][pointOrder.indexOf('N')], points[0][pointOrder.indexOf('E')]]]
         ];
     } else {
 
         // logging which objects don't parse
         console.debug('expected a rectangle of some kind but got the following rubbish : <' + text + '>');
-        return null;
+        return [];
     }
 };
 // ------------------------------------------------------------------
@@ -209,22 +244,51 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
     //
-    // find any rectangles
+    // find any rectangles within the result item
     //
 
-    var $rectElem = $r.find('[data-rectangle]');
-    var uiType = this.parseUiType($rectElem.attr('data-ui-type'));
 
-    var rect = this.getRect($rectElem.attr('data-rectangle'));
-    if (rect){
-        var newRect = L.rectangle(rect);
-        newRect.originalString = $rectElem.attr('data-rectangle');
-        newItem[uiType].rectangles.push(newRect);
+    var $rectElems = $r.find('[data-rectangle]');
 
-    }
-    else {
-        console.log("results that are bad rectangles are : " + $r.find('h3').text())
-    }
+    $rectElems.each(function (i, rectElem){
+
+        var $rectElem = $(rectElem);
+
+        var uiType = this.parseUiType($rectElem.attr('data-ui-type'));
+
+
+        // TODO : Correct pluralisation?
+
+        var rects = this.getRect($rectElem.attr('data-rectangle'));
+
+        for (var r = 0; r < rects.length; r++) {
+
+
+            if (rects) {
+
+                // make a leaflet object from the first rectangle in the rects list
+                var newRect = L.rectangle(rects[r]);
+
+                // store the original string to check with rectangle debugging
+                newRect.originalString = $rectElem.attr('data-rectangle');
+
+                // store the newRect leaflet object in the correct uiType structure
+                newItem[uiType].rectangles.push(newRect);
+
+            }
+
+            else {
+                console.log("results that are bad rectangles are : " + $r.find('h3').text())
+            }
+        }
+
+
+        // TODO : bind(this) as in above?
+
+    }.bind(this));
+
+
+
 
 
     // ------------------------------------------------------------------
