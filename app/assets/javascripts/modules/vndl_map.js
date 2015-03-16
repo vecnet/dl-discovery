@@ -9,9 +9,6 @@ window.VndlMap = function (mapDomId, options) {
 
     // TODO: Setup teaspoon js testing framework after feature complete
 
-    // this.l is the leaflet map reference
-
-    // TODO : Rename this.l to more expressive this.leafletMap with a refactor
     this.leafletMap = L.map(mapDomId, {
         reuseTiles: true,      // cache tiles
         worldCopyJump: true,    // keep markers when scroll sideways into a new world
@@ -43,11 +40,9 @@ window.VndlMap = function (mapDomId, options) {
 // ------------------------------------------------------------------
 VndlMap.prototype.clearMarkers = function () {
 
+    // when adding use a layer and so we can call layer.remove
+
     markerLayer.clearLayers();
-
-    // when adding use a layer and call layer.delete
-
-    // example : https://stackoverflow.com/questions/20751523/removing-leaflet-layers-and-l-marker-method
 
 };
 // ------------------------------------------------------------------
@@ -55,9 +50,6 @@ VndlMap.prototype.clearRectangles = function () {
 
     rectangleLayer.clearLayers();
 
-    // when adding use a layer and call layer.delete
-
-    // example : https://stackoverflow.com/questions/20751523/removing-leaflet-layers-and-l-marker-method
 };
 // ------------------------------------------------------------------
 // takes not-exactly Well Known Text (the ENVELOPE(...) thing isn't
@@ -83,13 +75,9 @@ VndlMap.prototype.getRect = function(text, pointOrder) {
     // WOOT GET RECKT RIGHT AWAY!!
 
 
-
-
-
     if (!pointOrder){
 
         pointOrder = "WSEN";
-
 
     }
 
@@ -97,9 +85,7 @@ VndlMap.prototype.getRect = function(text, pointOrder) {
 
     pointOrder.toUpperCase();
 
-
-
-    // regex fun
+    // regex to change from SOLR's ENVELOP to our format
 
     text = text.replace(/\,/g       , ' ');
     text = text.replace(/ENVELOPE/g , ' ');

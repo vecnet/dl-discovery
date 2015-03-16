@@ -1,5 +1,5 @@
 Digital Library Changelog
-*13.03.2015*
+*13-16.03.2015*
 
 
 Location : 144.6.226.216
@@ -16,7 +16,7 @@ Location : 144.6.226.216
 * First draft of facet appearance and use.  Still broken functionality so don’t try yet :)
 
 
-**Changelog**
+**More Detailed Changelog**
 
 * Turn off the crazy map panning to include only relevant results when mouse over as it was psychedelic and drove people crazy.  Functionality still exists for potential later use.
 

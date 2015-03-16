@@ -13,6 +13,9 @@
 
         <% unless label.blank? %>
             <span class="filterName"><%= label %></span>
+
+            <!--For some ungodly reason we need f[<facet_name>][] in the search form for facets...-->
+            <input type="hidden" name="f[<%= (options[:classes].join(" ") if options[:classes]).split(/-/).last %>][]" class="hidden" value="<%= value %>">
         <% end %>
       </button>
       <ul class="dropdown-menu dropdown-menu" role="menu">

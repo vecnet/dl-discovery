@@ -8,14 +8,31 @@ function searchFormSetup(formElement) {
     });
 
 
+    $('#ajax-modal').on('show.bs.modal', function(e) {
+
+
+        $('#ajax-modal a.facet_select').each(function (index, link) {
+
+
+            // call the function to remove submit event on href
+
+            //createHiddenInputForFacetLink(link);
+            console.log(link.innerHTML);
+
+        });
+    });
+
+
     $('#search-map-button').on("click", function() {
 
         //
-        // TODO : Refactor all of this
+        // Get the current map bounds
+        // convert it to the right format
+        // for geoblacklight to parse
+        // trigger form submit element
         //
 
         var currentMapBounds = window.vndl.theMap.leafletMap.getBounds();
-
 
 
         // TODO: Do some rounding on the output so can be readable in the UI?
@@ -34,17 +51,6 @@ function searchFormSetup(formElement) {
         var spacedString = currentMapBoundsString.split(',').join(' ');
 
         console.log('with spaces the map bounds are : ' + spacedString);
-
-
-        var correctMapBoundsString = (s.split(',')[1] + ' ' + s.split(',')[0] + ' ' +  s.split(',')[3] + ' ' + s.split(',')[2]);
-
-
-        // lets try it making it resemble the ENVELOPE format of SOLR
-
-        var envelopeFormatMapBoundsString = (s.split(',')[0] + ' ' + s.split(',')[2] + ' ' +  s.split(',')[3] + ' ' + s.split(',')[1]);
-
-        console.log('envelop style string is : ' + s.split(',')[1] + ',' + s.split(',')[0] + ',' +  s.split(',')[3] + ',' + s.split(',')[2]);
-
 
 
         // debugging
@@ -95,4 +101,44 @@ function searchFormSetup(formElement) {
     // box.
     $('input[name=showmap]').change(makeMapVisible);
 
+
+
+
+
+
+    function attachingEventstoFacetLink(link){
+
+        // find all the a elements in the modal
+        // add the content of the href to an input type for the form of type hidden
+        // then trigger the form submit
+
+        var $link = $(link);
+
+        $link.on("click", function (event) {
+            event.preventDefault();
+
+
+            // pull out href from data tags from rails partial
+            //$link.
+            //
+            //
+            //
+            //var hiddenInput =  <input type="hidden" name="f[][]" class="hidden" value="">
+            //
+            //
+            //$('form.vndl-search').append(hiddenInput);
+            //
+            //
+            //var queryString = $('form.vndl-search').serialize();
+            //getResultsPage(queryString);
+
+        });
+
+        // put the stupid f[<facet_name>[] bs in this function
+        //
+        // into an element and append it to the form
+
+
+
+    }
 };
