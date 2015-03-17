@@ -134,7 +134,7 @@ function searchFormSetup(formElement) {
 
 
             // TODO: Extract the following into a function
-            
+
             // pull out facet values from data tags
 
             var solrFacetName = $link.attr('data-facet-name');
@@ -153,8 +153,6 @@ function searchFormSetup(formElement) {
             var $hiddenInput = $('<input type="hidden" id="" name="" value="">');
 
 
-            $hiddenInput.attr('id', facetValue);
-
             $hiddenInput.attr('name', hiddenInputFacetNameFormatted);
             $hiddenInput.attr('value', facetValue);
 
@@ -165,7 +163,14 @@ function searchFormSetup(formElement) {
             // containing the facet and thus rendering the render_selected_facet_value
             // method to include the right class and remove link element...
 
-            if (!($('form.vndl-search').find('#'+ facetValue).length)){
+
+
+
+            if ($('form.vndl-search').find('.' + facetValue).length){
+
+            }
+            else {
+
                 $('form.vndl-search').append($hiddenInput);
             }
 
