@@ -5,6 +5,8 @@ Digital Library Changelog
 Location : 144.6.226.216
 
 
+**Added**
 
+* Facets now load search results correctly.  Still remain errors with showing a facet that is already selected.
 
 

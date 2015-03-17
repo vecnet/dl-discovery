@@ -16,8 +16,8 @@ function searchFormSetup(formElement) {
 
             // call the function to remove submit event on href
 
-            //createHiddenInputForFacetLink(link);
-            console.log(link.innerHTML);
+            attachingEventstoFacetLink(link);
+
 
         });
     });
@@ -106,7 +106,7 @@ function searchFormSetup(formElement) {
 
 
 
-    function attachingEventstoFacetLink(link){
+    function attachingEventstoFacetLink(link) {
 
         // find all the a elements in the modal
         // add the content of the href to an input type for the form of type hidden
@@ -115,30 +115,72 @@ function searchFormSetup(formElement) {
         var $link = $(link);
 
         $link.on("click", function (event) {
+
+
             event.preventDefault();
 
 
-            // pull out href from data tags from rails partial
-            //$link.
+            //// turn off the link to prevent running this handler again
             //
-            //
-            //
-            //var hiddenInput =  <input type="hidden" name="f[][]" class="hidden" value="">
-            //
-            //
-            //$('form.vndl-search').append(hiddenInput);
-            //
-            //
-            //var queryString = $('form.vndl-search').serialize();
-            //getResultsPage(queryString);
+            //$link.click(function(){
+            //    return false;
+            //});
 
-        });
 
-        // put the stupid f[<facet_name>[] bs in this function
-        //
-        // into an element and append it to the form
+            ////make selected link unclickable
+            //$link.attr( 'onClick', 'return false' );
 
 
 
+
+            // TODO: Extract the following into a function
+            
+            // pull out facet values from data tags
+
+            var solrFacetName = $link.attr('data-facet-name');
+
+            var facetValue = $link.attr('data-facet-solr-value');
+
+
+
+            // make the value the special encoding geobl and solr expect
+            var hiddenInputFacetNameFormatted = "f[" + solrFacetName + "][]";
+
+
+
+            // make a hidden input element to add to the form with the facet values
+
+            var $hiddenInput = $('<input type="hidden" id="" name="" value="">');
+
+
+            $hiddenInput.attr('id', facetValue);
+
+            $hiddenInput.attr('name', hiddenInputFacetNameFormatted);
+            $hiddenInput.attr('value', facetValue);
+
+
+            // check if the form element already exists in the search form parent
+
+            // TODO: Need to figure out why Rails doesn't recognise the params
+            // containing the facet and thus rendering the render_selected_facet_value
+            // method to include the right class and remove link element...
+
+            if (!($('form.vndl-search').find('#'+ facetValue).length)){
+                $('form.vndl-search').append($hiddenInput);
+            }
+
+
+            // return to the page
+            $('#ajax-modal').modal('hide');
+
+
+            // this calls the overridden form's submit method that serializes
+            // and does an jqxh request for new search result content
+            $('form.vndl-search').trigger('submit');
+
+
+
+        })
     }
-};
+}
+
