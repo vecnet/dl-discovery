@@ -156,11 +156,11 @@ function searchFormSetup(formElement) {
 
 
         // check if the form element already exists in the search form parent
-        // TODO: Fix this selector
 
-        if ($("form.vndl-search.div[data-facetValue="+facetValue+"]").length){
 
-            console.log('found a data tag of : ' + facetValue);
+        if ($("div[data-facetvalue='"+facetValue+"']").length){
+
+
 
         }
 
