@@ -126,8 +126,7 @@ module Blacklight::FacetsHelperBehavior
 
 
     content_tag(:span, :class => "facet-label") do
-      link_to(options[:suppress_link], :data=> {:'facet-name' => facet_solr_field, :'facet-solr-value' => item}, :class=>"facet_select")
-      link_to_unless(options[:suppress_link], facet_display_value(facet_solr_field, item), path, :class=>"facet_select")
+      link_to_unless(options[:suppress_link], facet_display_value(facet_solr_field, item), path, :data=> {:'facet-name' => facet_solr_field, :'facet-solr-value' => item}, :class=>"facet_select")
     end + render_facet_count(item.hits)
   end
 
