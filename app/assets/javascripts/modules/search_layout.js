@@ -55,10 +55,6 @@ function getResultsPage(queryString, start, length) {
             console.log("start parsing of html results");
             console.log($(data).find('#documents'));
 
-
-            console.log("the reloaded modal element should be here : " + $(data).find('.modal-content').html());
-
-
             // find and store the search result document element contained in #content
 
             var searchResultDOMElement = $(data).find('#content').html();

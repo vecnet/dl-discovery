@@ -504,8 +504,6 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
     var boundsThemAll = null;
 
 
-
-
     // loop through results - find each ones map location and adding it to the map
     $results.each(function (index, result) {
 

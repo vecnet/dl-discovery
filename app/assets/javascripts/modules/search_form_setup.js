@@ -74,6 +74,17 @@ function searchFormSetup(formElement) {
 
 
         });
+
+
+        // hijack the remove facet link
+
+        $('.modal-body a.remove').each(function (index, link) {
+
+
+            removeFacetWithAjax(link);
+
+        });
+
     });
 
 
@@ -195,26 +206,18 @@ function searchFormSetup(formElement) {
         var $hiddenInput = $('<input type="hidden" name="" value="">');
 
 
+
         $hiddenInput.attr('name', hiddenInputFacetNameFormatted);
         $hiddenInput.attr('value', facetValue);
 
 
 
 
-        // TODO: Need to figure out why Rails doesn't recognise the params
-        // containing the facet and thus rendering the render_selected_facet_value
-        // method to include the right class and remove link element...
-
-
-
-
-
         // check if the form element already exists in the search form parent
-
 
         if ($("div[data-facetvalue='"+facetValue+"']").length){
 
-
+            // don't go breaking my heart
 
         }
 
@@ -230,5 +233,29 @@ function searchFormSetup(formElement) {
 
         $('#ajax-modal').modal('hide');
     }
+
+
+    function removeFacetWithAjax(link) {
+
+
+        //TODO: This requires code review
+
+
+        $link = $(link);
+
+        var facetValue = $link.attr('data-facet-solr-value');
+
+        $("form.vndl-search[data-facet-solr-value='"+facetValue+"']").remove();
+
+
+        //this calls the search form's overridden submit method that serializes the form
+        // and does an jqxh request for new search result content
+        $('form.vndl-search').trigger('submit');
+
+
+        $('#ajax-modal').modal('hide');
+
+    }
+
 }
 
