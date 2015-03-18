@@ -3,9 +3,63 @@ function searchFormSetup(formElement) {
     $(formElement).on("submit", function (event) {
         event.preventDefault();
         var queryString = $('form.vndl-search').serialize();
+
+        console.log('the query string from serialized form is : ' + queryString);
         getResultsPage(queryString);
 
     });
+
+
+
+    // set the facet buttons to have href's that represent the current search params
+    // ie the seralized verion of the facets already being applied.
+
+
+
+    if ($('#appliedParams').length) {
+
+        // make the serialised form string
+
+        var serialisedForm = $('form.vndl-search').serialize();
+
+        // find all the elements that contain more_facets_link
+
+
+        var $links = $('form.vndl-search').find('.more_facets_link');
+
+
+        console.log('the links object is : ' + $links.html());
+
+        console.log('the serialised form that will become each href is : ' + serialisedForm);
+
+
+        $links.each(function (i, link) {
+
+
+            $link = $(link);
+
+
+            // find the original href
+
+            // append the serialised form to it
+
+            // the correct link structure is
+            //
+            // <a href="/catalog/facet/desc_metadata__creator_facet?f%5Bdesc_metadata__creator_facet%5D%5B%5D=Abaga%2C+S."
+
+            // therefore : add a '?' prior to the append
+
+            var originalHref = $link.attr('href');
+
+
+            $link.attr('href', originalHref + '?' + serialisedForm);
+
+        });
+
+    }
+
+
+
 
 
     $('#ajax-modal').on('show.bs.modal', function(e) {

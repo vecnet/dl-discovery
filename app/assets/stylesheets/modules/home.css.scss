@@ -421,7 +421,7 @@ footer:after {
 
 
 .box > .icon { text-align: center; position: relative; }
-.box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: #63B76C; vertical-align: middle; }
+.box > .icon > .image { position: relative; z-index: 2; margin: auto; width: 88px; height: 88px; border: 8px solid white; line-height: 88px; border-radius: 50%; background: $icon-box-background; vertical-align: middle; }
 .box > .icon:hover > .image { background: #333; }
 .box > .icon > .image > i { font-size: 36px !important; color: #fff !important; }
 .box > .icon:hover > .image > i { color: white !important; }
@@ -431,8 +431,9 @@ footer:after {
 .box > .icon > .info > p { font-family: "Roboto",sans-serif !important; font-size: 13px; color: #666; line-height: 1.5em; margin: 20px;}
 .box > .icon:hover > .info > h3.title, .box > .icon:hover > .info > p, .box > .icon:hover > .info > .more > a { color: #222; }
 .box > .icon > .info > .more a { font-family: "Roboto",sans-serif !important; font-size: 12px; color: #222; line-height: 12px; text-transform: uppercase; text-decoration: none; }
-.box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: #63B76C; }
+.box > .icon:hover > .info > .more > a { color: #fff; padding: 6px 8px; background-color: $icon-box-background; }
 .box .space { height: 30px; }
+
 
 .about-text {
 

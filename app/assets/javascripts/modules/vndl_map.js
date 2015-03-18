@@ -341,11 +341,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         markerColor: 'blue'
     });
 
-
-    // TODO: make a duplicate of this with alterations to color etc
-    // ie highlighted yellow center or with css so can animate
-
-
     var vndlIcon = L.Icon.extend({
         options: {
             iconUrl: 'http://cdn.leafletjs.com/leaflet-0.7/images/marker-icon.png'
