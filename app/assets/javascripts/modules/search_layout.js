@@ -18,8 +18,6 @@ function enable(element) {
 function getResultsPage(queryString, start, length) {
     // lol ignore the start/length paging info.
 
-    // TODO Change to correct path method
-
     var url = '/?' + queryString;
 
     // normally this would be a post of the form.  but for now
@@ -34,6 +32,39 @@ function getResultsPage(queryString, start, length) {
             console.log("successful ajax search request");
             console.log("start parsing of html results");
             console.log($(data).find('#documents'));
+
+
+            //
+            // TODO: Get modal content and replace the old one with it
+            // looks like the ajax_modal.js of bootstrap is controlling the content load on event loaded
+            // it is documented in that file.
+
+
+
+            // let us find some updated modal content
+
+
+            $('#ajax-modal').bind('loaded.blacklight.ajax-modal',
+                function(e){
+                    alert("EventName:"+e.type);
+                    console.log("the reloaded modal element should be here : " + $(data).find('#ajax-modal').html());
+                    console.log("the reloaded modal element should be here : " + $('#ajax-modal').html());
+
+                    var searchResultModalElement = $('#ajax-modal').html();
+
+
+                    $('.modal-backdrop > .modal-dialog').html(searchResultModalElement);
+
+                    console.log('reloaded the modal... but did it update or not freaking params!');
+
+
+                });
+
+
+
+
+
+            console.log("the reloaded modal element should be here : " + $(data).find('.modal-content').html());
 
 
             // find and store the search result document element contained in #content
