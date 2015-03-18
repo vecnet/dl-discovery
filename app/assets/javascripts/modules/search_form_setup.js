@@ -11,7 +11,7 @@ function searchFormSetup(formElement) {
 
 
 
-    // set the facet buttons to have href's that represent the current search params
+    // change facet buttons href's to equal the current search form when serialized
     // ie the seralized verion of the facets already being applied.
 
 
@@ -193,24 +193,20 @@ function searchFormSetup(formElement) {
         // pull out facet values from data tags
 
         var solrFacetName = $link.attr('data-facet-name');
-
         var facetValue = $link.attr('data-facet-solr-value');
 
 
-        // make the value the special encoding geobl and solr expect
+        // construct the facet_name URL with the special encoding geobl and solr expect
         var hiddenInputFacetNameFormatted = "f[" + solrFacetName + "][]";
 
 
-        // make a hidden input element to add to the form with the facet values
-
+        // make the hidden input element that will be added to the form
         var $hiddenInput = $('<input type="hidden" name="" value="">');
 
 
-
+        // given hidden input name and value of the facet_field and facet_value
         $hiddenInput.attr('name', hiddenInputFacetNameFormatted);
         $hiddenInput.attr('value', facetValue);
-
-
 
 
         // check if the form element already exists in the search form parent

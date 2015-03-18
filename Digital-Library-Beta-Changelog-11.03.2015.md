@@ -5,10 +5,20 @@ Digital Library Changelog
 Location : 144.6.226.216
 
 
-**Added**
+**Summary**
 
-* Facets now load search results correctly.  Still remain errors with showing a facet in the list that is already selected.
+* Facets now load search results correctly.
 
-* Draft of including original Digital Library front page text into new app with notch based design
+* Draft of original Digital Library front page text with notch based design
 
 
+
+
+**Changelog**
+
+
+* First draft of metadata fields with jquery filter
+
+* Refactoring of modal hijacking code
+
+* Removing of sorting fields when no search terms

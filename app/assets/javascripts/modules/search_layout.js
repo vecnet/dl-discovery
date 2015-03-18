@@ -1,27 +1,5 @@
 // assume jquery is available as $
 
-
-
-
-// let us find some updated modal content
-$('#ajax-modal').bind('loaded.blacklight.ajax-modal',
-    function(e){
-        alert("EventName:"+e.type);
-        //
-        //console.log("the reloaded modal element should be here : " + $('.modal-content').html());
-        //
-        //console.log('content of $this follows : ' + $(this).html());
-        //
-        //var searchResultModalElement = $('#ajax-modal').html();
-        //
-        //
-        //$('.modal-backdrop > .modal-dialog').html(searchResultModalElement);
-
-        //console.log('reloaded the modal... but did it update or not freaking params!');
-    });
-
-
-
 // ------------------------------------------------------------------
 // disable an input AND add a "disabled" class to its wrapper.
 function disable(element) {
