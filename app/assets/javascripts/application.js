@@ -22,6 +22,7 @@
 // Wellknown is a javascript WKT converter that doesn't have a gem.
 // https://github.com/mapbox/wellknown
 //= require modules/wellknown
+//= require bootstrap/tab.js
 
 //= require modules/vndl_map
 //= require modules/buttons.js

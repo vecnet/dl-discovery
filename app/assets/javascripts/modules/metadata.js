@@ -17,4 +17,9 @@ $(function () {
             elem.slideUp( 100 );
         }
     })
+
+
 });
+
+$("#tabs").tab();
+
