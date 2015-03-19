@@ -21,4 +21,4 @@ Location : 144.6.226.216
 
 * Refactoring of modal hijacking code
 
-* Removing of sorting fields when no search terms
+* Removing of sorting options when no search terms
