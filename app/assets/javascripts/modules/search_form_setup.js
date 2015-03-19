@@ -12,8 +12,15 @@ function searchFormSetup(formElement) {
 
 
 
+    //
+    //----------------------------------------------------------------------
+    //
+
+
+
+
     // change facet buttons href's to equal the current search form when serialized
-    // ie the seralized verion of the facets already being applied.
+    // ie the serialised version of the facets already being applied.
 
 
     if ($('#appliedParams').length) {
@@ -27,15 +34,10 @@ function searchFormSetup(formElement) {
         // find all the elements that contain more_facets_link
         var $links = $('form.vndl-search').find('.more_facets_link');
 
-        // find all the dropdown menus on facet buttons
-        var $facetButtonLinks = $('form.vndl-search .facet-button-dropdown').find('ul.facet-button-dropdown');
-
-        console.log('the jq facetButton html is : ' + $facetButtonLinks.html());
-
 
         //console.log('the links object is : ' + $links.html());
 
-        console.log('the serialised form is : ' + serialisedForm);
+        //console.log('the serialised form is : ' + serialisedForm);
 
 
         $links.each(function (i, link) {
@@ -59,7 +61,46 @@ function searchFormSetup(formElement) {
 
             $link.attr('href', originalHref + '?' + serialisedForm);
 
-            console.log('each link href will now be : ' + originalHref + '?' + serialisedForm);
+            console.log('each respective link href will now be : ' + originalHref + '?' + serialisedForm);
+
+        });
+
+
+        // for each 'remove this filter' link we need to
+        // hijack the click
+        // remove its hidden input
+        // trigger submit
+
+
+        // find the elements that contain removeFacet
+        var $removeFacetLinks = $('form.vndl-search').find('.removeFacet');
+
+
+        // get the hidden input element to be removed
+        var $removeFacetHiddenInput = $('form.vndl-search').find('.hidden');
+
+        //console.log('the removeFacetLinks el in html is : ' + $removeFacetLinks.html());
+
+        $removeFacetLinks.each(function(index,button){
+
+
+            $button = $(button);
+
+            $button.on("click", function(event){
+
+                event.preventDefault();
+
+                //$button.closest("div[aria-label=location-filter]").remove();
+
+                $button.closest("div[aria-label=location-filter]").remove();
+
+                $('form.vndl-search').trigger('submit');
+
+                alert('form triggered...');
+
+                console.log('remove facet link performed...');
+
+            })
 
         });
 
@@ -68,6 +109,9 @@ function searchFormSetup(formElement) {
 
 
 
+    //
+    // Replace modal links with ajax versions
+    //
 
     // when the Bootstrap modal is loaded
 
@@ -85,7 +129,7 @@ function searchFormSetup(formElement) {
         });
 
 
-        // hijack the remove facet link
+        // hijack the remove facet link in the modal
 
         $('.modal-body a.remove').each(function (index, link) {
 
@@ -95,6 +139,11 @@ function searchFormSetup(formElement) {
         });
 
     });
+
+
+    //
+    //----------------------------------------------------------------------
+    //
 
 
     $('#search-map-button').on("click", function() {
