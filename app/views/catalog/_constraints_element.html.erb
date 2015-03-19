@@ -18,9 +18,9 @@
             <input type="hidden" name="f[<%= (options[:classes].join(" ") if options[:classes]).split(/-/).last %>][]" class="hidden" value="<%= value %>">
         <% end %>
       </button>
-      <ul class="dropdown-menu dropdown-menu" role="menu">
-        <li><a href="#">Add another location filter</a></li>
-        <li><a href="#">Remove this filter</a></li>
+      <ul class="facet-button-dropdown dropdown-menu dropdown-menu" role="menu">
+        <li><a class= "add-facet" href="#">Add another location filter</a></li>
+        <li><a class= "remove-facet" href="#">Remove this filter</a></li>
       </ul>
     </div>
 
@@ -31,9 +31,9 @@
         <% end %>
         <i class="fa fa-angle-down" aria-hidden="true"></i>
       </button>
-      <ul class="dropdown-menu dropdown-menu-right" role="menu">
-        <li><a href="#">Add another location filter</a></li>
-        <li><a href="#">Remove this filter</a></li>
+      <ul class="facet-button-dropdown dropdown-menu dropdown-menu-right" role="menu">
+        <li><a class= "add-facet" href="#">Add another location filter</a></li>
+        <li><a class= "remove-facet" href="#">Remove this filter</a></li>
       </ul>
     </div>
 </div>

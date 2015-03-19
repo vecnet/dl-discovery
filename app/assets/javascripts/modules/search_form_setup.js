@@ -4,7 +4,8 @@ function searchFormSetup(formElement) {
         event.preventDefault();
         var queryString = $('form.vndl-search').serialize();
 
-        console.log('the query string from serialized form is : ' + queryString);
+        console.log('the serialized form make the following query string : ' + queryString);
+
         getResultsPage(queryString);
 
     });
@@ -15,22 +16,26 @@ function searchFormSetup(formElement) {
     // ie the seralized verion of the facets already being applied.
 
 
-
     if ($('#appliedParams').length) {
 
-        // make the serialised form string
+        console.log('div id appliedParams has length and therefore elements');
 
+        // make the serialised form string
         var serialisedForm = $('form.vndl-search').serialize();
 
+
         // find all the elements that contain more_facets_link
-
-
         var $links = $('form.vndl-search').find('.more_facets_link');
 
+        // find all the dropdown menus on facet buttons
+        var $facetButtonLinks = $('form.vndl-search .facet-button-dropdown').find('ul.facet-button-dropdown');
 
-        console.log('the links object is : ' + $links.html());
+        console.log('the jq facetButton html is : ' + $facetButtonLinks.html());
 
-        console.log('the serialised form that will become each href is : ' + serialisedForm);
+
+        //console.log('the links object is : ' + $links.html());
+
+        console.log('the serialised form is : ' + serialisedForm);
 
 
         $links.each(function (i, link) {
@@ -54,6 +59,8 @@ function searchFormSetup(formElement) {
 
             $link.attr('href', originalHref + '?' + serialisedForm);
 
+            console.log('each link href will now be : ' + originalHref + '?' + serialisedForm);
+
         });
 
     }
@@ -62,10 +69,12 @@ function searchFormSetup(formElement) {
 
 
 
+    // when the Bootstrap modal is loaded
+
     $('#ajax-modal').on('show.bs.modal', function(e) {
 
 
-        $('#ajax-modal a.facet_select').each(function (index, link) {
+        $('.modal-body a.facet_select').each(function (index, link) {
 
 
             // call the function to remove submit event on href
@@ -117,18 +126,6 @@ function searchFormSetup(formElement) {
 
         console.log('with spaces the map bounds are : ' + spacedString);
 
-
-        // debugging
-
-        //var southWestLatLng = currentMapBounds.getSouthWest();
-        //
-        //console.log('sw bounds are : ' + southWestLatLng.toString());
-        //
-        //var northEastLatLng = currentMapBounds.getNorthEast();
-        //
-        //console.log('ne bounds are : ' + northEastLatLng.toString());
-
-
         console.log('maps bounds are : ' + currentMapBounds.toBBoxString());
 
         console.log('setting the search bounds to : ' + spacedString);
@@ -179,9 +176,7 @@ function searchFormSetup(formElement) {
 
         $link.on("click", function (event) {
 
-
             event.preventDefault();
-
 
             makeHiddenInputElementForSearchForm($link);
 
@@ -211,9 +206,11 @@ function searchFormSetup(formElement) {
 
         // check if the form element already exists in the search form parent
 
-        if ($("div[data-facetvalue='"+facetValue+"']").length){
+        if ($("[data-facetvalue='"+facetValue+"']").length){
 
             // don't go breaking my heart
+
+            alert("this code shouldn't run as I can't add the same facet...");
 
         }
 
@@ -234,7 +231,7 @@ function searchFormSetup(formElement) {
     function removeFacetWithAjax(link) {
 
 
-        //TODO: This requires code review
+        //TODO: This requires review
 
 
         $link = $(link);
