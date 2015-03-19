@@ -9,23 +9,15 @@
 
 <div data-facetvalue="<%= value %>" class="btn-group" role="group" aria-label="location-filter">
     <div class="btn-group appliedFilter constraint <%= options[:classes].join(" ") if options[:classes] %>" role="group">
+      <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
 
-
-        <% if label.blank? %>
-
-
-            <input type="hidden" name="f[<%= (options[:classes].join(" ") if options[:classes]).split(/-/).last %>][]" class="hidden" value="<%= value %>">
-
-      <% else %>
-          <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+        <% unless label.blank? %>
             <span class="filterName"><%= label %></span>
 
             <!--For some ungodly reason we need f[<facet_name>][] in the search form for facets...-->
             <input type="hidden" name="f[<%= (options[:classes].join(" ") if options[:classes]).split(/-/).last %>][]" class="hidden" value="<%= value %>">
-
-          </button>
         <% end %>
-
+      </button>
       <ul class="facet-button-dropdown dropdown-menu dropdown-menu" role="menu">
         <li><a class= "addFacet" href="#">Add another location filter</a></li>
         <li><a class= "removeFacet" href="#">Remove this filter</a></li>
