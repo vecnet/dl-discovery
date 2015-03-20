@@ -7,11 +7,16 @@ Location : 144.6.226.216
 
 **Summary**
 
-* Facets now load search results correctly.
+* Facets load search results correctly
 
-* Draft of original Digital Library front page text with notch based design
+* Example concept of original Digital Library front page text with notch based design
+
+* View record metadata and search table for text
 
 
+**TODO Next**
+
+* Clean up facet UI errors
 
 
 **Changelog**
@@ -22,3 +27,5 @@ Location : 144.6.226.216
 * Refactoring of modal hijacking code
 
 * Removing of sorting options when no search terms
+
+* First draft of metadata fields display with tabs and fuzzy search

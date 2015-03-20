@@ -96,7 +96,7 @@ function searchFormSetup(formElement) {
 
                 $('form.vndl-search').trigger('submit');
 
-                alert('form triggered...');
+                //alert('form triggered...');
 
                 console.log('remove facet link performed...');
 

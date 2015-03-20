@@ -33,9 +33,24 @@ function getResultsPage(queryString, start, length) {
             console.log("start parsing of html results");
             console.log($(data).find('#documents'));
 
-            // find and store the search result document element contained in #content
 
-            var searchResultDOMElement = $(data).find('#content').html();
+            if ($(data).find('#content').length)
+            {
+                // find and store the search result document element contained in #content
+
+                var searchResultDOMElement = $(data).find('#content').html();
+
+            }
+
+            else
+
+            {
+
+                // some function that loads a result page that is no results found
+            }
+
+
+
 
             // inject DOMified search results into the vndl-results section of the current page
 
@@ -58,6 +73,8 @@ function getResultsPage(queryString, start, length) {
 
 
         })
+
+        // TODO: Add user error page for when jqxhr doesn't return 200
         .fail(function (jqXHR, textStatus) {
             console.log("error" + textStatus);
         })
