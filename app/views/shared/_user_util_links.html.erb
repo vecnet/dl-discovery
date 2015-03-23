@@ -45,9 +45,9 @@
               <li><%= link_to "Transmission Simulator", "#{ci_domain}/ts/" %></li>
               <% if current_user -%>
                   <li class="divider"></li>
-                  <li><%= link_to "My Uploads", dashboard_index_path %></li>
+                  <li><%= link_to "My Uploads", "/dashboard" %></li>
                   <% if current_user.admin? -%>
-                      <li><%= link_to "Admin Dashboard", admin_dashboard_index_path %></li>
+                      <li><%= link_to "Admin Dashboard", "/admin_dashboard" %></li>
                   <% end -%>
               <% end -%>
             </ul>
@@ -60,7 +60,7 @@
 
 
           <% if current_user -%>
-              <li><%= link_to "Logout (#{current_user.name})", user_logout_url %></li>
+              <li><%= link_to "Logout (#{current_user})", user_logout_url %></li>
           <% else -%>
               <li><%= link_to "Login", user_login_url(request.original_url) %></li>
           <% end -%>
