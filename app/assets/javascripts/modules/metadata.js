@@ -1,23 +1,61 @@
-$(function () {
-    $( '#table' ).searchable({
-        striped: true,
-        oddRow: { 'background-color': '#f5f5f5' },
-        evenRow: { 'background-color': '#fff' },
-        searchType: 'fuzzy',
-        onSearchActive : function( elem, term ) {
-            elem.show();
-        },
-        onSearchBlur: function() {
-            $( '#feedback' ).hide();
-        },
-        clearOnLoad: true,
-        hide          : function( elem ) {
-            elem.fadeOut(50);
-        },
-        show          : function( elem ) {
-            elem.fadeIn(50);
-        }
-    });
+//
+//$(document).ready(function() {
+//    $('#table-document').dataTable( {
+//        "paging":   false,
+//        "ordering": false,
+//        "info":     false
+//    } );
+//} );
+//
+//
+//$(document).ready(function() {
+//    $('#table-file').dataTable( {
+//        "paging":   false,
+//        "ordering": false,
+//        "info":     false
+//    } );
+//} );
+//
+//
+//$(document).ready(function() {
+//    $('#table-metadata').dataTable( {
+//        "paging":   false,
+//        "ordering": false,
+//        "info":     false
+//    } );
+//} );
+
+//$(document).ready(function() {
+//
+//
+//    var dTable = $('#document-table').dataTable( {
+//        "paging":   false,
+//        "ordering": false,
+//        "info":     false,
+//        "bInfo":    false
+//    } );
+//
+//    $('#search-field').keyup(function(){
+//    dTable.fnFilter($(this).val());
+//    });
+//
+//});
+
+
+$(document).ready(function () {
+
+    (function ($) {
+
+        $('#search-field').keyup(function () {
+
+            var rex = new RegExp($(this).val(), 'i');
+            $('.searchable tr').hide();
+            $('.searchable tr').filter(function () {
+                return rex.test($(this).text());
+            }).show();
+
+        })
+
+    }(jQuery));
 
 });
-

@@ -9,7 +9,9 @@ Digital Library Changelog
 
 * Example concept of original Digital Library front page text with notch based design
 
-* View record metadata and search table for row with text
+* View record metadata in table
+
+* Prototype of searching metadata table.  Discussion of use case needed.
 
 * Add feedback link dropdown from navigation bar on the home page.  Discussion on Wednesday.
 
