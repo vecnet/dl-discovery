@@ -267,7 +267,7 @@ function searchFormSetup(formElement) {
             //this calls the search form's overridden submit method that serializes the form
             // and does an jqxh request for new search result content
 
-            //$('form.vndl-search').trigger('submit');
+            $('form.vndl-search').trigger('submit');
         }
 
         $('#ajax-modal').modal('hide');
