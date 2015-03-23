@@ -29,13 +29,17 @@ function getResultsPage(queryString, start, length) {
     var jqxhr = $.ajax({url: url, dataType: "text", cache: false})
         .done(function (data) {
             //console.log( data );
-            console.log("successful ajax search request");
-            console.log("start parsing of html results");
+            console.log("start of ajax search request");
+
             console.log($(data).find('#documents'));
+
+            console.log("start parsing of html results in #documents");
 
 
             if ($(data).find('#content').length)
             {
+
+                console.log('found elements in #content' );
                 // find and store the search result document element contained in #content
 
                 var searchResultDOMElement = $(data).find('#content').html();
