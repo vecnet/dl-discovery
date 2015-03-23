@@ -1,8 +1,8 @@
 Digital Library Changelog
-*17.03.2015*
+*17-23.03.2015*
 
 
-Location : 144.6.226.216
+[Location : 144.6.226.216](http://144.6.226.216)
 
 
 **Summary**
@@ -12,6 +12,8 @@ Location : 144.6.226.216
 * Example concept of original Digital Library front page text with notch based design
 
 * View record metadata and search table for text
+
+* Add easy feedback dropdown on the home page.  Discussion needed.
 
 
 **TODO Next**
