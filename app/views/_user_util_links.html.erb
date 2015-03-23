@@ -1,4 +1,5 @@
 <div class="navbar-right">
+
   <div class='topnav-links'>
     <% if has_user_authentication_provider? -%>
         <ul class="nav navbar-nav">
@@ -9,9 +10,6 @@
             <% end -%>
           </li>
 
-          <!--TODO -->
-          <!--"HISTORY" LINK TO BE RENAMED AS PREVIOUS SEARCHES
-          <!--MOVED INTO SEARCH FORM-->
 
           <% if has_user_authentication_provider? and current_user %>
               <li>
@@ -70,6 +68,14 @@
         </ul>
     <% end -%>
   </div>
+
+
+
+
+
+
+
+
   <ul class="nav navbar-nav">
 
     <% if render_bookmarks_control? %>

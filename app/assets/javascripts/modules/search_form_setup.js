@@ -2,11 +2,13 @@ function searchFormSetup(formElement) {
 
     $(formElement).on("submit", function (event) {
         event.preventDefault();
+
         var queryString = $('form.vndl-search').serialize();
 
         console.log('the serialized form make the following query string : ' + queryString);
 
         getResultsPage(queryString);
+
 
     });
 
@@ -74,12 +76,6 @@ function searchFormSetup(formElement) {
 
         // find the elements that contain removeFacet
         var $removeFacetLinks = $('form.vndl-search').find('.removeFacet');
-
-
-        // get the hidden input element to be removed
-        var $removeFacetHiddenInput = $('form.vndl-search').find('.hidden');
-
-        //console.log('the removeFacetLinks el in html is : ' + $removeFacetLinks.html());
 
         $removeFacetLinks.each(function(index,button){
 
@@ -270,7 +266,8 @@ function searchFormSetup(formElement) {
 
             //this calls the search form's overridden submit method that serializes the form
             // and does an jqxh request for new search result content
-            $('form.vndl-search').trigger('submit');
+
+            //$('form.vndl-search').trigger('submit');
         }
 
         $('#ajax-modal').modal('hide');
