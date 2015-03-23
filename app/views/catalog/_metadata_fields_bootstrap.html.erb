@@ -2,94 +2,144 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="page-header">
-        <h1>Metadata </h1>
+        <h1>Metadata</h1>
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-lg-12">
+
     </div>
   </div>
   <div class="row">
+
+
+
+
     <div class="col-lg-4 col-lg-offset-8">
       <input type="search" id="search" value="" class="form-control" placeholder="Search for text">
     </div>
   </div>
-  <div class="row">
-    <ul id="tabs"  class=" nav nav-tabs metadata-table" data-tabs="tabs">
-      <li class="active"><a href="#1" data-toggle="tab">Summary</a>
-      </li>
-      <li><a href="#2" data-toggle="tab">Metadata</a>
-      </li>
-      <li><a href="#3" data-toggle="tab">File</a>
-      </li>
+  <div role="tabpanel">
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#document-tab" aria-controls="Document" role="tab" data-toggle="tab">Document</a></li>
+      <li role="presentation"><a href="#metadata-tab" aria-controls="References" role="tab" data-toggle="tab">References</a></li>
+      <li role="presentation"><a href="#file-tab" aria-controls="Metadata" role="tab" data-toggle="tab">File Metadata</a></li>
     </ul>
 
-
+    <!-- Tab panes -->
     <div class="tab-content">
-      <div class="tab-pane" id="1">
-      <table class="table table-striped table-responsive" id="table">
-        <thead>
-        <col class="field-bold"/>
-        <tr>
+      <div role="tabpanel" class="tab-pane active" id="document-tab">
 
 
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <th>Introducing</th>
-          <td>jQuery</td>
+        <div class="row">
+          <div class="col-lg-12">
+            <table class="table table-striped" id="table">
+              <thead>
+              <tr>
+                <th></th>
+                <th></th>
 
-        </tr>
-        <tr>
-          <th>Lorem</th>
-          <td>Ipsum</td>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>Title</th>
+                <td><%= @document["dc_title_s"] %></td>
 
-        </tr>
-        <tr>
-          <th>Some</th>
-          <td>More</td>
+              </tr>
+              <tr>
+                <th>Description</th>
+                <td><%= @document["dc_description_s"] %></td>
 
-        </tr>
-        </tbody>
-      </table>
-      <hr>
-    </div>
+              </tr>
+              <tr>
+                <th>Author</th>
+                <td>Tanya Russell</td>
 
-      <div class="tab-pane" id="2">
-        <table class="table table-striped table-responsive" id="table">
-          <thead>
-          <tr>
-
-
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <th>Introducing</th>
-            <td>jQuery</td>
-
-          </tr>
-          <tr>
-            <th>Lorem</th>
-            <td>Ipsum</td>
-
-          </tr>
-          <tr>
-            <th>Some</th>
-            <td>More</td>
-
-          </tr>
-          </tbody>
-        </table>
-        <hr>
+              </tr>
+              </tbody>
+            </table>
+            <hr>
+          </div>
+        </div>
       </div>
 
+
+      <div role="tabpanel" class="tab-pane" id="metadata-tab">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <table class="table table-striped" id="table">
+              <thead>
+              <tr>
+                <th></th>
+                <th></th>
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>First column</th>
+                <td>jQuery</td>
+
+              </tr>
+              <tr>
+                <th>Second column</th>
+                <td>Ipsum</td>
+
+              </tr>
+              <tr>
+                <th>Third column</th>
+                <td>More</td>
+
+              </tr>
+              </tbody>
+            </table>
+            <hr>
+          </div>
+        </div>
+
+      </div>
+      <div role="tabpanel" class="tab-pane" id="file-tab">
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <table class="table table-striped" id="table">
+              <thead>
+              <tr>
+                <th></th>
+                <th></th>
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th>UUID</th>
+                <td><%= @document["uuid"] %></td>
+
+              </tr>
+              <tr>
+                <th>Second column</th>
+                <td>Ipsum</td>
+
+              </tr>
+              <tr>
+                <th>Third column</th>
+                <td>More</td>
+
+              </tr>
+              </tbody>
+            </table>
+            <hr>
+          </div>
+        </div>
+      </div>
+
+
+
     </div>
-    <!--end of tab content-->
-
-
-
   </div>
 </div>

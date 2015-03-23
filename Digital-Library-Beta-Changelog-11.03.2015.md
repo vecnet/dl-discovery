@@ -7,27 +7,31 @@ Digital Library Changelog
 
 **Summary**
 
-* Facets load search results correctly
-
 * Example concept of original Digital Library front page text with notch based design
 
-* View record metadata and search table for text
+* View record metadata and search table for row with text
 
-* Add easy feedback dropdown on the home page.  Discussion needed.
+* Add feedback link dropdown from navigation bar on the home page.  Discussion on Wednesday.
+
+* Facets load search results.  Still fixing errors with multiple facet detection.
 
 
-**TODO Next**
+**TODO**
 
-* Clean up facet UI errors
+* Fix facet UI errors
+
+* Collaborate with Don on metadata format and display 
 
 
 **Changelog**
 
 
-* First draft of metadata fields with jquery filter
+* First draft of metadata fields with jQuery filter
 
 * Refactoring of modal hijacking code
 
 * Removing of sorting options when no search terms
 
 * First draft of metadata fields display with tabs and fuzzy search
+
+* Refactoring of javascript code in feature branch
