@@ -26,10 +26,29 @@ dd[itemprop='url'] a {
     display: none;
   }
 
+}
+
+#sidebar {
+
+  padding-top: 10px;
 
 }
 
-// metadata panels
+// map metadata icons and panels
+
+.metadata-relative {
+
+  position: relative;
+}
+
+.field-title {
+  font-weight: bold;
+  color:#CCCCCC;
+  margin:-0.3em 0 0.3em ;
+  font-size: 125%;
+  letter-spacing: 0.05em;
+
+}
 
 .timeline {
   list-style: none;
@@ -71,7 +90,7 @@ dd[itemprop='url'] a {
   float: right;
   border: 1px solid #d4d4d4;
   border-radius: 2px;
-  padding: 20px;
+  padding: 22px 20px 12px ;
   position: relative;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
