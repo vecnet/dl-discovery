@@ -1,7 +1,10 @@
 <% document ||= @document %>
 
-<div class="geoblacklight-view-panel">
-  <dl class="dl-horizontal">
+<div class="geoblacklight-view-panel" >
+  <dl class="dl-horizontal col-lg-10">
+
+    <dt>Description</dt>
+    <dd<%= @document["dc_description_s"]%></dd>
 
     <dt>Author</dt>
     <dd><%= @document["dc_creator_sm"] %></dd>
