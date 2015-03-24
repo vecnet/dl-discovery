@@ -49,18 +49,18 @@
               </thead>
               <tbody class="searchable">
               <tr>
-                <th>First column</th>
-                <td>jQuery</td>
+                <th>Catalog ID</th>
+                <td><%=@document["layer_id_s"] %></td>
 
               </tr>
               <tr>
-                <th>Second column</th>
-                <td>Ipsum</td>
+                <th>File Version</th>
+                <td><%=@document["_version"] %></td>
 
               </tr>
               <tr>
-                <th>Third column</th>
-                <td>More</td>
+                <th>Timestamp</th>
+                <td><%=@document["timestamp"] %></td>
 
               </tr>
               </tbody>
@@ -90,13 +90,13 @@
 
               </tr>
               <tr>
-                <th>Second column</th>
-                <td>Ipsum</td>
+                <th>UUID</th>
+                <td><%= @document["uuid"] %></td>
 
               </tr>
               <tr>
-                <th>Third column</th>
-                <td>More</td>
+                <th>UUID</th>
+                <td><%= @document["uuid"] %></td>
 
               </tr>
               </tbody>
