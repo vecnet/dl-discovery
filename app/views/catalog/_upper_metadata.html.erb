@@ -4,10 +4,17 @@
   <dl class="dl-horizontal col-lg-10">
 
     <dt>Description</dt>
-    <dd<%= @document["dc_description_s"]%></dd>
+    <dd><%= @document["dc_description_s"]%></dd>
 
     <dt>Author</dt>
-    <dd><%= @document["dc_creator_sm"] %></dd>
+    <dd><%= @document["dc_creator_sm"]%></dd>
+
+
+    <dt>Held By</dt>
+    <dd><%= @document["dct_provenance_s"]%></dd>
+
+    <dt>Access</dt>
+    <dd><%= @document["dc_rights_s"]%></dd>
 
 
     <%# TODO: Change these methods to use the document.fields that are correct %>
