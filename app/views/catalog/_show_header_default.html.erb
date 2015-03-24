@@ -1,0 +1,27 @@
+<% document ||= @document %>
+
+<h2>
+  <span itemprop="name"><%= document_heading(document) %></span>
+  <small>
+    <%= geoblacklight_icon(document['layer_geom_type_s']) %>
+    <%= geoblacklight_icon(document['dct_provenance_s']) %>
+    <%= geoblacklight_icon(document['dc_rights_s']) %>
+  </small>
+</h2>
+
+<div class="geoblacklight-view-panel">
+
+  <dl class="dl-horizontal">
+
+            <dt class="author">Author</dt>
+            <dd class="author-value"> <%= @document["dc_creator_sm"] %></dd>
+
+
+    <% if !@document.references.nil? && !@document.references.url.nil? %>
+        <dt>More details at</dt>
+        <dd itemprop="url"><%= link_to @document.references.url.endpoint, @document.references.url.endpoint %></dd>
+    <% end %>
+  </dl>
+</div>
+
+
