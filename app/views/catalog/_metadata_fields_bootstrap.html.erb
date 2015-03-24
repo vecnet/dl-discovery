@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <div class="page-header">
-        <h1>Metadata</h1>
-      </div>
+      <!--<div class="page-header">-->
+        <!--<h1>Metadata</h1>-->
+      <!--</div>-->
     </div>
   </div>
   <div class="row">
@@ -11,17 +11,15 @@
 
     </div>
   </div>
-  <div class="row">
-    <div class="col-lg-4 col-lg-offset-8">
-      <input type="search" id="search-field" value="" class="form-control" placeholder="Search for text">
-    </div>
-  </div>
 
 
   <div id="table-div" role="tabpanel">
 
+    <div class="col-lg-4 col-lg-offset-8">
+      <input type="search" id="search-field" value="" class="form-control" placeholder="Search for text">
+    </div>
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#document-tab" aria-controls="Document" role="tab" data-toggle="tab">Document</a></li>
+      <li role="presentation" class="active"><a href="#document-tab" aria-controls="Document" role="tab" data-toggle="tab">Map</a></li>
       <li role="presentation"><a href="#metadata-tab" aria-controls="References" role="tab" data-toggle="tab">References</a></li>
       <li role="presentation"><a href="#file-tab" aria-controls="Metadata" role="tab" data-toggle="tab">File Metadata</a></li>
     </ul>
@@ -32,35 +30,7 @@
 
 
         <div class="row">
-          <div class="col-lg-12">
-            <table class="table table-striped" id="document-table">
-              <thead>
-              <tr>
-                <th></th>
-                <th></th>
-
-              </tr>
-              </thead>
-              <tbody class="searchable">
-              <tr>
-                <th>Title</th>
-                <td><%= @document["dc_title_s"] %></td>
-
-              </tr>
-              <tr>
-                <th>Description</th>
-                <td><%= @document["dc_description_s"] %></td>
-
-              </tr>
-              <tr>
-                <th>Author</th>
-                <td>Tanya Russell</td>
-
-              </tr>
-              </tbody>
-            </table>
-            <hr>
-          </div>
+          <%= render 'show_default_viewer_container' %>
         </div>
       </div>
 
