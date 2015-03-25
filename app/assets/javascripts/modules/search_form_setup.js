@@ -177,12 +177,12 @@ function searchFormSetup(formElement) {
 
 
         // add fake bounding box value to form
-        $('form.vndl-search').append('<input id="bbox-input-field" type="hidden" name="bbox" value="nothing">');
+        $('form.vndl-search').append('<input id="bbox-input-field" type="hidden" name="bbox" value="'+ spacedString + '">');
 
 
         // change the bbox input value to the actual bounds of the map
-
-        $('#bbox-input-field').val(spacedString);
+        //
+        //$('#bbox-input-field').val(spacedString);
 
         $(formElement).trigger('submit');
 
