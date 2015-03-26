@@ -20,39 +20,31 @@ function getResultsPage(queryString, start, length) {
 
     var url = '/?' + queryString;
 
-    // normally this would be a post of the form.  but for now
-    // just fetch the url
-
-
     // Assign handlers immediately after making the request,
 // and remember the jqXHR object for this request
     var jqxhr = $.ajax({url: url, dataType: "text", cache: false})
         .done(function (data) {
 
             //console.log( data );
-
             console.log("start of ajax search request");
-
             console.log('found the following search result as elements : ' + $(data).find('#documents'));
-
-            console.log("start parsing of html results in #documents as above");
-
+            //console.log('the search result elements to html is : ' + $(data).find('#documents').html());
 
             if ($(data).find('#content').length)
             {
 
                 console.log('found search result elements in #content' );
-                // find and store the search result document element contained in #content
 
+                // find and store the search result document element contained in #content
                 var searchResultDOMElement = $(data).find('#content').html();
 
             }
 
-            else
-
-            {
+           else {
                 // TODO:
                 // some function that loads a result page that is the default page
+
+
             }
 
 

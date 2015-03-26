@@ -13,6 +13,24 @@ function searchFormSetup(formElement) {
     });
 
 
+
+    // Change the links of sortAndPerPage partial to make ajax calls
+    // when clicked the link shouldn't load rails page load but submit xhr
+    $(function(){
+        $('a.paginate-next').click(function(){
+            var ajaxNextLink = ($(this).attr('href'));
+            // or alert($(this).hash();
+            event.preventDefault();
+            getResultsPage(ajaxNextLink);
+        });
+    });
+
+
+    // change the search-widgets links to be ajax calls
+
+
+
+
     //
     //----------------------------------------------------------------------
     //
@@ -117,10 +135,10 @@ function searchFormSetup(formElement) {
         });
 
 
-        // hijack the remove facet link in the modal
+        // change remove facet link in the modal to remove a matching constraint from the form
+        // then trigger a resubmit
 
         $('.modal-body a.remove').each(function (index, link) {
-
 
             removeFacetWithAjax(link);
 
@@ -267,10 +285,6 @@ function searchFormSetup(formElement) {
 
 
     function removeFacetWithAjax(link) {
-
-
-        //TODO: This requires review
-
 
         $link = $(link);
 
