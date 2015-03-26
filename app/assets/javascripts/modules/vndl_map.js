@@ -16,20 +16,20 @@ window.VndlMap = function (mapDomId, options) {
 
 
     });
+
     // this.opts is our options, there are many like it but this one is ours
     this.opts = options || {};
 
     markerLayer = new L.FeatureGroup();
-
     this.leafletMap.addLayer(markerLayer);
 
-    rectangleLayer = new L.FeatureGroup();
 
+    rectangleLayer = new L.FeatureGroup();
     this.leafletMap.addLayer(rectangleLayer);
 
     this.clearMarkers();
-
     this.clearRectangles();
+
 
     this.leafletMap.setView([-13, 140], 3);
     // add an OpenStreetMap tile layer

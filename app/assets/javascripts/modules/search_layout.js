@@ -28,18 +28,20 @@ function getResultsPage(queryString, start, length) {
 // and remember the jqXHR object for this request
     var jqxhr = $.ajax({url: url, dataType: "text", cache: false})
         .done(function (data) {
+
             //console.log( data );
+
             console.log("start of ajax search request");
 
-            console.log($(data).find('#documents'));
+            console.log('found the following search result as elements : ' + $(data).find('#documents'));
 
-            console.log("start parsing of html results in #documents");
+            console.log("start parsing of html results in #documents as above");
 
 
             if ($(data).find('#content').length)
             {
 
-                console.log('found elements in #content' );
+                console.log('found search result elements in #content' );
                 // find and store the search result document element contained in #content
 
                 var searchResultDOMElement = $(data).find('#content').html();
@@ -49,27 +51,24 @@ function getResultsPage(queryString, start, length) {
             else
 
             {
-
-                // some function that loads a result page that is no results found
+                // TODO:
+                // some function that loads a result page that is the default page
             }
 
 
 
-
             // inject DOMified search results into the vndl-results section of the current page
-
             $('.contentwrapper > .content').html(searchResultDOMElement);
 
-            // rerun the method to hijack the search form to prevent a new page load
 
+            // rerun the method to hijack the search form to prevent a new page load
             searchFormSetup($('form.vndl-search'));
 
-            // chuck away the previous map markers
 
+            // chuck away the previous map markers
             window.vndl.theMap.clearMarkers();
 
             // chuck away the previous rectangles
-
             window.vndl.theMap.clearRectangles();
 
             // parse the inserted content for new map references
@@ -85,22 +84,6 @@ function getResultsPage(queryString, start, length) {
         .always(function () {
             console.log(" ajax search and load finished");
         });
-
-
-    //the old jq load method
-
-    //$('.contentwrapper > .content').load(jqxhr, function () {
-    //
-
-    //
-    //
-    //
-    //    // chuck away the previous map markers
-    //    window.vndl.theMap.clearMarkers();
-    //    // parse the inserted content for new map references
-    //    window.vndl.theMap.discoverAndMapGeoDataInResultsHtml($('.contentwrapper > .content'));
-    //});
-
 }
 // ------------------------------------------------------------------
 // ------------------------------------------------------------------
@@ -128,15 +111,6 @@ $(function () {
     // calls jqxhr getResultsPage with search terms
 
     searchFormSetup($('form.vndl-search'));
-
-    //$('form.vndl-search').on("submit", function (event) {
-    //    event.preventDefault();
-    //    var queryString = $('form.vndl-search').serialize();
-    //    getResultsPage(queryString);
-    //
-    //});
-
-
 
     // make the submit-search-form work
     $('#gosearch').click(function (event) {

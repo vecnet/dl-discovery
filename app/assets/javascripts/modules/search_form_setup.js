@@ -13,18 +13,15 @@ function searchFormSetup(formElement) {
     });
 
 
-
     //
     //----------------------------------------------------------------------
     //
 
 
+    // Change the href of each link in the modals to include the current facets applied
 
 
-    // change facet buttons href's to equal the current search form when serialized
-    // ie the serialised version of the facets already being applied.
-
-
+    // if a facet has already been applied
     if ($('#appliedParams').length) {
 
         console.log('div id appliedParams has length and therefore elements');
@@ -49,19 +46,17 @@ function searchFormSetup(formElement) {
 
 
             // find the original href
+            var originalHref = $link.attr('href');
 
             // append the serialised form to it
+            $link.attr('href', originalHref + '?' + serialisedForm);
 
-            // the correct link structure is
-            //
+            // the correct link structure is e.g.
+
             // <a href="/catalog/facet/desc_metadata__creator_facet?f%5Bdesc_metadata__creator_facet%5D%5B%5D=Abaga%2C+S."
 
             // therefore : add a '?' prior to the append
 
-            var originalHref = $link.attr('href');
-
-
-            $link.attr('href', originalHref + '?' + serialisedForm);
 
             console.log('each respective link href will now be : ' + originalHref + '?' + serialisedForm);
 
@@ -79,20 +74,17 @@ function searchFormSetup(formElement) {
 
         $removeFacetLinks.each(function(index,button){
 
-
             $button = $(button);
 
             $button.on("click", function(event){
 
                 event.preventDefault();
 
-                //$button.closest("div[aria-label=location-filter]").remove();
-
                 $button.closest("div[aria-label=location-filter]").remove();
 
-                $('form.vndl-search').trigger('submit');
+                //alert("about to trigger a form submit");
 
-                //alert('form triggered...');
+                $('form.vndl-search').trigger('submit');
 
                 console.log('remove facet link performed...');
 
@@ -106,7 +98,7 @@ function searchFormSetup(formElement) {
 
 
     //
-    // Replace modal links with ajax versions
+    // Replace rails modal links with ajax versions
     //
 
     // when the Bootstrap modal is loaded
