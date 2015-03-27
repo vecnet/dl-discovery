@@ -41,9 +41,9 @@ function getResultsPage(queryString, start, length) {
             }
 
            else {
-                // TODO:
+                // TODO: Redo this correctly
                 // some function that loads a result page that is the default page
-
+                document.location.href="/";
 
             }
 
@@ -80,6 +80,8 @@ function getResultsPage(queryString, start, length) {
 // ------------------------------------------------------------------
 // ------------------------------------------------------------------
 $(function () {
+
+    // Gets called at the start of a page load
 
     // store the map reference in a global
     window.vndl = {};

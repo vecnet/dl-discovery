@@ -13,32 +13,34 @@ function searchFormSetup(formElement) {
     });
 
 
+    changeElementAnchorsToAjax('a.paginate-next');
 
+    changeElementAnchorsToAjax('a.paginate-prev');
 
-    //TODO : Review method
+    changeElementAnchorsToAjax('div.search-widgets .dropdown-menu li a');
 
+    //
+    //// Change the next links of sortAndPerPage partial to make ajax calls
+    //// when clicked the link shouldn't load rails page load but submit xhr
+    //$(function(){
+    //    $('a.paginate-next').click(function(){
+    //        var ajaxNextLink = ($(this).attr('href'));
+    //        // or alert($(this).hash();
+    //        event.preventDefault();
+    //        getResultsPage(ajaxNextLink);
+    //    });
+    //});
 
-    // Change the next links of sortAndPerPage partial to make ajax calls
-    // when clicked the link shouldn't load rails page load but submit xhr
-    $(function(){
-        $('a.paginate-next').click(function(){
-            var ajaxNextLink = ($(this).attr('href'));
-            // or alert($(this).hash();
-            event.preventDefault();
-            getResultsPage(ajaxNextLink);
-        });
-    });
-
-    // Change the prev links of sortAndPerPage partial to make ajax calls
-    // when clicked the link shouldn't load rails page load but submit xhr
-    $(function(){
-        $('a.paginate-prev').click(function(){
-            var ajaxPrevLink = ($(this).attr('href'));
-            // or alert($(this).hash();
-            event.preventDefault();
-            getResultsPage(ajaxPrevLink);
-        });
-    });
+    //// Change the prev links of sortAndPerPage partial to make ajax calls
+    //// when clicked the link shouldn't load rails page load but submit xhr
+    //$(function(){
+    //    $('a.paginate-prev').click(function(){
+    //        var ajaxPrevLink = ($(this).attr('href'));
+    //        // or alert($(this).hash();
+    //        event.preventDefault();
+    //        getResultsPage(ajaxPrevLink);
+    //    });
+    //});
 
 
     // change the search-widgets links to be ajax calls
@@ -46,14 +48,14 @@ function searchFormSetup(formElement) {
 
     // Change the search-widgets to make ajax calls
     // when clicked the link shouldn't load rails page load but submit xhr
-    $(function(){
-        $('div.search-widgets .dropdown-menu li a').click(function(){
-            var widgetLink = ($(this).attr('href'));
-            // or alert($(this).hash();
-            event.preventDefault();
-            getResultsPage(widgetLink);
-        });
-    });
+    //$(function(){
+    //    $('div.search-widgets .dropdown-menu li a').click(function(){
+    //        var widgetLink = ($(this).attr('href'));
+    //        // or alert($(this).hash();
+    //        event.preventDefault();
+    //        getResultsPage(widgetLink);
+    //    });
+    //});
 
 
     //
@@ -267,8 +269,8 @@ function searchFormSetup(formElement) {
 
         // pull out facet values from data tags
 
-        var solrFacetName = $link.attr('data-facet-name');
-        var facetValue = $link.attr('data-facet-solr-value');
+        var solrFacetName = $link.attr("data-facet-name");
+        var facetValue = $link.attr("data-facet-solr-value");
 
 
         // construct the facet_name URL with the special encoding geobl and solr expect
@@ -284,17 +286,17 @@ function searchFormSetup(formElement) {
         $hiddenInput.attr('value', facetValue);
 
 
-        // check if the form element already exists in the search form parent
-
-        if ($("[data-facetvalue='"+facetValue+"']").length){
-
-            // don't go breaking my heart
-
-            alert("this code shouldn't run as I can't add the same facet...");
-
-        }
-
-        else {
+        //// check if the form element already exists in the search form parent
+        //
+        //if ($("[data-facetvalue='"+facetValue+"']").length){
+        //
+        //    // don't go breaking my heart
+        //
+        //    alert("this code shouldn't run as I can't add the same facet...");
+        //
+        //}
+        //
+        //else {
 
             $('form.vndl-search').append($hiddenInput);
 
@@ -303,7 +305,7 @@ function searchFormSetup(formElement) {
             // and does an jqxh request for new search result content
 
             $('form.vndl-search').trigger('submit');
-        }
+
 
         $('#ajax-modal').modal('hide');
     }
@@ -313,7 +315,7 @@ function searchFormSetup(formElement) {
 
         $link = $(link);
 
-        var facetValue = $link.attr('data-facet-solr-value');
+        var facetValue = $link.attr("data-facet-solr-value");
 
         $("form.vndl-search[data-facet-solr-value='"+facetValue+"']").remove();
 
@@ -327,5 +329,20 @@ function searchFormSetup(formElement) {
 
     }
 
+}
+
+//
+//----------------------------------------------------------------------------------------------------------------------
+//
+
+// Prevent normal link action and make ajax call to href
+function changeElementAnchorsToAjax(elementSelector){
+
+    $(elementSelector).click(function(){
+        var ajaxLink = ($(this).attr('href'));
+        // or alert($(this).hash();
+        event.preventDefault();
+        getResultsPage(ajaxLink);
+    });
 }
 
