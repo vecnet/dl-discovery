@@ -24,6 +24,9 @@ function searchFormSetup(formElement) {
     // Change the href of each link in the modals to include the current facets applied
 
     // if a facet has already been applied
+
+
+
     if ($('#appliedParams').length) {
 
         console.log('div id appliedParams has length and therefore elements');
@@ -33,33 +36,10 @@ function searchFormSetup(formElement) {
 
         console.log('the serialized form currently is : ' + serialisedForm);
 
-
         // find all the elements that contain more_facets_link
         var $links = $('form.vndl-search').find('.more_facets_link');
 
-
-        $links.each(function (i, link) {
-
-
-            $link = $(link);
-
-
-            // find the original href
-            var originalHref = $link.attr('href');
-
-            // append the serialised form to it
-            $link.attr('href', originalHref + '?' + serialisedForm);
-
-            // the correct link structure is e.g.
-
-            // <a href="/catalog/facet/desc_metadata__creator_facet?f%5Bdesc_metadata__creator_facet%5D%5B%5D=Abaga%2C+S."
-
-            // therefore : add a '?' prior to the append
-
-
-            console.log('each respective link href will now be : ' + originalHref + '?' + serialisedForm);
-
-        });
+        addSerialisedFormToHref($links);
 
 
         // for each 'remove this filter' link we need to
@@ -71,25 +51,7 @@ function searchFormSetup(formElement) {
         // find the elements that contain removeFacet
         var $removeFacetLinks = $('form.vndl-search').find('.removeFacet');
 
-        $removeFacetLinks.each(function(index,button){
-
-            $button = $(button);
-
-            $button.on("click", function(event){
-
-                event.preventDefault();
-
-                $button.closest("div[aria-label=location-filter]").remove();
-
-                //alert("about to trigger a form submit");
-
-                $('form.vndl-search').trigger('submit');
-
-                console.log('remove facet link performed...');
-
-            })
-
-        });
+        addClickEventToRemoveAppliedFacet($removeFacetLinks);
 
     }
 
@@ -281,13 +243,70 @@ function searchFormSetup(formElement) {
 
     }
 
+
+    //
+    // for each link in links, add the serialised search form to it's href
+    //
+    function addSerialisedFormToHref($links) {
+
+        $links.each(function (i, link) {
+
+            $link = $(link);
+
+            // find the original href
+            var originalHref = $link.attr('href');
+
+            // append the serialised form to it
+            $link.attr('href', originalHref + '?' + serialisedForm);
+
+            // the correct link structure is e.g.
+
+            // <a href="/catalog/facet/desc_metadata__creator_facet?f%5Bdesc_metadata__creator_facet%5D%5B%5D=Abaga%2C+S."
+
+            // therefore : add a '?' prior to the append
+
+            console.log('each respective link href will now be : ' + originalHref + '?' + serialisedForm);
+
+        });
+    }
+
+    //
+    // for each link in links prevent the default click and
+    // instead remove the closest div with aria-label=location-filter (aka an applied facet)
+    // then trigger the form submit to get refreshed search results
+    //
+    function addClickEventToRemoveAppliedFacet($links) {
+
+        var $removeFacetLinks = $links;
+
+        $removeFacetLinks.each(function (index, link) {
+
+            $link = $(link);
+
+            $link.on("click", function (event) {
+
+                event.preventDefault();
+
+                $link.closest("div[aria-label=location-filter]").remove();
+
+                //alert("about to trigger a form submit");
+
+                console.log('remove facet link performed...');
+
+                $('form.vndl-search').trigger('submit');
+
+            })
+
+        });
+    }
+
 }
 
 //
 //----------------------------------------------------------------------------------------------------------------------
 //
 
-// Prevent normal link action and make ajax call to href
+// Prevent the normal link action and make an ajax call to original href instead
 function changeElementAnchorsToAjax(elementSelector){
 
     $(elementSelector).click(function(){
