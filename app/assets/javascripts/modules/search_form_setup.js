@@ -14,7 +14,11 @@ function searchFormSetup(formElement) {
 
 
 
-    // Change the links of sortAndPerPage partial to make ajax calls
+
+    //TODO : Review method
+
+
+    // Change the next links of sortAndPerPage partial to make ajax calls
     // when clicked the link shouldn't load rails page load but submit xhr
     $(function(){
         $('a.paginate-next').click(function(){
@@ -25,10 +29,31 @@ function searchFormSetup(formElement) {
         });
     });
 
+    // Change the prev links of sortAndPerPage partial to make ajax calls
+    // when clicked the link shouldn't load rails page load but submit xhr
+    $(function(){
+        $('a.paginate-prev').click(function(){
+            var ajaxPrevLink = ($(this).attr('href'));
+            // or alert($(this).hash();
+            event.preventDefault();
+            getResultsPage(ajaxPrevLink);
+        });
+    });
+
 
     // change the search-widgets links to be ajax calls
 
 
+    // Change the search-widgets to make ajax calls
+    // when clicked the link shouldn't load rails page load but submit xhr
+    $(function(){
+        $('div.search-widgets .dropdown-menu li a').click(function(){
+            var widgetLink = ($(this).attr('href'));
+            // or alert($(this).hash();
+            event.preventDefault();
+            getResultsPage(widgetLink);
+        });
+    });
 
 
     //
