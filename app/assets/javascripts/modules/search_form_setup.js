@@ -1,5 +1,4 @@
-function searchFormSetup(formElement) {
-
+function changeFormSubmitEventToAjaxCall(formElement) {
     $(formElement).on("submit", function (event) {
         event.preventDefault();
 
@@ -9,9 +8,11 @@ function searchFormSetup(formElement) {
 
         getResultsPage(queryString);
 
-
     });
+}
+function searchFormSetup(formElement) {
 
+    changeFormSubmitEventToAjaxCall(formElement);
 
     changeElementAnchorsToAjax('a.paginate-next');
 
@@ -19,52 +20,8 @@ function searchFormSetup(formElement) {
 
     changeElementAnchorsToAjax('div.search-widgets .dropdown-menu li a');
 
-    //
-    //// Change the next links of sortAndPerPage partial to make ajax calls
-    //// when clicked the link shouldn't load rails page load but submit xhr
-    //$(function(){
-    //    $('a.paginate-next').click(function(){
-    //        var ajaxNextLink = ($(this).attr('href'));
-    //        // or alert($(this).hash();
-    //        event.preventDefault();
-    //        getResultsPage(ajaxNextLink);
-    //    });
-    //});
-
-    //// Change the prev links of sortAndPerPage partial to make ajax calls
-    //// when clicked the link shouldn't load rails page load but submit xhr
-    //$(function(){
-    //    $('a.paginate-prev').click(function(){
-    //        var ajaxPrevLink = ($(this).attr('href'));
-    //        // or alert($(this).hash();
-    //        event.preventDefault();
-    //        getResultsPage(ajaxPrevLink);
-    //    });
-    //});
-
-
-    // change the search-widgets links to be ajax calls
-
-
-    // Change the search-widgets to make ajax calls
-    // when clicked the link shouldn't load rails page load but submit xhr
-    //$(function(){
-    //    $('div.search-widgets .dropdown-menu li a').click(function(){
-    //        var widgetLink = ($(this).attr('href'));
-    //        // or alert($(this).hash();
-    //        event.preventDefault();
-    //        getResultsPage(widgetLink);
-    //    });
-    //});
-
-
-    //
-    //----------------------------------------------------------------------
-    //
-
 
     // Change the href of each link in the modals to include the current facets applied
-
 
     // if a facet has already been applied
     if ($('#appliedParams').length) {
@@ -74,14 +31,11 @@ function searchFormSetup(formElement) {
         // make the serialised form string
         var serialisedForm = $('form.vndl-search').serialize();
 
+        console.log('the serialized form currently is : ' + serialisedForm);
+
 
         // find all the elements that contain more_facets_link
         var $links = $('form.vndl-search').find('.more_facets_link');
-
-
-        //console.log('the links object is : ' + $links.html());
-
-        //console.log('the serialised form is : ' + serialisedForm);
 
 
         $links.each(function (i, link) {
@@ -248,11 +202,9 @@ function searchFormSetup(formElement) {
 
 
 
+    // add the href to a hidden input on the form
+    // trigger the form submit
     function attachEventsToFacetLink(link) {
-
-        // find all the a elements in the modal
-        // add the content of the href to an input type for the form of type hidden
-        // then trigger the form submit
 
         var $link = $(link);
 

@@ -26,6 +26,11 @@ function getResultsPage(queryString, start, length) {
         .done(function (data) {
 
             //console.log( data );
+
+            var queryString = $('form.vndl-search').serialize();
+
+            console.log('the serialized form is : ' + queryString);
+
             console.log("start of ajax search request");
             console.log('found the following search result as elements : ' + $(data).find('#documents'));
             //console.log('the search result elements to html is : ' + $(data).find('#documents').html());
