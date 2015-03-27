@@ -1,20 +1,5 @@
 // assume jquery is available as $
 
-// ------------------------------------------------------------------
-// disable an input AND add a "disabled" class to its wrapper.
-function disable(element) {
-    var $elem = $(element);
-    $elem.prop('disabled', true);
-    $elem.parent().closest('.checkbox, .checkbox-inline, .radio, .radio-inline, fieldset').addClass('disabled');
-}
-// ------------------------------------------------------------------
-// un-disables an input AND removes the "disabled" class from its wrapper.
-function enable(element) {
-    var $elem = $(element);
-    $elem.prop('disabled', false);
-    $elem.parent().closest('.disabled').removeClass('disabled');
-}
-// ------------------------------------------------------------------
 function getResultsPage(queryString, start, length) {
     // lol ignore the start/length paging info.
 
@@ -25,13 +10,12 @@ function getResultsPage(queryString, start, length) {
     var jqxhr = $.ajax({url: url, dataType: "text", cache: false})
         .done(function (data) {
 
-            //console.log( data );
-
             var queryString = $('form.vndl-search').serialize();
 
             console.log('the serialized form is : ' + queryString);
 
             console.log("start of ajax search request");
+
             console.log('found the following search result as elements : ' + $(data).find('#documents'));
             //console.log('the search result elements to html is : ' + $(data).find('#documents').html());
 
@@ -117,5 +101,115 @@ $(function () {
         getResultsPage();
     });
 
+
+    // when the Blacklight adjusted bootstrap modal is loaded
+    // attach the ajax events to it's add and remove facet links
+    $('#ajax-modal').on('show.bs.modal', function(e) {
+
+
+        $('.modal-body a.facet_select').each(function (index, link) {
+
+            attachEventsToFacetLink(link);
+
+        });
+
+
+
+
+        $('.modal-body a.remove').each(function (index, link) {
+
+            // remove a matching constraint from the form
+            // then trigger a resubmit
+            removeFacetWithAjax(link);
+        });
+
+    });
+
 });
 
+
+
+// ------------------------------------------------------------------
+// disable an input AND add a "disabled" class to its wrapper.
+function disable(element) {
+    var $elem = $(element);
+    $elem.prop('disabled', true);
+    $elem.parent().closest('.checkbox, .checkbox-inline, .radio, .radio-inline, fieldset').addClass('disabled');
+}
+// ------------------------------------------------------------------
+// un-disables an input AND removes the "disabled" class from its wrapper.
+function enable(element) {
+    var $elem = $(element);
+    $elem.prop('disabled', false);
+    $elem.parent().closest('.disabled').removeClass('disabled');
+}
+
+// ------------------------------------------------------------------
+// remove a matching constraint from the form
+// then trigger a resubmit
+function removeFacetWithAjax(link) {
+
+    $link = $(link);
+
+    var facetValue = $link.attr("data-facet-solr-value");
+
+    $("form.vndl-search[data-facet-solr-value='"+facetValue+"']").remove();
+
+    // calls the search form's overridden submit method that serializes the form
+    // and does an jqxh request for new search result content
+    $('form.vndl-search').trigger('submit');
+
+
+    $('#ajax-modal').modal('hide');
+
+}
+
+// ------------------------------------------------------------------
+// add the href to a hidden input on the form
+// trigger the form submit
+function attachEventsToFacetLink(link) {
+
+    var $link = $(link);
+
+    $link.on("click", function (event) {
+
+        event.preventDefault();
+
+        makeHiddenInputElement($link);
+
+    })
+}
+
+// ------------------------------------------------------------------
+// create a hidden input element in the search form
+// from the original modal link
+// trigger submit and hide the modal
+function makeHiddenInputElement($link) {
+
+    // pull out facet values from data tags
+
+    var solrFacetName = $link.attr("data-facet-name");
+    var facetValue = $link.attr("data-facet-solr-value");
+
+
+    // construct the facet_name URL with the special encoding geobl and solr expect
+    var hiddenInputFacetNameFormatted = "f[" + solrFacetName + "][]";
+
+
+    // make the hidden input element that will be added to the form
+    var $hiddenInput = $('<input type="hidden" name="" value="">');
+
+
+    // given hidden input name and value of the facet_field and facet_value
+    $hiddenInput.attr('name', hiddenInputFacetNameFormatted);
+    $hiddenInput.attr('value', facetValue);
+
+
+    $('form.vndl-search').append($hiddenInput);
+
+
+    $('form.vndl-search').trigger('submit');
+
+
+    $('#ajax-modal').modal('hide');
+}

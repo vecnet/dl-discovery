@@ -9,6 +9,8 @@ Digital Library Beta Weekly Changelog
 
 * Search by map area
 
+* Multiple facet search
+
 * Search results can be paginated
 
 * Search results can be sorted and number of results changed
@@ -19,8 +21,10 @@ Digital Library Beta Weekly Changelog
 
 * Collaborate with Don on metadata format and display 
 
-* Fix multiple facets bug
-
 * Fix various UI inconsistencies
+	i.e. 
+	columns in facets
+	highlighting of search result element
+	# of results dropbown box
 
 

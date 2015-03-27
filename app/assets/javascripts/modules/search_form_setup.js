@@ -1,5 +1,7 @@
 function changeFormSubmitEventToAjaxCall(formElement) {
+
     $(formElement).on("submit", function (event) {
+
         event.preventDefault();
 
         var queryString = $('form.vndl-search').serialize();
@@ -10,23 +12,57 @@ function changeFormSubmitEventToAjaxCall(formElement) {
 
     });
 }
+
 function searchFormSetup(formElement) {
 
     changeFormSubmitEventToAjaxCall(formElement);
 
-    changeElementAnchorsToAjax('a.paginate-next');
+    changeAnchorToUseAjax('a.paginate-next');
 
-    changeElementAnchorsToAjax('a.paginate-prev');
+    changeAnchorToUseAjax('a.paginate-prev');
 
-    changeElementAnchorsToAjax('div.search-widgets .dropdown-menu li a');
+    changeAnchorToUseAjax('div.search-widgets .dropdown-menu li a');
 
 
-    // Change the href of each link in the modals to include the current facets applied
+    //
+    // Events Handling
+    // -----------------------------------------------------------
+    //
+
+    //// when the Blacklight adjusted bootstrap modal is loaded
+    //// attach the ajax events to it's add and remove facet links
+    //$('#ajax-modal').on('show.bs.modal', function(e) {
+    //
+    //
+    //    $('.modal-body a.facet_select').each(function (index, link) {
+    //
+    //        attachEventsToFacetLink(link);
+    //
+    //    });
+    //
+    //
+    //
+    //
+    //    $('.modal-body a.remove').each(function (index, link) {
+    //
+    //        // remove a matching constraint from the form
+    //        // then trigger a resubmit
+    //        removeFacetWithAjax(link);
+    //    });
+    //
+    //});
+
+
+    // use the shown map area as a search parameter
+    $('#search-map-button').on("click", function() {
+
+        searchMapAreaUsingFormSubmit();
+
+    });
+
+
 
     // if a facet has already been applied
-
-
-
     if ($('#appliedParams').length) {
 
         console.log('div id appliedParams has length and therefore elements');
@@ -39,108 +75,25 @@ function searchFormSetup(formElement) {
         // find all the elements that contain more_facets_link
         var $links = $('form.vndl-search').find('.more_facets_link');
 
+        // for each link in links, add the serialised search form to it's href
         addSerialisedFormToHref($links);
-
-
-        // for each 'remove this filter' link we need to
-        // hijack the click
-        // remove its hidden input
-        // trigger submit
 
 
         // find the elements that contain removeFacet
         var $removeFacetLinks = $('form.vndl-search').find('.removeFacet');
 
+        // remove hidden input els from 'remove this Filter' links
+        // then reserialise the form and trigger submit
         addClickEventToRemoveAppliedFacet($removeFacetLinks);
 
     }
 
 
 
-
     //
-    // Replace rails modal links with ajax versions
+    // Functions
+    // -----------------------------------------------------------
     //
-
-    // when the Bootstrap modal is loaded
-
-    $('#ajax-modal').on('show.bs.modal', function(e) {
-
-
-        $('.modal-body a.facet_select').each(function (index, link) {
-
-
-            // call the function to remove submit event on href
-
-            attachEventsToFacetLink(link);
-
-
-        });
-
-
-        // change remove facet link in the modal to remove a matching constraint from the form
-        // then trigger a resubmit
-
-        $('.modal-body a.remove').each(function (index, link) {
-
-            removeFacetWithAjax(link);
-
-        });
-
-    });
-
-
-    //
-    //----------------------------------------------------------------------
-    //
-
-
-    $('#search-map-button').on("click", function() {
-
-        //
-        // Get the current map bounds
-        // convert it to the right format
-        // for geoblacklight to parse
-        // trigger form submit element
-        //
-
-        var currentMapBounds = window.vndl.theMap.leafletMap.getBounds();
-
-
-        // TODO: Do some rounding on the output so can be readable in the UI?
-
-        var currentMapBoundsString = currentMapBounds.toBBoxString();
-
-        console.log('toBBoxString output : ' + currentMapBoundsString);
-
-
-
-        // lets manipulate this string
-
-        var s = currentMapBoundsString;
-
-
-        var spacedString = currentMapBoundsString.split(',').join(' ');
-
-        console.log('with spaces the map bounds are : ' + spacedString);
-
-        console.log('maps bounds are : ' + currentMapBounds.toBBoxString());
-
-        console.log('setting the search bounds to : ' + spacedString);
-
-
-        // add fake bounding box value to form
-        $('form.vndl-search').append('<input id="bbox-input-field" type="hidden" name="bbox" value="'+ spacedString + '">');
-
-
-        // change the bbox input value to the actual bounds of the map
-        //
-        //$('#bbox-input-field').val(spacedString);
-
-        $(formElement).trigger('submit');
-
-
-    });
 
     function makeMapVisible() {
         var showmap = $('input[name=showmap]').prop('checked');
@@ -164,84 +117,41 @@ function searchFormSetup(formElement) {
 
 
 
-    // add the href to a hidden input on the form
-    // trigger the form submit
-    function attachEventsToFacetLink(link) {
-
-        var $link = $(link);
-
-        $link.on("click", function (event) {
-
-            event.preventDefault();
-
-            makeHiddenInputElementForSearchForm($link);
-
-        })
-    }
-
-    function makeHiddenInputElementForSearchForm($link) {
-
-        // pull out facet values from data tags
-
-        var solrFacetName = $link.attr("data-facet-name");
-        var facetValue = $link.attr("data-facet-solr-value");
+    //// add the href to a hidden input on the form
+    //// trigger the form submit
+    //function attachEventsToFacetLink(link) {
+    //
+    //    var $link = $(link);
+    //
+    //    $link.on("click", function (event) {
+    //
+    //        event.preventDefault();
+    //
+    //        makeHiddenInputElement($link);
+    //
+    //    })
+    //}
 
 
-        // construct the facet_name URL with the special encoding geobl and solr expect
-        var hiddenInputFacetNameFormatted = "f[" + solrFacetName + "][]";
-
-
-        // make the hidden input element that will be added to the form
-        var $hiddenInput = $('<input type="hidden" name="" value="">');
-
-
-        // given hidden input name and value of the facet_field and facet_value
-        $hiddenInput.attr('name', hiddenInputFacetNameFormatted);
-        $hiddenInput.attr('value', facetValue);
-
-
-        //// check if the form element already exists in the search form parent
-        //
-        //if ($("[data-facetvalue='"+facetValue+"']").length){
-        //
-        //    // don't go breaking my heart
-        //
-        //    alert("this code shouldn't run as I can't add the same facet...");
-        //
-        //}
-        //
-        //else {
-
-            $('form.vndl-search').append($hiddenInput);
-
-
-            //this calls the search form's overridden submit method that serializes the form
-            // and does an jqxh request for new search result content
-
-            $('form.vndl-search').trigger('submit');
-
-
-        $('#ajax-modal').modal('hide');
-    }
-
-
-    function removeFacetWithAjax(link) {
-
-        $link = $(link);
-
-        var facetValue = $link.attr("data-facet-solr-value");
-
-        $("form.vndl-search[data-facet-solr-value='"+facetValue+"']").remove();
-
-
-        //this calls the search form's overridden submit method that serializes the form
-        // and does an jqxh request for new search result content
-        $('form.vndl-search').trigger('submit');
-
-
-        $('#ajax-modal').modal('hide');
-
-    }
+    //
+    //// remove a matching constraint from the form
+    //// then trigger a resubmit
+    //function removeFacetWithAjax(link) {
+    //
+    //    $link = $(link);
+    //
+    //    var facetValue = $link.attr("data-facet-solr-value");
+    //
+    //    $("form.vndl-search[data-facet-solr-value='"+facetValue+"']").remove();
+    //
+    //    // calls the search form's overridden submit method that serializes the form
+    //    // and does an jqxh request for new search result content
+    //    $('form.vndl-search').trigger('submit');
+    //
+    //
+    //    $('#ajax-modal').modal('hide');
+    //
+    //}
 
 
     //
@@ -300,6 +210,46 @@ function searchFormSetup(formElement) {
         });
     }
 
+
+}
+
+//
+//----------------------------------------------------------------------------------------------------------------------
+//
+
+
+// Get the current map bounds
+// convert it to the right format for geoblacklight to parse
+// add to hidden input on search form
+// trigger form submit
+//
+function searchMapAreaUsingFormSubmit() {
+
+
+
+    var currentMapBounds = window.vndl.theMap.leafletMap.getBounds();
+
+
+    // TODO: Do some rounding on the output so can be readable in the UI?
+
+    var currentMapBoundsString = currentMapBounds.toBBoxString();
+
+    console.log('toBBoxString output : ' + currentMapBoundsString);
+
+
+    var spacedString = currentMapBoundsString.split(',').join(' ');
+
+    console.log('with spaces the map bounds are : ' + spacedString);
+
+    console.log('maps bounds are : ' + currentMapBounds.toBBoxString());
+
+    console.log('setting the search bounds to : ' + spacedString);
+
+
+    // add fake bounding box value to form
+    $('form.vndl-search').append('<input id="bbox-input-field" type="hidden" name="bbox" value="' + spacedString + '">');
+
+    $('form.vndl-search').trigger('submit');
 }
 
 //
@@ -307,12 +257,14 @@ function searchFormSetup(formElement) {
 //
 
 // Prevent the normal link action and make an ajax call to original href instead
-function changeElementAnchorsToAjax(elementSelector){
+function changeAnchorToUseAjax(elementSelector){
 
     $(elementSelector).click(function(){
+        event.preventDefault();
+
         var ajaxLink = ($(this).attr('href'));
         // or alert($(this).hash();
-        event.preventDefault();
+
         getResultsPage(ajaxLink);
     });
 }
