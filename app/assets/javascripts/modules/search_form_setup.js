@@ -23,35 +23,16 @@ function searchFormSetup(formElement) {
 
     changeAnchorToUseAjax('div.search-widgets .dropdown-menu li a');
 
+    // set up the "show map" checkbox to switch the map on and off
+    // and also to allow/disallow the "search map area only" check
+    // box.
+    $('input[name=showmap]').change(makeMapVisible);
+
 
     //
-    // Events Handling
+    // Event Handling
     // -----------------------------------------------------------
     //
-
-    //// when the Blacklight adjusted bootstrap modal is loaded
-    //// attach the ajax events to it's add and remove facet links
-    //$('#ajax-modal').on('show.bs.modal', function(e) {
-    //
-    //
-    //    $('.modal-body a.facet_select').each(function (index, link) {
-    //
-    //        attachEventsToFacetLink(link);
-    //
-    //    });
-    //
-    //
-    //
-    //
-    //    $('.modal-body a.remove').each(function (index, link) {
-    //
-    //        // remove a matching constraint from the form
-    //        // then trigger a resubmit
-    //        removeFacetWithAjax(link);
-    //    });
-    //
-    //});
-
 
     // use the shown map area as a search parameter
     $('#search-map-button').on("click", function() {
@@ -59,7 +40,6 @@ function searchFormSetup(formElement) {
         searchMapAreaUsingFormSubmit();
 
     });
-
 
 
     // if a facet has already been applied
@@ -87,137 +67,13 @@ function searchFormSetup(formElement) {
         addClickEventToRemoveAppliedFacet($removeFacetLinks);
 
     }
-
-
-
-    //
-    // Functions
-    // -----------------------------------------------------------
-    //
-
-    function makeMapVisible() {
-        var showmap = $('input[name=showmap]').prop('checked');
-
-        if (showmap) {
-            window.vndl.theMap.show();
-            enable($('input[name=searchmap]'));
-
-        } else {
-            window.vndl.theMap.hide();
-            disable($('input[name=searchmap]'));
-        }
-    };
-
-
-    // set up the "show map" checkbox to switch the map on and off
-    // and also to allow/disallow the "search map area only" check
-    // box.
-    $('input[name=showmap]').change(makeMapVisible);
-
-
-
-
-    //// add the href to a hidden input on the form
-    //// trigger the form submit
-    //function attachEventsToFacetLink(link) {
-    //
-    //    var $link = $(link);
-    //
-    //    $link.on("click", function (event) {
-    //
-    //        event.preventDefault();
-    //
-    //        makeHiddenInputElement($link);
-    //
-    //    })
-    //}
-
-
-    //
-    //// remove a matching constraint from the form
-    //// then trigger a resubmit
-    //function removeFacetWithAjax(link) {
-    //
-    //    $link = $(link);
-    //
-    //    var facetValue = $link.attr("data-facet-solr-value");
-    //
-    //    $("form.vndl-search[data-facet-solr-value='"+facetValue+"']").remove();
-    //
-    //    // calls the search form's overridden submit method that serializes the form
-    //    // and does an jqxh request for new search result content
-    //    $('form.vndl-search').trigger('submit');
-    //
-    //
-    //    $('#ajax-modal').modal('hide');
-    //
-    //}
-
-
-    //
-    // for each link in links, add the serialised search form to it's href
-    //
-    function addSerialisedFormToHref($links) {
-
-        $links.each(function (i, link) {
-
-            $link = $(link);
-
-            // find the original href
-            var originalHref = $link.attr('href');
-
-            // append the serialised form to it
-            $link.attr('href', originalHref + '?' + serialisedForm);
-
-            // the correct link structure is e.g.
-
-            // <a href="/catalog/facet/desc_metadata__creator_facet?f%5Bdesc_metadata__creator_facet%5D%5B%5D=Abaga%2C+S."
-
-            // therefore : add a '?' prior to the append
-
-            console.log('each respective link href will now be : ' + originalHref + '?' + serialisedForm);
-
-        });
-    }
-
-    //
-    // for each link in links prevent the default click and
-    // instead remove the closest div with aria-label=location-filter (aka an applied facet)
-    // then trigger the form submit to get refreshed search results
-    //
-    function addClickEventToRemoveAppliedFacet($links) {
-
-        var $removeFacetLinks = $links;
-
-        $removeFacetLinks.each(function (index, link) {
-
-            $link = $(link);
-
-            $link.on("click", function (event) {
-
-                event.preventDefault();
-
-                $link.closest("div[aria-label=location-filter]").remove();
-
-                //alert("about to trigger a form submit");
-
-                console.log('remove facet link performed...');
-
-                $('form.vndl-search').trigger('submit');
-
-            })
-
-        });
-    }
-
-
 }
+// Functions
+//----------------------------------------------------------------------------------------------------------------------
+
 
 //
 //----------------------------------------------------------------------------------------------------------------------
-//
-
-
 // Get the current map bounds
 // convert it to the right format for geoblacklight to parse
 // add to hidden input on search form
@@ -268,4 +124,77 @@ function changeAnchorToUseAjax(elementSelector){
         getResultsPage(ajaxLink);
     });
 }
+//----------------------------------------------------------------------------------------------------------------------
 
+//
+// for each link in links prevent the default click and
+// instead remove the closest div with aria-label=location-filter (aka an applied facet)
+// then trigger the form submit to get refreshed search results
+//
+function addClickEventToRemoveAppliedFacet($links) {
+
+    var $removeFacetLinks = $links;
+
+    $removeFacetLinks.each(function (index, link) {
+
+        $link = $(link);
+
+        $link.on("click", function (event) {
+
+            event.preventDefault();
+
+            $link.closest("div[aria-label=location-filter]").remove();
+
+            //alert("about to trigger a form submit");
+
+            console.log('remove facet link performed...');
+
+            $('form.vndl-search').trigger('submit');
+
+        })
+
+    });
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+//
+// for each link in links, add the serialised search form to it's href
+//
+function addSerialisedFormToHref($links) {
+
+    $links.each(function (i, link) {
+
+        $link = $(link);
+
+        // find the original href
+        var originalHref = $link.attr('href');
+
+        var serialisedForm = $('form.vndl-search').serialize();
+
+        // append the serialised form to it
+        $link.attr('href', originalHref + '?' + serialisedForm);
+
+        // the correct link structure is e.g.
+
+        // <a href="/catalog/facet/desc_metadata__creator_facet?f%5Bdesc_metadata__creator_facet%5D%5B%5D=Abaga%2C+S."
+
+        // therefore : add a '?' prior to the append
+
+        console.log('each respective link href will now be : ' + originalHref + '?' + serialisedForm);
+
+    });
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+function makeMapVisible() {
+    var showmap = $('input[name=showmap]').prop('checked');
+
+    if (showmap) {
+        window.vndl.theMap.show();
+        enable($('input[name=searchmap]'));
+
+    } else {
+        window.vndl.theMap.hide();
+        disable($('input[name=searchmap]'));
+    }
+}
