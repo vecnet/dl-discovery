@@ -11,6 +11,7 @@ window.VndlMap = function (mapDomId, options) {
 
     this.leafletMap = L.map(mapDomId, {
         reuseTiles: true,      // cache tiles
+        maxZoom: 18,            // geoblacklight says so
         worldCopyJump: true,    // keep markers when scroll sideways into a new world
         scrollWheelZoom: false // forced to double-click or use the controls so no crazy things
 
@@ -22,6 +23,9 @@ window.VndlMap = function (mapDomId, options) {
 
     markerLayer = new L.FeatureGroup();
     this.leafletMap.addLayer(markerLayer);
+
+    //markerClusterLayer = new L.MarkerClusterGroup();
+    //this.leafletMap.addLayer(markerClusterLayer);
 
 
     rectangleLayer = new L.FeatureGroup();
