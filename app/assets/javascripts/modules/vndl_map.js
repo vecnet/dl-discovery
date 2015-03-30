@@ -27,6 +27,7 @@ window.VndlMap = function (mapDomId, options) {
     rectangleLayer = new L.FeatureGroup();
     this.leafletMap.addLayer(rectangleLayer);
 
+
     this.clearMarkers();
     this.clearRectangles();
 
@@ -191,14 +192,13 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     var $r = $(result);  // jQuery-ify the result element
 
-    // represents a single result entry (a thing in the Digital Library)
+    // represents a single result entry (a record in the Digital Library)
     var newItem = {
         id: null,
         element: $r,
-        primary: {points: [], rectangles: [], bounds: null},
-        secondary: {points: [], rectangles: [], bounds: null},
-        tertiary: {points: [], rectangles: [], bounds: null},
-        placename:{placenames:[]}
+        primary: {points: [], rectangles: [], titles: [], bounds: null},
+        secondary: {points: [], rectangles: [], titles: [], bounds: null},
+        tertiary: {points: [], rectangles: [], titles: [], bounds: null}
     };
 
     //
@@ -208,15 +208,13 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     newItem.id = id;
 
 
-
-
-    // TODO : Sort out placename data structure and add to pop up for marker?
+    // TODO : Sort out placename data structure and add to pop up for marker
 
     //
     // find the placenames, if there are any
     //
-    var placenames = $r.find('[data-placename]').attr('data-placename');
-    newItem.placenames = placenames;
+    var markerTitles = $r.find('[data-placename]').attr('data-placename');
+    newItem.markerTitles = markerTitles;
 
     //
     // find any points
@@ -283,11 +281,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     }.bind(this));
 
-
-
-
-
-    // ------------------------------------------------------------------
+//--------------------------------------------------------------------------------------
 
 
     // Calculate the BOUNDS for points et al
@@ -360,11 +354,8 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         $.each(newItem.primary.points, function (index, marker) {
 
-            marker.setIcon(redMarker);
-
-
-
             // TODO : Change highlight method to surround entire search result parent element
+            marker.setIcon(redMarker);
 
         });
 
@@ -382,9 +373,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         });
 
 
-
-
-        // in case the bounds are null and prevent leaflet from erroring
+        // in case the bounds are null
         if (newItem.primary.bounds) {
 
 
@@ -429,6 +418,26 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     }
 
 
+    //
+    // popup code
+    //
+
+    //var popup = L.popup();
+    //
+    //// attach popup to marker on click event
+    //
+    //function addPopupOnClick(event){
+    //
+    //    popup
+    //        .setLatLng(event.latlng)
+    //        .setContent("string")
+    //        .openOn(map);
+    //
+    //}
+
+    ///////////////////
+
+
     // add points to FeatureGroup layer and connect highlight functions
     if (!$.each(newItem.primary.points, function (index, marker) {
 
@@ -437,7 +446,9 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             marker.on({
                 mouseover: highlightResult,
                 mouseout: unHighlightResult
+
             });
+
 
             marker.addTo(markerLayer);
 
@@ -449,18 +460,10 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             marker.setIcon(blueMarker);
 
 
-        })) {
-
-    }
-
-
-
-
-
+        }))
 
 
     // add rects to rectangleLayer and connect highlight functions
-
     $.each(newItem.primary.rectangles, function (index, rect) {
 
         rect.on({
@@ -473,10 +476,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         rect.addTo(rectangleLayer);
     });
 
-
-
-
-
     $r.on('mouseover', highlightResult);
     $r.on('mouseout', unHighlightResult);
 
@@ -486,7 +485,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     this.resultItems.push(newItem);
 
     // return newItem
-
     return newItem;
 };
 
