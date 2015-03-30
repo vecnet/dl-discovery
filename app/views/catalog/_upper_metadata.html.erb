@@ -6,20 +6,26 @@
     <dt>Description</dt>
     <dd><%= @document["dc_description_s"]%></dd>
 
+    <dt>Alternate title</dt>
+    <dd><%= @document["dc_alternate_sm"]%></dd>
+
     <dt>Author</dt>
     <dd><%= @document["dc_creator_sm"]%></dd>
 
-    <dt>Date</dt>
-    <dd>2005</dd>
+    <dt>Author Facet</dt>
+    <dd><%= @document["dc_creator_facet"]%></dd>
 
+    <dt>Contributor</dt>
+    <dd><%= @document["dc_contributor_sm"]%></dd>
+
+    <dt>Date</dt>
+    <dd><%= @document["dc_created_sm"]%></dd>
 
     <dt>Held By</dt>
     <dd><%= @document["dct_provenance_s"]%></dd>
 
-
     <dt>Data Type</dt>
     <dd><%= @document["dc_type_s"]%></dd>
-
 
     <dt>Access</dt>
     <dd><%= @document["dc_rights_s"]%></dd>
