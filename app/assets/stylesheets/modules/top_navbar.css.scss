@@ -39,7 +39,8 @@
       
       &:hover,
       &:focus {
-        border-bottom: 2px solid $cardinal-red;
+//        border-bottom: 2px solid $cardinal-red;
+        border-bottom: 2px solid $vecnet-blue;
       }
     }
   }
@@ -52,7 +53,8 @@
   }
 
   .nav-element-divider {
-    color: $cardinal-red;
+//    color: $cardinal-red;
+    color: $vecnet-blue;
     padding-left: 5px;
     padding-right: 5px;
   }
