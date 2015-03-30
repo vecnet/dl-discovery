@@ -8,10 +8,12 @@
     width: 376px;
     height: 80px;
 
+
+//    TODO: Change this image size so no margin required - as screws responsive
     img {
       height: 50px;
       margin-right: 10px;
-      margin-left: -20px;
+      margin-left: -10px;
       vertical-align: middle;
       @media screen and (max-width: $screen-sm) {
         height: 26px;
