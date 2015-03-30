@@ -19,12 +19,7 @@ Digital Library Beta Weekly Changelog
 
 **TODO**
 
-* Collaborate with Don on metadata format and display 
-
-* Fix various UI inconsistencies
-	i.e. 
-	columns in facets
-	highlighting of search result element
-	# of results dropbown box
+* Demo Day issue [list](https://docs.google.com/document/d/11gtdK6Eay-r3NSYAlLqcpUxd9WGxWpsCNaEuat87laU/edit?usp=sharing)
+	
 
 
