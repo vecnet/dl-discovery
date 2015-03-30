@@ -23,6 +23,7 @@
 // https://github.com/mapbox/wellknown
 //= require modules/wellknown
 //= require bootstrap/tab.js
+//= require bootstrap/tooltip
 //= require modules/vndl_map
 //= require modules/buttons.js
 //= require modules/metadata_table.js

@@ -11,15 +11,18 @@ Digital Library Beta Weekly Changelog
 
 * Multiple facet search
 
-* Search results can be paginated
+* Search results pagination
 
-* Search results can be sorted and number of results changed
+* Search results can be sorted by various metrics and number of results changed
 
 
 
-**TODO**
+**TODO Next Week**
 
 * Demo Day issue [list](https://docs.google.com/document/d/11gtdK6Eay-r3NSYAlLqcpUxd9WGxWpsCNaEuat87laU/edit?usp=sharing)
 	
+* Condense search form elements and whitespace
+    * Move map search button to map container
 
+* Polish css and search form element grid
 
