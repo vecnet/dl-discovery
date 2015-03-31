@@ -22,11 +22,11 @@
 // Wellknown is a javascript WKT converter that doesn't have a gem.
 // https://github.com/mapbox/wellknown
 //= require modules/wellknown
-//= require bootstrap/tab.js
+//= require bootstrap/tab
 //= require bootstrap/tooltip
 //= require modules/vndl_map
-//= require modules/buttons.js
-//= require modules/metadata_table.js
-//= require modules/leaflet.awesome-markers
+//= require modules/buttons
+//= require modules/metadata_table
+//= require modules/leaflet.markercluster
 //= require modules/readmore.min
 //= require_tree .
