@@ -33,6 +33,11 @@
     <dt>URL</dt>
     <a href="https://dl.vecnet.org/files/sb3978279"><dd>https://dl.vecnet.org/files/sb3978279</dd></a>
 
+    <dt>References</dt>
+    <dd><%= @document["dc_references_s"]%></dd>
+
+
+
 
     <%# TODO: Change these methods to use the document.fields that are correct %>
     <% if !@document.references.nil? && !@document.references.url.nil? %>

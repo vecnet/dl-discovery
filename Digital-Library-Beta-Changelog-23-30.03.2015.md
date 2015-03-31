@@ -15,14 +15,13 @@ Digital Library Beta Weekly Changelog
 
 * Search results can be sorted by various metrics and number of results changed
 
+* Completion of metadata fields on record page (awaiting data)
+
+* Changes to branding
+
 
 
 **TODO Next Week**
 
 * Demo Day issue [list](https://docs.google.com/document/d/11gtdK6Eay-r3NSYAlLqcpUxd9WGxWpsCNaEuat87laU/edit?usp=sharing)
-	
-* Condense search form elements and whitespace
-    * Move map search button to map container
-
-* Polish css and search form element grid
 

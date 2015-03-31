@@ -10,18 +10,11 @@
   <%= favicon_link_tag 'favicon.ico' %>
   <meta name="description" content="The VecNET Digital Library Beta adds geospatial awareness and searching to malaria studies and datasets." />
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= stylesheet_link_tag "https://www.stanford.edu/su-identity/css/su-identity.css" %>
   <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700" %>
   <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <!--[if IE 8]>
-    <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie8.css" />
-  <![endif]-->
-  <!--[if IE 7]>
-    <link rel="stylesheet" type="text/css" href="https://www.stanford.edu/su-identity/css/ie/ie7.css" />
-  <![endif]-->
   <%= csrf_meta_tags %>
 </head>
 <body class="map-active <%= render_body_class %>">
