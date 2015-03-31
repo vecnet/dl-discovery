@@ -20,13 +20,18 @@ window.VndlMap = function (mapDomId, options) {
     // this.opts is our options, there are many like it but this one is ours
     this.opts = options || {};
 
+    // make a layer for the markers
+    // so we can clear them all with a nice function
     markerLayer = new L.FeatureGroup();
     this.leafletMap.addLayer(markerLayer);
 
 
+    // make a layer for the rectangles
+    // so we can clear them all with a nice function
     rectangleLayer = new L.FeatureGroup();
     this.leafletMap.addLayer(rectangleLayer);
 
+    // the nice clearing map functions
     this.clearMarkers();
     this.clearRectangles();
 
@@ -179,8 +184,6 @@ VndlMap.prototype.parseGeoText = function(text) {
 VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
-
-
     // TODO : REFACTOR
     // Break into several methods that accept two params
     // newItem as the data state
@@ -194,11 +197,12 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     // represents a single result entry (a thing in the Digital Library)
     var newItem = {
         id: null,
+        title: null,
+        link: null,
         element: $r,
-        primary: {points: [], rectangles: [], bounds: null},
-        secondary: {points: [], rectangles: [], bounds: null},
-        tertiary: {points: [], rectangles: [], bounds: null},
-        placename:{placenames:[]}
+        primary: {points: [], rectangles: [], titles: [], bounds: null},
+        secondary: {points: [], rectangles: [], titles: [], bounds: null},
+        tertiary: {points: [], rectangles: [], titles: [], bounds: null}
     };
 
     //
@@ -208,15 +212,26 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     newItem.id = id;
 
 
+    //
+    // find the title, if there is one
+    //
+    var title = $r.find('[data-title]').attr('data-title');
+    newItem.title = title;
 
+    //
+    // find the catalog link, if there is one
+    //
+    var link = $r.find('[data-link]').attr('href');
+    console.log(link);
+    //var link = linkEl.attr('href');
+    newItem.link = link;
 
-    // TODO : Sort out placename data structure and add to pop up for marker?
 
     //
     // find the placenames, if there are any
     //
-    var placenames = $r.find('[data-placename]').attr('data-placename');
-    newItem.placenames = placenames;
+    //var placenames = $r.find('[data-placename]').attr('data-placename');
+    //newItem.placenames = placenames;
 
     //
     // find any points
@@ -323,7 +338,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
                 flavour.bounds.extend(rect.getBounds());
             }
         });
-    //console.log('the bounds object is hereeee : ' + flavour.bounds );
     }
 
 
@@ -347,11 +361,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         }
     });
 
-    var vndlIcon = new vndlIcon();
-
-
-
-
     //
     // toggle highlight class on search results and map markers and rectangles
     //
@@ -360,8 +369,15 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         $.each(newItem.primary.points, function (index, marker) {
 
-            marker.setIcon(redMarker);
+            //marker.setIcon(redMarker);
 
+
+
+            // TODO: marker set style to be lighter or different colour to indicate highlight
+
+            //marker.setOpacity(0.5);
+
+            marker.openPopup();
 
 
             // TODO : Change highlight method to surround entire search result parent element
@@ -415,7 +431,10 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         $.each(newItem.primary.points, function (index, marker) {
 
-            marker.setIcon(blueMarker);
+            // TODO: set marker back to default style
+            //marker.setOpacity(1);
+
+            marker.closePopup();
 
         });
 
@@ -439,24 +458,56 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
                 mouseout: unHighlightResult
             });
 
+
+            var link = newItem.link;
+
+            var title = newItem.title;
+
+            console.log("item link for popup is : " + link);
+
+            // Insert whatever you want into the container, using whichever approach you prefer
+            var container = $("<div> <h3 class='result-title'> <a href='' class='rectangleLink'>Click me</a> </div>");
+
+            container.find('a').attr('href', link);
+
+            container.find('a').text(title);
+
+            container.find('a').attr('target', "_blank");
+
+            console.log("find expression equal", container.find('a'));
+
+            console.log("container is : ", container);
+
+
+
+            // Insert the container into the popup
+            marker.bindPopup(container[0]);
+
+
+            // debug
+            //marker.on('click', function (e){
+            //
+            //    alert("marker click");
+            //});
+
+
+
+
+
+
+            // finally add the marker to the displayed layer
             marker.addTo(markerLayer);
 
 
             // TODO: messing with the default icon causes various issues
-            // needs to be sorted out to some satisfactory way.
-
+            //
             // set the default marker
-            marker.setIcon(blueMarker);
+            //marker.setIcon(blueMarker);
 
 
         })) {
 
     }
-
-
-
-
-
 
 
     // add rects to rectangleLayer and connect highlight functions
@@ -468,10 +519,40 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             mouseout: unHighlightResult
         });
 
+        //
+        // adding popups to rectangles
+        //
 
-        // TODO: turn rectangles back on when deal with meridian issue
-        rect.addTo(rectangleLayer);
+        var link = newItem.link;
+
+        var link = newItem.title;
+
+
+
+
+
+        // Insert whatever you want into the container, using whichever approach you prefer
+        var container = $("<div> <h3 class='result-title'> <a href='' class='rectangleLink'>Click me </a></div>");
+
+        container.find('a').attr('href', link);
+
+        container.find('a').attr('target', "_blank");
+
+        container.find('a').text(title);
+
+
+
+
+        // replace link text with title
+
+
+        // Insert the container into the popup
+        rect.bindPopup(container[0]);
+
+        // finally add the rectangle to the displayed layer
+        //rect.addTo(rectangleLayer);
     });
+
 
 
 
