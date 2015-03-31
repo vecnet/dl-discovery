@@ -343,17 +343,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     // ------------------------------------------------------------------
 
-    // Creates a red with highlight marker
-    var redMarker = L.AwesomeMarkers.icon({
-        icon: 'circle',
-        markerColor: 'red'
-    });
 
-    // Creates a blue marker
-    var blueMarker = L.AwesomeMarkers.icon({
-        icon: 'circle',
-        markerColor: 'blue'
-    });
 
     var vndlIcon = L.Icon.extend({
         options: {
@@ -369,15 +359,8 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         $.each(newItem.primary.points, function (index, marker) {
 
-            //marker.setIcon(redMarker);
-
-
 
             // TODO: marker set style to be lighter or different colour to indicate highlight
-
-            //marker.setOpacity(0.5);
-
-            marker.openPopup();
 
 
             // TODO : Change highlight method to surround entire search result parent element
@@ -408,7 +391,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
             //map.fitBounds(newItem.primary.bounds);
         }
-
 
         $r.addClass("vndl-results-highlight");
 
@@ -474,25 +456,10 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
             container.find('a').attr('target', "_blank");
 
-            console.log("find expression equal", container.find('a'));
-
-            console.log("container is : ", container);
-
 
 
             // Insert the container into the popup
             marker.bindPopup(container[0]);
-
-
-            // debug
-            //marker.on('click', function (e){
-            //
-            //    alert("marker click");
-            //});
-
-
-
-
 
 
             // finally add the marker to the displayed layer
