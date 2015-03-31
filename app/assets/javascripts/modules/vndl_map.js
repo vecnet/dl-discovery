@@ -12,7 +12,8 @@ window.VndlMap = function (mapDomId, options) {
     this.leafletMap = L.map(mapDomId, {
         reuseTiles: true,      // cache tiles
         worldCopyJump: true,    // keep markers when scroll sideways into a new world
-        scrollWheelZoom: false // forced to double-click or use the controls so no crazy things
+        scrollWheelZoom: false, // forced to double-click or use the controls so no crazy things
+        maxZoom: 17             // geoblacklight says
 
 
     });
@@ -30,6 +31,13 @@ window.VndlMap = function (mapDomId, options) {
     // so we can clear them all with a nice function
     rectangleLayer = new L.FeatureGroup();
     this.leafletMap.addLayer(rectangleLayer);
+
+
+
+    markerClusterLayer = new L.MarkerClusterGroup();
+
+    //markerCluster.addLayer(markerLayer);
+
 
     // the nice clearing map functions
     this.clearMarkers();
@@ -462,9 +470,19 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             marker.bindPopup(container[0]);
 
 
-            // finally add the marker to the displayed layer
-            marker.addTo(markerLayer);
+            // finally add the marker to the displayed Layer
+            //marker.addTo(markerLayer);
 
+
+
+            // Trying out cluster markers
+
+            markerClusterLayer.addLayer(marker);
+
+            map.addLayer(markerClusterLayer);
+
+
+            //
 
             // TODO: messing with the default icon causes various issues
             //
