@@ -199,6 +199,8 @@ $disabled-color: #aaa;
   position: relative;
 }
 
+#documents.vndl-results .document { border-bottom: none; }
+
 //.search-result h3 { font: 500 normal 1.375em "Roboto",Arial,Verdana,sans-serif; margin-top: 0 !important; margin-bottom: 10px !important; }
 //.search-result h3 > a, .search-result i { color: #248dc1 !important; }
 //.search-result p { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; }

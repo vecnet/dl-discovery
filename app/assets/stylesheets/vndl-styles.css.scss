@@ -13,3 +13,8 @@
   padding: 1px;
 }
 
+#mapfieldset .form-group div.checkbox {
+	// this is the wrapper div for the show-the-map checkbox
+	display: inline-block;
+	padding-right: 2em;
+}
