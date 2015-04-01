@@ -42,7 +42,7 @@ function searchFormSetup(formElement) {
     });
 
 
-    // check the state of the map switch and toggle the checkbox
+    // check the state of the map switch and toggle the hidden checkbox
 
     $('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
 
@@ -53,13 +53,12 @@ function searchFormSetup(formElement) {
 
             console.log("state should be true : ", state);
             makeMapVisible();
-            enable($('button[name=searchmap]'));
+            
         }
-        else{
+        else {
 
             console.log("state should be false : ", state);
             makeMapVisible();
-            disable($('button[name=searchmap]'));
 
         }
 
@@ -217,9 +216,11 @@ function makeMapVisible() {
     if (showmap) {
         window.vndl.theMap.show();
         enable($('input[name=searchmap]'));
+        enable($('button[name=searchmap]'));
 
     } else {
         window.vndl.theMap.hide();
         disable($('input[name=searchmap]'));
+        disable($('button[name=searchmap]'));
     }
 }
