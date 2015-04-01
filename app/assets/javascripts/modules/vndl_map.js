@@ -13,7 +13,7 @@ window.VndlMap = function (mapDomId, options) {
         reuseTiles: true,      // cache tiles
         worldCopyJump: true,    // keep markers when scroll sideways into a new world
         scrollWheelZoom: false, // forced to double-click or use the controls so no crazy things
-        maxZoom: 17             // geoblacklight says
+        maxZoom: 16             // geoblacklight says
 
 
     });
@@ -33,10 +33,12 @@ window.VndlMap = function (mapDomId, options) {
     this.leafletMap.addLayer(rectangleLayer);
 
 
+    // allows for clustering of markers if we find it useful?
 
-    markerClusterLayer = new L.MarkerClusterGroup();
+    //markerClusterLayer = new L.MarkerClusterGroup({
+    //    disableClusteringAtZoom: 8
+    //});
 
-    //markerCluster.addLayer(markerLayer);
 
 
     // the nice clearing map functions
@@ -303,11 +305,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             }
         }
 
-
     }.bind(this));
-
-
-
 
 
     // ------------------------------------------------------------------
@@ -351,14 +349,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     // ------------------------------------------------------------------
 
-
-
-    var vndlIcon = L.Icon.extend({
-        options: {
-            iconUrl: 'http://cdn.leafletjs.com/leaflet-0.7/images/marker-icon.png'
-        }
-    });
-
     //
     // toggle highlight class on search results and map markers and rectangles
     //
@@ -389,14 +379,10 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         });
 
 
-
-
         // in case the bounds are null and prevent leaflet from erroring
         if (newItem.primary.bounds) {
 
-
             // turn off the map panning to results
-
             //map.fitBounds(newItem.primary.bounds);
         }
 
@@ -424,7 +410,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             // TODO: set marker back to default style
             //marker.setOpacity(1);
 
-            marker.closePopup();
+            //marker.closePopup();
 
         });
 
@@ -471,15 +457,13 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
             // finally add the marker to the displayed Layer
-            //marker.addTo(markerLayer);
-
+            marker.addTo(markerLayer);
 
 
             // Trying out cluster markers
-
-            markerClusterLayer.addLayer(marker);
-
-            map.addLayer(markerClusterLayer);
+            //markerClusterLayer.addLayer(marker);
+            //
+            //map.addLayer(markerClusterLayer);
 
 
             //
@@ -504,19 +488,17 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             mouseout: unHighlightResult
         });
 
+
+
         //
-        // adding popups to rectangles
+        // add popup to rectangle
         //
 
         var link = newItem.link;
 
         var link = newItem.title;
 
-
-
-
-
-        // Insert whatever you want into the container, using whichever approach you prefer
+        // Insert html placeholders into the popup container to be edited
         var container = $("<div> <h3 class='result-title'> <a href='' class='rectangleLink'>Click me </a></div>");
 
         container.find('a').attr('href', link);
@@ -526,16 +508,13 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         container.find('a').text(title);
 
 
-
-
-        // replace link text with title
-
-
         // Insert the container into the popup
         rect.bindPopup(container[0]);
 
+        // finished adding popups to rectangles
+
         // finally add the rectangle to the displayed layer
-        //rect.addTo(rectangleLayer);
+        rect.addTo(rectangleLayer);
     });
 
 
