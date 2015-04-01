@@ -349,6 +349,9 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     // ------------------------------------------------------------------
 
+
+
+
     //
     // toggle highlight class on search results and map markers and rectangles
     //
@@ -361,7 +364,25 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             // TODO: marker set style to be lighter or different colour to indicate highlight
 
 
+
+            var redIcon = L.icon({
+                iconUrl: 'assets/marker-icon-red.png',
+                iconSize:    [25, 41],
+                iconAnchor:  [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize:  [41, 41],
+                shadowUrl: 'assets/markers-shadow.png',
+                shadowRetinaUrl: 'assets/markers-shadow@2x.png'
+            });
+
+            marker.setIcon(redIcon);
+
+
+
+
             // TODO : Change highlight method to surround entire search result parent element
+
+
 
         });
 
@@ -411,6 +432,21 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             //marker.setOpacity(1);
 
             //marker.closePopup();
+
+
+
+            var blueIcon = L.icon({
+                iconUrl: 'assets/leaflet-marker-icon.png',
+                iconSize:    [25, 41],
+                iconAnchor:  [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize:  [41, 41],
+                shadowUrl: 'assets/markers-shadow.png',
+                shadowRetinaUrl: 'assets/markers-shadow@2x.png'
+            });
+
+            marker.setIcon(blueIcon);
+
 
         });
 
@@ -466,12 +502,42 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             //map.addLayer(markerClusterLayer);
 
 
-            //
+
+
+
+
+
 
             // TODO: messing with the default icon causes various issues
+
+
+            var redIcon = L.icon({
+                iconUrl: 'assets/marker-icon-red.png',
+                iconSize:    [25, 41],
+                iconAnchor:  [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize:  [41, 41],
+                shadowUrl: 'assets/markers-shadow.png',
+                shadowRetinaUrl: 'assets/markers-shadow@2x.png'
+            });
+
+            var blueIcon = L.icon({
+                iconUrl: 'assets/leaflet-marker-icon.png',
+                iconSize:    [25, 41],
+                iconAnchor:  [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize:  [41, 41],
+                shadowUrl: 'assets/markers-shadow.png',
+                shadowRetinaUrl: 'assets/markers-shadow@2x.png'
+            });
+
+
+
+
+
             //
             // set the default marker
-            //marker.setIcon(blueMarker);
+            marker.setIcon(blueIcon);
 
 
         })) {
@@ -592,6 +658,27 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
 
 };
 // ------------------------------------------------------------------
+
+function highlightIcon(marker) {
+
+
+
+    var redIcon = L.icon({
+        iconUrl: 'marker-icon-red.png',
+        iconSize: [38, 95],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+        shadowUrl: 'markers-shadow.png',
+        shadowRetinaUrl: 'markers-shadow@2x.png',
+        shadowSize: [68, 95],
+        shadowAnchor: [22, 94]
+    });
+
+    marker.setIcon(redIcon);
+
+}
+// ------------------------------------------------------------------
+
 VndlMap.prototype.leaflet = function () {
     return this.leafletMap;
 };
