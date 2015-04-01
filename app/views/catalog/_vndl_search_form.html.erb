@@ -22,9 +22,9 @@
 
   <!-- map search -->
   <fieldset id="mapfieldset">
-    <legend class="sr-only">Geographic searching</legend>
+    <legend class="col-md-2">Map</legend>
     <div class="mapnotch"></div>
-    <div class="form-group">
+    <div class="col-md-10 form-group">
       <div class="checkbox"><label>
         <input type="checkbox" name="showmap" <%= get_map_checkbox %> value="checked"/> show results on a map
       </label></div>
@@ -33,106 +33,8 @@
         Search visible map area
       </button>
 
-
-      <!--<div class=" button-checkbox ui-group-buttons">-->
-        <!--<button class="btn  btn-primary btn-lg " data-color="primary"> Show results on map</button>-->
-        <!--<input type="checkbox" class="hidden" checked />-->
-        <!--<div class="or or-lg"></div>-->
-        <!--<button id="search-map-button" class="btn btn-default btn-lg">Search map area only</button>      </div>-->
-
-
-    <!--<span class="button-checkbox">-->
-        <!--<button type="button" class="btn btn-lg" data-color="primary">Primary</button>-->
-        <!--<input type="checkbox" class="hidden" checked />-->
-    <!--</span>-->
-
-
-
     </div>
   </fieldset>
-
-  <!-- example applied facets -->
-  <!--<fieldset>-->
-    <!--<legend class="sr-only">Search filters applied</legend>-->
-    <!--<div class="form-group">-->
-      <!--&lt;!&ndash;-->
-       <!--<span class="appliedFilter constraint filter filter-location_hierarchy_facet">-->
-          <!--<span class="filterName">Location</span>-->
-          <!--<span class="filterValue">Asia:Kingdom of Cambodia</span>-->
-          <!--<a href="#" class="btnRemove imgReplace">Remove constraint Location: Asia:Kingdom of Cambodia</a>-->
-      <!--</span>-->
-      <!--&ndash;&gt;-->
-      <!--<div class="btn-group" role="group" aria-label="location filter">-->
-        <!--<div class="btn-group" role="group">-->
-          <!--<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">-->
-            <!--Location-->
-          <!--</button>-->
-          <!--<ul class="dropdown-menu dropdown-menu" role="menu">-->
-            <!--<li><a href="#">Add another location filter</a></li>-->
-            <!--<li><a href="#">Remove this filter</a></li>-->
-          <!--</ul>-->
-        <!--</div>-->
-        <!--<div class="btn-group" role="group">-->
-          <!--<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">-->
-            <!--Asia: Kingdom of Cambodia-->
-            <!--<i class="fa fa-angle-down" aria-hidden="true"></i>-->
-          <!--</button>-->
-          <!--<ul class="dropdown-menu dropdown-menu-right" role="menu">-->
-            <!--<li><a href="#">Add another location filter</a></li>-->
-            <!--<li><a href="#">Remove this filter</a></li>-->
-          <!--</ul>-->
-        <!--</div>-->
-      <!--</div>-->
-
-      <!--<div class="btn-group" role="group" aria-label="location filter">-->
-        <!--<div class="btn-group" role="group">-->
-          <!--<button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">-->
-            <!--Author-->
-          <!--</button>-->
-          <!--<ul class="dropdown-menu dropdown-menu" role="menu">-->
-            <!--<li><a href="#">Add another author filter</a></li>-->
-            <!--<li><a href="#">Remove this filter</a></li>-->
-          <!--</ul>-->
-        <!--</div>-->
-        <!--<div class="btn-group" role="group">-->
-          <!--<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">-->
-            <!--Donatien François-->
-            <!--<i class="fa fa-angle-down" aria-hidden="true"></i>-->
-          <!--</button>-->
-          <!--<ul class="dropdown-menu dropdown-menu-right" role="menu">-->
-            <!--<li><a href="#">Add another author filter</a></li>-->
-            <!--<li><a href="#">Remove this filter</a></li>-->
-          <!--</ul>-->
-        <!--</div>-->
-      <!--</div>-->
-
-    <!--</div>-->
-  <!--</fieldset>-->
-
-  <!-- available facets -->
-  <!--<fieldset style="display:none">-->
-    <!--<legend class="sr-only">Search filters available</legend>-->
-    <!--<div class="form-group">-->
-
-      <!--<li class="expandable_new grey">-->
-        <!--<a class="accordion-toggle grey collapsed" data-toggle="collapse" data-parent="#facet_group" data-target="#collapse_Author">-->
-          <!--Author<i class="icon-angle-right grey"></i>-->
-        <!--</a>-->
-
-        <!--<div style="height: 0px;" id="collapse_Author" class="accordion-body collapse">-->
-          <!--<ul class="slide-list">-->
-            <!--<li>-->
-              <!--<a href="/?_=1422421726732&amp;f%5Bdesc_metadata__creator_facet%5D%5B%5D=Chow%2C+CY&amp;f%5Blocation_hierarchy_facet%5D%5B%5D=Asia%3AKingdom+of+Cambodia&amp;path_only=true" class="facet_select">Chow,-->
-                <!--CY</a> <span class="count">1</span>-->
-            <!--</li>-->
-          <!--</ul>-->
-          <!--&lt;!&ndash; /slide-list &ndash;&gt;-->
-        <!--</div>-->
-      <!--</li>-->
-
-    <!--</div>-->
-
-  <!--</fieldset>-->
 
 
   <%= render 'did_you_mean' %>
