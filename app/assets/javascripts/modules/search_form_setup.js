@@ -26,7 +26,11 @@ function searchFormSetup(formElement) {
     // set up the "show map" checkbox to switch the map on and off
     // and also to allow/disallow the "search map area only" check
     // box.
-    $('input[name=showmap]').change(makeMapVisible);
+    $('input[name=showmap]').change(setMapVisibility);
+
+
+    // turn the checkbox into a pumpkin everytime
+    $("[name='showmap']").bootstrapSwitch();
 
 
     //
@@ -46,22 +50,7 @@ function searchFormSetup(formElement) {
 
     $('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
 
-        console.log("inside switchchange");
-        console.log("state is : ", state);
-
-        if(state){
-
-            console.log("state should be true : ", state);
-            makeMapVisible();
-            
-        }
-        else {
-
-            console.log("state should be false : ", state);
-            makeMapVisible();
-
-        }
-
+        setMapVisibility();
 
     });
 
@@ -92,6 +81,8 @@ function searchFormSetup(formElement) {
 
     }
 }
+
+
 // Functions
 //----------------------------------------------------------------------------------------------------------------------
 
@@ -210,17 +201,17 @@ function addSerialisedFormToHref($links) {
 }
 //----------------------------------------------------------------------------------------------------------------------
 
-function makeMapVisible() {
+function setMapVisibility() {
     var showmap = $('input[name=showmap]').prop('checked');
 
     if (showmap) {
         window.vndl.theMap.show();
-        enable($('input[name=searchmap]'));
+        //enable($('input[name=searchmap]'));
         enable($('button[name=searchmap]'));
 
     } else {
         window.vndl.theMap.hide();
-        disable($('input[name=searchmap]'));
+        //disable($('input[name=searchmap]'));
         disable($('button[name=searchmap]'));
     }
 }
