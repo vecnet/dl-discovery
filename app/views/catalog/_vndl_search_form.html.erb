@@ -22,16 +22,48 @@
 
   <!-- map search -->
   <fieldset id="mapfieldset">
+
+
+    <!--// TODO: Format these legends-->
     <legend class="col-md-2">Map</legend>
     <div class="mapnotch"></div>
     <div class="col-md-10 form-group">
+
+
+      <!--TODO: Turn this into a panel checkbox a la air bnb?-->
       <div class="checkbox"><label>
         <input type="checkbox" name="showmap" <%= get_map_checkbox %> value="checked"/> show results on a map
       </label></div>
 
-      <button id="search-map-button" class="btn btn-default" type="button">
-        Search visible map area
-      </button>
+
+
+
+      <!--<button id="search-map-button" class="btn btn-default" type="button">-->
+        <!--Search visible map area-->
+      <!--</button>-->
+
+
+      <div id="search-map-button" class="btn btn-default" type="button">
+
+        <div class="btn-group" >
+          <button class="btn btn-default " type="button">
+
+            Search visible map area
+
+          </button>
+
+        </div>
+
+        <div class="btn-group" role="group">
+
+          <button class="btn fa fa-globe btn-default" type="button">
+
+          </button>
+
+        </div>
+
+      </div>
+
 
     </div>
   </fieldset>
