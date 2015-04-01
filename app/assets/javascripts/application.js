@@ -26,6 +26,7 @@
 //= require bootstrap/tooltip
 //= require modules/vndl_map
 //= require modules/buttons
+//= require modules/bootstrap-switch
 //= require modules/metadata_table
 //= require modules/leaflet.markercluster
 //= require modules/readmore.min

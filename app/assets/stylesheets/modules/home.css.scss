@@ -152,6 +152,7 @@ $content-h-pad: ceil(3 * $content-pad-unit);
 $content-v-pad: ceil(1 * $content-pad-unit);
 
 $disabled-color: #aaa;
+$disabled-color: #aaa;
 
 ///////////////////////////////////////////////////////// search result fieldset
 
@@ -387,6 +388,13 @@ footer:after {
 
 .vndl-search .disabled {
   color: $disabled-color;
+
+
+}
+
+.disabled .searchmap-group {
+
+  opacity: 0.50;
 }
 
 .vndl-search .form-group {

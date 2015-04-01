@@ -42,6 +42,31 @@ function searchFormSetup(formElement) {
     });
 
 
+    // check the state of the map switch and toggle the checkbox
+
+    $('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
+
+        console.log("inside switchchange");
+        console.log("state is : ", state);
+
+        if(state){
+
+            console.log("state should be true : ", state);
+            makeMapVisible();
+            enable($('button[name=searchmap]'));
+        }
+        else{
+
+            console.log("state should be false : ", state);
+            makeMapVisible();
+            disable($('button[name=searchmap]'));
+
+        }
+
+
+    });
+
+
     // if a facet has already been applied
     if ($('#appliedParams').length) {
 

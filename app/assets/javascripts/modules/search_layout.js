@@ -22,6 +22,14 @@ $(function () {
     // (initialise things to their start up values)
     window.vndl.theMap.hide();
     disable($('input[name=searchmap]'));
+    disable($('button[name=searchmap]'));
+
+
+
+    // turn the checkbox into a pumpkin
+    $("[name='showmap']").bootstrapSwitch();
+
+
 
 
     // overrides the form submit event on the top Search form
@@ -65,7 +73,7 @@ $(function () {
 function disable(element) {
     var $elem = $(element);
     $elem.prop('disabled', true);
-    $elem.parent().closest('.checkbox, .checkbox-inline, .radio, .radio-inline, fieldset').addClass('disabled');
+    $elem.parent().closest('.searchmap-group .btn-group .checkbox, .checkbox-inline, .radio, .radio-inline, fieldset').addClass('disabled');
 }
 // ------------------------------------------------------------------
 // un-disables an input AND removes the "disabled" class from its wrapper.

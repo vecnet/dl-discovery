@@ -30,11 +30,12 @@
     <div class="col-md-10 form-group">
 
 
-      <!--TODO: Turn this into a panel checkbox a la air bnb?-->
-      <div class="checkbox"><label>
-        <input type="checkbox" name="showmap" <%= get_map_checkbox %> value="checked"/> show results on a map
-      </label></div>
 
+      <div class="checkbox">
+        <label>
+        <input type="checkbox" class="switch" name="showmap" data-label-text="Map Results"  value=""/>
+      </label>
+      </div>
 
 
 
@@ -43,10 +44,10 @@
       <!--</button>-->
 
 
-      <div id="search-map-button" class="btn btn-default" type="button">
+      <div class="btn-group searchmap-group">
 
-        <div class="btn-group" >
-          <button class="btn btn-default " type="button">
+        <div class="btn-group" role="group" >
+          <button name="searchmap" class="btn btn-default " type="button">
 
             Search visible map area
 
@@ -56,7 +57,7 @@
 
         <div class="btn-group" role="group">
 
-          <button class="btn fa fa-globe btn-default" type="button">
+          <button class="btn fa fa-arrows-alt btn-default" type="button">
 
           </button>
 
