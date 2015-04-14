@@ -97,8 +97,8 @@ class Geonames
       # which minimizes the new side length
       @north = [@north, point["lat"].to_f].max
       @south = [@south, point["lat"].to_f].min
-      lat = point["lng"].to_f
-      @east, @west = optimize_east_west_add(lat, lat)
+      lng = point["lng"].to_f
+      @east, @west = optimize_east_west_add(lng, lng)
       normalize
     end
 
@@ -167,6 +167,7 @@ class Geonames
       @cache.insert(place_name, id)
     end
     return {} if id.nil?
+    puts "found #{place_name} ==> #{id}"
     result = @cache.lookup(id.to_s)
     if result.nil?
       result = load_feature_info(id)
@@ -182,6 +183,7 @@ class Geonames
       { params: { name: place_name, username: 'banu' }}
     result = JSON.parse(data)
     if result['totalResultsCount'] == 0
+      STDERR.puts "No location found for: '#{place_name}'"
       id = nil
     elsif result['totalResultsCount'] == 1
       id = result['geonames'].first['geonameId']

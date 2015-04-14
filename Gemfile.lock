@@ -289,6 +289,7 @@ DEPENDENCIES
   jettywrapper
   jquery-rails
   lyberteam-capistrano-devel
+  nokogiri
   pg
   poltergeist
   rails (= 4.1.8)
