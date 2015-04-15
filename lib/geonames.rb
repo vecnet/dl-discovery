@@ -166,7 +166,6 @@ class Geonames
       @cache.insert(place_name, id)
     end
     return {} if id.nil?
-    STDERR.puts "found #{place_name} ==> #{id}"
     result = @cache.lookup(id.to_s) do
       result = load_feature_info(id)
       @cache.insert(id.to_s, result)

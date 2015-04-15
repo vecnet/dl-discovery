@@ -15,9 +15,43 @@ require_relative 'geonames'
 #
 # The hierarchal faceting is done only if a vecnet base url is passed in.
 class EnrichSolr
+  class AuthorityCache
+    def initialize(base_url, authority_name)
+      @url = base_url + "/authorities/" + authority_name
+      @cache = {}
+    end
+    def get(term)
+      info = @cache.fetch(term) do
+        begin
+          response = RestClient.get(@url, params: {q: term})
+          info = JSON.parse(response)
+          info.empty? ? nil : info
+        rescue RestClient::Exception
+          nil
+        end
+      end
+      @cache[term] = info
+      return term, nil if info.nil?
+      return "#{term} [" + info['id'] + "]", info['hierarchy']
+    end
+    def enrich_terms(terms)
+      return nil, nil if terms.nil?
+      new_term_list = []
+      hierarchal_facets = []
+      terms.each do |term|
+        label, h_facet = self.get(term)
+        new_term_list << label
+        hierarchal_facets << h_facet
+      end
+      return new_term_list, hierarchal_facets.flatten.compact.uniq
+    end
+  end
+
   def initialize(cache_filename=nil, harvest_url=nil)
     @geonames = Geonames.new(cache_filename)
     @harvest_url = harvest_url
+    @subjects = AuthorityCache.new(@harvest_url, 'subject-info')
+    @species = AuthorityCache.new(@harvest_url, 'species-info')
   end
 
   def process_one(record_xml)
@@ -86,12 +120,21 @@ class EnrichSolr
     new_record[:point_list_s] = enrich_multipoint(new_record[:dct_spatial_sm])
     new_record[:dct_spatial_sm] = enrich_location_names(new_record[:dct_spatial_sm])
 
+    labels, h_facet = @subjects.enrich_terms(new_record[:dc_subject_sm])
+    new_record[:dc_subject_sm] = labels
+    new_record[:dc_subject_h_facet] = h_facet
+
+    labels, h_facet = @species.enrich_terms(new_record[:dwc_scientificname_sm])
+    new_record[:dwc_scientificname_sm] = labels
+    new_record[:dwc_scientificname_h_facet] = h_facet
+
     references = {
       # TODO: have the DL export download links
       #"http://schema.org/downloadUrl" => ,
       "http://schema.org/url" => first_or_nil(xml, "//vn:purl"),
       "http://schema.org/thumbnailUrl" => first_or_nil(xml, "//vn:thumbnail")
     }
+    references.delete_if { |k, v| v.nil? }
     new_record[:dct_references_s] = references.to_json
 
     # download children full_text if this is a citation
@@ -99,6 +142,7 @@ class EnrichSolr
       new_record[:full_text] = children_full_text(new_record[:vn_child_records_sm])
     end
 
+    new_record.delete_if { |k, v| v.nil? }
     new_record
   end
 
@@ -173,7 +217,7 @@ class EnrichSolr
     better_place_names = location_names.map do |place|
       short_place = place.split(",").first
       info = @geonames.lookup_name(short_place)
-      if info.nil?
+      if info.nil? || info.empty?
         place
       else
         name = info['name']
@@ -189,8 +233,11 @@ class EnrichSolr
 
   def children_full_text(child_noids)
     child_noids.map do |child_record|
-      response = RestClient.get(@harvest_url + '/files/#{child_record}.xml') {|r,_,_| r}
-      next if response.code != 200
+      begin
+        response = RestClient.get(@harvest_url + "/files/#{child_record}.xml")
+      rescue RestClient::Exception
+        next
+      end
       rxml = Nokogiri::XML(response)
       first_or_nil(rxml, '//full_text')
     end.join(' ')
@@ -207,5 +254,4 @@ class EnrichSolr
     return nil if lst.empty?
     lst
   end
-
 end

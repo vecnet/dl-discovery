@@ -12,10 +12,14 @@ require_relative '../lib/enrich_solr'
 
 # This is getting to be kinda ugly.
 
-if ARGV.length != 2
+if ARGV.length < 2 || ARGV.length > 3
   puts "USAGE:"
   puts "copy-dl-to-solr.rb [harvest url] [target solr url]"
+  puts "copy-dl-to-solr.rb [harvest url] [target solr url] YYYY-MM-DD"
   puts "copy-dl-to-solr.rb [harvest url] -o"
+  puts "copy-dl-to-solr.rb [harvest url] -o YYYY-MM-DD"
+  puts
+  puts "The YYYY-MM-DD is date in the past to start harvesting from."
   exit 1
 end
 
@@ -32,7 +36,9 @@ else
 end
 
 # harvest list of changes
-response = RestClient.get(ARGV[0] + "/harvest?since=2015-04-01")
+params = {}
+params[:since] = ARGV[2] if ARGV[2]
+response = RestClient.get(ARGV[0] + "/harvest", params: params)
 response = JSON.parse(response)
 
 def first_or_nil(lst)
@@ -40,25 +46,28 @@ def first_or_nil(lst)
   lst.first
 end
 
-enrich = EnrichSolr.new('geoname-cache.json')
+enrich = EnrichSolr.new('geoname-cache.json', ARGV[0])
 processed_count = 0
 output = []
 
 response.each do |record|
-  STDERR.puts "Processing record #{record['url']}"
-  puts record.inspect
   processed_count += 1
+  STDERR.puts "#{processed_count}) Processing record #{record['url']}"
 
   # get full record from source
-  dl_record = RestClient.get(record["url"] + ".xml")
+  begin
+    dl_record = RestClient.get(record["url"] + ".xml")
+  rescue RestClient::Exception
+    STDERR.puts " ...received status #{dl_record.code}"
+    next
+  end
 
   new_record = enrich.process_one(dl_record)
-  puts new_record.inspect
   #if new_record[:dct_spatial_sm].length > 0
   #  STDERR.puts "   " + new_record[:dct_spatial_sm].join("\n   ")
   #end
   if output_stdout
-    output << JSON.pretty_generate(new_record)
+    output << new_record
   end
   if target
     target.add(new_record)
