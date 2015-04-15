@@ -149,12 +149,12 @@ header {
 
 $content-pad-unit: ceil(0.66 * $map-notch-width);
 $content-h-pad: ceil(3 * $content-pad-unit);
-$content-v-pad: ceil(1 * $content-pad-unit);
+$content-v-pad: ceil(2 * $content-pad-unit);
 
 $disabled-color: #aaa;
 $disabled-color: #aaa;
 
-///////////////////////////////////////////////////////// search result fieldset
+///////////////////////////////////////////////////////// search result
 
 .result-title {
   margin-top: 0px;
@@ -200,7 +200,11 @@ $disabled-color: #aaa;
   position: relative;
 }
 
-#documents.vndl-results .document { border-bottom: none; }
+#documents.vndl-results .document {
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
 
 //.search-result h3 { font: 500 normal 1.375em "Roboto",Arial,Verdana,sans-serif; margin-top: 0 !important; margin-bottom: 10px !important; }
 //.search-result h3 > a, .search-result i { color: #248dc1 !important; }
@@ -229,7 +233,24 @@ $disabled-color: #aaa;
   border-bottom: 1px solid $line-color;
   &:first-of-type {
     // the first thing in the search form gets extra top padding
-    padding-top: (2 * $content-v-pad);
+    padding-top: (1.5 * $content-v-pad);
+  }
+
+  div.checkbox {
+    // this is the "map results on/off" element
+    width: 33%; // dirty hack to make the following button line up nicer
+    label {
+      padding-left: 0;
+    }
+  }
+
+  // the legends
+  legend {
+    border: none;
+    font-size: 133%;
+    color: #777;
+    padding-top: $fieldset-child-padding + 6px; // extra 6px to match button content pad
+
   }
 }
 .vndl-search fieldset#mapfieldset {
@@ -400,14 +421,27 @@ footer:after {
 .vndl-search .form-group {
   // even out top and bottom margins
   // Bookstrap by default has only bottom margin)
-  margin: 15px 0;
+  margin: 0;
 }
 
 ////////////////////////////////////////////////////// search results
 
+#sortAndPerPage {
+  padding-bottom: 0 ! important;
+  margin-bottom: 0 ! important;
+}
+
 .vndl-results {
   padding: 2em $content-h-pad;
   background-color: $content-bg;
+  article {
+    opacity: 0.8;
+  }
+  article.vndl-results-highlight {
+    opacity: 1;
+    position: relative;
+    box-shadow: 0 0 20px #ccc;
+  }
 }
 
 .vndl-search-result {
@@ -418,10 +452,6 @@ footer:after {
   background-color: $content-bg;
 }
 
-.vndl-results-highlight {
-  background-color: $search-result-highlight;
-
-}
 
 
 ////////////////////////////////////////////////////// text hero

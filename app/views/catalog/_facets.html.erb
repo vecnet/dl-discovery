@@ -1,28 +1,19 @@
 <% # main container for facets/limits menu  -%>
 
 
-<% if query_has_constraints? %>
 
     <fieldset>
-      <legend id="browse-or-filter" class="col-md-2">Filter</legend>
-      <div id="col-md-10 facets" class="facets sidenav">
+      <% if query_has_constraints? %>
+          <legend id="browse-or-filter" class="col-md-2">Filter</legend>
+      <% elsif has_facet_values? %>
+          <legend id="browse-or-filter" class="col-md-2">Browse</legend>
+      <% end %>
+      <div id="facets" class="col-md-10 facets sidenav">
 
-        <div id="facet-panel-collapse" class="collapse">
+        <div id="facet-panel-collapse" class="fieldset-columns collapse">
           <%= render_facet_partials %>
         </div>
       </div>
     </fieldset>
 
-<% elsif has_facet_values? %>
 
-<fieldset>
-  <legend id="browse-or-filter" class="col-md-2">Browse</legend>
-  <div id="col-md-10 facets" class="facets sidenav">
-
-    <div id="facet-panel-collapse" class="collapse">
-      <%= render_facet_partials %>
-    </div>
-  </div>
-</fieldset>
-
-<% end %>
