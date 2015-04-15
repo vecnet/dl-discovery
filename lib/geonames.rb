@@ -40,8 +40,8 @@ class Geonames
       end
     end
 
-    def lookup(key)
-      @cache[key]
+    def lookup(key, &block)
+      @cache.fetch(key, &block)
     end
 
     def insert(key, value)
@@ -161,15 +161,13 @@ class Geonames
   end
 
   def lookup_name(place_name)
-    id = @cache.lookup(place_name)
-    if id.nil?
+    id = @cache.lookup(place_name) do
       id = find_name_in_geonames(place_name)
       @cache.insert(place_name, id)
     end
     return {} if id.nil?
-    puts "found #{place_name} ==> #{id}"
-    result = @cache.lookup(id.to_s)
-    if result.nil?
+    STDERR.puts "found #{place_name} ==> #{id}"
+    result = @cache.lookup(id.to_s) do
       result = load_feature_info(id)
       @cache.insert(id.to_s, result)
     end
