@@ -25,18 +25,14 @@ $(function () {
     disable($('button[name=searchmap]'));
 
 
-
-    // turn the checkbox into a pumpkin
+    // turn the checkbox into a fancy switch
     $("[name='showmap']").bootstrapSwitch();
-
-
 
 
     // overrides the form submit event on the top Search form
     // and instead gets the user search and serialised form
     // and calls jqxhr getResultsPage
     searchFormSetup($('form.vndl-search'));
-
 
 
     // when the Blacklight adjusted bootstrap modal is loaded
@@ -47,9 +43,7 @@ $(function () {
         $('.modal-body a.facet_select').each(function (index, link) {
 
             attachEventsToFacetLink(link);
-
         });
-
 
 
 

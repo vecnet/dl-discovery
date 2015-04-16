@@ -31,8 +31,8 @@
     <dd><%= @document["dc_rights_s"]%></dd>
 
     <dt>URL</dt>
-    <a href="https://dl.vecnet.org/files/sb3978279"><dd>https://dl.vecnet.org/files/sb3978279</dd></a>
-
+    <dd><%= link_to @document["dc_references_s"], @document["dc_references_s"] %></dd>
+    <!--TODO: Fish out the correct links from JSON object here-->
 
     <%# TODO: Change these methods to use the document.fields that are correct %>
     <% if !@document.references.nil? && !@document.references.url.nil? %>
@@ -41,3 +41,4 @@
     <% end %>
   </dl>
 </div>
+

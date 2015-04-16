@@ -57,8 +57,7 @@ function searchFormSetup(formElement) {
 
     // if a facet has already been applied
     if ($('#appliedParams').length) {
-
-        console.log('div id appliedParams has length and therefore elements');
+        console.log('div id appliedParams has length and therefore facets are applied');
 
         // make the serialised form string
         var serialisedForm = $('form.vndl-search').serialize();
@@ -69,13 +68,14 @@ function searchFormSetup(formElement) {
         var $links = $('form.vndl-search').find('.more_facets_link');
 
         // for each link in links, add the serialised search form to it's href
+        // so it's correctly using ajax instead of original link
         addSerialisedFormToHref($links);
 
 
         // find the elements that contain removeFacet
         var $removeFacetLinks = $('form.vndl-search').find('.removeFacet');
 
-        // remove hidden input els from 'remove this Filter' links
+        // remove hidden input elements contained in 'remove this Filter' links
         // then reserialise the form and trigger submit
         addClickEventToRemoveAppliedFacet($removeFacetLinks);
 
@@ -148,26 +148,29 @@ function changeAnchorToUseAjax(elementSelector){
 //
 function addClickEventToRemoveAppliedFacet($links) {
 
+    // TODO: Code review function
+
     var $removeFacetLinks = $links;
 
     $removeFacetLinks.each(function (index, link) {
 
-        $link = $(link);
+        var $newLink = $(link);
 
-        $link.on("click", function (event) {
+        $newLink.on("click", function (event) {
 
             event.preventDefault();
 
-            $link.closest("div[aria-label=location-filter]").remove();
+            var ParentButtonGroup = $newLink.closest("div[aria-label=location-filter]");
+
+            ParentButtonGroup.remove();
 
             //alert("about to trigger a form submit");
 
-            console.log('remove facet link performed...');
+            console.log('remove facet link performed. trigger form submit next');
 
             $('form.vndl-search').trigger('submit');
 
         })
-
     });
 }
 //----------------------------------------------------------------------------------------------------------------------
