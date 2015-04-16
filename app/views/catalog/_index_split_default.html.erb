@@ -2,8 +2,6 @@
 <!-- results list item start -->
 <article class="vndl-search-result search-result row">
 
-  <!--TODO Pick which option, li or fieldset above for Hidden data element to parse with javascript to manipulate leaflet-->
-
   <%= content_tag :data, class: 'xvndl-results', data: {layer_id: document[:uuid], bbox: document[:solr_bbox], geom: document[:solr_geom], ptdata: document[:solr_point_list_s]} do %><% end %>
 
   <!--Start of data-ptdata-->
@@ -20,8 +18,8 @@
   <!--End of data-ptdata-->
 
   <div class="col-xs-4 col-md-2">
-    <!--TODO Bootstrap thumbnail class is messing with this not quite right and span sizing is wrong-->
-    <a href="#" title="Lorem ipsum" class="thumbnail"><img src="http://fillmurray.com/g/250/140/" alt="Lorem ipsum"/></a>
+    <!--TODO: Change this to be correct thumbnail url and logic if no url then default image-->
+    <a href="#" title="Lorem ipsum" class="thumbnail"><img src="/assets/example-thumbnail.png" alt="Lorem ipsum"/></a>
   </div>
 
   <!--<a href="#" title="Lorem ipsum" class="thumbnail"><i class="glyphicon glyphicon-file"></i></a>-->

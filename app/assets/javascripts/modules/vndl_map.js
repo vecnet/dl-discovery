@@ -292,6 +292,17 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
                 // make a leaflet object from the first rectangle in the rects list
                 var newRect = L.rectangle(rects[r]);
 
+
+                // default leaflet polygon style
+                var lighterDefaultStyle = {
+                    color: "#578ce3",
+                    weight: 2,
+                    opacity: 0.8,
+                    fillOpacity: 0.0025
+                }
+
+                newRect.setStyle(lighterDefaultStyle);
+
                 // store the original string to check with rectangle debugging
                 newRect.originalString = $rectElem.attr('data-rectangle');
 
@@ -381,10 +392,10 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
             rect.setStyle({
                 color: '#ff7f7f',
-                weight: 3,
-                opacity: 0.4,
-                fillOpacity: 0.45,
-                fillColor: '#ff7f7f'
+                weight: 2,
+                opacity: 0.5,
+                fillColor: false,
+                fillOpacity: 0.025
             });
             console.log('original string of rectangle is : ' + rect.originalString);
         });
@@ -406,19 +417,19 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     function unHighlightResult() {
 
 
-        // default leaflet polygon style
+        // default leaflet polygon style made lighter
         var defaultStyle = {
-            color: "#2262CC",
+            color: "#578ce3",
             weight: 2,
-            opacity: 0.6,
-            fillOpacity: 0.1,
-            fillColor: "#2262CC"
+            opacity: 0.8,
+            fillOpacity: 0.0025
+
         };
 
 
         $.each(newItem.primary.points, function (index, marker) {
 
-            // TODO: set marker back to default style
+
             //marker.setOpacity(1);
 
             //marker.closePopup();
@@ -443,6 +454,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         $.each(newItem.primary.rectangles, function (index, rect) {
 
             rect.setStyle(defaultStyle);
+
         });
 
         $r.removeClass("vndl-results-highlight");
