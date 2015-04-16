@@ -5,19 +5,14 @@ require 'rsolr'
 require_relative '../lib/geonames'
 require_relative '../lib/enrich_solr'
 
-# usage:
-# $ copy-dl-to-solr.rb [harvest url] [target solr url]
-# $ copy-dl-to-solr.rb [harvest url] -o
-
-
 # This is getting to be kinda ugly.
 
 if ARGV.length < 2 || ARGV.length > 3
   puts "USAGE:"
-  puts "copy-dl-to-solr.rb [harvest url] [target solr url]"
-  puts "copy-dl-to-solr.rb [harvest url] [target solr url] YYYY-MM-DD"
-  puts "copy-dl-to-solr.rb [harvest url] -o"
-  puts "copy-dl-to-solr.rb [harvest url] -o YYYY-MM-DD"
+  puts "harvest-dl.rb [harvest url] [target solr url]"
+  puts "harvest-dl.rb [harvest url] [target solr url] YYYY-MM-DD"
+  puts "harvest-dl.rb [harvest url] -o"
+  puts "harvest-dl.rb [harvest url] -o YYYY-MM-DD"
   puts
   puts "The YYYY-MM-DD is date in the past to start harvesting from."
   exit 1
@@ -52,13 +47,14 @@ output = []
 
 response.each do |record|
   processed_count += 1
+  next if record.nil?
   STDERR.puts "#{processed_count}) Processing record #{record['url']}"
 
   # get full record from source
   begin
     dl_record = RestClient.get(record["url"] + ".xml")
   rescue RestClient::Exception
-    STDERR.puts " ...received status #{dl_record.code}"
+    STDERR.puts " ...received error"
     next
   end
 
