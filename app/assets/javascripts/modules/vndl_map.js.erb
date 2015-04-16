@@ -513,25 +513,25 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             // TODO: messing with the default icon causes various issues
 
 
-            var redIcon = L.icon({
-                iconUrl: 'assets/marker-icon-red.png',
-                iconSize:    [25, 41],
-                iconAnchor:  [12, 41],
-                popupAnchor: [1, -34],
-                shadowSize:  [41, 41],
-                shadowUrl: 'assets/markers-shadow.png',
-                shadowRetinaUrl: 'assets/markers-shadow@2x.png'
-            });
+                var redIcon = L.icon({
+                    iconUrl: "<%= asset_path('marker-icon-red.png') %>",
+                    iconSize:    [25, 41],
+                    iconAnchor:  [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize:  [41, 41],
+                    shadowUrl: "<%= asset_path('markers-shadow.png') %>",
+                    shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
+                });
 
-            var blueIcon = L.icon({
-                iconUrl: 'assets/leaflet-marker-icon.png',
-                iconSize:    [25, 41],
-                iconAnchor:  [12, 41],
-                popupAnchor: [1, -34],
-                shadowSize:  [41, 41],
-                shadowUrl: 'assets/markers-shadow.png',
-                shadowRetinaUrl: 'assets/markers-shadow@2x.png'
-            });
+                var blueIcon = L.icon({
+                    iconUrl: "<%= asset_path('leaflet-marker-icon.png') %>",
+                    iconSize:    [25, 41],
+                    iconAnchor:  [12, 41],
+                    popupAnchor: [1, -34],
+                    shadowSize:  [41, 41],
+                    shadowUrl: "<%= asset_path('markers-shadow.png') %>",
+                    shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
+                });
 
 
 
