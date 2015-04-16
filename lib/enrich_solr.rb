@@ -67,7 +67,6 @@ class EnrichSolr
       layer_id_s:       noid,
       vn_content_version_s: first_or_nil(xml, '//vn:content_version'),
 
-      # TODO: format date times correctly
       dc_date_uploaded_dt: format_solr_date(first_or_nil(xml, '//dc:date_uploaded')),
       dc_date_modified_dt: format_solr_date(first_or_nil(xml, '//dc:date_modified')),
 
