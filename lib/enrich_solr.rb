@@ -1,3 +1,4 @@
+require 'time'
 require 'json'
 require 'nokogiri'
 require_relative 'geonames'
@@ -67,8 +68,8 @@ class EnrichSolr
       vn_content_version_s: first_or_nil(xml, '//vn:content_version'),
 
       # TODO: format date times correctly
-      dc_date_uploaded_dt: first_or_nil(xml, '//dc:date_uploaded'),
-      dc_date_modified_dt: first_or_nil(xml, '//dc:date_modified'),
+      dc_date_uploaded_dt: format_solr_date(first_or_nil(xml, '//dc:date_uploaded')),
+      dc_date_modified_dt: format_solr_date(first_or_nil(xml, '//dc:date_modified')),
 
       read_access_group_sm: all_or_nil(xml, '//dc:access.read.group'),
       read_access_person_sm: all_or_nil(xml, '//dc:access.read.person'),
@@ -241,6 +242,12 @@ class EnrichSolr
       rxml = Nokogiri::XML(response)
       first_or_nil(rxml, '//full_text')
     end.join(' ')
+  end
+
+  def format_solr_date(date_string)
+    return nil if date_string.nil? || date_string == ''
+    d = Date.parse(date_string)
+    d.strftime("%Y-%m-%dT%H:%M:%SZ")
   end
 
   def first_or_nil(xml, xpath)
