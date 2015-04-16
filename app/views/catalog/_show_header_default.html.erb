@@ -1,13 +1,4 @@
 <h2>
   <span itemprop="name"><%= document_heading(document) %></span>
-  <small>
-    <span title="The record's GIS type is : <%= document['layer_geom_type_s']%>">
-    <%= geoblacklight_icon(document['layer_geom_type_s']) %>
-    </span>
-    <%= geoblacklight_icon(document['dct_provenance_s']) %>
-    <span title="The record's access control level is : <%= document['dc_rights_s']%>">
-    <%= geoblacklight_icon(document['dc_rights_s']) %>
-        </span>
-  </small>
 </h2>
 
