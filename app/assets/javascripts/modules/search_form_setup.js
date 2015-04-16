@@ -33,6 +33,11 @@ function searchFormSetup(formElement) {
     $("[name='showmap']").bootstrapSwitch();
 
 
+    // start the page with the map and switch turned off per Natalie
+    $("[name='showmap']").bootstrapSwitch('toggleState');
+    window.vndl.theMap.show();
+
+
     //
     // Event Handling
     // -----------------------------------------------------------
