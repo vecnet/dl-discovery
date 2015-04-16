@@ -48800,5 +48800,670 @@
     "toponymName": "Uberlândia",
     "fcl": "A",
     "continentCode": "SA"
-  }
+  },
+  "Papua New Guinea": 2088628,
+  "2088628": {
+    "bbox": {
+      "east": 159.477921,
+      "south": -11.657861,
+      "north": -0.877889,
+      "west": 140.842865
+    },
+    "asciiName": "Independent State of Papua New Guinea",
+    "countryId": "2088628",
+    "fcl": "A",
+    "srtm3": 1209,
+    "countryCode": "PG",
+    "lat": "-6",
+    "fcode": "PCLI",
+    "continentCode": "OC",
+    "adminCode1": "00",
+    "lng": "147",
+    "geonameId": 2088628,
+    "toponymName": "Independent State of Papua New Guinea",
+    "population": 6064515,
+    "wikipediaURL": "en.wikipedia.org/wiki/Papua_New_Guinea",
+    "adminName5": "",
+    "adminName4": "",
+    "adminName3": "",
+    "alternateNames": [
+      {
+        "name": "ፓፑዋ ኒው ጊኒ",
+        "lang": "am"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ፓፑዋ ኒው ጊኒ",
+        "lang": "ti"
+      },
+      {
+        "name": "파푸아 뉴기니",
+        "lang": "ko"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ପପୁଆ ନ୍ୟୁ ଗୁଏନିଆ",
+        "lang": "or"
+      },
+      {
+        "name": "파푸아뉴기니",
+        "lang": "ko"
+      },
+      {
+        "name": "パプアニューギニア",
+        "lang": "ja"
+      },
+      {
+        "isPreferredName": true,
+        "name": "パプア・ニューギニア",
+        "lang": "ja"
+      },
+      {
+        "name": "ปาปัวนิวกินี",
+        "lang": "th"
+      },
+      {
+        "name": "ປາປົວນິວກີນີ",
+        "lang": "lo"
+      },
+      {
+        "name": "ประเทศปาปัวนิวกินี",
+        "lang": "th"
+      },
+      {
+        "name": "ប៉ាពូអានូវែលហ្គីណេ",
+        "lang": "km"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Papua_New_Guinea",
+        "lang": "link"
+      },
+      {
+        "name": "http://ru.wikipedia.org/wiki/%D0%9F%D0%B0%D0%BF%D1%83%D0%B0_%E2%80%94_%D0%9D%D0%BE%D0%B2%D0%B0%D1%8F_%D0%93%D0%B2%D0%B8%D0%BD%D0%B5%D1%8F",
+        "lang": "link"
+      },
+      {
+        "name": "Independent State of Papua New Guinea"
+      },
+      {
+        "isPreferredName": true,
+        "name": "i-Papua New Guinea",
+        "lang": "zu"
+      },
+      {
+        "name": "Nua-Ghuine Phapua",
+        "lang": "ga"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Nugini Papua Nugini",
+        "lang": "id"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Orílẹ́ède Paapu ti Giini",
+        "lang": "yo"
+      },
+      {
+        "name": "Paapua Uus-Guinea",
+        "lang": "et"
+      },
+      {
+        "name": "Papoa Nòva Guinèa",
+        "lang": "oc"
+      },
+      {
+        "name": "Papoa-Nòva Guinèa",
+        "lang": "oc"
+      },
+      {
+        "name": "Papoasie-Novèla-Guinê",
+        "lang": "frp"
+      },
+      {
+        "name": "Papoea Nieu-Guinee",
+        "lang": "af"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papoea-Nieu-Guinee",
+        "lang": "af"
+      },
+      {
+        "name": "Papoea-Nieuw-Guinea",
+        "lang": "nl"
+      },
+      {
+        "name": "Papoea-Nui-Guinea",
+        "lang": "li"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papoua Ginea-Nevez",
+        "lang": "br"
+      },
+      {
+        "name": "Papoua-Ginea Nevez",
+        "lang": "br"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papouasie-Nouvelle Guinée",
+        "lang": "fr"
+      },
+      {
+        "name": "Papouasie-Nouvelle-Guinée",
+        "lang": "fr"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papouasie-Nouvelle-Guinée",
+        "lang": "mg"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua",
+        "lang": "ki"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua",
+        "lang": "sw"
+      },
+      {
+        "name": "Papua Bagong Ginea",
+        "lang": "tl"
+      },
+      {
+        "name": "Papua Baro a Guinea",
+        "lang": "ilo"
+      },
+      {
+        "name": "Papua Ginea Berria",
+        "lang": "eu"
+      },
+      {
+        "name": "Papua Gîneya Nû",
+        "lang": "ku"
+      },
+      {
+        "name": "Papua Gini Newydd",
+        "lang": "cy"
+      },
+      {
+        "name": "Papua Guinea e Re",
+        "lang": "sq"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua Guinea Foforo",
+        "lang": "ak"
+      },
+      {
+        "name": "Papua Guineja e Re",
+        "lang": "sq"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua ir Naujoji Gvinėja",
+        "lang": "lt"
+      },
+      {
+        "name": "Papua-Jaungvineja",
+        "lang": "lv"
+      },
+      {
+        "name": "Papua Naujoji Gvinėja",
+        "lang": "lt"
+      },
+      {
+        "name": "Papua-Neuguinea",
+        "lang": "de"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua New Gini nutome",
+        "lang": "ee"
+      },
+      {
+        "name": "Papua New Guinea",
+        "lang": "en"
+      },
+      {
+        "name": "Papua New Guinea",
+        "lang": "ms"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua New Guinea",
+        "lang": "nd"
+      },
+      {
+        "name": "Papua New Guinea",
+        "lang": "pam"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua New Guinea",
+        "lang": "sn"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua New Guinea",
+        "lang": "so"
+      },
+      {
+        "name": "Papua New Guinea"
+      },
+      {
+        "name": "Papua-Niegguinea",
+        "lang": "nds"
+      },
+      {
+        "name": "Pa-pu-a Niu Ghi-nê",
+        "lang": "vi"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Pa-pua Niu Ghi-nê (Papua New Guinea)",
+        "lang": "vi"
+      },
+      {
+        "name": "Papua Niugini",
+        "lang": "tpi"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papuaniukini",
+        "lang": "to"
+      },
+      {
+        "name": "Papua Noua Guinee",
+        "lang": "ro"
+      },
+      {
+        "name": "Papua-Nova Guiné",
+        "lang": "pt"
+      },
+      {
+        "name": "Papua Nova Guinea",
+        "lang": "ca"
+      },
+      {
+        "name": "Papua Nova Guinea",
+        "lang": "la"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua Nova Guinea",
+        "lang": "rm"
+      },
+      {
+        "name": "Papua-Nova-Guinea",
+        "lang": "io"
+      },
+      {
+        "name": "Papúa Nova Guinea",
+        "lang": "gl"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua Nová Guinea",
+        "lang": "cs"
+      },
+      {
+        "name": "Papua Nová Guinea",
+        "lang": "sk"
+      },
+      {
+        "name": "Papua-Nová Guinea",
+        "lang": "cs"
+      },
+      {
+        "name": "Papua-Nová Guinea",
+        "lang": "sk"
+      },
+      {
+        "name": "Papua Nova Gvineja",
+        "lang": "bs"
+      },
+      {
+        "name": "Papua Nova Gvineja",
+        "lang": "hbs"
+      },
+      {
+        "name": "Papua Nova Gvineja",
+        "lang": "hr"
+      },
+      {
+        "name": "Papua Nova Gvineja",
+        "lang": "sl"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua Nove Guinea",
+        "lang": "ia"
+      },
+      {
+        "name": "Papua Nowa Gwinea",
+        "lang": "pl"
+      },
+      {
+        "name": "Papua-Nowa Gwinea",
+        "lang": "pl"
+      },
+      {
+        "name": "Papúa Nueva Guinea",
+        "lang": "es"
+      },
+      {
+        "isShortName": true,
+        "isPreferredName": true,
+        "name": "Papúa-Nueva Guinea",
+        "lang": "es"
+      },
+      {
+        "name": "Papua Nuova Guinea",
+        "lang": "it"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua Nutaaq Guinea",
+        "lang": "kl"
+      },
+      {
+        "name": "Papua Nya Guinea",
+        "lang": "sv"
+      },
+      {
+        "name": "Papua Ny Guinea",
+        "lang": "da"
+      },
+      {
+        "name": "Papua Ny-Guinea",
+        "lang": "nb"
+      },
+      {
+        "name": "Papua Ny-Guinea",
+        "lang": "nn"
+      },
+      {
+        "name": "Papua Ny-Guinea",
+        "lang": "no"
+      },
+      {
+        "name": "Papua Nýguinea",
+        "lang": "fo"
+      },
+      {
+        "name": "Papúa Nýja-Gínea",
+        "lang": "is"
+      },
+      {
+        "name": "Papua-Ođđa-Guinea",
+        "lang": "se"
+      },
+      {
+        "name": "Papua Tân Guinea",
+        "lang": "vi"
+      },
+      {
+        "name": "Pápua Új-Guinea",
+        "lang": "hu"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papua Uus Guinea",
+        "lang": "et"
+      },
+      {
+        "name": "Papua-Uusi-Guinea",
+        "lang": "fi"
+      },
+      {
+        "name": "Papua Yeni Gine",
+        "lang": "tr"
+      },
+      {
+        "name": "Papua-Yeni Qvineya",
+        "lang": "az"
+      },
+      {
+        "name": "Papua y Nueva Guinea",
+        "lang": "an"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papû Finî Ginëe, Papuazïi",
+        "lang": "sg"
+      },
+      {
+        "name": "Papuo-Nov-Gvineo",
+        "lang": "eo"
+      },
+      {
+        "name": "Papuveän Nula-Gineyän",
+        "lang": "vo"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papuwaa Nuwel Gine",
+        "lang": "ff"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papuwa Niyugineya",
+        "lang": "rn"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papuwa Nugini",
+        "lang": "ha"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papuwasi-Gine-Koura",
+        "lang": "bm"
+      },
+      {
+        "name": "Papwa-Ginea Ġdida",
+        "lang": "mt"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papwa Nyugini",
+        "lang": "lg"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papwazi Ginɛ ya sika",
+        "lang": "ln"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Papwazi wa Nginɛ wa mumu",
+        "lang": "lu"
+      },
+      {
+        "name": "بابوا غينيا الجديدة",
+        "lang": "ar"
+      },
+      {
+        "isPreferredName": true,
+        "name": "پاپوا گینێی نوێ",
+        "lang": "ku"
+      },
+      {
+        "name": "پاپوآ گینه نو",
+        "lang": "fa"
+      },
+      {
+        "name": "پاپوا گینهٔ نو",
+        "lang": "fa"
+      },
+      {
+        "isPreferredName": true,
+        "name": "پاپوآ نیو گنی",
+        "lang": "ur"
+      },
+      {
+        "name": "پاپۇئا يېڭى گۋىنېيە",
+        "lang": "ug"
+      },
+      {
+        "isPreferredName": true,
+        "name": "گوینیا ی جدید پاپوا",
+        "lang": "fa"
+      },
+      {
+        "isPreferredName": true,
+        "name": "גינאה החדשה פפואה",
+        "lang": "he"
+      },
+      {
+        "name": "פאפואה ניו-גיניאה",
+        "lang": "he"
+      },
+      {
+        "name": "פפואה גינאה החדשה",
+        "lang": "he"
+      },
+      {
+        "name": "Παπούα - Νέα Γουινέα",
+        "lang": "el"
+      },
+      {
+        "name": "Παπούα Νέα Γουινέα",
+        "lang": "el"
+      },
+      {
+        "name": "Папуа Нова Гвинеја",
+        "lang": "mk"
+      },
+      {
+        "name": "Папуа Нова Гвинеја",
+        "lang": "sr"
+      },
+      {
+        "name": "Папуа Нова Гвинея",
+        "lang": "bg"
+      },
+      {
+        "name": "Папуа-Нова Гвинея",
+        "lang": "bg"
+      },
+      {
+        "name": "Папуа Нова Гвінея",
+        "lang": "uk"
+      },
+      {
+        "name": "Папуа-Нова Ґвінея",
+        "lang": "uk"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Папуа – Новая Гвинея",
+        "lang": "ru"
+      },
+      {
+        "name": "Папуа — Новая Гвинея",
+        "lang": "ru"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Папуа-Новая Гвінея",
+        "lang": "be"
+      },
+      {
+        "isPreferredName": true,
+        "name": "པ་པུ་ཨ། ནིའུ། གྷི་ནི།",
+        "lang": "bo"
+      },
+      {
+        "name": "Պապուա Նոր Գվինեա",
+        "lang": "hy"
+      },
+      {
+        "name": "პაპუა-ახალი გვინეა",
+        "lang": "ka"
+      },
+      {
+        "isPreferredName": true,
+        "name": "पपुआ न्यू गाइनिया",
+        "lang": "ne"
+      },
+      {
+        "name": "पपुवा न्यू गिनी",
+        "lang": "ks"
+      },
+      {
+        "name": "पपुवा न्यू गिनी",
+        "lang": "sa"
+      },
+      {
+        "name": "पापुआ न्यू गिनी",
+        "lang": "hi"
+      },
+      {
+        "isPreferredName": true,
+        "name": "पापुआ न्यू गिनी",
+        "lang": "mr"
+      },
+      {
+        "isPreferredName": true,
+        "name": "પાપુઆ ન્યૂ ગિની",
+        "lang": "gu"
+      },
+      {
+        "isPreferredName": true,
+        "name": "పాపువా న్యు గినియా",
+        "lang": "te"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ಪಪುವಾ ನ್ಯೂಗೀನಿಯಾ",
+        "lang": "kn"
+      },
+      {
+        "name": "பப்புவா நியூ கினி",
+        "lang": "ta"
+      },
+      {
+        "isPreferredName": true,
+        "name": "பாப்புவா நியூ கினி",
+        "lang": "ta"
+      },
+      {
+        "isPreferredName": true,
+        "name": "പപ്പുവ ന്യൂ ഗ്വിനി",
+        "lang": "ml"
+      },
+      {
+        "isPreferredName": true,
+        "name": "পাপুয়া নিউ গিনি",
+        "lang": "bn"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ပါပူရာနယူးဂီနီ",
+        "lang": "my"
+      },
+      {
+        "isPreferredName": true,
+        "name": "පැපුවා නිව් ගිනියාව",
+        "lang": "si"
+      },
+      {
+        "name": "巴布亚新几内亚",
+        "lang": "zh"
+      }
+    ],
+    "adminName2": "",
+    "name": "Papua New Guinea",
+    "fclName": "country, state, region,...",
+    "countryName": "Papua New Guinea",
+    "fcodeName": "independent political entity",
+    "adminName1": ""
+  },
+  "Viet Nam": 1562822
 }
