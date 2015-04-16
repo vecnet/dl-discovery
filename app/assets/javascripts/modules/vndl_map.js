@@ -361,10 +361,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         $.each(newItem.primary.points, function (index, marker) {
 
 
-            // TODO: marker set style to be lighter or different colour to indicate highlight
-
-
-
             var redIcon = L.icon({
                 iconUrl: 'assets/marker-icon-red.png',
                 iconSize:    [25, 41],
@@ -378,23 +374,17 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             marker.setIcon(redIcon);
 
 
-
-
-            // TODO : Change highlight method to surround entire search result parent element
-
-
-
         });
 
         // set each relevant rectangle to the higlight style
         $.each(newItem.primary.rectangles, function (index, rect) {
 
             rect.setStyle({
-                color: '#ffffab',
+                color: '#ff7f7f',
                 weight: 3,
                 opacity: 0.4,
                 fillOpacity: 0.45,
-                fillColor: '#ffffab'
+                fillColor: '#ff7f7f'
             });
             console.log('original string of rectangle is : ' + rect.originalString);
         });
