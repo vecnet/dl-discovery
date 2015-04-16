@@ -24,7 +24,7 @@
 //= require modules/wellknown
 //= require bootstrap/tab
 //= require bootstrap/tooltip
-//= require modules/vndl_map
+//= require modules/vndl_map.js.erb
 //= require modules/buttons
 //= require modules/bootstrap-switch
 //= require modules/metadata_table

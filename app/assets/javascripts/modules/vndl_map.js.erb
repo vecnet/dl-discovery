@@ -373,13 +373,13 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
             var redIcon = L.icon({
-                iconUrl: 'assets/marker-icon-red.png',
+                iconUrl: "<%= asset_path('marker-icon-red.png') %>",
                 iconSize:    [25, 41],
                 iconAnchor:  [12, 41],
                 popupAnchor: [1, -34],
                 shadowSize:  [41, 41],
-                shadowUrl: 'assets/markers-shadow.png',
-                shadowRetinaUrl: 'assets/markers-shadow@2x.png'
+                shadowUrl: "<%= asset_path('markers-shadow.png') %>",
+                shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
             });
 
             marker.setIcon(redIcon);
@@ -437,13 +437,13 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
             var blueIcon = L.icon({
-                iconUrl: 'assets/leaflet-marker-icon.png',
+                iconUrl: "<%= asset_path('leaflet-marker-icon.png') %>",
                 iconSize:    [25, 41],
                 iconAnchor:  [12, 41],
                 popupAnchor: [1, -34],
                 shadowSize:  [41, 41],
-                shadowUrl: 'assets/markers-shadow.png',
-                shadowRetinaUrl: 'assets/markers-shadow@2x.png'
+                shadowUrl: "<%= asset_path('markers-shadow.png') %>",
+                shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
             });
 
             marker.setIcon(blueIcon);
