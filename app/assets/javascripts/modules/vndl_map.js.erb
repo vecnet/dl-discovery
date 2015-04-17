@@ -430,7 +430,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         $.each(newItem.primary.points, function (index, marker) {
 
             var blueIcon = L.icon({
-                iconUrl: "assets/images/leaflet-marker-icon.png",
+                iconUrl: "<%= asset_path('leaflet-marker-icon.png') %>",
                 iconSize:    [25, 41],
                 iconAnchor:  [12, 41],
                 popupAnchor: [1, -34],
