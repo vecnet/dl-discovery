@@ -160,7 +160,7 @@ class EnrichSolr
     location_names.each do |place|
       place = place.split(",").first
       info = @geonames.lookup_name(place)
-      if info.nil?
+      if info.empty?
         next
       elsif info['bbox']
         bbox.add_bbox(info['bbox'])
