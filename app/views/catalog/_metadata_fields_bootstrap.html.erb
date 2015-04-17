@@ -99,23 +99,18 @@
               </tr>
 
               <tr>
-                <th>Person Read Access Rights</th>
-                <td><%= @document["read_access_person_sm"] %></td>
+                <th>Access Rights (Record)</th>
+                <td><%= permission_badge_for(@document) %>
+                  </br>
+                  Read Only: <%= read_only_users(@document) %>
+                  </br>
+                  Read and Edit: <%= edit_users(@document) %>
+                </td>
               </tr>
 
               <tr>
-                <th>Person Edit Access Rights</th>
-                <td><%= @document["edit_access_person_sm"] %></td>
-              </tr>
-
-              <tr>
-                <th>Group Read Access Rights</th>
-                <td><%= @document["read_access_group_sm"] %></td>
-              </tr>
-
-              <tr>
-                <th>Group Edit Access Rights</th>
-                <td><%= @document["edit_access_group_sm"] %></td>
+                <th>Access Rights (File)</th>
+                <td></td>
               </tr>
 
               </tbody>
