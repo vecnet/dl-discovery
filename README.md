@@ -59,3 +59,15 @@ To upload the sample records into your local jetty solr, run the following.
 
     ./script/upload-to-solr.rb vecnet-solr-sample.json http://localhost:8983/solr/blacklight-core
 
+# Harvesting production data
+
+Optinally, clear the solr core.
+
+
+Harvest the Library and Simulation Records:
+
+    ./script/harvest-dl.rb https://dl.vecnet.org <target solr core> 2015-04-01
+    ./script/harvest-ci.rb https://ci-qa.vecnet.org https://dl.vecnet.org <target solr core>
+
+
+

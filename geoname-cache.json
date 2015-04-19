@@ -64761,7 +64761,7 @@
     "fcl": "P",
     "continentCode": "AF"
   },
-  "Kita": 1859360,
+  "Kita": 7701501,
   "1859360": {
     "alternateNames": [
       {
@@ -73585,6 +73585,532 @@
     "srtm3": -32768,
     "toponymName": "Tak Province",
     "fcl": "A",
+    "continentCode": "AS"
+  },
+  "Bangkok": 1609350,
+  "1609350": {
+    "alternateNames": [
+      {
+        "name": "방콕",
+        "lang": "ko"
+      },
+      {
+        "name": "ባንኮክ",
+        "lang": "am"
+      },
+      {
+        "name": "バンコク",
+        "lang": "ja"
+      },
+      {
+        "name": "ບາງກອກ",
+        "lang": "lo"
+      },
+      {
+        "name": "པན་ཀོག",
+        "lang": "bo"
+      },
+      {
+        "name": "กรุงเทพ",
+        "lang": "tai"
+      },
+      {
+        "name": "กรุงเทพ",
+        "lang": "th"
+      },
+      {
+        "name": "பேங்காக்",
+        "lang": "ta"
+      },
+      {
+        "isShortName": true,
+        "name": "กรุงเทพฯ",
+        "lang": "th"
+      },
+      {
+        "name": "กรุงเทพมหานคร",
+        "isPreferredName": true,
+        "lang": "th"
+      },
+      {
+        "name": "Amphoe Phra Nakhon"
+      },
+      {
+        "name": "Bancác",
+        "lang": "ga"
+      },
+      {
+        "name": "Bancocum",
+        "lang": "la"
+      },
+      {
+        "name": "Banghok",
+        "lang": "ie"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "af"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "an"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "bs"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "ca"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "cs"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "cy"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "da"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "de"
+      },
+      {
+        "name": "Bangkok",
+        "isPreferredName": true,
+        "lang": "en"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "es"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "et"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "eu"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "fi"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "fr"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "frp"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "gl"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "hu"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "id"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "io"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "is"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "it"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "lb"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "ms"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "nb"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "nl"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "nn"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "no"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "pl"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "ro"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "scn"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "sk"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "sl"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "sv"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "tr"
+      },
+      {
+        "name": "Bangkok",
+        "lang": "vi"
+      },
+      {
+        "name": "Bangkòk",
+        "lang": "oc"
+      },
+      {
+        "name": "Bangkoka",
+        "lang": "lv"
+      },
+      {
+        "name": "Bangkok Metropolis"
+      },
+      {
+        "name": "Banguecoque",
+        "lang": "mwl"
+      },
+      {
+        "name": "Banguecoque",
+        "lang": "pt"
+      },
+      {
+        "name": "Bankok"
+      },
+      {
+        "name": "Bankokas",
+        "lang": "lt"
+      },
+      {
+        "name": "Bankoko",
+        "lang": "eo"
+      },
+      {
+        "name": "Banqkok",
+        "lang": "az"
+      },
+      {
+        "name": "BKK",
+        "lang": "iata"
+      },
+      {
+        "name": "Changwat Phra Nakhon"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Bangkok",
+        "lang": "link"
+      },
+      {
+        "name": "http://ru.wikipedia.org/wiki/%D0%91%D0%B0%D0%BD%D0%B3%D0%BA%D0%BE%D0%BA",
+        "lang": "link"
+      },
+      {
+        "name": "Krungdeb"
+      },
+      {
+        "name": "Krung Thep"
+      },
+      {
+        "name": "Krung Thep Maha Nakhon"
+      },
+      {
+        "name": "Màn-kuk",
+        "lang": "hak"
+      },
+      {
+        "name": "Phra Nakhon"
+      },
+      {
+        "name": "Siayuthia"
+      },
+      {
+        "isColloquial": true,
+        "name": "The City of Angels",
+        "lang": "en"
+      },
+      {
+        "name": "بانكوك",
+        "lang": "ar"
+      },
+      {
+        "name": "بانكوك",
+        "lang": "arz"
+      },
+      {
+        "name": "بانکۆک",
+        "lang": "ckb"
+      },
+      {
+        "name": "بانګکوک",
+        "lang": "ps"
+      },
+      {
+        "name": "بانکوک",
+        "lang": "fa"
+      },
+      {
+        "name": "بانگكوك",
+        "lang": "ug"
+      },
+      {
+        "name": "بنکاک",
+        "lang": "pnb"
+      },
+      {
+        "name": "بنکاک",
+        "lang": "ur"
+      },
+      {
+        "name": "באנגקאק",
+        "lang": "yi"
+      },
+      {
+        "name": "בנגקוק",
+        "lang": "he"
+      },
+      {
+        "name": "Μπανγκόκ",
+        "lang": "el"
+      },
+      {
+        "name": "Бангкок",
+        "isPreferredName": true,
+        "lang": "be"
+      },
+      {
+        "name": "Бангкок",
+        "lang": "cv"
+      },
+      {
+        "name": "Бангкок",
+        "lang": "kk"
+      },
+      {
+        "name": "Бангкок",
+        "lang": "koi"
+      },
+      {
+        "name": "Бангкок",
+        "lang": "mhr"
+      },
+      {
+        "name": "Бангкок",
+        "lang": "mk"
+      },
+      {
+        "name": "Бангкок",
+        "lang": "mn"
+      },
+      {
+        "name": "Бангкок",
+        "lang": "os"
+      },
+      {
+        "name": "Бангкок",
+        "isPreferredName": true,
+        "lang": "ru"
+      },
+      {
+        "name": "Бангкок",
+        "lang": "sr"
+      },
+      {
+        "name": "Бангкок",
+        "lang": "tg"
+      },
+      {
+        "name": "Бангкок",
+        "lang": "uk"
+      },
+      {
+        "name": "Баҥкок",
+        "lang": "sah"
+      },
+      {
+        "name": "Банкок",
+        "lang": "bg"
+      },
+      {
+        "name": "Банкок",
+        "lang": "rue"
+      },
+      {
+        "name": "Բանգկոկ",
+        "lang": "hy"
+      },
+      {
+        "name": "ბანგკოკი",
+        "lang": "ka"
+      },
+      {
+        "name": "बैंकक",
+        "lang": "new"
+      },
+      {
+        "name": "बैंकॉक",
+        "lang": "hi"
+      },
+      {
+        "name": "बँकॉक",
+        "lang": "mr"
+      },
+      {
+        "name": "ਬੈਂਕਾਕ",
+        "lang": "pa"
+      },
+      {
+        "name": "ಬ್ಯಾಂಕಾಕ್",
+        "lang": "kn"
+      },
+      {
+        "name": "ബാങ്കോക്ക്",
+        "lang": "ml"
+      },
+      {
+        "name": "চাংৱাত ব্যাংকক",
+        "lang": "bpy"
+      },
+      {
+        "name": "ব্যাংকক",
+        "lang": "bn"
+      },
+      {
+        "name": "ဘန်ကောက်မြို့",
+        "lang": "my"
+      },
+      {
+        "name": "බැංකොක්",
+        "lang": "si"
+      },
+      {
+        "name": "曼谷",
+        "lang": "wuu"
+      },
+      {
+        "name": "曼谷",
+        "lang": "zh"
+      },
+      {
+        "name": "曼谷",
+        "lang": "zh-CN"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "40",
+    "lng": "100.50144",
+    "adminName2": "",
+    "fcodeName": "capital of a political entity",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 13.460718468187507,
+      "east": 100.80374454913354,
+      "north": 14.047239531812492,
+      "west": 100.19914345086647
+    },
+    "name": "Bangkok",
+    "fcode": "PPLC",
+    "geonameId": 1609350,
+    "asciiName": "Bangkok",
+    "lat": "13.75398",
+    "population": 5104476,
+    "adminName1": "Bangkok",
+    "adminId1": "1609348",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 12,
+    "wikipediaURL": "en.wikipedia.org/wiki/Bangkok",
+    "toponymName": "Bangkok",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "Ban Plaeng Yao": 1614004,
+  "1614004": {
+    "alternateNames": [
+      {
+        "name": "บ้านแปลงยาว",
+        "lang": "th"
+      },
+      {
+        "name": "Ban Plaeng Yao"
+      },
+      {
+        "name": "Plaeng Yao"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "44",
+    "lng": "101.2727",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 13.597006351248574,
+      "east": 101.28194868253757,
+      "north": 13.614993648751426,
+      "west": 101.26344131746242
+    },
+    "name": "Ban Plaeng Yao",
+    "fcode": "PPL",
+    "geonameId": 1614004,
+    "asciiName": "Ban Plaeng Yao",
+    "lat": "13.606",
+    "population": 0,
+    "adminName1": "Chachoengsao",
+    "adminId1": "1611438",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 14,
+    "toponymName": "Ban Plaeng Yao",
+    "fcl": "P",
     "continentCode": "AS"
   }
 }

@@ -53,8 +53,8 @@ response.each do |record|
   # get full record from source
   begin
     dl_record = RestClient.get(record["url"] + ".xml")
-  rescue RestClient::Exception
-    STDERR.puts " ...received error"
+  rescue RestClient::Exception => e
+    STDERR.puts " ...received error #{e.inspect}"
     next
   end
 
