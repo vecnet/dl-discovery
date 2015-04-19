@@ -35,9 +35,9 @@ window.VndlMap = function (mapDomId, options) {
 
     // allows for clustering of markers if we find it useful?
 
-    //markerClusterLayer = new L.MarkerClusterGroup({
-    //    disableClusteringAtZoom: 8
-    //});
+    markerClusterLayer = new L.MarkerClusterGroup({
+        disableClusteringAtZoom: 8
+    });
 
 
 
@@ -491,9 +491,9 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
             // Trying out cluster markers
-            //markerClusterLayer.addLayer(marker);
-            //
-            //map.addLayer(markerClusterLayer);
+            markerClusterLayer.addLayer(marker);
+
+            map.addLayer(markerClusterLayer);
 
 
 
