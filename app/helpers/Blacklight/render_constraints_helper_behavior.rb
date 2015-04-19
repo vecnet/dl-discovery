@@ -16,6 +16,17 @@ module Blacklight::RenderConstraintsHelperBehavior
     !(localized_params[:q].blank? and localized_params[:f].blank?)
   end
 
+
+
+  ##
+  # Check if the query only is query and no facets
+  #
+  # @param [Hash] query parameters
+  # @return [Boolean]
+  def query_has_facets?(localized_params = params)
+    (!localized_params[:f].blank?)
+  end
+
   ##
   # Render the actual constraints, not including header or footer
   # info. 

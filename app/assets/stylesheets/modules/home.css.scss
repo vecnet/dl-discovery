@@ -96,7 +96,6 @@ header {
 /* the content has a fixed width */
 .content {
   float: right;
-  /* TODO: this bit should be responsive */
   // width: $result-column-width;
   // overlap the map so we can make the map notch
   margin-left: (-1 * $map-notch-width);
@@ -150,6 +149,8 @@ header {
 $content-pad-unit: ceil(0.66 * $map-notch-width);
 $content-h-pad: ceil(3 * $content-pad-unit);
 $content-v-pad: ceil(2 * $content-pad-unit);
+
+$content-h-pad-halved: ceil(2 * $content-pad-unit);
 
 $disabled-color: #aaa;
 $disabled-color: #aaa;
@@ -229,7 +230,7 @@ $disabled-color: #aaa;
   background-color: $content-bg;
   // position: relative;
   // z-index: $content-z;
-  padding: $content-v-pad $content-h-pad;
+  padding: $content-v-pad $content-h-pad-halved;
   border-bottom: 1px solid $line-color;
   &:first-of-type {
     // the first thing in the search form gets extra top padding
