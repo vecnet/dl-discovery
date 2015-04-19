@@ -10,15 +10,6 @@
   <div class="metadata-relative">
     <ul class="timeline">
       <li>
-        <div class="timeline-badge success"><i class="glyphicon glyphicon-globe"></i></div>
-        <div class="timeline-panel">
-          <div class="timeline-heading">
-            <h4 class="field-title">Regions</h4>
-            <h4 class="timeline-title"><%=@document["dct_spatial_sm"]%></h4>
-          </div>
-        </div>
-      </li>
-      <li>
         <div class="timeline-badge primary"><i class="glyphicon glyphicon-fullscreen"></i></div>
         <div class="timeline-panel">
           <div class="timeline-heading">
@@ -26,6 +17,15 @@
             <h4 class="timeline-title"><%= @document["solr_bbox"]%></h4>
           </div>
 
+        </div>
+      </li>
+      <li>
+        <div class="timeline-badge success"><i class="glyphicon glyphicon-globe"></i></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4 class="field-title">Regions</h4>
+            <h4 class="timeline-title"><%=@document["dct_spatial_sm"]%></h4>
+          </div>
         </div>
       </li>
       <li>
