@@ -34,8 +34,8 @@ function searchFormSetup(formElement) {
 
 
     // start the page with the map and switch turned off per Natalie
-    $("[name='showmap']").bootstrapSwitch('toggleState');
-    window.vndl.theMap.show();
+    //$("[name='showmap']").bootstrapSwitch('toggleState');
+    //window.vndl.theMap.show();
 
 
     //
@@ -44,7 +44,7 @@ function searchFormSetup(formElement) {
     //
 
     // use the shown map area as a search parameter
-    $('#search-map-button').on("click", function() {
+    $('#search-map-area').on("click", function() {
 
         searchMapAreaUsingFormSubmit();
 
@@ -100,8 +100,7 @@ function searchFormSetup(formElement) {
 // trigger form submit
 //
 function searchMapAreaUsingFormSubmit() {
-
-
+    
 
     var currentMapBounds = window.vndl.theMap.leafletMap.getBounds();
 
