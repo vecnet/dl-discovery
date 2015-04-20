@@ -13,7 +13,6 @@
         <div class="input-group-btn">
           <button type="submit" class="search-submit btn-lg btn btn-primary" id="search-submit-header" tabindex="2">
              Search
-            <!--<i class="search-icon glyphicon glyphicon-search"></i>-->
           </button>
         </div>
       </div>
@@ -24,7 +23,6 @@
   <fieldset id="mapfieldset">
 
 
-    <!--// TODO: Format these legends-->
     <legend class="col-md-2">Map</legend>
     <div class="mapnotch"></div>
     <div class="col-md-10 form-group">
@@ -33,13 +31,9 @@
 
       <div class="checkbox">
         <label>
-        <input id="map-checkbox" type="checkbox" class="switch" name="showmap" data-label-text="Show Map"  value=""/>
+        <input id="map-checkbox" type="checkbox" class="switch" name="showmap" data-label-text="Show Map"  <%= get_map_checkbox %> />
       </label>
       </div>
-
-      <!--<button id="search-map-button" class="btn btn-default" type="button">-->
-        <!--Search visible map area-->
-      <!--</button>-->
 
 
       <div id="search-map-area" class="btn-group searchmap-group">
