@@ -48,12 +48,12 @@
               <tbody>
               <tr>
                 <th>Subject</th>
-                <td><%=@document["dc_subject_sm"] %></td>
+                <td><%=Array(@document["dc_subject_sm"]).join(", ") %></td>
               </tr>
 
               <tr>
                 <th>Keywords</th>
-                <td><%=@document["vn_keyword_sm"] %></td>
+                <td><%=Array(@document["vn_keyword_sm"]).join(", ") %></td>
               </tr>
 
               <tr>
@@ -68,7 +68,7 @@
 
               <tr>
                 <th>Species</th>
-                <td><%=@document["dwc_scientificname_sm"] %></td>
+                <td><%=Array(@document["dwc_scientificname_sm"]).join(", ") %></td>
               </tr>
 
               </tbody>

@@ -10,7 +10,7 @@
     <dd><%= @document["dc_alternate_sm"]%></dd>
 
     <dt>Author</dt>
-    <dd><%= @document["dc_creator_sm"]%></dd>
+    <dd><%= Array(@document["dc_creator_sm"]).join(", ")%></dd>
 
     <dt>Author Facet</dt>
     <dd><%= @document["dc_creator_facet"]%></dd>
@@ -19,7 +19,7 @@
     <dd><%= @document["dc_contributor_sm"]%></dd>
 
     <dt>Date</dt>
-    <dd><%= @document["dc_created_sm"]%></dd>
+    <dd><%= Array(@document["dc_created_sm"]).join(", ")%></dd>
 
     <dt>Data Type</dt>
     <dd><%= @document["dc_type_s"]%></dd>

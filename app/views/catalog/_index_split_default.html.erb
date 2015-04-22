@@ -29,7 +29,7 @@
     <ul class="meta-search">
       <li><i class="glyphicon glyphicon-tags"></i> <span><%= document[:dc_type_s] %></span></li>
       <li><i class="glyphicon glyphicon-file"></i> <span><%= Array(document[:vn_keyword_sm]).join(", ") %></span></li>
-      <li><i class="glyphicon glyphicon-calendar"></i> <span><%= document[:dc_created_sm] %></span></li>
+      <li><i class="glyphicon glyphicon-calendar"></i> <span><%= Array(document[:dc_created_sm]).join(", ") %></span></li>
       <li><i class="glyphicon glyphicon-map-marker"></i> <span><%= document[:layer_geom_type_s] %></span></li>
     </ul>
   </div>
