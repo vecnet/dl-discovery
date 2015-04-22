@@ -4,24 +4,24 @@
     <div id="map" class="map"></div>
   </div>
 
-  <div class="content col-xs-11 col-sm-11 col-md-11 col-lg-11">
+  <div id="content" class="content col-xs-11 col-sm-11 col-md-11 col-lg-11">
 
-    <%= render 'vndl_search_form' %>
 
-    <!--results list groups start-->
-
-    <!--render 'example_search_results'-->
-
-    <%=  %>
-
-    <!--results list group end-->
-
+    <% unless has_search_parameters? %>
+        <%# if there are no input/search related params, display the "home" partial %>
     <!--example front page text start-->
-
+        <%= render 'vndl_search_form' %>
     <%= render 'example_front_page_text' %>
 
     <!--example front page text end -->
+    <% else %>
 
+
+
+          <%= render 'search_results' %>
+
+
+        <% end %>
 
     <!--footer start-->
     <%= render 'shared/vndl_footer' %>

@@ -4,16 +4,18 @@
 
   .navbar-brand {
     background: transparent;
-    padding: 22px 0 5px 15px;
+    padding: 0px 0 0px 15px;
     width: 376px;
     height: 80px;
 
 
 //    TODO: Change this image size so no margin required - as screws responsive
     img {
-      height: 50px;
+      height: 66px;
+      position: absolute;
+      top: 7px;
       margin-right: 10px;
-      margin-left: -10px;
+      margin-left: -15px;
       vertical-align: middle;
       @media screen and (max-width: $screen-sm) {
         height: 26px;

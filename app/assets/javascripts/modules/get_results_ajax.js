@@ -11,6 +11,8 @@ function getResultsPage(queryString, start, length) {
 
             var queryString = $('form.vndl-search').serialize();
 
+            var newURL = '/?' + queryString;
+
             console.log('the serialized form is : ' + queryString);
 
             console.log("start of ajax search request");
@@ -31,7 +33,7 @@ function getResultsPage(queryString, start, length) {
             else {
                 // TODO: Redo this correctly
                 // some function that loads a result page that is the default page
-                document.location.href="/";
+                history.replaceState="?";
 
             }
 
@@ -39,6 +41,9 @@ function getResultsPage(queryString, start, length) {
 
             // inject DOMified search results into the vndl-results section of the current page
             $('.contentwrapper > .content').html(searchResultDOMElement);
+
+            // use the html5 history API to preserve the browser history and back button
+            history.pushState(null,null,newURL);
 
 
             // rerun the method to hijack the search form to prevent a new page load
