@@ -15,6 +15,8 @@ function changeFormSubmitEventToAjaxCall(formElement) {
 
 function searchFormSetup(formElement) {
 
+
+
     changeFormSubmitEventToAjaxCall(formElement);
 
     changeAnchorToUseAjax('a.paginate-next');
@@ -33,7 +35,7 @@ function searchFormSetup(formElement) {
     $("[name='showmap']").bootstrapSwitch();
 
 
-    // start the page with the map and switch turned off per Natalie
+    // start the page with the map and switch turned on per Natalie
     //$("[name='showmap']").bootstrapSwitch('toggleState');
     //window.vndl.theMap.show();
 
@@ -222,3 +224,4 @@ function setMapVisibility() {
         disable($('button[name=searchmap]'));
     }
 }
+//----------------------------------------------------------------------------------------------------------------------

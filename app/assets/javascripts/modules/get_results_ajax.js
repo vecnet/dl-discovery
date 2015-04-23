@@ -31,8 +31,7 @@ function getResultsPage(queryString, start, length) {
             }
 
             else {
-                // TODO: Redo this correctly
-                // some function that loads a result page that is the default page
+                // TODO: Redo this?
                 history.replaceState="?";
 
             }
@@ -48,6 +47,12 @@ function getResultsPage(queryString, start, length) {
 
             // rerun the method to hijack the search form to prevent a new page load
             searchFormSetup($('form.vndl-search'));
+
+
+
+            // TODO: NOT WORKING
+            // match the search box value to the query
+            changeValueOfSearchBoxToQuery(newURL);
 
 
             // chuck away the previous map markers
@@ -69,4 +74,39 @@ function getResultsPage(queryString, start, length) {
         .always(function () {
             console.log(" ajax search and load finished");
         });
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+
+// TODO: Not setting value correctly!
+function changeValueOfSearchBoxToQuery(newURL){
+
+    var params = getSearchParameters(newURL);
+
+    console.log("params q string is : " + params.q);
+
+    $('#catalog_search').attr('value',params.q);
+
+}
+//----------------------------------------------------------------------------------------------------------------------
+
+
+function getSearchParameters(newURL) {
+    var prmstr = window.location.search.substr(1);
+    var urlstr = newURL.substr(1);
+    //var urlstr = newURL.search.substr(1);
+    //return urlstr != null && urlstr != "" ? transformToAssocArray(urlstr) : {};
+    return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+}
+
+//----------------------------------------------------------------------------------------------------------------------
+
+function transformToAssocArray( urlstr ) {
+    var params = {};
+    var prmarr = urlstr.split("&");
+    for ( var i = 0; i < prmarr.length; i++) {
+        var tmparr = prmarr[i].split("=");
+        params[tmparr[0]] = tmparr[1];
+    }
+    return params;
 }

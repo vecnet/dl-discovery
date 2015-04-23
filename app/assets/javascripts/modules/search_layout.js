@@ -35,6 +35,9 @@ $(function () {
     searchFormSetup($('form.vndl-search'));
 
 
+
+
+
     // when the Blacklight adjusted bootstrap modal is loaded
     // attach the ajax events to it's add and remove facet links
     $('#ajax-modal').on('show.bs.modal', function(e) {
@@ -154,3 +157,5 @@ function makeHiddenInputElement($link) {
 
     $('#ajax-modal').modal('hide');
 }
+
+// ----------------------------------------------------------------------------

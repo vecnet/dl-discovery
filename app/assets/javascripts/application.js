@@ -30,4 +30,5 @@
 //= require modules/metadata_table
 //= require modules/leaflet.markercluster
 //= require modules/readmore.min
+//= require modules/jquery.scrollTo.min
 //= require_tree .

@@ -237,11 +237,8 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     newItem.link = link;
 
 
-    //
-    // find the placenames, if there are any
-    //
-    //var placenames = $r.find('[data-placename]').attr('data-placename');
-    //newItem.placenames = placenames;
+    // make markers be on top layer when hovered over
+    var markerOptions = {riseOnHover: 'true'};
 
     //
     // find any points
@@ -256,7 +253,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         for (var p = 0; p < pts.length; p++) {
             if (pts) {
                 newItem[uiType].points.push(
-                    new L.marker([pts[p][1], pts[p][0]])
+                    new L.marker([pts[p][1], pts[p][0]],markerOptions)
                 );
             }
             else {
@@ -410,9 +407,22 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         $r.addClass("vndl-results-highlight");
 
+
+
     }
 
-    //---
+
+    function scrollToResult(){
+
+
+        $('#content').scrollTo($r,2,{axis: 'y',interrupt: 'true'});
+
+        highlightResult();
+
+        // TODO: how to unhighlight on next click event?
+    }
+
+    //----------------------------
 
     function unHighlightResult() {
 
@@ -461,6 +471,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             // add event listeners for mouseover and mouseout
             marker.on({
                 mouseover: highlightResult,
+                click: scrollToResult,
                 mouseout: unHighlightResult
             });
 
