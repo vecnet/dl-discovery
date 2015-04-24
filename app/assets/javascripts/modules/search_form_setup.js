@@ -10,12 +10,15 @@ function changeFormSubmitEventToAjaxCall(formElement) {
 
         getResultsPage(queryString);
 
+        // use the html5 history API to preserve the browser history and back button
+        history.pushState(queryString,null,queryString);
+
+
+
     });
 }
 
 function searchFormSetup(formElement) {
-
-
 
     changeFormSubmitEventToAjaxCall(formElement);
 
@@ -169,8 +172,6 @@ function addClickEventToRemoveAppliedFacet($links) {
             var ParentButtonGroup = $newLink.closest("div[aria-label=location-filter]");
 
             ParentButtonGroup.remove();
-
-            //alert("about to trigger a form submit");
 
             console.log('remove facet link performed. trigger form submit next');
 

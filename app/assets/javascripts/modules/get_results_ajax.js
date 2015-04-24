@@ -41,18 +41,11 @@ function getResultsPage(queryString, start, length) {
             // inject DOMified search results into the vndl-results section of the current page
             $('.contentwrapper > .content').html(searchResultDOMElement);
 
-            // use the html5 history API to preserve the browser history and back button
-            history.pushState(null,null,newURL);
+
 
 
             // rerun the method to hijack the search form to prevent a new page load
             searchFormSetup($('form.vndl-search'));
-
-
-
-            // TODO: NOT WORKING
-            // match the search box value to the query
-            changeValueOfSearchBoxToQuery(newURL);
 
 
             // chuck away the previous map markers
@@ -76,18 +69,6 @@ function getResultsPage(queryString, start, length) {
         });
 }
 
-//----------------------------------------------------------------------------------------------------------------------
-
-// TODO: Not setting value correctly!
-function changeValueOfSearchBoxToQuery(newURL){
-
-    var params = getSearchParameters(newURL);
-
-    console.log("params q string is : " + params.q);
-
-    $('#catalog_search').attr('value',params.q);
-
-}
 //----------------------------------------------------------------------------------------------------------------------
 
 

@@ -6,6 +6,14 @@
 $(function () {
 
 
+    window.addEventListener('popstate', function(event) {
+        var state = event.state;
+
+        $(function(){
+
+            getResultsPage(state);
+        })
+    });
 
     // store the map reference in a global
     window.vndl = {};
@@ -33,8 +41,6 @@ $(function () {
     // and instead gets the user search and serialised form
     // and calls jqxhr getResultsPage
     searchFormSetup($('form.vndl-search'));
-
-
 
 
 
@@ -157,5 +163,4 @@ function makeHiddenInputElement($link) {
 
     $('#ajax-modal').modal('hide');
 }
-
 // ----------------------------------------------------------------------------
