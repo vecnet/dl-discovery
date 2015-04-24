@@ -215,25 +215,17 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         tertiary: {points: [], rectangles: [], titles: [], bounds: null}
     };
 
-    //
-    // find the id, if there is one
-    //
+    // find the id
     var id = $r.find('[data-layer-id]').attr('data-layer-id');
     newItem.id = id;
 
-
-    //
-    // find the title, if there is one
-    //
+    // find the title
     var title = $r.find('[data-title]').attr('data-title');
     newItem.title = title;
 
-    //
-    // find the catalog link, if there is one
-    //
+
+    // find the catalog link
     var link = $r.find('[data-link]').attr('href');
-    console.log(link);
-    //var link = linkEl.attr('href');
     newItem.link = link;
 
 
@@ -415,11 +407,11 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     function scrollToResult(){
 
 
-        $('#content').scrollTo($r,2,{axis: 'y',interrupt: 'true'});
+        $('#content').scrollTo($r,500,{axis: 'y',interrupt: 'true', duration: 500});
 
         highlightResult();
 
-        // TODO: how to unhighlight on next click event?
+        // TODO: un highlight on next click event?
     }
 
     //----------------------------
@@ -483,7 +475,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             console.log("item link for popup is : " + link);
 
             // Insert whatever you want into the container, using whichever approach you prefer
-            var container = $("<div> <h3 class='result-title'> <a href='' class='rectangleLink'>Click me</a> </div>");
+            var container = $("<div> <h3 class='result-title'> <a href='' class='rectangleLink'>Click me</a> </div> ");
 
             container.find('a').attr('href', link);
 
@@ -502,9 +494,9 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
             // Trying out cluster markers
-            markerClusterLayer.addLayer(marker);
 
-            map.addLayer(markerClusterLayer);
+                markerClusterLayer.addLayer(marker);
+                map.addLayer(markerClusterLayer);
 
 
 
