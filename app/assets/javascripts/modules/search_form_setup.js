@@ -10,8 +10,10 @@ function changeFormSubmitEventToAjaxCall(formElement) {
 
         getResultsPage(queryString);
 
+        var fullPathQueryString = "?" + queryString;
+
         // use the html5 history API to preserve the browser history and back button
-        history.pushState(queryString,null,queryString);
+        history.pushState(queryString,null,fullPathQueryString);
 
 
 

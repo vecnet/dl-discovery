@@ -37,11 +37,8 @@ function getResultsPage(queryString, start, length) {
             }
 
 
-
             // inject DOMified search results into the vndl-results section of the current page
             $('.contentwrapper > .content').html(searchResultDOMElement);
-
-
 
 
             // rerun the method to hijack the search form to prevent a new page load
