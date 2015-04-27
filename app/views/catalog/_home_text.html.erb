@@ -9,22 +9,22 @@
 
     <% unless has_search_parameters? %>
         <%# if there are no input/search related params, display the "home" partial %>
-    <!--example front page text start-->
+
         <%= render 'vndl_search_form' %>
-    <%= render 'example_front_page_text' %>
 
-    <!--example front page text end -->
+        <!--example front page text start-->
+        <%= render 'example_front_page_text' %>
+        <!--example front page text end -->
+
     <% else %>
-
-
 
           <%= render 'search_results' %>
 
+    <% end %>
 
-        <% end %>
-
-    <!--footer start-->
+    <!--footer partial start-->
     <%= render 'shared/vndl_footer' %>
+    <!--footer partial end-->
 
   </div>
   <!-- end of .content -->

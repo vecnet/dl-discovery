@@ -31,8 +31,8 @@ function getResultsPage(queryString, start, length) {
             }
 
             else {
-                // TODO: Redo this?
-                history.replaceState="?";
+                // TODO: Is this necessary since the example home text partial is rendered when no search params?
+                //history.replaceState="?";
 
             }
 

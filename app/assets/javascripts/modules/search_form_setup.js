@@ -10,6 +10,7 @@ function changeFormSubmitEventToAjaxCall(formElement) {
 
         getResultsPage(queryString);
 
+        // because servers understand URLs differently
         var fullPathQueryString = "?" + queryString;
 
         // use the html5 history API to preserve the browser history and back button
@@ -40,7 +41,7 @@ function searchFormSetup(formElement) {
     $("[name='showmap']").bootstrapSwitch();
 
 
-    // start the page with the map and switch turned on per Natalie
+    // start the page with the map and switch turned on per Natalie request
     //$("[name='showmap']").bootstrapSwitch('toggleState');
     //window.vndl.theMap.show();
 
@@ -207,8 +208,10 @@ function addSerialisedFormToHref($links) {
 
         // therefore : add a '?' prior to the append
 
+
         console.log('each respective link href will now be : ' + originalHref + '?' + serialisedForm);
 
+        debugger;
     });
 }
 //----------------------------------------------------------------------------------------------------------------------
