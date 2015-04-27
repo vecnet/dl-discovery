@@ -14,4 +14,25 @@
     </div>
 
     </fieldset>
+
+    <% else %>
+
+    <!--The applied params needs to be part of the form to update the modals -->
+    <!--but prefer display:hidden when only a text search since the value is visible above.-->
+
+    <fieldset>
+      <legend class="hidden col-md-2">Applied</legend>
+
+      <div class="col-md-10">
+
+        <div id="appliedParams" class="clearfix">
+
+          <%= render_constraints(params) %>
+
+        </div>
+
+      </div>
+
+    </fieldset>
+
 <% end %>

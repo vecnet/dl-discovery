@@ -208,10 +208,7 @@ function addSerialisedFormToHref($links) {
 
         // therefore : add a '?' prior to the append
 
-
         console.log('each respective link href will now be : ' + originalHref + '?' + serialisedForm);
-
-        debugger;
     });
 }
 //----------------------------------------------------------------------------------------------------------------------
