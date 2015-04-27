@@ -11,14 +11,22 @@
 
 //    TODO: Change this image size so no margin required - as screws responsive
     img {
-      height: 66px;
+      height: 87px;
       position: absolute;
       top: 7px;
       margin-right: 10px;
-      margin-left: -15px;
+      margin-left: -10px;
       vertical-align: middle;
+
+      // messing with shadows and outlines to match mockup
+      box-shadow: 0 0 3px $line-color;
+
+
       @media screen and (max-width: $screen-sm) {
         height: 26px;
+
+
+
       }
     }
   }

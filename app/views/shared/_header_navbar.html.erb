@@ -8,7 +8,10 @@
         <span class="icon-bar"></span>
       </button>
 
-      <%= link_to (image_tag 'dl-beta-brand-logo.png', {:"data-svg-fallback" => "#{image_path('dl-beta-brand-logo.png')}", :alt => 'Digital Library'}), root_path, :class => 'navbar-brand' %>
+      <%= link_to root_path, class: 'navbar-brand' do%>
+          <h1>VecNET Digital Library Beta</h1>
+          <%= image_tag 'original@87.png', alt: 'Digital Library' %>
+          <% end %>
     </div>
     
     <div class="collapse navbar-collapse" id="user-util-collapse">
