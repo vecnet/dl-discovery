@@ -160,17 +160,21 @@ class Geonames
     @cache.save
   end
 
+  def lookup_id(id)
+    result = @cache.lookup(id.to_s) do
+      result = load_feature_info(id)
+      @cache.insert(id.to_s, result)
+    end
+    result
+  end
+
   def lookup_name(place_name)
     id = @cache.lookup(place_name) do
       id = find_name_in_geonames(place_name)
       @cache.insert(place_name, id)
     end
     return {} if id.nil?
-    result = @cache.lookup(id.to_s) do
-      result = load_feature_info(id)
-      @cache.insert(id.to_s, result)
-    end
-    result
+    lookup_id(id)
   end
 
   private

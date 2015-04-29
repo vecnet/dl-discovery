@@ -21,7 +21,7 @@ class EnrichSolr
       @url = base_url + "/authorities/" + authority_name
       @cache = {}
     end
-    def get(term)
+    def lookup(term)
       info = @cache.fetch(term) do
         begin
           response = RestClient.get(@url, params: {q: term})
@@ -32,15 +32,19 @@ class EnrichSolr
         end
       end
       @cache[term] = info
+      info
+    end
+    def get_formatted(term)
+      info = self.lookup(term)
       return term, nil if info.nil?
-      return "#{term} [" + info['id'] + "]", info['hierarchy']
+      return "#{term} [#{info['id']}]", info['hierarchy']
     end
     def enrich_terms(terms)
       return nil, nil if terms.nil?
       new_term_list = []
       hierarchal_facets = []
       terms.each do |term|
-        label, h_facet = self.get(term)
+        label, h_facet = self.get_formatted(term)
         new_term_list << label
         hierarchal_facets << h_facet
       end
@@ -48,11 +52,27 @@ class EnrichSolr
     end
   end
 
+  class ZeroAuthorityCache
+    def lookup
+      nil
+    end
+    def enrich_terms(terms)
+      terms
+    end
+  end
+
   def initialize(cache_filename=nil, harvest_url=nil)
+    # look up place names and info from geonames
+    # But use the application authority to resolve place names into geonameids
     @geonames = Geonames.new(cache_filename)
     @harvest_url = harvest_url
-    @subjects = AuthorityCache.new(@harvest_url, 'subject-info')
-    @species = AuthorityCache.new(@harvest_url, 'species-info')
+    if @harvest_url
+      @subjects = AuthorityCache.new(@harvest_url, 'subject-info')
+      @species = AuthorityCache.new(@harvest_url, 'species-info')
+      @locations = AuthorityCache.new(@harvest_url, 'location-info')
+    else
+      @subjects = @species = @locations = ZeroAuthorityCache.new
+    end
   end
 
   def process_one(record_xml)
@@ -116,9 +136,12 @@ class EnrichSolr
       # these are required ATM for geoblacklight...
       layer_geom_type_s: 'Point'
     }
-    new_record.merge!(enrich_bounding_box(new_record[:dct_spatial_sm]))
-    new_record[:point_list_s] = enrich_multipoint(new_record[:dct_spatial_sm])
-    new_record[:dct_spatial_sm] = enrich_location_names(new_record[:dct_spatial_sm])
+    geoids = lookup_location_ids(new_record[:dct_spatial_sm])
+    new_record.merge!(enrich_bounding_box(geoids))
+    new_record[:point_list_s] = enrich_multipoint(geoids)
+    labels, h_facet = enrich_location_names(geoids)
+    new_record[:dct_spatial_sm] = labels
+    new_record[:dct_spatial_h_facet] = h_facet
 
     labels, h_facet = @subjects.enrich_terms(new_record[:dc_subject_sm])
     new_record[:dc_subject_sm] = labels
@@ -152,17 +175,38 @@ class EnrichSolr
 
   private
 
+  def lookup_location_ids(location_names)
+    # first try to look up the location on the harvest place. Then we look
+    # at geonames. Thus, the records in the discovery interface
+    # conservatively extend the DL records.
+    # return a list of tuples [place_name, geoid]. geoid may be nil.
+    return [] if location_names.nil?
+    location_names.map do |place|
+      info = @locations.lookup(place)
+      if info
+        [place, info['id']]
+      else
+        short_place = place.split(",").first
+        info = @geonames.lookup_name(short_place)
+        if info
+          [place, info['geonameId']]
+        else
+          [place, nil]
+        end
+      end
+    end
+  end
+
   # add all locations into a bounding box.
-  # todo: include spatial data in the bounding box
-  def enrich_bounding_box(location_names)
-    return {} if location_names.nil?
+  # todo: include raw spatial coordinate data in the bounding box
+  def enrich_bounding_box(geoids)
+    return {} if geoids.empty?
     bbox = Geonames::Bbox.new
-    location_names.each do |place|
-      place = place.split(",").first
-      info = @geonames.lookup_name(place)
-      if info.empty?
-        next
-      elsif info['bbox']
+    geoids.each do |_, id|
+      next if id.nil?
+      info = @geonames.lookup_id(id)
+      next if info.empty?
+      if info['bbox']
         bbox.add_bbox(info['bbox'])
       else
         bbox.add_point(info)
@@ -171,55 +215,54 @@ class EnrichSolr
 
     if bbox.valid?
       # nothing was added to this bounding box
-      new_record = {}
-    else
-      north = bbox.north
-      south = bbox.south
-      west = bbox.west
-      east = bbox.east
-      # solr does not like coordinates > 180 :(
-      east -= 360 if east > 180
-      # if Bbox is a point, enlarge it slightly so it is nicer.
-      if north == south
-        north += 0.1 if north <= 89.9
-        south -= 0.1 if south >= -89.9
-      end
-      if east == west
-        east += 0.1 if east <= 179.9
-        west -= 0.1 if west >= -179.9
-      end
-      new_record = {
-        "solr_bbox" => "#{west} #{south} #{east} #{north}",
-        "solr_geom" => "ENVELOPE(#{west}, #{east}, #{north}, #{south})",
-        "georss_box_s" => "#{south} #{west} #{north} #{east}",
-        #"georss_polygon_s" => "#{north} #{west} #{north} #{east} #{south} #{east} #{south} #{west} #{north} #{west}"
-      }
+      return {}
     end
-    new_record
+    north = bbox.north
+    south = bbox.south
+    west = bbox.west
+    east = bbox.east
+    # solr does not like coordinates > 180 :(
+    east -= 360 if east > 180
+    # if Bbox is a point, enlarge it slightly so it is nicer.
+    if north == south
+      north += 0.1 if north <= 89.9
+      south -= 0.1 if south >= -89.9
+    end
+    if east == west
+      east += 0.1 if east <= 179.9
+      west -= 0.1 if west >= -179.9
+    end
+    {
+      "solr_bbox" => "#{west} #{south} #{east} #{north}",
+      "solr_geom" => "ENVELOPE(#{west}, #{east}, #{north}, #{south})",
+      "georss_box_s" => "#{south} #{west} #{north} #{east}",
+      #"georss_polygon_s" => "#{north} #{west} #{north} #{east} #{south} #{east} #{south} #{west} #{north} #{west}"
+    }
   end
 
-  def enrich_multipoint(location_names)
-    return nil if location_names.nil?
-    point_list = []
-    location_names.each do |place|
-      place = place.split(",").first
-      info = @geonames.lookup_name(place)
-      next if info.nil? || info.empty?
-      point_list << info["lng"] + " " + info["lat"]
+  def enrich_multipoint(geoids)
+    return nil if geoids.empty?
+    point_list = geoids.map do |_, id|
+      next if id.nil?
+      info = @geonames.lookup_id(id)
+      info["lng"] + " " + info["lat"]
     end
 
     return nil if point_list.length == 0
     "MULTIPOINT(" + point_list.join(", ") + ")"
   end
 
-  def enrich_location_names(location_names)
-    return nil if location_names.nil?
-    better_place_names = location_names.map do |place|
-      short_place = place.split(",").first
-      info = @geonames.lookup_name(short_place)
-      if info.nil? || info.empty?
+  def enrich_location_names(geoids)
+    return nil if geoids.empty?
+    hierarchal_facets = []
+    better_place_names = geoids.map do |place, id|
+      info = @geonames.lookup_id(id) unless id.nil?
+      if id.nil? || info.nil? || info.empty?
         place
       else
+        _, h_facet = @locations.get_formatted(place)
+        hierarchal_facets << h_facet
+
         name = info['name']
         country = info['countryName']
         country = "(" + country + ")" if !country.nil?
@@ -228,7 +271,7 @@ class EnrichSolr
         "#{name} #{country} [#{geoid}/#{fcode}]"
       end
     end
-    better_place_names.uniq
+    return better_place_names.uniq, hierarchal_facets.flatten.compact.uniq
   end
 
   def children_full_text(child_noids)
