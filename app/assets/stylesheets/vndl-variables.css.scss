@@ -30,3 +30,7 @@ $fieldset-child-padding: 6px;
 // narrow button-y things in fieldsets can be in columns
 $column-width: 210px;
 
+//override some blacklight/geoblacklight defaults
+$logo_image: null;
+
+$font-family-betatag: Lato;
