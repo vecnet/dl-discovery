@@ -50,10 +50,8 @@
 .nav.navbar-nav > li > a {
   margin-left: 15px;
   margin-right: 15px;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 25.5px;
+  padding: 0px;
+  margin-top: 25.5px;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -67,7 +65,7 @@
 .navbar-brand-name {
 
   margin-left: 105px;
-  font-family: $font-family-sans-serif;
+  font-family: sans-serif;
   display: inline-block;
   color: white;
   //outline: solid 3px red;
@@ -83,3 +81,19 @@
 
 .superscript
 { position: relative; top: -0.5em; font-size: 120%; }
+
+.vecnet-home-link {
+  position: relative;
+  top: -3px;
+  border-radius: 2px;
+  color: #00a3bb;
+  opacity: 0.8;
+  padding-left: 3px;
+  padding-right: 3px;
+  //background-image: linear-gradient(to top, white, white 20px, #00a3bb 20px);
+}
+
+.vecnet-home-link:hover {
+  opacity: 1;
+  border-bottom: none;
+}

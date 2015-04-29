@@ -8,24 +8,17 @@
         <span class="icon-bar"></span>
       </button>
 
-      <a  href="#">
+      <a  href="<%= root_path %>">
         <div>
           <%= image_tag 'original@110.png', class: 'logo-image'%>
-
         </div>
-      </a>
       <h1 class="navbar-brand-name">Digital Library</h1><span><p class="superscript beta-tag">beta</p></span>
-
+      </a>
     </div>
 
 
     <div class="collapse navbar-collapse" id="user-util-collapse">
-      <!--<ul class="nav navbar-nav">-->
 
-
-        <!--<li><%= link_to "Digital Library", root_path, id: 'brand-text', class: 'navbar-brand-notrans' %></li>-->
-
-        <!--</ul>-->
 
       <%= render :partial=>'/shared/user_util_links' %>
     </div>

@@ -56,7 +56,6 @@
 
           <li><%= link_to "Contact", "#{vecnet_domain}/index.php/contact-us" %></li>
 
-          <li><%= link_to "VecNET", "#{vecnet_domain}" %></li>
 
 
 
@@ -65,6 +64,9 @@
           <% else -%>
               <li><%= link_to "Login", user_login_url(request.original_url) %></li>
           <% end -%>
+
+          <li><%= link_to (image_tag 'vecnet-logotype-trans.png' ), "#{vecnet_domain}", class:'vecnet-home-link' %></li>
+
 
         </ul>
     <% end -%>
