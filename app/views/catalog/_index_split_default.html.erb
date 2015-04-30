@@ -20,8 +20,17 @@
 
   <div class="col-xs-4 col-md-2">
     <!--TODO: Change this to be correct thumbnail url and logic if no url then default image-->
+
+    <% unless document[:vn_thumnbnail_s].blank? %>
+
+        <a href="#" title="Lorem ipsum" class="thumbnail"><img src="<%= document[:vn_thumnbnail_s]%>" alt="Lorem ipsum"/></a>
+
+  <% else %>
+
     <a href="#" title="Lorem ipsum" class="thumbnail"><img src="<%= asset_path('example-thumbnail.png')%>" alt="Lorem ipsum"/></a>
-  </div>
+
+        <% end %>
+        </div>
 
   <!--<a href="#" title="Lorem ipsum" class="thumbnail"><i class="glyphicon glyphicon-file"></i></a>-->
   <!--</div>-->
