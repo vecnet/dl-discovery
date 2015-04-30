@@ -11,15 +11,39 @@
           </li>
 
 
-          <% if has_user_authentication_provider? and current_user %>
-              <li>
-                <%= link_to t('blacklight.header_links.saved_searches'), saved_searches_path %>
-              </li>
 
-          <% end %>
-          <li>
-            <%= link_to t('blacklight.header_links.search_history'), search_history_path %>
+          <li class="dropdown">
+            <% vecnet_domain = 'https://www.vecnet.org'
+               ci_domain = 'https://ci.vecnet.org'
+            -%>
+            <a href="#" class="menu-dropdown dropdown-toggle" data-toggle="dropdown">Searches<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li>
+                <%= link_to t('blacklight.header_links.search_history'), search_history_path %>
+              </li>
+              <% if has_user_authentication_provider? and current_user %>
+                  <li>
+                    <%= link_to t('blacklight.header_links.saved_searches'), saved_searches_path %>
+                  </li>
+
+              <% end %>
+
+              <% if render_bookmarks_control? %>
+                  <li>
+                    <%= link_to bookmarks_path, id:'bookmarks_nav' do %>
+                        <%= t('blacklight.header_links.bookmarks') %>
+                        (<span data-role='bookmark-counter'><%= current_or_guest_user.bookmarks.count %></span>)
+                    <% end %>
+                  </li>
+              <% end %>
+            </ul>
           </li>
+
+
+
+
+
+
 
 
           <li class="dropdown">
@@ -72,24 +96,4 @@
     <% end -%>
   </div>
 
-
-
-
-
-
-
-
-  <ul class="nav navbar-nav">
-
-    <% if render_bookmarks_control? %>
-    <li>
-      <%= link_to bookmarks_path, id:'bookmarks_nav' do %>
-      <%= t('blacklight.header_links.bookmarks') %>
-      (<span data-role='bookmark-counter'><%= current_or_guest_user.bookmarks.count %></span>)
-      <% end %>
-    </li>
-    <% end %>
-
-
-  </ul>
 </div>

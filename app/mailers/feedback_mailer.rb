@@ -19,7 +19,7 @@ class FeedbackMailer < ActionMailer::Base
     @viewport = params[:viewport]
 
     mail(to: Settings.EMAIL_TO,
-         subject: 'Feedback from EarthWorks',
+         subject: 'Feedback from VecNET Digital Library Beta',
          from: 'feedback@vecnet.org',
          reply_to: Settings.EMAIL_TO)
   end
