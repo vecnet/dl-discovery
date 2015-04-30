@@ -20,7 +20,7 @@ class FeedbackMailer < ActionMailer::Base
 
     mail(to: Settings.EMAIL_TO,
          subject: 'Feedback for VecNET Digital Library Beta',
-         from: 'feedback@vecnet.zohosupport.com',
+         from: 'support@vecnet.zohosupport.com',
          reply_to: Settings.EMAIL_TO)
   end
 end
