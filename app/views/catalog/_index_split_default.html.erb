@@ -27,9 +27,9 @@
   <!--</div>-->
   <div class="col-xs-8 col-md-2">
     <ul class="meta-search">
-      <li><i class="glyphicon glyphicon-time"></i> <span><%= Array(document[:dc_created_sm]).join(", ") %></span></li>
-      <li><i class="glyphicon glyphicon-file"></i> <span><%= document[:dc_type_s] %></span></li>
-      <li><i class="glyphicon glyphicon-tags"></i> <span><%= Array(document[:vn_keyword_sm]).join(", ") %></span></li>
+      <% unless document[:dc_created_sm].blank? %><li><i class="glyphicon glyphicon-time"></i> <span><%= Array(document[:dc_created_sm]).join(", ") %></span></li><% end %>
+      <% unless document[:dc_type_s].blank? %><li><i class="glyphicon glyphicon-file"></i> <span><%= document[:dc_type_s] %></span></li> <% end %>
+      <% unless document[:vn_keyword_sm].blank? %> <li><i class="glyphicon glyphicon-tags"></i> <span> <%= Array(document[:vn_keyword_sm]).join(", ") %> </span></li> <% end %>
       <li><i class="glyphicon glyphicon-map-marker"></i> <span><%= document[:layer_geom_type_s] %></span></li>
     </ul>
   </div>
