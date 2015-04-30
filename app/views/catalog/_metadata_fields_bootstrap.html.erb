@@ -37,17 +37,17 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <table class="table table-striped" id="subject-table">
+            <table class="table-bordered table table-striped" id="subject-table">
               <thead>
               <tr>
-                <th></th>
-                <th></th>
+                <th>Field</th>
+                <th>Value</th>
 
               </tr>
               </thead>
               <tbody>
               <tr>
-                <th>Subject</th>
+                <th style="width:10%">Subject</th>
                 <td><%=Array(@document["dc_subject_sm"]).join(", ") %></td>
               </tr>
 
@@ -83,18 +83,18 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <table class="table table-striped" id="rights-table">
+            <table class="fixed-table-layout table table-bordered table-striped" id="rights-table">
               <thead>
               <tr>
-                <th></th>
-                <th></th>
+                <th>Field</th>
+                <th>Value</th>
 
               </tr>
               </thead>
               <tbody>
 
               <tr>
-                <th>Intellectual Rights</th>
+                <th style="width:10%">Intellectual Rights</th>
                 <td><%= @document["dc_rights_s"] %></td>
               </tr>
 
@@ -126,18 +126,18 @@
 
         <div class="row">
           <div class="col-lg-12">
-            <table class="table table-striped" id="record-table">
+            <table class="fixed-table-layout table table-striped table-bordered" id="record-table">
               <thead>
               <tr>
-                <th></th>
-                <th></th>
+                <th>Field</th>
+                <th>Value</th>
 
               </tr>
               </thead>
               <tbody>
 
               <tr>
-                <th>Resource Type</th>
+                <th style="width:10%">Resource Type</th>
                 <td><%= @document["dc_type_s"] %></td>
               </tr>
 

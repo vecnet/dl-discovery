@@ -8,6 +8,18 @@ dd[itemprop='url'] a {
   min-height: 1em; // this hack is due to a strange bootstrap clearfix issue (https://github.com/twbs/bootstrap/issues/4062)
 }
 
+
+.fixed-table-layout {
+
+  .table {
+    table-layout: fixed;
+  }
+  table th {
+   width: 10%
+  } table td {
+  }
+
+}
 .metadata {
   .row{
     margin-top:40px;
