@@ -74,6 +74,7 @@ class CatalogController < ApplicationController
     config.add_facet_field 'dc_publisher_s', label: 'Publisher', limit: 6
     #config.add_facet_field 'dc_subject_h_facet'
     #config.add_facet_field 'dwc_scientificname_h_facet'
+    #config.add_facet_field 'dct_spatial_h_facet'
 
     # config.add_facet_field 'layer_availability_score_f', :label => 'Availability', :query => {
     #   offline: { label: 'Offline', fq: "layer_availability_score_f:[0 TO #{Settings.GEOMONITOR_TOLERANCE}]" },

@@ -74112,5 +74112,5208 @@
     "toponymName": "Ban Plaeng Yao",
     "fcl": "P",
     "continentCode": "AS"
+  },
+  "1619601": {
+    "adminCode2": "1619601",
+    "alternateNames": [
+      {
+        "name": "อำเภอบางบัวทอง",
+        "lang": "th"
+      },
+      {
+        "name": "Amphoe Bang Bua Thong"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Bang_Bua_Thong_District",
+        "lang": "link"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "38",
+    "lng": "100.3936",
+    "adminName2": "Amphoe Bang Bua Thong",
+    "fcodeName": "second-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Amphoe Bang Bua Thong",
+    "fcode": "ADM2",
+    "geonameId": 1619601,
+    "asciiName": "Amphoe Bang Bua Thong",
+    "lat": "13.92641",
+    "population": 0,
+    "adminName1": "Nonthaburi",
+    "adminId1": "1608132",
+    "countryId": "1605651",
+    "fclName": "country, state, region,...",
+    "countryCode": "TH",
+    "srtm3": 4,
+    "adminId2": "1619601",
+    "wikipediaURL": "en.wikipedia.org/wiki/Bang_Bua_Thong_District",
+    "toponymName": "Amphoe Bang Bua Thong",
+    "fcl": "A",
+    "continentCode": "AS"
+  },
+  "Bang Bua Thong": 1619602,
+  "1619602": {
+    "timezone": {
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok",
+      "dstOffset": 7
+    },
+    "bbox": {
+      "east": 100.45104491511154,
+      "south": 13.891612233385647,
+      "north": 13.944053766614353,
+      "west": 100.39701108488848
+    },
+    "asciiName": "Bang Bua Thong",
+    "countryId": "1605651",
+    "fcl": "P",
+    "srtm3": 5,
+    "countryCode": "TH",
+    "adminId1": "1608132",
+    "lat": "13.91783",
+    "fcode": "PPL",
+    "continentCode": "AS",
+    "adminCode1": "38",
+    "lng": "100.42403",
+    "geonameId": 1619602,
+    "toponymName": "Bang Bua Thong",
+    "population": 41567,
+    "adminName5": "",
+    "adminName4": "",
+    "adminName3": "",
+    "alternateNames": [
+      {
+        "name": "บางบัวทอง"
+      },
+      {
+        "name": "Amphoe Bang Bua Thong"
+      },
+      {
+        "name": "Bang Bua Thong"
+      }
+    ],
+    "adminName2": "",
+    "name": "Bang Bua Thong",
+    "fclName": "city, village,...",
+    "countryName": "Thailand",
+    "fcodeName": "populated place",
+    "adminName1": "Nonthaburi"
+  },
+  "2243266": {
+    "alternateNames": [
+      {
+        "name": "카빈다 주",
+        "lang": "ko"
+      },
+      {
+        "name": "カビンダ",
+        "lang": "ja"
+      },
+      {
+        "name": "Angola_-_Cabinda.svg|miniatyr|Kabinda",
+        "lang": "fil"
+      },
+      {
+        "isShortName": true,
+        "name": "Cabinda",
+        "lang": "en"
+      },
+      {
+        "name": "Cabinda Bölgesi",
+        "lang": "tr"
+      },
+      {
+        "name": "Cabinda Province",
+        "lang": "en"
+      },
+      {
+        "name": "Distrito de Cabinda"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Cabinda_Province",
+        "lang": "link"
+      },
+      {
+        "name": "http://ru.wikipedia.org/wiki/%D0%9A%D0%B0%D0%B1%D0%B8%D0%BD%D0%B4%D0%B0",
+        "lang": "link"
+      },
+      {
+        "name": "Kabinda"
+      },
+      {
+        "name": "Kabindo",
+        "lang": "eo"
+      },
+      {
+        "name": "Provincia Cabinda",
+        "lang": "ro"
+      },
+      {
+        "name": "Província de Cabinda"
+      },
+      {
+        "name": "Provincia di Cabinda",
+        "lang": "it"
+      },
+      {
+        "name": "Provinsi Cabinda",
+        "lang": "id"
+      },
+      {
+        "name": "Provinz Cabinda",
+        "lang": "de"
+      },
+      {
+        "name": "Prowincja Kabinda",
+        "lang": "pl"
+      },
+      {
+        "name": "مقاطعة كابيندا",
+        "lang": "ar"
+      },
+      {
+        "name": "קבינדה",
+        "lang": "he"
+      },
+      {
+        "name": "Вилояти Кабинда",
+        "lang": "tg"
+      },
+      {
+        "name": "Кабинда",
+        "lang": "bg"
+      },
+      {
+        "name": "Кабинда",
+        "lang": "ru"
+      },
+      {
+        "name": "Кабинда",
+        "lang": "sr"
+      },
+      {
+        "name": "Кабінда",
+        "lang": "uk"
+      },
+      {
+        "name": "Правінцыя Кабінда",
+        "lang": "be"
+      },
+      {
+        "name": "喀丙達省",
+        "lang": "zh"
+      }
+    ],
+    "countryName": "Angola",
+    "adminCode1": "03",
+    "lng": "12.40532",
+    "adminName2": "",
+    "fcodeName": "first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 1,
+      "gmtOffset": 1,
+      "timeZoneId": "Africa/Luanda"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -5.768555641174316,
+      "east": 13.092777252197266,
+      "north": -4.388991355895996,
+      "west": 12.017221450805664
+    },
+    "name": "Cabinda",
+    "fcode": "ADM1",
+    "geonameId": 2243266,
+    "asciiName": "Cabinda",
+    "lat": "-4.93423",
+    "population": 0,
+    "adminName1": "Cabinda",
+    "adminId1": "2243266",
+    "countryId": "3351879",
+    "fclName": "country, state, region,...",
+    "countryCode": "AO",
+    "srtm3": 91,
+    "wikipediaURL": "en.wikipedia.org/wiki/Cabinda_Province",
+    "toponymName": "Cabinda",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "7701501": {
+    "adminCode2": "7701501",
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/Kita_Cercle",
+        "lang": "link"
+      },
+      {
+        "name": "Kita"
+      }
+    ],
+    "countryName": "Mali",
+    "adminCode1": "03",
+    "lng": "-9.39713",
+    "adminName2": "Kita Cercle",
+    "fcodeName": "second-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 0,
+      "gmtOffset": 0,
+      "timeZoneId": "Africa/Bamako"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Kita Cercle",
+    "fcode": "ADM2",
+    "geonameId": 7701501,
+    "asciiName": "Kita Cercle",
+    "lat": "13.28205",
+    "population": 0,
+    "adminName1": "Kayes",
+    "adminId1": "2455517",
+    "countryId": "2453866",
+    "fclName": "country, state, region,...",
+    "countryCode": "ML",
+    "srtm3": 364,
+    "adminId2": "7701501",
+    "wikipediaURL": "en.wikipedia.org/wiki/Kita_Cercle",
+    "toponymName": "Kita Cercle",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "199987": {
+    "alternateNames": [
+      {
+        "name": "Busia"
+      },
+      {
+        "name": "Busia District"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Busia_District%2C_Kenya",
+        "lang": "link"
+      }
+    ],
+    "countryName": "Kenya",
+    "adminCode1": "13",
+    "lng": "34.17",
+    "adminName2": "",
+    "fcodeName": "first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Nairobi"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -0.030042250679233,
+      "east": 34.43494178148318,
+      "north": 0.775438706320754,
+      "west": 33.91089392948316
+    },
+    "name": "Busia",
+    "fcode": "ADM1",
+    "geonameId": 199987,
+    "asciiName": "Busia District",
+    "lat": "0.35",
+    "population": 488075,
+    "adminName1": "Busia",
+    "adminId1": "199987",
+    "countryId": "192950",
+    "fclName": "country, state, region,...",
+    "countryCode": "KE",
+    "srtm3": 1211,
+    "wikipediaURL": "en.wikipedia.org/wiki/Busia_District%2C_Kenya",
+    "toponymName": "Busia",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "1066310": {
+    "alternateNames": [
+      {
+        "name": "Betioky",
+        "lang": "en"
+      },
+      {
+        "name": "Betioky",
+        "lang": "fr"
+      },
+      {
+        "name": "Betioky"
+      },
+      {
+        "name": "BKU",
+        "lang": "iata"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Betioky",
+        "lang": "link"
+      }
+    ],
+    "countryName": "Madagascar",
+    "adminCode1": "7670913",
+    "lng": "44.38069",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Indian/Antananarivo"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -23.743134767885252,
+      "east": 44.405243352268435,
+      "north": -23.69816652412812,
+      "west": 44.35613398232629
+    },
+    "name": "Betioky",
+    "fcode": "PPL",
+    "geonameId": 1066310,
+    "asciiName": "Betioky",
+    "lat": "-23.72065",
+    "population": 31102,
+    "adminName1": "Atsimo-Andrefana",
+    "adminId1": "7670913",
+    "countryId": "1062947",
+    "fclName": "city, village,...",
+    "countryCode": "MG",
+    "srtm3": 257,
+    "wikipediaURL": "en.wikipedia.org/wiki/Betioky",
+    "toponymName": "Betioky",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "931070": {
+    "adminCode2": "02",
+    "alternateNames": [
+      {
+        "name": "Chikwawa",
+        "lang": "de"
+      },
+      {
+        "name": "Chikwawa",
+        "lang": "en"
+      },
+      {
+        "name": "Chikwawa",
+        "lang": "sv"
+      },
+      {
+        "name": "Chikwawa"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Chikwawa",
+        "lang": "link"
+      }
+    ],
+    "countryName": "Malawi",
+    "adminCode1": "S",
+    "lng": "34.80091",
+    "adminName2": "Chikwawa",
+    "fcodeName": "seat of a second-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Blantyre"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -16.043577745022997,
+      "east": 34.8113726034385,
+      "north": -16.02346733504905,
+      "west": 34.79044929597556
+    },
+    "name": "Chikwawa",
+    "fcode": "PPLA2",
+    "geonameId": 931070,
+    "asciiName": "Chikwawa",
+    "lat": "-16.03352",
+    "population": 6987,
+    "adminName1": "Southern Region",
+    "adminId1": "923817",
+    "countryId": "927384",
+    "fclName": "city, village,...",
+    "countryCode": "MW",
+    "srtm3": 106,
+    "adminId2": "931067",
+    "wikipediaURL": "en.wikipedia.org/wiki/Chikwawa",
+    "toponymName": "Chikwawa",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "2449066": {
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/Tombouctou_Region",
+        "lang": "link"
+      },
+      {
+        "name": "Région de Tombouctou"
+      },
+      {
+        "name": "Region VI"
+      },
+      {
+        "name": "Sixth Region"
+      },
+      {
+        "isShortName": true,
+        "name": "Tombouctou",
+        "isPreferredName": true,
+        "lang": "en"
+      },
+      {
+        "name": "Tombouctou Region"
+      }
+    ],
+    "countryName": "Mali",
+    "adminCode1": "08",
+    "lng": "-3.6",
+    "adminName2": "",
+    "fcodeName": "first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 0,
+      "gmtOffset": 0,
+      "timeZoneId": "Africa/Bamako"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Tombouctou",
+    "fcode": "ADM1",
+    "geonameId": 2449066,
+    "asciiName": "Tombouctou Region",
+    "lat": "19.7",
+    "population": 681691,
+    "adminName1": "Tombouctou",
+    "adminId1": "2449066",
+    "countryId": "2453866",
+    "fclName": "country, state, region,...",
+    "countryCode": "ML",
+    "srtm3": 277,
+    "wikipediaURL": "en.wikipedia.org/wiki/Tombouctou_Region",
+    "toponymName": "Tombouctou Region",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "7690210": {
+    "timezone": {
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Kigali",
+      "dstOffset": 2
+    },
+    "asciiName": "Rutsiro District",
+    "countryId": "49518",
+    "fcl": "A",
+    "srtm3": 1714,
+    "adminId2": "7690210",
+    "countryCode": "RW",
+    "adminId1": "6413340",
+    "lat": "-1.9145",
+    "fcode": "ADM2",
+    "continentCode": "AF",
+    "adminCode2": "7690210",
+    "adminCode1": "14",
+    "lng": "29.31507",
+    "geonameId": 7690210,
+    "toponymName": "Rutsiro District",
+    "population": 0,
+    "wikipediaURL": "en.wikipedia.org/wiki/Rutsiro_District",
+    "adminName5": "",
+    "adminName4": "",
+    "adminName3": "",
+    "alternateNames": [
+      {
+        "name": "Akarere ka Rutsiro",
+        "lang": "rw"
+      },
+      {
+        "name": "District de Rutsiro",
+        "lang": "fr"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Rutsiro_District",
+        "lang": "link"
+      },
+      {
+        "name": "Rutsiro"
+      },
+      {
+        "name": "Rutsiro District",
+        "lang": "en"
+      }
+    ],
+    "adminName2": "Rutsiro District",
+    "name": "Rutsiro District",
+    "fclName": "country, state, region,...",
+    "countryName": "Rwanda",
+    "fcodeName": "second-order administrative division",
+    "adminName1": "Western Province"
+  },
+  "913029": {
+    "timezone": {
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Lusaka",
+      "dstOffset": 2
+    },
+    "bbox": {
+      "east": 28.69565094802789,
+      "south": -13.996505349655832,
+      "north": -13.946430832645826,
+      "west": 28.644055472870548
+    },
+    "asciiName": "Kapiri Mposhi",
+    "countryId": "895949",
+    "fcl": "P",
+    "srtm3": 1265,
+    "countryCode": "ZM",
+    "adminId1": "921064",
+    "lat": "-13.97147",
+    "fcode": "PPL",
+    "continentCode": "AF",
+    "adminCode1": "02",
+    "lng": "28.66985",
+    "geonameId": 913029,
+    "toponymName": "Kapiri Mposhi",
+    "population": 37942,
+    "wikipediaURL": "en.wikipedia.org/wiki/Kapiri_Mposhi",
+    "adminName5": "",
+    "adminName4": "",
+    "adminName3": "",
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/Kapiri_Mposhi",
+        "lang": "link"
+      },
+      {
+        "name": "Kapiri Imposhi"
+      },
+      {
+        "name": "Kapiri Mposhi"
+      }
+    ],
+    "adminName2": "",
+    "name": "Kapiri Mposhi",
+    "fclName": "city, village,...",
+    "countryName": "Zambia",
+    "fcodeName": "populated place",
+    "adminName1": "Central"
+  },
+  "Omnhenene": null,
+  "Côte d’Ivoire": 2287781,
+  "Jimma": 333772,
+  "333772": {
+    "timezone": {
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Addis_Ababa",
+      "dstOffset": 3
+    },
+    "bbox": {
+      "east": 36.8800533261808,
+      "south": 7.6203693594169915,
+      "north": 7.712964640583009,
+      "west": 36.78661267381921
+    },
+    "asciiName": "Jima",
+    "countryId": "337996",
+    "fcl": "P",
+    "srtm3": 1716,
+    "countryCode": "ET",
+    "adminId1": "444185",
+    "lat": "7.66667",
+    "fcode": "PPL",
+    "continentCode": "AF",
+    "adminCode1": "51",
+    "lng": "36.83333",
+    "geonameId": 333772,
+    "toponymName": "Jīma",
+    "population": 128306,
+    "wikipediaURL": "en.wikipedia.org/wiki/Jimma",
+    "adminName5": "",
+    "adminName4": "",
+    "adminName3": "",
+    "alternateNames": [
+      {
+        "name": "Djimma"
+      },
+      {
+        "name": "Gima"
+      },
+      {
+        "name": "Gimma"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Jimma",
+        "lang": "link"
+      },
+      {
+        "name": "JIM",
+        "lang": "iata"
+      },
+      {
+        "name": "Jīma"
+      },
+      {
+        "name": "Jimma"
+      }
+    ],
+    "adminName2": "",
+    "name": "Jīma",
+    "fclName": "city, village,...",
+    "countryName": "Ethiopia",
+    "fcodeName": "populated place",
+    "adminName1": "Oromiya"
+  },
+  "Anakazobe": null,
+  "Caprivi": 1090052,
+  "1090052": {
+    "alternateNames": [
+      {
+        "isShortName": true,
+        "name": "Caprivi",
+        "isHistoric": true
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Zambezi_Region",
+        "lang": "link"
+      },
+      {
+        "name": "Liambezi"
+      },
+      {
+        "isShortName": true,
+        "name": "Zambezi"
+      },
+      {
+        "name": "Zambezi Region"
+      }
+    ],
+    "countryName": "Namibia",
+    "adminCode1": "28",
+    "lng": "23.75",
+    "adminName2": "",
+    "fcodeName": "first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 1,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Windhoek"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -18.489878872999896,
+      "east": 25.262804432000053,
+      "north": -17.46895218099985,
+      "west": 22.498316895948733
+    },
+    "name": "Zambezi Region",
+    "fcode": "ADM1",
+    "geonameId": 1090052,
+    "asciiName": "Zambezi Region",
+    "lat": "-17.83333",
+    "population": 0,
+    "adminName1": "Zambezi",
+    "adminId1": "1090052",
+    "countryId": "3355338",
+    "fclName": "country, state, region,...",
+    "countryCode": "NA",
+    "srtm3": 958,
+    "wikipediaURL": "en.wikipedia.org/wiki/Zambezi_Region",
+    "toponymName": "Zambezi Region",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "Ndumu": 971696,
+  "971696": {
+    "adminCode3": "KZN272",
+    "alternateNames": [
+
+    ],
+    "adminCode2": "DC27",
+    "countryName": "South Africa",
+    "adminCode1": "02",
+    "lng": "32.28462",
+    "adminName2": "uMkhanyakude District Municipality",
+    "fcodeName": "hill",
+    "adminName3": "Jozini",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Johannesburg"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Ndumu",
+    "fcode": "HLL",
+    "geonameId": 971696,
+    "asciiName": "Ndumu",
+    "lat": "-26.92175",
+    "population": 0,
+    "adminName1": "KwaZulu-Natal",
+    "adminId1": "972062",
+    "countryId": "953987",
+    "fclName": "mountain,hill,rock,... ",
+    "countryCode": "ZA",
+    "srtm3": 176,
+    "adminId3": "8347448",
+    "adminId2": "8347388",
+    "toponymName": "Ndumu",
+    "fcl": "T",
+    "continentCode": "AF"
+  },
+  "Thomo": 923683,
+  "923683": {
+    "adminCode2": "28",
+    "alternateNames": [
+
+    ],
+    "countryName": "Malawi",
+    "adminCode1": "S",
+    "lng": "35.53333",
+    "adminName2": "Machinga",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Blantyre"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -14.758993648751426,
+      "east": 35.54263274152623,
+      "north": -14.741006351248574,
+      "west": 35.524033258473764
+    },
+    "name": "Thomo",
+    "fcode": "PPL",
+    "geonameId": 923683,
+    "asciiName": "Thomo",
+    "lat": "-14.75",
+    "population": 0,
+    "adminName1": "Southern Region",
+    "adminId1": "923817",
+    "countryId": "927384",
+    "fclName": "city, village,...",
+    "countryCode": "MW",
+    "srtm3": 826,
+    "adminId2": "927642",
+    "toponymName": "Thomo",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "Chabona": null,
+  "2282494": {
+    "alternateNames": [
+      {
+        "name": "Péténarha"
+      },
+      {
+        "name": "Pétionara"
+      },
+      {
+        "name": "Pétyonara"
+      }
+    ],
+    "countryName": "Ivory Coast",
+    "adminCode1": "90",
+    "lng": "-5.11429",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 0,
+      "gmtOffset": 0,
+      "timeZoneId": "Africa/Abidjan"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 8.421648351248574,
+      "east": -5.105198893163062,
+      "north": 8.439635648751427,
+      "west": -5.123383106836937
+    },
+    "name": "Pétyonara",
+    "fcode": "PPL",
+    "geonameId": 2282494,
+    "asciiName": "Petyonara",
+    "lat": "8.43064",
+    "population": 0,
+    "adminName1": "Vallée du Bandama",
+    "adminId1": "2597321",
+    "countryId": "2287781",
+    "fclName": "city, village,...",
+    "countryCode": "CI",
+    "srtm3": 281,
+    "toponymName": "Pétyonara",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "184989": {
+    "alternateNames": [
+
+    ],
+    "countryName": "Kenya",
+    "adminCode1": "15",
+    "lng": "37.48333",
+    "adminName2": "",
+    "fcodeName": "administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Nairobi"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Mwea Location",
+    "fcode": "ADMD",
+    "geonameId": 184989,
+    "asciiName": "Mwea Location",
+    "lat": "-0.75",
+    "population": 0,
+    "adminName1": "Embu",
+    "countryId": "192950",
+    "adminId1": "198474",
+    "fclName": "country, state, region,...",
+    "countryCode": "KE",
+    "srtm3": 1093,
+    "toponymName": "Mwea Location",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "7873983": {
+    "adminCode2": "7873983",
+    "alternateNames": [
+
+    ],
+    "countryName": "Mozambique",
+    "adminCode1": "04",
+    "lng": "32.389",
+    "adminName2": "Boane District",
+    "fcodeName": "second-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Maputo"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Boane District",
+    "fcode": "ADM2",
+    "geonameId": 7873983,
+    "asciiName": "Boane District",
+    "lat": "-26.029",
+    "population": 0,
+    "adminName1": "Maputo",
+    "adminId1": "1040649",
+    "countryId": "1036973",
+    "fclName": "country, state, region,...",
+    "countryCode": "MZ",
+    "srtm3": 15,
+    "adminId2": "7873983",
+    "toponymName": "Boane District",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "3355338": {
+    "alternateNames": [
+      {
+        "name": "ናሚቢያ",
+        "lang": "am"
+      },
+      {
+        "name": "ናሚቢያ",
+        "isPreferredName": true,
+        "lang": "ti"
+      },
+      {
+        "name": "ナミビア",
+        "lang": "ja"
+      },
+      {
+        "name": "나미비아",
+        "lang": "ko"
+      },
+      {
+        "name": "ନାମ୍ବିଆ",
+        "isPreferredName": true,
+        "lang": "or"
+      },
+      {
+        "name": "ນາມິເບຍ",
+        "lang": "lo"
+      },
+      {
+        "name": "ណាមីប៊ី",
+        "lang": "km"
+      },
+      {
+        "name": "นามิเบีย",
+        "lang": "th"
+      },
+      {
+        "name": "ན་མི་བི་ཡ།",
+        "isPreferredName": true,
+        "lang": "bo"
+      },
+      {
+        "name": "ประเทศนามิเบีย",
+        "lang": "th"
+      },
+      {
+        "name": "An Namaib",
+        "lang": "ga"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Namibia",
+        "lang": "link"
+      },
+      {
+        "name": "http://id.loc.gov/authorities/names/n79039884",
+        "lang": "link"
+      },
+      {
+        "name": "http://ru.wikipedia.org/wiki/%D0%9D%D0%B0%D0%BC%D0%B8%D0%B1%D0%B8%D1%8F",
+        "lang": "link"
+      },
+      {
+        "name": "i-Namibia",
+        "isPreferredName": true,
+        "lang": "zu"
+      },
+      {
+        "name": "Namibhiya",
+        "isPreferredName": true,
+        "lang": "nd"
+      },
+      {
+        "name": "Namibi",
+        "isPreferredName": true,
+        "lang": "bm"
+      },
+      {
+        "name": "Namibi",
+        "lang": "kw"
+      },
+      {
+        "name": "Namibi",
+        "isPreferredName": true,
+        "lang": "ln"
+      },
+      {
+        "name": "Namibi",
+        "isPreferredName": true,
+        "lang": "lu"
+      },
+      {
+        "name": "Namibi",
+        "lang": "sq"
+      },
+      {
+        "name": "Namibia",
+        "isPreferredName": true,
+        "lang": "ak"
+      },
+      {
+        "name": "Namibia",
+        "lang": "an"
+      },
+      {
+        "name": "Namibia",
+        "lang": "ang"
+      },
+      {
+        "name": "Namibia",
+        "lang": "ast"
+      },
+      {
+        "name": "Namibia",
+        "isPreferredName": true,
+        "lang": "br"
+      },
+      {
+        "name": "Namibia",
+        "lang": "cy"
+      },
+      {
+        "name": "Namibia",
+        "lang": "da"
+      },
+      {
+        "name": "Namibia",
+        "lang": "de"
+      },
+      {
+        "name": "Namibia",
+        "lang": "en"
+      },
+      {
+        "isShortName": true,
+        "name": "Namibia",
+        "isPreferredName": true,
+        "lang": "es"
+      },
+      {
+        "name": "Namibia",
+        "lang": "eu"
+      },
+      {
+        "name": "Namibia",
+        "lang": "fi"
+      },
+      {
+        "name": "Namibia",
+        "isPreferredName": true,
+        "lang": "fo"
+      },
+      {
+        "name": "Namibia",
+        "lang": "gl"
+      },
+      {
+        "name": "Namibia",
+        "isPreferredName": true,
+        "lang": "ia"
+      },
+      {
+        "name": "Namibia",
+        "lang": "id"
+      },
+      {
+        "name": "Namibia",
+        "lang": "ilo"
+      },
+      {
+        "name": "Namibia",
+        "lang": "io"
+      },
+      {
+        "name": "Namibia",
+        "lang": "it"
+      },
+      {
+        "name": "Namibia",
+        "isPreferredName": true,
+        "lang": "kl"
+      },
+      {
+        "name": "Namibia",
+        "lang": "la"
+      },
+      {
+        "name": "Namibia",
+        "lang": "ln"
+      },
+      {
+        "name": "Namibia",
+        "isPreferredName": true,
+        "lang": "mg"
+      },
+      {
+        "name": "Namibia",
+        "lang": "ms"
+      },
+      {
+        "name": "Namibia",
+        "lang": "nb"
+      },
+      {
+        "name": "Namibia",
+        "lang": "nds"
+      },
+      {
+        "name": "Namibia",
+        "lang": "nn"
+      },
+      {
+        "name": "Namibia",
+        "lang": "no"
+      },
+      {
+        "name": "Namibia",
+        "lang": "oc"
+      },
+      {
+        "name": "Namibia",
+        "lang": "pam"
+      },
+      {
+        "name": "Namibia",
+        "lang": "pl"
+      },
+      {
+        "name": "Namibia",
+        "isPreferredName": true,
+        "lang": "rm"
+      },
+      {
+        "name": "Namibia",
+        "lang": "ro"
+      },
+      {
+        "name": "Namibia",
+        "lang": "se"
+      },
+      {
+        "name": "Namibia",
+        "isPreferredName": true,
+        "lang": "sn"
+      },
+      {
+        "name": "Namibia",
+        "lang": "sq"
+      },
+      {
+        "name": "Namibia",
+        "lang": "sv"
+      },
+      {
+        "name": "Namibia",
+        "lang": "sw"
+      },
+      {
+        "name": "Namibia",
+        "lang": "vi"
+      },
+      {
+        "name": "Namibia"
+      },
+      {
+        "name": "Namíbia",
+        "lang": "ca"
+      },
+      {
+        "name": "Namíbia",
+        "lang": "hu"
+      },
+      {
+        "name": "Namíbia",
+        "lang": "pt"
+      },
+      {
+        "name": "Namíbia",
+        "lang": "sk"
+      },
+      {
+        "name": "Namibía",
+        "lang": "is"
+      },
+      {
+        "name": "Na-mi-bi-a (Namibia)",
+        "isPreferredName": true,
+        "lang": "vi"
+      },
+      {
+        "name": "Namibia nutome",
+        "isPreferredName": true,
+        "lang": "ee"
+      },
+      {
+        "name": "Namibie",
+        "lang": "cs"
+      },
+      {
+        "name": "Namibie",
+        "lang": "fr"
+      },
+      {
+        "name": "Namibie",
+        "lang": "frp"
+      },
+      {
+        "name": "Namibië",
+        "lang": "af"
+      },
+      {
+        "name": "Namibië",
+        "lang": "nl"
+      },
+      {
+        "name": "Namibië"
+      },
+      {
+        "name": "Namibien",
+        "lang": "lb"
+      },
+      {
+        "name": "Namibii",
+        "isPreferredName": true,
+        "lang": "ff"
+      },
+      {
+        "name": "Namibija",
+        "lang": "bs"
+      },
+      {
+        "name": "Namibija",
+        "lang": "hbs"
+      },
+      {
+        "name": "Namibija",
+        "lang": "hr"
+      },
+      {
+        "name": "Namibija",
+        "lang": "lt"
+      },
+      {
+        "name": "Namibija",
+        "lang": "sl"
+      },
+      {
+        "name": "Namībija",
+        "lang": "lv"
+      },
+      {
+        "name": "Namibio",
+        "lang": "eo"
+      },
+      {
+        "name": "Namibiya",
+        "isPreferredName": true,
+        "lang": "az"
+      },
+      {
+        "name": "Namibiya",
+        "isPreferredName": true,
+        "lang": "ha"
+      },
+      {
+        "name": "Namibiya",
+        "isPreferredName": true,
+        "lang": "lg"
+      },
+      {
+        "name": "Namibiya",
+        "isPreferredName": true,
+        "lang": "rn"
+      },
+      {
+        "name": "Namibiyän",
+        "lang": "vo"
+      },
+      {
+        "name": "Namibja",
+        "lang": "mt"
+      },
+      {
+        "name": "Namibùii",
+        "isPreferredName": true,
+        "lang": "sg"
+      },
+      {
+        "name": "Namibya",
+        "lang": "tl"
+      },
+      {
+        "name": "Namibya",
+        "lang": "tr"
+      },
+      {
+        "name": "Namîbya",
+        "lang": "ku"
+      },
+      {
+        "name": "Namiibia",
+        "lang": "et"
+      },
+      {
+        "name": "Namiibiya",
+        "lang": "so"
+      },
+      {
+        "name": "Namimbia",
+        "isPreferredName": true,
+        "lang": "ki"
+      },
+      {
+        "name": "Namipia",
+        "isPreferredName": true,
+        "lang": "to"
+      },
+      {
+        "name": "Nam-mi-bi-a",
+        "lang": "vi"
+      },
+      {
+        "name": "Orílẹ́ède Namibia",
+        "isPreferredName": true,
+        "lang": "yo"
+      },
+      {
+        "name": "Republic of Namibia"
+      },
+      {
+        "name": "South-West Africa"
+      },
+      {
+        "name": "Suidwes-Afrika"
+      },
+      {
+        "name": "نامیبیا",
+        "lang": "fa"
+      },
+      {
+        "name": "نامیبیا",
+        "isPreferredName": true,
+        "lang": "ku"
+      },
+      {
+        "name": "نامیبیا",
+        "isPreferredName": true,
+        "lang": "ur"
+      },
+      {
+        "name": "ناميبيا",
+        "lang": "ar"
+      },
+      {
+        "name": "نامىبىيە",
+        "lang": "ug"
+      },
+      {
+        "name": "נאמיביה",
+        "lang": "he"
+      },
+      {
+        "name": "נמיביה",
+        "lang": "he"
+      },
+      {
+        "name": "Ναμίμπια",
+        "lang": "el"
+      },
+      {
+        "name": "Намибија",
+        "lang": "mk"
+      },
+      {
+        "name": "Намибија",
+        "lang": "sr"
+      },
+      {
+        "name": "Намибия",
+        "lang": "bg"
+      },
+      {
+        "name": "Намибия",
+        "lang": "ru"
+      },
+      {
+        "name": "Намибия",
+        "lang": "tg"
+      },
+      {
+        "name": "Намібія",
+        "lang": "be"
+      },
+      {
+        "name": "Намібія",
+        "lang": "uk"
+      },
+      {
+        "name": "Նամիբիա",
+        "lang": "hy"
+      },
+      {
+        "name": "ნამიბია",
+        "lang": "ka"
+      },
+      {
+        "name": "नमीबिया",
+        "lang": "ks"
+      },
+      {
+        "name": "नमीबिया",
+        "isPreferredName": true,
+        "lang": "mr"
+      },
+      {
+        "name": "नमीबिया",
+        "lang": "sa"
+      },
+      {
+        "name": "नामिबिया",
+        "lang": "mr"
+      },
+      {
+        "name": "नामिबिया",
+        "isPreferredName": true,
+        "lang": "ne"
+      },
+      {
+        "name": "नामीबिया",
+        "isPreferredName": true,
+        "lang": "hi"
+      },
+      {
+        "name": "નામિબિયા",
+        "isPreferredName": true,
+        "lang": "gu"
+      },
+      {
+        "name": "నమీబియా",
+        "isPreferredName": true,
+        "lang": "te"
+      },
+      {
+        "name": "ನಮೀಬಿಯಾ",
+        "isPreferredName": true,
+        "lang": "kn"
+      },
+      {
+        "name": "நமீபியா",
+        "isPreferredName": true,
+        "lang": "ta"
+      },
+      {
+        "name": "നമീബിയ",
+        "isPreferredName": true,
+        "lang": "ml"
+      },
+      {
+        "name": "নামিবিয়া",
+        "isPreferredName": true,
+        "lang": "bn"
+      },
+      {
+        "name": "နမ်မီးဘီးယား",
+        "isPreferredName": true,
+        "lang": "my"
+      },
+      {
+        "name": "නැමීබියාව",
+        "isPreferredName": true,
+        "lang": "si"
+      },
+      {
+        "name": "ナミビア共和国",
+        "isPreferredName": true,
+        "lang": "ja"
+      },
+      {
+        "name": "纳米比亚",
+        "lang": "zh"
+      }
+    ],
+    "countryName": "Namibia",
+    "adminCode1": "00",
+    "lng": "17",
+    "adminName2": "",
+    "fcodeName": "independent political entity",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 1,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Windhoek"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -28.97143,
+      "east": 25.256701,
+      "north": -16.959894,
+      "west": 11.71563
+    },
+    "name": "Namibia",
+    "fcode": "PCLI",
+    "geonameId": 3355338,
+    "asciiName": "Republic of Namibia",
+    "lat": "-22",
+    "population": 2128471,
+    "adminName1": "",
+    "countryId": "3355338",
+    "fclName": "country, state, region,...",
+    "countryCode": "NA",
+    "srtm3": 1381,
+    "wikipediaURL": "en.wikipedia.org/wiki/Namibia",
+    "toponymName": "Republic of Namibia",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "979632": {
+    "adminCode3": "KZN272",
+    "alternateNames": [
+
+    ],
+    "adminCode2": "DC27",
+    "countryName": "South Africa",
+    "adminCode1": "02",
+    "lng": "32.21472",
+    "adminName2": "uMkhanyakude District Municipality",
+    "fcodeName": "populated place",
+    "adminName3": "Jozini",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Johannesburg"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -27.347318648751756,
+      "east": 32.22484362446389,
+      "north": -27.329331351248246,
+      "west": 32.20459637553611
+    },
+    "name": "Mamfene",
+    "fcode": "PPL",
+    "geonameId": 979632,
+    "asciiName": "Mamfene",
+    "lat": "-27.33832",
+    "population": 0,
+    "adminName1": "KwaZulu-Natal",
+    "adminId1": "972062",
+    "countryId": "953987",
+    "fclName": "city, village,...",
+    "countryCode": "ZA",
+    "srtm3": 76,
+    "adminId3": "8347448",
+    "adminId2": "8347388",
+    "toponymName": "Mamfene",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "161288": {
+    "adminCode2": "161288",
+    "alternateNames": [
+
+    ],
+    "countryName": "Tanzania",
+    "adminCode1": "02",
+    "lng": "38.5",
+    "adminName2": "Bagamoyo District",
+    "fcodeName": "second-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Dar_es_Salaam"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Bagamoyo District",
+    "fcode": "ADM2",
+    "geonameId": 161288,
+    "asciiName": "Bagamoyo District",
+    "lat": "-6.33333",
+    "population": 0,
+    "adminName1": "Pwani",
+    "adminId1": "150602",
+    "countryId": "149590",
+    "fclName": "country, state, region,...",
+    "countryCode": "TZ",
+    "srtm3": 184,
+    "adminId2": "161288",
+    "toponymName": "Bagamoyo District",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "Simbock": null,
+  "Rota": 2511700,
+  "2511700": {
+    "adminCode3": "11030",
+    "alternateNames": [
+      {
+        "name": "11520",
+        "lang": "post"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Rota,_C%C3%A1diz",
+        "lang": "link"
+      },
+      {
+        "name": "http://ru.wikipedia.org/wiki/%D0%A0%D0%BE%D1%82%D0%B0",
+        "lang": "link"
+      },
+      {
+        "name": "Rota",
+        "lang": "de"
+      },
+      {
+        "name": "Rota",
+        "lang": "en"
+      },
+      {
+        "name": "Rota",
+        "lang": "es"
+      },
+      {
+        "name": "Rota",
+        "lang": "fr"
+      },
+      {
+        "name": "Rota",
+        "lang": "it"
+      },
+      {
+        "name": "Rota",
+        "lang": "nl"
+      },
+      {
+        "name": "Rota",
+        "lang": "pl"
+      },
+      {
+        "name": "Rota",
+        "lang": "pt"
+      },
+      {
+        "name": "Rota",
+        "lang": "tr"
+      },
+      {
+        "name": "Rota"
+      },
+      {
+        "name": "ROZ",
+        "lang": "iata"
+      },
+      {
+        "name": "Рота",
+        "lang": "ru"
+      }
+    ],
+    "adminCode2": "CA",
+    "countryName": "Spain",
+    "adminCode1": "51",
+    "lng": "-6.3622",
+    "adminName2": "Cadiz",
+    "fcodeName": "seat of a third-order administrative division",
+    "adminName3": "Rota",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 1,
+      "timeZoneId": "Europe/Madrid"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 36.603883987904155,
+      "east": -6.3353207008190235,
+      "north": 36.64701601209585,
+      "west": -6.389079299180976
+    },
+    "name": "Rota",
+    "fcode": "PPLA3",
+    "geonameId": 2511700,
+    "asciiName": "Rota",
+    "lat": "36.62545",
+    "population": 28516,
+    "adminName1": "Andalusia",
+    "adminId1": "2593109",
+    "countryId": "2510769",
+    "fclName": "city, village,...",
+    "countryCode": "ES",
+    "srtm3": 18,
+    "adminId3": "6356945",
+    "adminId2": "2520597",
+    "wikipediaURL": "en.wikipedia.org/wiki/Rota%2C_C%C3%A1diz",
+    "toponymName": "Rota",
+    "fcl": "P",
+    "continentCode": "EU"
+  },
+  "Magaoni": 188394,
+  "188394": {
+    "alternateNames": [
+
+    ],
+    "countryName": "Kenya",
+    "adminCode1": "28",
+    "lng": "39.47369",
+    "adminName2": "",
+    "fcodeName": "area",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Nairobi"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Magaoni",
+    "fcode": "AREA",
+    "geonameId": 188394,
+    "asciiName": "Magaoni",
+    "lat": "-4.37921",
+    "population": 0,
+    "adminName1": "Kwale",
+    "countryId": "192950",
+    "adminId1": "190106",
+    "fclName": "parks,area, ...",
+    "countryCode": "KE",
+    "srtm3": 53,
+    "toponymName": "Magaoni",
+    "fcl": "L",
+    "continentCode": "AF"
+  },
+  "Morilla Mine": null,
+  "Kakira": 232661,
+  "232661": {
+    "adminCode2": "33",
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/Kakira",
+        "lang": "link"
+      },
+      {
+        "name": "Kakira"
+      }
+    ],
+    "countryName": "Uganda",
+    "adminCode1": "E",
+    "lng": "33.28778",
+    "adminName2": "Jinja",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Kampala"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 0.49933965124890073,
+      "east": 33.296771815362554,
+      "north": 0.5173269487510992,
+      "west": 33.27878378463745
+    },
+    "name": "Kakira",
+    "fcode": "PPL",
+    "geonameId": 232661,
+    "asciiName": "Kakira",
+    "lat": "0.50833",
+    "population": 0,
+    "adminName1": "Eastern Region",
+    "adminId1": "8260673",
+    "countryId": "226074",
+    "fclName": "city, village,...",
+    "countryCode": "UG",
+    "srtm3": 1186,
+    "adminId2": "443335",
+    "wikipediaURL": "en.wikipedia.org/wiki/Kakira",
+    "toponymName": "Kakira",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "3351073": {
+    "alternateNames": [
+      {
+        "name": "Calueque"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Calueque",
+        "lang": "link"
+      }
+    ],
+    "countryName": "Angola",
+    "adminCode1": "07",
+    "lng": "14.56667",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 1,
+      "gmtOffset": 1,
+      "timeZoneId": "Africa/Luanda"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -17.275660348751426,
+      "east": 14.576084328381556,
+      "north": -17.25767305124857,
+      "west": 14.557249071618445
+    },
+    "name": "Calueque",
+    "fcode": "PPL",
+    "geonameId": 3351073,
+    "asciiName": "Calueque",
+    "lat": "-17.26667",
+    "population": 0,
+    "adminName1": "Cunene",
+    "adminId1": "3349096",
+    "countryId": "3351879",
+    "fclName": "city, village,...",
+    "countryCode": "AO",
+    "srtm3": 1099,
+    "wikipediaURL": "en.wikipedia.org/wiki/Calueque",
+    "toponymName": "Calueque",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "2362150": {
+    "adminCode2": "45",
+    "alternateNames": [
+      {
+        "name": "Borom"
+      },
+      {
+        "name": "Boromo",
+        "lang": "de"
+      },
+      {
+        "name": "Boromo",
+        "lang": "en"
+      },
+      {
+        "name": "Boromo",
+        "lang": "fi"
+      },
+      {
+        "name": "Boromo",
+        "lang": "fr"
+      },
+      {
+        "name": "Boromo"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Boromo",
+        "lang": "link"
+      }
+    ],
+    "countryName": "Burkina Faso",
+    "adminCode1": "01",
+    "lng": "-2.93006",
+    "adminName2": "Province des Balé",
+    "fcodeName": "seat of a second-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 0,
+      "gmtOffset": 0,
+      "timeZoneId": "Africa/Ouagadougou"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 11.731201792735499,
+      "east": -2.9155379286708967,
+      "north": 11.7596422072645,
+      "west": -2.9445880713291035
+    },
+    "name": "Boromo",
+    "fcode": "PPLA2",
+    "geonameId": 2362150,
+    "asciiName": "Boromo",
+    "lat": "11.74542",
+    "population": 13157,
+    "adminName1": "Boucle du Mouhoun",
+    "adminId1": "6930701",
+    "countryId": "2361809",
+    "fclName": "city, village,...",
+    "countryCode": "BF",
+    "srtm3": 263,
+    "adminId2": "2597248",
+    "wikipediaURL": "en.wikipedia.org/wiki/Boromo",
+    "toponymName": "Boromo",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "2300086": {
+    "alternateNames": [
+
+    ],
+    "countryName": "Ghana",
+    "adminCode1": "00",
+    "lng": "-1.46667",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 0,
+      "gmtOffset": 0,
+      "timeZoneId": "Africa/Accra"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 6.257673051248901,
+      "east": -1.4576188317183447,
+      "north": 6.275660348751099,
+      "west": -1.4757145682816553
+    },
+    "name": "Jimiso",
+    "fcode": "PPL",
+    "geonameId": 2300086,
+    "asciiName": "Jimiso",
+    "lat": "6.26667",
+    "population": 0,
+    "adminName1": "",
+    "countryId": "2300660",
+    "fclName": "city, village,...",
+    "countryCode": "GH",
+    "srtm3": 236,
+    "toponymName": "Jimiso",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "201229": {
+    "alternateNames": [
+      {
+        "name": "Ahero"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Ahero",
+        "lang": "link"
+      }
+    ],
+    "countryName": "Kenya",
+    "adminCode1": "26",
+    "lng": "34.9163",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Nairobi"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -0.18651347898810486,
+      "east": 34.92819352696773,
+      "north": -0.16271852101189513,
+      "west": 34.90439847303227
+    },
+    "name": "Ahero",
+    "fcode": "PPL",
+    "geonameId": 201229,
+    "asciiName": "Ahero",
+    "lat": "-0.17462",
+    "population": 8788,
+    "adminName1": "Kisumu",
+    "adminId1": "191242",
+    "countryId": "192950",
+    "fclName": "city, village,...",
+    "countryCode": "KE",
+    "srtm3": 1154,
+    "wikipediaURL": "en.wikipedia.org/wiki/Ahero",
+    "toponymName": "Ahero",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "194322": {
+    "alternateNames": [
+      {
+        "name": "Lake Kanyabola"
+      },
+      {
+        "name": "Lake Kanyaboli"
+      }
+    ],
+    "countryName": "Kenya",
+    "adminCode1": "46",
+    "lng": "34.16406",
+    "adminName2": "",
+    "fcodeName": "lake",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Nairobi"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Lake Kanyaboli",
+    "fcode": "LK",
+    "geonameId": 194322,
+    "asciiName": "Lake Kanyaboli",
+    "lat": "0.05724",
+    "population": 0,
+    "adminName1": "Siaya",
+    "countryId": "192950",
+    "adminId1": "180320",
+    "fclName": "stream, lake, ...",
+    "countryCode": "KE",
+    "srtm3": 1147,
+    "toponymName": "Lake Kanyaboli",
+    "fcl": "H",
+    "continentCode": "AF"
+  },
+  "191298": {
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/Kisii_District",
+        "lang": "link"
+      },
+      {
+        "name": "Kisii"
+      }
+    ],
+    "countryName": "Kenya",
+    "adminCode1": "25",
+    "lng": "34.83333",
+    "adminName2": "",
+    "fcodeName": "first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Nairobi"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -0.97346266067922,
+      "east": 35.0125174644832,
+      "north": -0.504163343679241,
+      "west": 34.6109061364832
+    },
+    "name": "Kisii",
+    "fcode": "ADM1",
+    "geonameId": 191298,
+    "asciiName": "Kisii District",
+    "lat": "-0.75",
+    "population": 1152282,
+    "adminName1": "Kisii",
+    "adminId1": "191298",
+    "countryId": "192950",
+    "fclName": "country, state, region,...",
+    "countryCode": "KE",
+    "srtm3": 1821,
+    "wikipediaURL": "en.wikipedia.org/wiki/Kisii_District",
+    "toponymName": "Kisii",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "195987": {
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/Jarabuni",
+        "lang": "link"
+      },
+      {
+        "name": "Jarabuni"
+      },
+      {
+        "name": "Jarabunyi"
+      },
+      {
+        "name": "Jaribuni"
+      }
+    ],
+    "countryName": "Kenya",
+    "adminCode1": "23",
+    "lng": "39.73964",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Nairobi"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -3.640171648751099,
+      "east": 39.7486556509543,
+      "north": -3.6221843512489005,
+      "west": 39.7306323490457
+    },
+    "name": "Jarabuni",
+    "fcode": "PPL",
+    "geonameId": 195987,
+    "asciiName": "Jarabuni",
+    "lat": "-3.63118",
+    "population": 0,
+    "adminName1": "Kilifi",
+    "adminId1": "192064",
+    "countryId": "192950",
+    "fclName": "city, village,...",
+    "countryCode": "KE",
+    "srtm3": 106,
+    "wikipediaURL": "en.wikipedia.org/wiki/Jarabuni",
+    "toponymName": "Jarabuni",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "7667652": {
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/Taita-Taveta_District",
+        "lang": "link"
+      },
+      {
+        "name": "Taita Taveta"
+      }
+    ],
+    "countryName": "Kenya",
+    "adminCode1": "47",
+    "lng": "38.37",
+    "adminName2": "",
+    "fcodeName": "first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Nairobi"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -4.140149672679232,
+      "east": 39.219914925483174,
+      "north": -2.683057386679256,
+      "west": 37.585088265483186
+    },
+    "name": "Taita Taveta",
+    "fcode": "ADM1",
+    "geonameId": 7667652,
+    "asciiName": "Taita Taveta District",
+    "lat": "-3.4",
+    "population": 284657,
+    "adminName1": "Taita Taveta",
+    "adminId1": "7667652",
+    "countryId": "192950",
+    "fclName": "country, state, region,...",
+    "countryCode": "KE",
+    "srtm3": 1388,
+    "wikipediaURL": "en.wikipedia.org/wiki/Taita-Taveta_District",
+    "toponymName": "Taita Taveta",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "1080158": {
+    "alternateNames": [
+      {
+        "name": "Ahimena"
+      },
+      {
+        "name": "Ambohimena"
+      }
+    ],
+    "countryName": "Madagascar",
+    "adminCode1": "03",
+    "cc2": "MG",
+    "lng": "46.6",
+    "adminName2": "",
+    "fcodeName": "hill",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Indian/Antananarivo"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Ambohimena",
+    "fcode": "HLL",
+    "geonameId": 1080158,
+    "asciiName": "Ambohimena",
+    "lat": "-16.96667",
+    "population": 0,
+    "adminName1": "MG.03",
+    "countryId": "1062947",
+    "fclName": "mountain,hill,rock,... ",
+    "countryCode": "MG",
+    "srtm3": 255,
+    "toponymName": "Ambohimena",
+    "fcl": "T",
+    "continentCode": "AF"
+  },
+  "2352947": {
+    "alternateNames": [
+      {
+        "name": "アベオクタ",
+        "lang": "ja"
+      },
+      {
+        "name": "아베오쿠타",
+        "lang": "ko"
+      },
+      {
+        "name": "Abeokuta",
+        "lang": "da"
+      },
+      {
+        "name": "Abeokuta",
+        "lang": "de"
+      },
+      {
+        "name": "Abeokuta",
+        "lang": "en"
+      },
+      {
+        "name": "Abeokuta",
+        "lang": "es"
+      },
+      {
+        "name": "Abeokuta",
+        "lang": "fi"
+      },
+      {
+        "name": "Abeokuta",
+        "lang": "gl"
+      },
+      {
+        "name": "Abeokuta",
+        "lang": "it"
+      },
+      {
+        "name": "Abeokuta",
+        "lang": "pl"
+      },
+      {
+        "name": "Abeokuta",
+        "lang": "pt"
+      },
+      {
+        "name": "Abeokuta",
+        "lang": "sv"
+      },
+      {
+        "name": "Abeokuta"
+      },
+      {
+        "name": "Abẹ́òkúta",
+        "lang": "yo"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Abeokuta",
+        "lang": "link"
+      },
+      {
+        "name": "http://ru.wikipedia.org/wiki/%D0%90%D0%B1%D0%B5%D0%BE%D0%BA%D1%83%D1%82%D0%B0",
+        "lang": "link"
+      },
+      {
+        "name": "QAT",
+        "lang": "iata"
+      },
+      {
+        "name": "אבאוקוטה",
+        "lang": "he"
+      },
+      {
+        "name": "Абеокута",
+        "lang": "ru"
+      },
+      {
+        "name": "Абеокута",
+        "lang": "sr"
+      },
+      {
+        "name": "Абеокута",
+        "lang": "uk"
+      },
+      {
+        "name": "阿贝奥库塔",
+        "lang": "zh"
+      },
+      {
+        "name": "阿贝奥库塔",
+        "lang": "zh-CN"
+      }
+    ],
+    "countryName": "Nigeria",
+    "adminCode1": "16",
+    "lng": "3.35",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 1,
+      "gmtOffset": 1,
+      "timeZoneId": "Africa/Lagos"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 7.050053083308141,
+      "east": 3.450752425827298,
+      "north": 7.24994691669186,
+      "west": 3.2492475741727023
+    },
+    "name": "Abeokuta",
+    "fcode": "PPLA",
+    "geonameId": 2352947,
+    "asciiName": "Abeokuta",
+    "lat": "7.15",
+    "population": 593100,
+    "adminName1": "Ogun",
+    "adminId1": "2327546",
+    "countryId": "2328926",
+    "fclName": "city, village,...",
+    "countryCode": "NG",
+    "srtm3": 68,
+    "wikipediaURL": "en.wikipedia.org/wiki/Abeokuta",
+    "toponymName": "Abeokuta",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "1085595": {
+    "alternateNames": [
+      {
+        "name": "음푸말랑가 주",
+        "lang": "ko"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Mpumalanga",
+        "lang": "link"
+      },
+      {
+        "name": "http://ru.wikipedia.org/wiki/%D0%9C%D0%BF%D1%83%D0%BC%D0%B0%D0%BB%D0%B0%D0%BD%D0%B3%D0%B0",
+        "lang": "link"
+      },
+      {
+        "name": "IPhondo yaMpumalanga",
+        "lang": "xh"
+      },
+      {
+        "name": "Mpumalanga",
+        "lang": "sv"
+      },
+      {
+        "isShortName": true,
+        "name": "Mpumalanga",
+        "isPreferredName": true
+      },
+      {
+        "name": "Mpumalanga Province",
+        "lang": "so"
+      },
+      {
+        "name": "Mpumalanga-sén",
+        "lang": "hak"
+      },
+      {
+        "name": "Mpumalangiän",
+        "lang": "vo"
+      },
+      {
+        "name": "Province of Eastern Transvaal"
+      },
+      {
+        "name": "Provincia Mpumalanga",
+        "lang": "ro"
+      },
+      {
+        "name": "مبومالانجا",
+        "lang": "ar"
+      },
+      {
+        "name": "مپومالانگا",
+        "lang": "pnb"
+      },
+      {
+        "name": "מפומלנגה",
+        "lang": "he"
+      },
+      {
+        "name": "Мпумаланга",
+        "lang": "bg"
+      },
+      {
+        "name": "Мпумаланга",
+        "lang": "mk"
+      },
+      {
+        "name": "Мпумаланга",
+        "lang": "ru"
+      },
+      {
+        "name": "Мпумаланга",
+        "lang": "sr"
+      },
+      {
+        "name": "Мпумаланга",
+        "lang": "uk"
+      },
+      {
+        "name": "Правінцыя Мпумаланга",
+        "lang": "be"
+      },
+      {
+        "name": "მპუმალანგა",
+        "lang": "ka"
+      },
+      {
+        "name": "उम्पुमालांगा",
+        "lang": "mr"
+      },
+      {
+        "name": "ムプマランガ州",
+        "lang": "ja"
+      },
+      {
+        "name": "普馬蘭加省",
+        "lang": "zh"
+      }
+    ],
+    "countryName": "South Africa",
+    "adminCode1": "07",
+    "lng": "30",
+    "adminName2": "",
+    "fcodeName": "first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Johannesburg"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -27.511669158935547,
+      "east": 32.01860809326172,
+      "north": -23.950645446777344,
+      "west": 28.288536071777344
+    },
+    "name": "Mpumalanga",
+    "fcode": "ADM1",
+    "geonameId": 1085595,
+    "asciiName": "Mpumalanga",
+    "lat": "-26",
+    "population": 3409743,
+    "adminName1": "Mpumalanga",
+    "adminId1": "1085595",
+    "countryId": "953987",
+    "fclName": "country, state, region,...",
+    "countryCode": "ZA",
+    "srtm3": 1631,
+    "wikipediaURL": "en.wikipedia.org/wiki/Mpumalanga",
+    "toponymName": "Mpumalanga",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "972062": {
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/KwaZulu-Natal",
+        "lang": "link"
+      },
+      {
+        "isShortName": true,
+        "name": "KwaZulu-Natal",
+        "isPreferredName": true,
+        "lang": "en"
+      },
+      {
+        "name": "KwaZulu-Natal",
+        "lang": "sv"
+      },
+      {
+        "name": "KwaZulu-Natal"
+      },
+      {
+        "name": "Natal"
+      },
+      {
+        "name": "Province of KwaZulu-Natal"
+      },
+      {
+        "name": "Province of KwaZulu/Natal"
+      },
+      {
+        "name": "Province of Natal"
+      }
+    ],
+    "countryName": "South Africa",
+    "adminCode1": "02",
+    "lng": "30",
+    "adminName2": "",
+    "fcodeName": "first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Johannesburg"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -31.072917938232422,
+      "east": 32.89042663574219,
+      "north": -26.806095123291016,
+      "west": 28.750274658203125
+    },
+    "name": "KwaZulu-Natal",
+    "fcode": "ADM1",
+    "geonameId": 972062,
+    "asciiName": "Province of KwaZulu-Natal",
+    "lat": "-29",
+    "population": 10154469,
+    "adminName1": "KwaZulu-Natal",
+    "adminId1": "972062",
+    "countryId": "953987",
+    "fclName": "country, state, region,...",
+    "countryCode": "ZA",
+    "srtm3": 1276,
+    "wikipediaURL": "en.wikipedia.org/wiki/KwaZulu-Natal",
+    "toponymName": "Province of KwaZulu-Natal",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "8469239": {
+    "alternateNames": [
+      {
+        "isShortName": true,
+        "name": "Geita",
+        "isPreferredName": true,
+        "lang": "en"
+      },
+      {
+        "name": "Geita Region",
+        "lang": "en"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Geita_region",
+        "lang": "link"
+      },
+      {
+        "name": "Mkoa wa Geita",
+        "lang": "sw"
+      }
+    ],
+    "countryName": "Tanzania",
+    "adminCode1": "28",
+    "lng": "31.9",
+    "adminName2": "",
+    "fcodeName": "first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Dar_es_Salaam"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Geita",
+    "fcode": "ADM1",
+    "geonameId": 8469239,
+    "asciiName": "Geita Region",
+    "lat": "-3.2",
+    "population": 1739530,
+    "adminName1": "Geita",
+    "adminId1": "8469239",
+    "countryId": "149590",
+    "fclName": "country, state, region,...",
+    "countryCode": "TZ",
+    "srtm3": 1170,
+    "wikipediaURL": "en.wikipedia.org/wiki/Geita_region",
+    "toponymName": "Geita Region",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "233114": {
+    "adminCode2": "33",
+    "alternateNames": [
+      {
+        "name": "진자",
+        "lang": "ko"
+      },
+      {
+        "name": "ジンジャ",
+        "lang": "ja"
+      },
+      {
+        "name": "Džindža",
+        "lang": "lt"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Jinja%2C_Uganda",
+        "lang": "link"
+      },
+      {
+        "name": "JIN",
+        "lang": "iata"
+      },
+      {
+        "name": "Jinga"
+      },
+      {
+        "name": "Jinja"
+      },
+      {
+        "name": "גינגה",
+        "lang": "he"
+      },
+      {
+        "name": "Τζίντζα",
+        "lang": "el"
+      },
+      {
+        "name": "Джинджа",
+        "lang": "bg"
+      },
+      {
+        "name": "Джинджа",
+        "lang": "ru"
+      },
+      {
+        "name": "金賈",
+        "lang": "zh"
+      }
+    ],
+    "countryName": "Uganda",
+    "adminCode1": "E",
+    "lng": "33.20317",
+    "adminName2": "Jinja",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Kampala"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 0.3995602018287072,
+      "east": 33.24263353345683,
+      "north": 0.4784791493351931,
+      "west": 33.16371183397481
+    },
+    "name": "Jinja",
+    "fcode": "PPLA",
+    "geonameId": 233114,
+    "asciiName": "Jinja",
+    "lat": "0.43902",
+    "population": 93061,
+    "adminName1": "Eastern Region",
+    "adminId1": "8260673",
+    "countryId": "226074",
+    "fclName": "city, village,...",
+    "countryCode": "UG",
+    "srtm3": 1187,
+    "adminId2": "443335",
+    "wikipediaURL": "en.wikipedia.org/wiki/Jinja%2C_Uganda",
+    "toponymName": "Jinja",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "901344": {
+    "alternateNames": [
+      {
+        "name": "ンドラ",
+        "lang": "ja"
+      },
+      {
+        "name": "은돌라",
+        "lang": "ko"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Ndola",
+        "lang": "link"
+      },
+      {
+        "name": "http://ru.wikipedia.org/wiki/%D0%9D%D0%B4%D0%BE%D0%BB%D0%B0",
+        "lang": "link"
+      },
+      {
+        "name": "Ndola",
+        "lang": "de"
+      },
+      {
+        "name": "Ndola",
+        "lang": "en"
+      },
+      {
+        "name": "Ndola",
+        "lang": "es"
+      },
+      {
+        "name": "Ndola",
+        "lang": "fr"
+      },
+      {
+        "name": "Ndola",
+        "lang": "id"
+      },
+      {
+        "name": "Ndola",
+        "lang": "pl"
+      },
+      {
+        "name": "Ndola",
+        "lang": "pt"
+      },
+      {
+        "name": "Ndola",
+        "lang": "sv"
+      },
+      {
+        "name": "Ndola"
+      },
+      {
+        "name": "NLA",
+        "lang": "iata"
+      },
+      {
+        "name": "ندولا",
+        "lang": "ar"
+      },
+      {
+        "name": "Ντόλα",
+        "lang": "el"
+      },
+      {
+        "name": "Ндола",
+        "lang": "bg"
+      },
+      {
+        "name": "Ндола",
+        "lang": "mrj"
+      },
+      {
+        "name": "Ндола",
+        "lang": "ru"
+      },
+      {
+        "name": "Ндола",
+        "lang": "uk"
+      },
+      {
+        "name": "ნდოლა",
+        "lang": "ka"
+      },
+      {
+        "name": "恩多拉",
+        "lang": "zh"
+      }
+    ],
+    "countryName": "Zambia",
+    "adminCode1": "08",
+    "lng": "28.63659",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Lusaka"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -13.0401129532413,
+      "east": 28.720135050074227,
+      "north": -12.8772310467587,
+      "west": 28.553050949925776
+    },
+    "name": "Ndola",
+    "fcode": "PPLA",
+    "geonameId": 901344,
+    "asciiName": "Ndola",
+    "lat": "-12.95867",
+    "population": 394518,
+    "adminName1": "Copperbelt",
+    "adminId1": "917524",
+    "countryId": "895949",
+    "fclName": "city, village,...",
+    "countryCode": "ZM",
+    "srtm3": 1307,
+    "wikipediaURL": "en.wikipedia.org/wiki/Ndola",
+    "toponymName": "Ndola",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "918702": {
+    "alternateNames": [
+      {
+        "name": "치파타",
+        "lang": "ko"
+      },
+      {
+        "name": "Chipata",
+        "lang": "de"
+      },
+      {
+        "name": "Chipata",
+        "lang": "en"
+      },
+      {
+        "name": "Chipata"
+      },
+      {
+        "name": "CIP",
+        "lang": "iata"
+      },
+      {
+        "name": "Čipata",
+        "lang": "lt"
+      },
+      {
+        "name": "Fort Jameson"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Chipata",
+        "lang": "link"
+      },
+      {
+        "name": "Τσιπάτα",
+        "lang": "el"
+      },
+      {
+        "name": "Чипата",
+        "lang": "bg"
+      },
+      {
+        "name": "Чипата",
+        "lang": "mrj"
+      },
+      {
+        "name": "Чипата",
+        "lang": "ru"
+      },
+      {
+        "name": "奇帕塔",
+        "lang": "zh"
+      }
+    ],
+    "countryName": "Zambia",
+    "adminCode1": "03",
+    "lng": "32.65",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Lusaka"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -13.671223915693433,
+      "east": 32.68898323785537,
+      "north": -13.595442084306567,
+      "west": 32.61101676214463
+    },
+    "name": "Chipata",
+    "fcode": "PPLA",
+    "geonameId": 918702,
+    "asciiName": "Chipata",
+    "lat": "-13.63333",
+    "population": 85963,
+    "adminName1": "Eastern",
+    "adminId1": "917388",
+    "countryId": "895949",
+    "fclName": "city, village,...",
+    "countryCode": "ZM",
+    "srtm3": 1147,
+    "wikipediaURL": "en.wikipedia.org/wiki/Chipata",
+    "toponymName": "Chipata",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "mae ramard": null,
+  "1150490": {
+    "alternateNames": [
+      {
+        "name": "ตาก",
+        "lang": "th"
+      },
+      {
+        "name": "Amphoe Mueang Tak"
+      },
+      {
+        "name": "Baheng"
+      },
+      {
+        "name": "Ban Rahaeng"
+      },
+      {
+        "name": "Ban Raheang"
+      },
+      {
+        "name": "Changwat Tak"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Tak_%28town%29",
+        "lang": "link"
+      },
+      {
+        "name": "Muang Raheng"
+      },
+      {
+        "name": "Muang Tak"
+      },
+      {
+        "name": "Rahaeng"
+      },
+      {
+        "name": "Rahaong"
+      },
+      {
+        "name": "Raheng"
+      },
+      {
+        "name": "Tak"
+      },
+      {
+        "name": "Tark"
+      },
+      {
+        "name": "TKT",
+        "lang": "iata"
+      },
+      {
+        "name": "Так",
+        "lang": "ru"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "08",
+    "lng": "99.12898",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 16.849573590026054,
+      "east": 99.14999596984677,
+      "north": 16.889794409973945,
+      "west": 99.10796203015323
+    },
+    "name": "Tak",
+    "fcode": "PPLA",
+    "geonameId": 1150490,
+    "asciiName": "Tak",
+    "lat": "16.86968",
+    "population": 24149,
+    "adminName1": "Tak",
+    "adminId1": "1150489",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 113,
+    "wikipediaURL": "en.wikipedia.org/wiki/Tak_%28town%29",
+    "toponymName": "Tak",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "kanchanaburi Province": null,
+  "Sai Yok": 1150843,
+  "1150843": {
+    "adminCode2": "1150843",
+    "alternateNames": [
+      {
+        "name": "อำเภอไทรโยค",
+        "lang": "th"
+      },
+      {
+        "name": "Amphoe Sai Yok"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Sai_Yok_District",
+        "lang": "link"
+      },
+      {
+        "name": "King Amphoe Saiyok"
+      },
+      {
+        "name": "Nam Tok Sai Yok Noi"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "50",
+    "lng": "98.93372",
+    "adminName2": "Amphoe Sai Yok",
+    "fcodeName": "second-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Amphoe Sai Yok",
+    "fcode": "ADM2",
+    "geonameId": 1150843,
+    "asciiName": "Amphoe Sai Yok",
+    "lat": "14.25652",
+    "population": 0,
+    "adminName1": "Kanchanaburi",
+    "adminId1": "1153080",
+    "countryId": "1605651",
+    "fclName": "country, state, region,...",
+    "countryCode": "TH",
+    "srtm3": 108,
+    "adminId2": "1150843",
+    "wikipediaURL": "en.wikipedia.org/wiki/Sai_Yok_District",
+    "toponymName": "Amphoe Sai Yok",
+    "fcl": "A",
+    "continentCode": "AS"
+  },
+  "1152188": {
+    "alternateNames": [
+      {
+        "name": "แม่สอด",
+        "lang": "th"
+      },
+      {
+        "name": "แม่สอด"
+      },
+      {
+        "name": "Amphoe Ban Mae Sot"
+      },
+      {
+        "name": "Amphoe Mae Saut"
+      },
+      {
+        "name": "Amphoe Mae Sot"
+      },
+      {
+        "name": "Amphoe Mesoht"
+      },
+      {
+        "name": "Ban Mae Sot"
+      },
+      {
+        "name": "Ban Me Ramat"
+      },
+      {
+        "name": "Ban Mesod"
+      },
+      {
+        "name": "Ban Me Sohd"
+      },
+      {
+        "name": "Branch Amphoe Mē Sōhd"
+      },
+      {
+        "name": "Mae Saut"
+      },
+      {
+        "name": "Mae Sord"
+      },
+      {
+        "name": "Mae Sot"
+      },
+      {
+        "name": "MAQ",
+        "lang": "iata"
+      },
+      {
+        "name": "Mehsord"
+      },
+      {
+        "name": "Mesod"
+      },
+      {
+        "name": "Mēsoht"
+      },
+      {
+        "name": "Mesort"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "08",
+    "lng": "98.56667",
+    "adminName2": "",
+    "fcodeName": "seat of a second-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 16.68931388518208,
+      "east": 98.59523119605066,
+      "north": 16.74402011481792,
+      "west": 98.53810280394933
+    },
+    "name": "Mae Sot",
+    "fcode": "PPLA2",
+    "geonameId": 1152188,
+    "asciiName": "Mae Sot",
+    "lat": "16.71667",
+    "population": 44563,
+    "adminName1": "Tak",
+    "adminId1": "1150489",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 213,
+    "toponymName": "Mae Sot",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "1330952": {
+    "alternateNames": [
+      {
+        "name": "บ้านจุมสาม",
+        "lang": "th"
+      },
+      {
+        "name": "Ban Chum Sam"
+      },
+      {
+        "name": "Ban Mae Chum Sam"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "02",
+    "lng": "98.14811",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 18.654590351248245,
+      "east": 98.15760434415915,
+      "north": 18.672577648751755,
+      "west": 98.13861765584085
+    },
+    "name": "Ban Chum Sam",
+    "fcode": "PPL",
+    "geonameId": 1330952,
+    "asciiName": "Ban Chum Sam",
+    "lat": "18.66358",
+    "population": 0,
+    "adminName1": "Chiang Mai",
+    "adminId1": "1153670",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 1047,
+    "toponymName": "Ban Chum Sam",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "1153081": {
+    "alternateNames": [
+      {
+        "name": "깐짜나부리",
+        "lang": "ko"
+      },
+      {
+        "name": "カーンチャナブリー",
+        "lang": "ja"
+      },
+      {
+        "name": "ཀཱན་ཅ་ན་བུ་རི།",
+        "lang": "bo"
+      },
+      {
+        "name": "Changwat Kanchanaburi"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Kanchanaburi",
+        "lang": "link"
+      },
+      {
+        "name": "Kanburi"
+      },
+      {
+        "name": "Kanchana"
+      },
+      {
+        "name": "Kanchanaburi",
+        "lang": "de"
+      },
+      {
+        "name": "Kanchanaburi",
+        "lang": "en"
+      },
+      {
+        "name": "Kanchanaburi",
+        "lang": "fr"
+      },
+      {
+        "name": "Kanchanaburi",
+        "lang": "nl"
+      },
+      {
+        "name": "Kanchanaburi",
+        "lang": "no"
+      },
+      {
+        "name": "Kancsanaburi",
+        "lang": "hu"
+      },
+      {
+        "name": "Kanpuri"
+      },
+      {
+        "name": "Moeang Kanchana Buri"
+      },
+      {
+        "name": "Muang Kanchana Buri"
+      },
+      {
+        "name": "کانچانابوری",
+        "lang": "pnb"
+      },
+      {
+        "name": "Канчанабури",
+        "lang": "ru"
+      },
+      {
+        "name": "காஞ்சனபுரி",
+        "lang": "ta"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "50",
+    "lng": "99.54832",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 13.971378659485485,
+      "east": 99.58206577470885,
+      "north": 14.036853410701465,
+      "west": 99.51457576581849
+    },
+    "name": "Kanchanaburi",
+    "fcode": "PPLA",
+    "geonameId": 1153081,
+    "asciiName": "Kanchanaburi",
+    "lat": "14.00412",
+    "population": 63699,
+    "adminName1": "Kanchanaburi",
+    "adminId1": "1153080",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 33,
+    "wikipediaURL": "en.wikipedia.org/wiki/Kanchanaburi",
+    "toponymName": "Kanchanaburi",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "1608534": {
+    "alternateNames": [
+      {
+        "name": "นครปฐม",
+        "lang": "th"
+      },
+      {
+        "name": "นครปฐม"
+      },
+      {
+        "name": "ナコーンパトム",
+        "lang": "ja"
+      },
+      {
+        "name": "Amphoe Muang Nakhon Pathom"
+      },
+      {
+        "name": "Changwat Nakhon Chai Si"
+      },
+      {
+        "name": "Changwat Nakhon Pathom"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Nakhon_Pathom",
+        "lang": "link"
+      },
+      {
+        "name": "Monthon Nakhon Chai Si"
+      },
+      {
+        "name": "Mueang Nakhon Pathom"
+      },
+      {
+        "name": "Nagara Pathom"
+      },
+      {
+        "name": "Nagorn Pathom"
+      },
+      {
+        "name": "Nakawn Patom"
+      },
+      {
+        "name": "Nakhaun Pathom"
+      },
+      {
+        "name": "Nakhon Chai Si"
+      },
+      {
+        "name": "Nakhon Pathom",
+        "lang": "de"
+      },
+      {
+        "name": "Nakhon Pathom",
+        "lang": "en"
+      },
+      {
+        "name": "Nakhon Pathom",
+        "lang": "fr"
+      },
+      {
+        "name": "Nakhon Pathom",
+        "lang": "nl"
+      },
+      {
+        "name": "Nakhon Pathom",
+        "lang": "no"
+      },
+      {
+        "name": "Nakhon Pathom"
+      },
+      {
+        "name": "Nakon Patom"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "53",
+    "lng": "100.04427",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 13.775085709861791,
+      "east": 100.09012611220099,
+      "north": 13.864118290138208,
+      "west": 99.99842188779901
+    },
+    "name": "Nakhon Pathom",
+    "fcode": "PPLA",
+    "geonameId": 1608534,
+    "asciiName": "Nakhon Pathom",
+    "lat": "13.8196",
+    "population": 117927,
+    "adminName1": "Nakhon Pathom",
+    "adminId1": "1608533",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 11,
+    "wikipediaURL": "en.wikipedia.org/wiki/Nakhon_Pathom",
+    "toponymName": "Nakhon Pathom",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "1152473": {
+    "alternateNames": [
+      {
+        "name": "ลำปาง",
+        "lang": "th"
+      },
+      {
+        "name": "Amphoe Muang Lampang"
+      },
+      {
+        "name": "Amphoe Mueang Lampang"
+      },
+      {
+        "name": "Changwat Lampang"
+      },
+      {
+        "name": "Changwat Muang Lampang"
+      },
+      {
+        "name": "Changwat Muang Nagorn Lambang"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Lampang",
+        "lang": "link"
+      },
+      {
+        "name": "Lakhon"
+      },
+      {
+        "name": "Lakhon Lampang"
+      },
+      {
+        "name": "Lampang",
+        "lang": "de"
+      },
+      {
+        "name": "Lampang",
+        "lang": "en"
+      },
+      {
+        "name": "Lampang",
+        "lang": "fr"
+      },
+      {
+        "name": "Lampang",
+        "lang": "nl"
+      },
+      {
+        "name": "Lampang",
+        "lang": "pt"
+      },
+      {
+        "name": "Lampang"
+      },
+      {
+        "name": "Lampangas",
+        "lang": "lt"
+      },
+      {
+        "name": "LPT",
+        "lang": "iata"
+      },
+      {
+        "name": "Muang Lakhon Lampang"
+      },
+      {
+        "name": "Muang Lampang"
+      },
+      {
+        "name": "Muang Nagorn Lambang"
+      },
+      {
+        "name": "Muang Nakon Lampang"
+      },
+      {
+        "name": "Mueang Lampang"
+      },
+      {
+        "name": "Nakawn"
+      },
+      {
+        "name": "Nakawn Lampang"
+      },
+      {
+        "name": "Nakhon Lampang"
+      },
+      {
+        "name": "Nakon Lampang"
+      },
+      {
+        "name": "Nakorn Lampang"
+      },
+      {
+        "name": "Лампанг",
+        "lang": "ru"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "06",
+    "lng": "99.49277",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 18.241046313558247,
+      "east": 99.54678646216819,
+      "north": 18.343589686441756,
+      "west": 99.4387535378318
+    },
+    "name": "Lampang",
+    "fcode": "PPLA",
+    "geonameId": 1152473,
+    "asciiName": "Lampang",
+    "lat": "18.29232",
+    "population": 156139,
+    "adminName1": "Lampang",
+    "adminId1": "1152472",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 238,
+    "wikipediaURL": "en.wikipedia.org/wiki/Lampang",
+    "toponymName": "Lampang",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "1606147": {
+    "alternateNames": [
+      {
+        "name": "송클라",
+        "lang": "ko"
+      },
+      {
+        "name": "สงขลา",
+        "lang": "th"
+      },
+      {
+        "name": "སོང་ཁ་ལ།",
+        "lang": "bo"
+      },
+      {
+        "name": "เทศบาลนครสงขลา",
+        "lang": "th"
+      },
+      {
+        "name": "Amphoe Muang Songkhla"
+      },
+      {
+        "name": "Changwat Songkhla"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Songkhla",
+        "lang": "link"
+      },
+      {
+        "name": "Monthon Nakhon Si Thamarat"
+      },
+      {
+        "name": "Monthon Nakhon Si Thammarat"
+      },
+      {
+        "name": "Muang Sawng Kla"
+      },
+      {
+        "name": "Muang Songkla"
+      },
+      {
+        "name": "Sawng Kla"
+      },
+      {
+        "name": "Senggora"
+      },
+      {
+        "name": "SGZ",
+        "lang": "iata"
+      },
+      {
+        "name": "Singgora",
+        "lang": "mfa"
+      },
+      {
+        "name": "Singgora",
+        "lang": "my"
+      },
+      {
+        "name": "Singgora"
+      },
+      {
+        "name": "Singora"
+      },
+      {
+        "name": "Singorra"
+      },
+      {
+        "name": "Songkhla"
+      },
+      {
+        "name": "Songkla"
+      },
+      {
+        "name": "Sung Kla"
+      },
+      {
+        "name": "Thành phố Songkhla",
+        "lang": "vi"
+      },
+      {
+        "name": "سونگکھلا",
+        "lang": "pnb"
+      },
+      {
+        "name": "Сонгкхла",
+        "lang": "ru"
+      },
+      {
+        "name": "Сонгкхла",
+        "lang": "uk"
+      },
+      {
+        "name": "宋卡",
+        "lang": "zh"
+      },
+      {
+        "name": "宋卡市",
+        "lang": "wuu"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "68",
+    "lng": "100.5951",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 7.1611988679849645,
+      "east": 100.63302321485853,
+      "north": 7.236445132015035,
+      "west": 100.55717278514146
+    },
+    "name": "Songkhla",
+    "fcode": "PPLA",
+    "geonameId": 1606147,
+    "asciiName": "Songkhla",
+    "lat": "7.19882",
+    "population": 84264,
+    "adminName1": "Songkhla",
+    "adminId1": "1606146",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 12,
+    "wikipediaURL": "en.wikipedia.org/wiki/Songkhla",
+    "toponymName": "Songkhla",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "3693134": {
+    "adminCode3": "160112",
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/Punchana",
+        "lang": "link"
+      },
+      {
+        "name": "Punchana"
+      }
+    ],
+    "adminCode2": "1601",
+    "countryName": "Peru",
+    "adminCode1": "16",
+    "lng": "-73.23333",
+    "adminName2": "Provincia de Maynas",
+    "fcodeName": "populated place",
+    "adminName3": "Belen",
+    "timezone": {
+      "dstOffset": -5,
+      "gmtOffset": -5,
+      "timeZoneId": "America/Lima"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -3.725660348751755,
+      "east": -73.22432078775965,
+      "north": -3.7076730512482454,
+      "west": -73.24234581224034
+    },
+    "name": "Punchana",
+    "fcode": "PPL",
+    "geonameId": 3693134,
+    "asciiName": "Punchana",
+    "lat": "-3.71667",
+    "population": 0,
+    "adminName1": "Loreto",
+    "adminId1": "3695238",
+    "countryId": "3932488",
+    "fclName": "city, village,...",
+    "countryCode": "PE",
+    "srtm3": 85,
+    "adminId3": "8350673",
+    "adminId2": "3694873",
+    "wikipediaURL": "en.wikipedia.org/wiki/Punchana",
+    "toponymName": "Punchana",
+    "fcl": "P",
+    "continentCode": "SA"
+  },
+  "3696183": {
+    "adminCode3": "160101",
+    "alternateNames": [
+      {
+        "name": "イキトス",
+        "lang": "ja"
+      },
+      {
+        "name": "이키토스",
+        "lang": "ko"
+      },
+      {
+        "name": "อีกีโตส",
+        "lang": "th"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Iquitos",
+        "lang": "link"
+      },
+      {
+        "name": "Ikitosas",
+        "lang": "lt"
+      },
+      {
+        "name": "Ikitus",
+        "lang": "qu"
+      },
+      {
+        "name": "IQT",
+        "lang": "iata"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "de"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "en"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "es"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "et"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "fi"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "fr"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "id"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "nl"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "nn"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "no"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "pl"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "pt"
+      },
+      {
+        "name": "Iquitos",
+        "lang": "sv"
+      },
+      {
+        "name": "Iquitos"
+      },
+      {
+        "name": "Iquitum",
+        "lang": "la"
+      },
+      {
+        "name": "איקיטוס",
+        "lang": "he"
+      },
+      {
+        "name": "Горад Ікітас",
+        "lang": "be"
+      },
+      {
+        "name": "Икитос",
+        "lang": "mk"
+      },
+      {
+        "name": "Икитос",
+        "lang": "os"
+      },
+      {
+        "name": "Икитос",
+        "lang": "ru"
+      },
+      {
+        "name": "Ікітос",
+        "lang": "uk"
+      },
+      {
+        "name": "იკიტოსი",
+        "lang": "ka"
+      },
+      {
+        "name": "伊基托斯",
+        "lang": "zh"
+      }
+    ],
+    "adminCode2": "1601",
+    "countryName": "Peru",
+    "adminCode1": "16",
+    "lng": "-73.25383",
+    "adminName2": "Provincia de Maynas",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "Iquitos",
+    "timezone": {
+      "dstOffset": -5,
+      "gmtOffset": -5,
+      "timeZoneId": "America/Lima"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -3.834918941077608,
+      "east": -73.167858398411,
+      "north": -3.6633310589223917,
+      "west": -73.339797601589
+    },
+    "name": "Iquitos",
+    "fcode": "PPLA",
+    "geonameId": 3696183,
+    "asciiName": "Iquitos",
+    "lat": "-3.74912",
+    "population": 437620,
+    "adminName1": "Loreto",
+    "adminId1": "3695238",
+    "countryId": "3932488",
+    "fclName": "city, village,...",
+    "countryCode": "PE",
+    "srtm3": 92,
+    "adminId3": "8350666",
+    "adminId2": "3694873",
+    "wikipediaURL": "en.wikipedia.org/wiki/Iquitos",
+    "toponymName": "Iquitos",
+    "fcl": "P",
+    "continentCode": "SA"
+  },
+  "8350147": {
+    "adminCode3": "120907",
+    "alternateNames": [
+
+    ],
+    "adminCode2": "1209",
+    "countryName": "Peru",
+    "adminCode1": "12",
+    "lng": "-75.45375",
+    "adminName2": "Provincia de Chupaca",
+    "fcodeName": "third-order administrative division",
+    "adminName3": "San Juan De Jarpa",
+    "timezone": {
+      "dstOffset": -5,
+      "gmtOffset": -5,
+      "timeZoneId": "America/Lima"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -12.194410104989293,
+      "east": -75.37644698472468,
+      "north": -12.040313479845786,
+      "west": -75.53245998487
+    },
+    "name": "San Juan De Jarpa",
+    "fcode": "ADM3",
+    "geonameId": 8350147,
+    "asciiName": "San Juan De Jarpa",
+    "lat": "-12.11614",
+    "population": 0,
+    "adminName1": "Junín",
+    "adminId1": "3937485",
+    "countryId": "3932488",
+    "fclName": "country, state, region,...",
+    "countryCode": "PE",
+    "srtm3": 3986,
+    "adminId3": "8350147",
+    "adminId2": "7778812",
+    "toponymName": "San Juan De Jarpa",
+    "fcl": "A",
+    "continentCode": "SA"
+  },
+  "Mae Hong Son": 1152221,
+  "1152221": {
+    "alternateNames": [
+      {
+        "name": "จังหวัดแม่ฮ่องสอน",
+        "lang": "th"
+      },
+      {
+        "name": "Changwat Mae Hong Son"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Mae_Hong_Son_Province",
+        "lang": "link"
+      },
+      {
+        "isShortName": true,
+        "name": "Mae Hong Son",
+        "isPreferredName": true
+      },
+      {
+        "name": "Maehongsorn"
+      },
+      {
+        "name": "Mae Hong Sorn"
+      },
+      {
+        "name": "Mae Rong Son"
+      },
+      {
+        "name": "Mae Rong Sorn"
+      },
+      {
+        "name": "Mao Hong Son"
+      },
+      {
+        "name": "Mea Haung Saun"
+      },
+      {
+        "name": "Mehohngsohn"
+      },
+      {
+        "name": "Mehongson"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "01",
+    "lng": "97.91667",
+    "adminName2": "",
+    "fcodeName": "first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 17.568965911865234,
+      "east": 98.65525817871094,
+      "north": 19.80999755859375,
+      "west": 97.34526062011719
+    },
+    "name": "Changwat Mae Hong Son",
+    "fcode": "ADM1",
+    "geonameId": 1152221,
+    "asciiName": "Changwat Mae Hong Son",
+    "lat": "18.75",
+    "population": 287828,
+    "adminName1": "Mae Hong Son",
+    "adminId1": "1152221",
+    "countryId": "1605651",
+    "fclName": "country, state, region,...",
+    "countryCode": "TH",
+    "srtm3": 539,
+    "wikipediaURL": "en.wikipedia.org/wiki/Mae_Hong_Son_Province",
+    "toponymName": "Changwat Mae Hong Son",
+    "fcl": "A",
+    "continentCode": "AS"
+  },
+  "1607552": {
+    "alternateNames": [
+      {
+        "name": "แพร่",
+        "lang": "th"
+      },
+      {
+        "name": "Amphoe Muang Phrae"
+      },
+      {
+        "name": "Amphoe Mueang Phrae"
+      },
+      {
+        "name": "Bhre"
+      },
+      {
+        "name": "Changwat Muang Bhré"
+      },
+      {
+        "name": "Changwat Muang Phrae"
+      },
+      {
+        "name": "Changwat Phrae"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Phrae",
+        "lang": "link"
+      },
+      {
+        "name": "Muang Bhre"
+      },
+      {
+        "name": "Muang Phrae"
+      },
+      {
+        "name": "Muang Pre"
+      },
+      {
+        "name": "Mueang Phrae"
+      },
+      {
+        "name": "Phrae",
+        "lang": "de"
+      },
+      {
+        "name": "Phrae",
+        "lang": "en"
+      },
+      {
+        "name": "Phrae",
+        "lang": "fr"
+      },
+      {
+        "name": "Phrae",
+        "lang": "lt"
+      },
+      {
+        "name": "Phrae",
+        "lang": "nl"
+      },
+      {
+        "name": "Phrae",
+        "lang": "no"
+      },
+      {
+        "name": "Phrae",
+        "lang": "sv"
+      },
+      {
+        "name": "Phrae"
+      },
+      {
+        "name": "Phrea"
+      },
+      {
+        "name": "Prae"
+      },
+      {
+        "name": "Pre"
+      },
+      {
+        "name": "PRH",
+        "lang": "iata"
+      },
+      {
+        "name": "Пхрае",
+        "lang": "ru"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "07",
+    "lng": "100.14103",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 18.120451119921025,
+      "east": 100.16780110218538,
+      "north": 18.171326880078976,
+      "west": 100.11425489781463
+    },
+    "name": "Phrae",
+    "fcode": "PPLA",
+    "geonameId": 1607552,
+    "asciiName": "Phrae",
+    "lat": "18.14589",
+    "population": 38538,
+    "adminName1": "Phrae",
+    "adminId1": "1607551",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 162,
+    "wikipediaURL": "en.wikipedia.org/wiki/Phrae",
+    "toponymName": "Phrae",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "1153671": {
+    "alternateNames": [
+      {
+        "name": "치앙마이",
+        "lang": "ko"
+      },
+      {
+        "name": "チエンマイ",
+        "lang": "ja"
+      },
+      {
+        "name": "แม่ริม เชียงใหม่",
+        "lang": "th"
+      },
+      {
+        "name": "เชียงใหม่",
+        "lang": "th"
+      },
+      {
+        "name": "Amphoe Muang Chiang Mai"
+      },
+      {
+        "name": "Changwat Chiang Mai"
+      },
+      {
+        "name": "Chiangmai",
+        "lang": "en"
+      },
+      {
+        "name": "Chiang Mai",
+        "lang": "da"
+      },
+      {
+        "name": "Chiang Mai",
+        "lang": "de"
+      },
+      {
+        "name": "Chiang Mai",
+        "isPreferredName": true,
+        "lang": "en"
+      },
+      {
+        "name": "Chiang Mai",
+        "lang": "fr"
+      },
+      {
+        "name": "Chiang Mai",
+        "lang": "id"
+      },
+      {
+        "name": "Chiang Mai",
+        "lang": "lt"
+      },
+      {
+        "name": "Chiang Mai",
+        "lang": "nl"
+      },
+      {
+        "name": "Chiang Mai",
+        "lang": "nn"
+      },
+      {
+        "name": "Chiang Mai",
+        "lang": "no"
+      },
+      {
+        "name": "Chiang Mai",
+        "lang": "pt"
+      },
+      {
+        "name": "Chiang Mai",
+        "lang": "sv"
+      },
+      {
+        "name": "Chiang Mai",
+        "lang": "vi"
+      },
+      {
+        "name": "Chiang Mai"
+      },
+      {
+        "name": "Chiengmai"
+      },
+      {
+        "name": "CNX",
+        "lang": "iata"
+      },
+      {
+        "name": "Cziang Maj",
+        "lang": "pl"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Chiang_Mai",
+        "lang": "link"
+      },
+      {
+        "name": "http://ru.wikipedia.org/wiki/%D0%A7%D0%B8%D0%B0%D0%BD%D0%B3-%D0%9C%D0%B0%D0%B9",
+        "lang": "link"
+      },
+      {
+        "name": "Kiangmai"
+      },
+      {
+        "name": "Muang Chieng Mai"
+      },
+      {
+        "name": "Muang Jieng Hmai"
+      },
+      {
+        "name": "Mueang Chiang Mai"
+      },
+      {
+        "name": "Xieng Mai"
+      },
+      {
+        "name": "Zimmé"
+      },
+      {
+        "name": "צ'אנג מאי",
+        "lang": "he"
+      },
+      {
+        "name": "צ'יאנג מאי",
+        "lang": "he"
+      },
+      {
+        "name": "Чианг-Май",
+        "lang": "ru"
+      },
+      {
+        "name": "清迈",
+        "lang": "zh"
+      },
+      {
+        "name": "清邁",
+        "lang": "zh"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "02",
+    "lng": "98.98468",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 18.732264222184963,
+      "east": 99.04608752261232,
+      "north": 18.848487777815034,
+      "west": 98.92327847738768
+    },
+    "name": "Chiang Mai",
+    "fcode": "PPLA",
+    "geonameId": 1153671,
+    "asciiName": "Chiang Mai",
+    "lat": "18.79038",
+    "population": 200952,
+    "adminName1": "Chiang Mai",
+    "adminId1": "1153670",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 313,
+    "wikipediaURL": "en.wikipedia.org/wiki/Chiang_Mai",
+    "toponymName": "Chiang Mai",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "Ban San Pu Loei": 1154827,
+  "1154827": {
+    "alternateNames": [
+      {
+        "name": "บ้านสันปูเลย",
+        "lang": "th"
+      },
+      {
+        "name": "Ban San Bu Loei"
+      },
+      {
+        "name": "Ban San Bu Loi"
+      },
+      {
+        "name": "Ban San Pu Loei"
+      },
+      {
+        "name": "Ban San Pu Loei (1)"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "02",
+    "lng": "98.92603",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 18.664478351248572,
+      "east": 98.93552189800717,
+      "north": 18.68246564875143,
+      "west": 98.91653410199284
+    },
+    "name": "Ban San Pu Loei",
+    "fcode": "PPL",
+    "geonameId": 1154827,
+    "asciiName": "Ban San Pu Loei",
+    "lat": "18.67347",
+    "population": 0,
+    "adminName1": "Chiang Mai",
+    "adminId1": "1153670",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 306,
+    "toponymName": "Ban San Pu Loei",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "pu teuy": null,
+  " Ban Paung District": null,
+  "ban pu tuey": null,
+  "Changwat Khon Kaen": 1609776,
+  "1609776": {
+    "alternateNames": [
+      {
+        "name": "콘깬",
+        "lang": "ko"
+      },
+      {
+        "name": "เมืองขอนแก่น",
+        "lang": "th"
+      },
+      {
+        "name": "เทศบาลนครขอนแก่น",
+        "lang": "th"
+      },
+      {
+        "name": "Amphoe Muang Khon Kaen"
+      },
+      {
+        "name": "Amphoe Phralap"
+      },
+      {
+        "name": "Amphoe Pralap"
+      },
+      {
+        "name": "Changwat Khon Kaen"
+      },
+      {
+        "name": "Changwat Muang Khon Kaen"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Khon_Kaen",
+        "lang": "link"
+      },
+      {
+        "name": "Kawn Ken"
+      },
+      {
+        "name": "Khohn Ken"
+      },
+      {
+        "name": "Khon Kaen",
+        "isPreferredName": true,
+        "lang": "de"
+      },
+      {
+        "name": "Khon Kaen",
+        "isPreferredName": true,
+        "lang": "en"
+      },
+      {
+        "name": "Khon Kaen",
+        "isPreferredName": true,
+        "lang": "fr"
+      },
+      {
+        "name": "Khon Kaen"
+      },
+      {
+        "name": "Khon Kan"
+      },
+      {
+        "name": "Khonkean"
+      },
+      {
+        "name": "Khonkhaen"
+      },
+      {
+        "name": "Khon Khen"
+      },
+      {
+        "name": "KKC",
+        "lang": "iata"
+      },
+      {
+        "name": "Konkahen"
+      },
+      {
+        "name": "Muang Kaun Gean"
+      },
+      {
+        "name": "Muang Khaunkaen"
+      },
+      {
+        "name": "Muang Khon Kaen"
+      },
+      {
+        "name": "Mueang Khon Kaen"
+      },
+      {
+        "name": "کھون کائن",
+        "lang": "pnb"
+      },
+      {
+        "name": "קון קאן",
+        "lang": "he"
+      },
+      {
+        "name": "Кхонкэн",
+        "lang": "ru"
+      },
+      {
+        "name": "坤敬市",
+        "lang": "wuu"
+      },
+      {
+        "name": "孔敬",
+        "lang": "zh"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "22",
+    "lng": "102.833",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 16.397041951339357,
+      "east": 102.88480031147787,
+      "north": 16.496380048660644,
+      "west": 102.78119768852213
+    },
+    "name": "Khon Kaen",
+    "fcode": "PPLA",
+    "geonameId": 1609776,
+    "asciiName": "Khon Kaen",
+    "lat": "16.44671",
+    "population": 147579,
+    "adminName1": "Khon Kaen",
+    "adminId1": "1609775",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 167,
+    "wikipediaURL": "en.wikipedia.org/wiki/Khon_Kaen",
+    "toponymName": "Khon Kaen",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "1606376": {
+    "alternateNames": [
+      {
+        "name": "สตูล",
+        "lang": "th"
+      },
+      {
+        "name": "สตูล"
+      },
+      {
+        "name": "Changwat Satun"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Satun",
+        "lang": "link"
+      },
+      {
+        "name": "Satul"
+      },
+      {
+        "name": "Satun",
+        "lang": "de"
+      },
+      {
+        "name": "Satun",
+        "lang": "en"
+      },
+      {
+        "name": "Satun",
+        "lang": "fr"
+      },
+      {
+        "name": "Satun",
+        "lang": "nl"
+      },
+      {
+        "name": "Satun"
+      },
+      {
+        "name": "Setul"
+      },
+      {
+        "name": "Сатун",
+        "lang": "ru"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "67",
+    "lng": "100.06676",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 6.599347042024657,
+      "east": 100.09071398354268,
+      "north": 6.646936957975342,
+      "west": 100.0428020164573
+    },
+    "name": "Satun",
+    "fcode": "PPLA",
+    "geonameId": 1606376,
+    "asciiName": "Satun",
+    "lat": "6.62314",
+    "population": 34544,
+    "adminName1": "Satun",
+    "adminId1": "1606375",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 15,
+    "wikipediaURL": "en.wikipedia.org/wiki/Satun",
+    "toponymName": "Satun",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "1611269": {
+    "alternateNames": [
+      {
+        "name": "จันทบุรี",
+        "lang": "th"
+      },
+      {
+        "name": "Amphoe Muang Chanthaburi"
+      },
+      {
+        "name": "Chandaburi"
+      },
+      {
+        "name": "Chandha Buri"
+      },
+      {
+        "name": "Changwat Chanthaburi"
+      },
+      {
+        "name": "Chantaboun"
+      },
+      {
+        "name": "Chantabun"
+      },
+      {
+        "name": "Chantaburi"
+      },
+      {
+        "name": "Chanthaburi"
+      },
+      {
+        "name": "Chentabun"
+      },
+      {
+        "name": "Chiyandburii"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Chanthaburi",
+        "lang": "link"
+      },
+      {
+        "name": "Mueang Chanthaburi"
+      },
+      {
+        "name": "Чантхабури",
+        "lang": "ru"
+      }
+    ],
+    "countryName": "Thailand",
+    "adminCode1": "48",
+    "lng": "102.10447",
+    "adminName2": "",
+    "fcodeName": "seat of a first-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 7,
+      "gmtOffset": 7,
+      "timeZoneId": "Asia/Bangkok"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 12.56864298020649,
+      "east": 102.14645931194786,
+      "north": 12.650579019793508,
+      "west": 102.06248468805214
+    },
+    "name": "Chanthaburi",
+    "fcode": "PPLA",
+    "geonameId": 1611269,
+    "asciiName": "Chanthaburi",
+    "lat": "12.60961",
+    "population": 99819,
+    "adminName1": "Chanthaburi",
+    "adminId1": "1611268",
+    "countryId": "1605651",
+    "fclName": "city, village,...",
+    "countryCode": "TH",
+    "srtm3": 7,
+    "wikipediaURL": "en.wikipedia.org/wiki/Chanthaburi",
+    "toponymName": "Chanthaburi",
+    "fcl": "P",
+    "continentCode": "AS"
+  },
+  "Rakai": 443363,
+  "443363": {
+    "adminCode2": "61",
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/Rakai_District",
+        "lang": "link"
+      },
+      {
+        "isShortName": true,
+        "name": "Rakai"
+      },
+      {
+        "name": "Rakai District"
+      }
+    ],
+    "countryName": "Uganda",
+    "adminCode1": "C",
+    "lng": "31.5099",
+    "adminName2": "Rakai",
+    "fcodeName": "second-order administrative division",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Kampala"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Rakai District",
+    "fcode": "ADM2",
+    "geonameId": 443363,
+    "asciiName": "Rakai District",
+    "lat": "-0.75773",
+    "population": 0,
+    "adminName1": "Central Region",
+    "adminId1": "234594",
+    "countryId": "226074",
+    "fclName": "country, state, region,...",
+    "countryCode": "UG",
+    "srtm3": 1175,
+    "adminId2": "443363",
+    "wikipediaURL": "en.wikipedia.org/wiki/Rakai_District",
+    "toponymName": "Rakai District",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "Kéla": 333438,
+  "333438": {
+    "alternateNames": [
+      {
+        "name": "Kēla"
+      },
+      {
+        "name": "Scerscera"
+      }
+    ],
+    "countryName": "Ethiopia",
+    "adminCode1": "54",
+    "lng": "38.5",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Addis_Ababa"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 8.2576733512489,
+      "east": 38.509088284880555,
+      "north": 8.2756606487511,
+      "west": 38.490911715119445
+    },
+    "name": "Kēla",
+    "fcode": "PPL",
+    "geonameId": 333438,
+    "asciiName": "Kela",
+    "lat": "8.26667",
+    "population": 0,
+    "adminName1": "Southern Nations, Nationalities, and People's Region",
+    "adminId1": "444188",
+    "countryId": "337996",
+    "fclName": "city, village,...",
+    "countryCode": "ET",
+    "srtm3": 1966,
+    "toponymName": "Kēla",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "Kibanda": 231597,
+  "231597": {
+    "adminCode3": "231597",
+    "alternateNames": [
+
+    ],
+    "adminCode2": "F7",
+    "countryName": "Uganda",
+    "adminCode1": "W",
+    "lng": "32.03573",
+    "adminName2": "Kiryandongo District",
+    "fcodeName": "third-order administrative division",
+    "adminName3": "Kibanda",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Africa/Kampala"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Kibanda",
+    "fcode": "ADM3",
+    "geonameId": 231597,
+    "asciiName": "Kibanda",
+    "lat": "2.01481",
+    "population": 0,
+    "adminName1": "Western Region",
+    "adminId1": "8260675",
+    "countryId": "226074",
+    "fclName": "country, state, region,...",
+    "countryCode": "UG",
+    "srtm3": 1101,
+    "adminId3": "231597",
+    "adminId2": "8030564",
+    "toponymName": "Kibanda",
+    "fcl": "A",
+    "continentCode": "AF"
+  },
+  "Miandrivazo": 1059051,
+  "1059051": {
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/Miandrivazo",
+        "lang": "link"
+      },
+      {
+        "name": "Miandrivazo"
+      },
+      {
+        "name": "ZVA",
+        "lang": "iata"
+      }
+    ],
+    "countryName": "Madagascar",
+    "adminCode1": "7670902",
+    "lng": "45.45559",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 3,
+      "gmtOffset": 3,
+      "timeZoneId": "Indian/Antananarivo"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -19.547594593220882,
+      "east": 45.47525964355465,
+      "north": -19.510512829457692,
+      "west": 45.43591894531254
+    },
+    "name": "Miandrivazo",
+    "fcode": "PPL",
+    "geonameId": 1059051,
+    "asciiName": "Miandrivazo",
+    "lat": "-19.52905",
+    "population": 20631,
+    "adminName1": "Menabe",
+    "adminId1": "7670902",
+    "countryId": "1062947",
+    "fclName": "city, village,...",
+    "countryCode": "MG",
+    "srtm3": 67,
+    "wikipediaURL": "en.wikipedia.org/wiki/Miandrivazo",
+    "toponymName": "Miandrivazo",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "2570345": {
+    "adminCode2": "53",
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/Koubri_Department",
+        "lang": "link"
+      },
+      {
+        "name": "Koubri"
+      }
+    ],
+    "countryName": "Burkina Faso",
+    "adminCode1": "03",
+    "lng": "-1.35556",
+    "adminName2": "Kadiogo Province",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 0,
+      "gmtOffset": 0,
+      "timeZoneId": "Africa/Ouagadougou"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 12.158506351248574,
+      "east": -1.346355359896944,
+      "north": 12.176493648751427,
+      "west": -1.364756640103056
+    },
+    "name": "Koubri",
+    "fcode": "PPL",
+    "geonameId": 2570345,
+    "asciiName": "Koubri",
+    "lat": "12.1675",
+    "population": 0,
+    "adminName1": "Centre",
+    "adminId1": "6930704",
+    "countryId": "2361809",
+    "fclName": "city, village,...",
+    "countryCode": "BF",
+    "srtm3": 293,
+    "adminId2": "2359923",
+    "wikipediaURL": "en.wikipedia.org/wiki/Koubri_Department",
+    "toponymName": "Koubri",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "2348142": {
+    "alternateNames": [
+      {
+        "name": "Bakin Kogi",
+        "lang": "en"
+      },
+      {
+        "name": "Birnin Kogi",
+        "lang": "en"
+      },
+      {
+        "name": "Birnin Kogi"
+      }
+    ],
+    "countryName": "Nigeria",
+    "adminCode1": "46",
+    "lng": "10.3547",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 1,
+      "gmtOffset": 1,
+      "timeZoneId": "Africa/Lagos"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": 10.063463651248574,
+      "east": 10.363837789284059,
+      "north": 10.081450948751426,
+      "west": 10.345568410715941
+    },
+    "name": "Bakin Kogi",
+    "fcode": "PPL",
+    "geonameId": 2348142,
+    "asciiName": "Bakin Kogi",
+    "lat": "10.07246",
+    "population": 0,
+    "adminName1": "Bauchi",
+    "adminId1": "2347468",
+    "countryId": "2328926",
+    "fclName": "city, village,...",
+    "countryCode": "NG",
+    "srtm3": 319,
+    "toponymName": "Bakin Kogi",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "2401823": {
+    "alternateNames": [
+
+    ],
+    "countryName": "Gabon",
+    "adminCode1": "08",
+    "lng": "10.15",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 1,
+      "gmtOffset": 1,
+      "timeZoneId": "Africa/Libreville"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -1.9089936487517547,
+      "east": 10.158998549291155,
+      "north": -1.8910063512482451,
+      "west": 10.141001450708846
+    },
+    "name": "Bengui",
+    "fcode": "PPL",
+    "geonameId": 2401823,
+    "asciiName": "Bengui",
+    "lat": "-1.9",
+    "population": 0,
+    "adminName1": "Ogooué-Maritime",
+    "adminId1": "2396924",
+    "countryId": "2400553",
+    "fclName": "city, village,...",
+    "countryCode": "GA",
+    "srtm3": 77,
+    "toponymName": "Bengui",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "2591943": {
+    "alternateNames": [
+
+    ],
+    "countryName": "Angola",
+    "adminCode1": "20",
+    "lng": "13.40453",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 1,
+      "gmtOffset": 1,
+      "timeZoneId": "Africa/Luanda"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -8.766201648751755,
+      "east": 13.413633510196147,
+      "north": -8.748214351248246,
+      "west": 13.395434489803852
+    },
+    "name": "Bairro da Vidrul",
+    "fcode": "PPL",
+    "geonameId": 2591943,
+    "asciiName": "Bairro da Vidrul",
+    "lat": "-8.75721",
+    "population": 0,
+    "adminName1": "Luanda",
+    "adminId1": "2240444",
+    "countryId": "3351879",
+    "fclName": "city, village,...",
+    "countryCode": "AO",
+    "srtm3": 20,
+    "toponymName": "Bairro da Vidrul",
+    "fcl": "P",
+    "continentCode": "AF"
+  },
+  "881664": {
+    "alternateNames": [
+      {
+        "name": "Sangwe Communal Land",
+        "lang": "en"
+      },
+      {
+        "name": "Sangwe Reserve",
+        "lang": "en"
+      },
+      {
+        "name": "Sangwe Reserve"
+      },
+      {
+        "name": "Sangwe Tribal Trust Land",
+        "lang": "en"
+      }
+    ],
+    "countryName": "Zimbabwe",
+    "adminCode1": "08",
+    "lng": "32.11636",
+    "adminName2": "",
+    "fcodeName": "tribal area",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Harare"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Sangwe Communal Land",
+    "fcode": "TRB",
+    "geonameId": 881664,
+    "asciiName": "Sangwe Communal Land",
+    "lat": "-20.85063",
+    "population": 0,
+    "adminName1": "Masvingo",
+    "countryId": "878675",
+    "adminId1": "886761",
+    "fclName": "parks,area, ...",
+    "countryCode": "ZW",
+    "srtm3": 436,
+    "toponymName": "Sangwe Communal Land",
+    "fcl": "L",
+    "continentCode": "AF"
+  },
+  "881945": {
+    "alternateNames": [
+      {
+        "name": "Sabi",
+        "lang": "en"
+      },
+      {
+        "name": "Sabi Division",
+        "lang": "en"
+      },
+      {
+        "name": "Sabi Division"
+      },
+      {
+        "name": "Sabi Native Division",
+        "lang": "en"
+      },
+      {
+        "name": "Sabi Native Division"
+      },
+      {
+        "name": "Sabi Purchase Land",
+        "lang": "en"
+      }
+    ],
+    "countryName": "Zimbabwe",
+    "adminCode1": "01",
+    "lng": "32.61422",
+    "adminName2": "",
+    "fcodeName": "agricultural colony",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Harare"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "name": "Sabi",
+    "fcode": "AGRC",
+    "geonameId": 881945,
+    "asciiName": "Sabi",
+    "lat": "-20.53444",
+    "population": 0,
+    "adminName1": "Manicaland",
+    "countryId": "878675",
+    "adminId1": "887358",
+    "fclName": "parks,area, ...",
+    "countryCode": "ZW",
+    "srtm3": 773,
+    "toponymName": "Sabi",
+    "fcl": "L",
+    "continentCode": "AF"
+  },
+  "893485": {
+    "alternateNames": [
+      {
+        "name": "BFO",
+        "lang": "iata"
+      },
+      {
+        "name": "Chiredzi",
+        "lang": "en"
+      },
+      {
+        "name": "Chiredzi"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Chiredzi",
+        "lang": "link"
+      }
+    ],
+    "countryName": "Zimbabwe",
+    "adminCode1": "08",
+    "lng": "31.66667",
+    "adminName2": "",
+    "fcodeName": "populated place",
+    "adminName3": "",
+    "timezone": {
+      "dstOffset": 2,
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Harare"
+    },
+    "adminName4": "",
+    "adminName5": "",
+    "bbox": {
+      "south": -21.07156601209585,
+      "east": 31.68977143053941,
+      "north": -21.02843398790415,
+      "west": 31.643561969460592
+    },
+    "name": "Chiredzi",
+    "fcode": "PPL",
+    "geonameId": 893485,
+    "asciiName": "Chiredzi",
+    "lat": "-21.05",
+    "population": 28205,
+    "adminName1": "Masvingo",
+    "adminId1": "886761",
+    "countryId": "878675",
+    "fclName": "city, village,...",
+    "countryCode": "ZW",
+    "srtm3": 436,
+    "wikipediaURL": "en.wikipedia.org/wiki/Chiredzi",
+    "toponymName": "Chiredzi",
+    "fcl": "P",
+    "continentCode": "AF"
   }
 }
