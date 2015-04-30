@@ -24,7 +24,9 @@
         <div class="timeline-panel">
           <div class="timeline-heading">
             <h4 class="field-title">Regions</h4>
-            <h4 class="timeline-title"><%=Array(@document["dct_spatial_sm"]).join(", ")%></h4>
+            <h4 class="timeline-title">
+              <%= @document["dct_spatial_sm"].to_a * "\n" %>
+            </h4>
           </div>
         </div>
       </li>
@@ -33,7 +35,7 @@
         <div class="timeline-panel">
           <div class="timeline-heading">
             <h4 class="field-title">Latitude & Longitude</h4>
-            <h4 class="timeline-title"><%=@document["point_list_s"] %></h4>
+            <h4 class="timeline-title"><%=Array(@document["point_list_s"]).join("\n") %></h4>
           </div>
 
         </div>

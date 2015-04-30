@@ -19,8 +19,8 @@ class FeedbackMailer < ActionMailer::Base
     @viewport = params[:viewport]
 
     mail(to: Settings.EMAIL_TO,
-         subject: 'Feedback from VecNET Digital Library Beta',
-         from: 'feedback@vecnet.org',
+         subject: 'Feedback for VecNET Digital Library Beta',
+         from: 'feedback@vecnet.zohosupport.com',
          reply_to: Settings.EMAIL_TO)
   end
 end
