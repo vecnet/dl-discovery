@@ -24,7 +24,7 @@
 
     <% if !document[:dct_references].nil? && !document[:dct_references]["thumbnailUrl"].nil? %>
 
-  <a href="<%= document[:dct_references]["url"] %>" title="Document thumbnail" class="thumbnail"><img src="<%= document.references.thumbnailUrl%>" alt="Document thumbnail"/></a>
+  <a href="<%= document[:dct_references]["thumbnailUrl"] %>" title="Document thumbnail" class="thumbnail"><img src="<%= document.references.thumbnailUrl%>" alt="Document thumbnail"/></a>
 
   <% else %>
 
