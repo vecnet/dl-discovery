@@ -19,15 +19,16 @@
   <!--End of data-ptdata-->
 
   <div class="col-xs-4 col-md-2">
+
     <!--TODO: Change this to be correct thumbnail url and logic if no url then default image-->
 
-    <% unless document[:vn_thumnbnail_s].blank? %>
+    <% if !document[:dct_references_s].nil? %>
 
-        <a href="<%= document[:vn_thumnbnail_s]%>" title="Document thumbnail" class="thumbnail"><img src="<%= document[:vn_thumnbnail_s]%>" alt="Document thumbnail"/></a>
+        <a href="<%= document.references[1]%>" title="Document thumbnail" class="thumbnail"><img src="<%= document[:dct_references_s][1]%>" alt="Document thumbnail"/></a>
 
   <% else %>
 
-    <a href="#" title="Placeholder document thumbnail" class="thumbnail"><img src="<%= asset_path('example-thumbnail.png')%>" alt="Example document thumbnail"/></a>
+    <a href="#" title="Placeholder document thumbnail" class="thumbnail"><img src="<%= asset_path('placeholder-image.png')%>" alt="Example document thumbnail"/></a>
     <% end %>
   </div>
 

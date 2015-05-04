@@ -179,6 +179,17 @@
   </div>
 
   <!--debugging-->
-  <%= @document.inspect %>
+  <%# @document.inspect %>
+
+  <p>references object : <%= @document[:dct_references] %></p>
+
+  <% if !@document.references.nil? && !@document.references.url.nil? %>
+      <dt>More details at</dt>
+      <dd itemprop="url"><%= link_to @document.references.url, @document.references.url.endpoint %></dd>
+      <dt>Thumbnail at</dt>
+
+      <dd itemprop="thumbnailURL"><%= link_to @document.references.thumbnailUrl, @document.references.thumbnailUrl %></dd>
+
+<% end %>
 
 </div>
