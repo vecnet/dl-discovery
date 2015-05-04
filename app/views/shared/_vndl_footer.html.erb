@@ -1,20 +1,21 @@
 <!--footer start-->
 <footer id="footer" class="footer">
-  <%= link_to (image_tag 'vecnet_logo_footer.png', {:"data-svg-fallback" => "#{image_path('vecnet_logo_footer.png')}", :alt => 'VecNET Digital Library'}), root_path %>
+
+  <% vecnet_host = Rails.env == 'production' ? 'https://vecnet.org' : 'https://dev.vecnet.org' -%>
+
+
+  <%= link_to (image_tag 'vecnet_logo_footer.png', {:"data-svg-fallback" => "#{image_path('vecnet_logo_footer.png')}", :alt => 'VecNET Digital Library'}), vecnet_host %>
 
   <%# image_tag 'vecnet_logo_footer.jpg' %>
 
   <div class="row">
-
-
-    <% vecnet_host = Rails.env == 'production' ? 'https://vecnet.org' : 'https://dev.vecnet.org' -%>
     <p>
       | <%= link_to "FAQ", "#{vecnet_host}/index.php/about-vecnet/faq" %>
       | <%= link_to "User Privacy Policy", "#{vecnet_host}/index.php/user-privacy-policy" %>
       | <%= link_to "Terms of Use", "#{vecnet_host}/index.php/terms-of-use" %>
       <br/>
           <span class="fine-print">Copyright &copy;
-            2014 <%= link_to "Vector-Borne Disease Network (VecNet)", "#{vecnet_host}/" %></span>
+            2015 <%= link_to "Vector-Borne Disease Network (VecNet)", "#{vecnet_host}/" %></span>
       <br/>
 
 
