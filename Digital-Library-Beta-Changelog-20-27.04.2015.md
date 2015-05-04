@@ -7,16 +7,28 @@ Digital Library Beta Weekly Changelog
 
 **Summary**
 
-* Persistent URLS for search terms (you can share the URL of your search)
+* Persistent URLS for search terms (share the URL of a search)
 
-* Back to search using browser back support
+* Back to search using browser back button support
 
 * User friendly metadata strings
 
 * Updated banner logo
 
+* Bug fixing
 
 
-**Next Week**
+**TODO**
+
+* Update banner design to ND mockups? Or ND doing?
+    * fonts
+    * terms
+    * link to vecnet home
+
+* MODC call issues TBD
+
+* Javascript testing
+
+* Bug fixing
 
 * Issue [list](https://docs.google.com/document/d/11gtdK6Eay-r3NSYAlLqcpUxd9WGxWpsCNaEuat87laU/edit?usp=sharing)
