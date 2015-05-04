@@ -28,16 +28,18 @@
     <dd><%= @document["dc_rights_s"]%></dd>
 
     <dt>URL</dt>
-    <dd><%= link_to @document["dc_references_s"] %></dd>
+    <dd><%= link_to @document["dct_references_s"] %></dd>
     <!--TODO: Fish out the correct links from JSON object here-->
 
     <%# TODO: Double check this work with Don %>
     <% if !@document.references.nil? && !@document.references.url.nil? %>
       <dt>More details at</dt>
       <dd itemprop="url"><%= link_to @document.references.url.endpoint, @document.references.url.endpoint %></dd>
+    <% end %>
 
+    <% if document.has_key?(:dct_references_s) %>
         <dt>Thumbnail URL</dt>
-        <dd itemprop="thumbnailurl"><%= link_to @document[:dct_references]["http://schema.org/thumbnailUrl"], [:dct_references]["http://schema.org/thumbnailUrl"] %></dd>
+        <dd itemprop="thumbnailurl"><%= link_to @document[:dct_references_s]["https://schema.org/thumbnailUrl"], [:dct_reference_s]["https://schema.org/thumbnailUrl"] %></dd>
 
   <% end %>
   </dl>
