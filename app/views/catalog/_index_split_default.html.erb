@@ -22,9 +22,9 @@
 
     <!--TODO: Change this to be correct thumbnail url and logic if no url then default image-->
 
-    <% if !document[:dct_references_s].nil? %>
+    <% if !document[:dct_references].nil? && !document[:dct_references]["thumbnailUrl"].nil? %>
 
-        <a href="<%= document.references[1]%>" title="Document thumbnail" class="thumbnail"><img src="<%= document[:dct_references_s][1]%>" alt="Document thumbnail"/></a>
+  <a href="<%= document[:dct_references]["url"] %>" title="Document thumbnail" class="thumbnail"><img src="<%= document.references.thumbnailUrl%>" alt="Document thumbnail"/></a>
 
   <% else %>
 
@@ -37,7 +37,7 @@
       <% unless document[:dc_created_sm].blank? %><li><i class="glyphicon glyphicon-time"></i> <span><%= Array(document[:dc_created_sm]).join(", ") %></span></li><% end %>
       <% unless document[:dc_type_s].blank? %><li><i class="glyphicon glyphicon-file"></i> <span><%= document[:dc_type_s] %></span></li> <% end %>
       <% unless document[:vn_keyword_sm].blank? %> <li><i class="glyphicon glyphicon-tags"></i> <span> <%= Array(document[:vn_keyword_sm]).join(", ") %> </span></li> <% end %>
-      <li><i class="glyphicon glyphicon-map-marker"></i> <span><%= document[:layer_geom_type_s] %></span></li>
+      <% unless document[:layer_geom_type_s].blank? %> <li><i class="glyphicon glyphicon-map-marker"></i> <span><%= document[:layer_geom_type_s] %></span></li><% end %>
     </ul>
   </div>
   <div class="col-xs-12 col-md-8 excerpet">
