@@ -27,10 +27,10 @@
     <dt>Access</dt>
     <dd><%= @document["dc_rights_s"]%></dd>
 
+
     <dt>URL</dt>
-    <dd><%= link_to @document["dct_references_s"]["http://schema.org/url"] %></dd>
-
-
+    <% hash = JSON.parse(@document["dct_references_s"]) %>
+    <dd><%= link_to hash["http://schema.org/url"]%></dd>
 
     <!--TODO: Fish out the correct links from JSON object here || Check with Don -->
     <% if !@document.references.nil? && !@document.references.url.nil? %>
