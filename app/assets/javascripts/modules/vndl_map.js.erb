@@ -48,9 +48,7 @@ window.VndlMap = function (mapDomId, options) {
 
     this.leafletMap.setView([8, 17], 4);
     // add an OpenStreetMap tile layer
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OSM</a> contributors'
-    }).addTo(this.leafletMap);
+    L.tileLayer.provider('MapQuestOpen.Aerial').addTo(this.leafletMap);
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.clearMarkers = function () {
