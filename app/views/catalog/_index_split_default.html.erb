@@ -24,7 +24,7 @@
 
     <% unless document[:dct_references_s].nil? or document[:dct_references_s]["http://schema.org/thumbnailUrl"].nil? %>
 
-        <a href="<%= document[:dct_references_s]["https://schema.org/thumbnailUrl"]%>" title="Document thumbnail" class="thumbnail"><img src="<%= document[:dct_references_s]["https://schema.org/thumbnailUrl"]%>" alt="Document thumbnail"/></a>
+        <a href="<%= document[:dct_references_s]["https://schema.org/thumbnailUrl"]%>" class="thumbnail"><img src="<%= document[:dct_references_s]["https://schema.org/thumbnailUrl"]%>" alt="Document thumbnail"/></a>
 
   <% else %>
 
