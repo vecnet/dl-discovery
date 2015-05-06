@@ -111,6 +111,13 @@ response.each do |_, record|
 
   output << new_record if output_stdout
   target.add(new_record) if target
+
+  # save our progress every so often
+  if processed_count % 100 == 0
+    STDERR.puts "(saving)"
+    enrich.save
+    target.commit if target
+  end
 end
 
 # save the geonames cache to disk
