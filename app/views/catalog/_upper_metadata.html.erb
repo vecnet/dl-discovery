@@ -32,6 +32,11 @@
     <% hash = JSON.parse(@document["dct_references_s"]) %>
     <dd><%= link_to hash["http://schema.org/url"]%></dd>
 
+
+    <dt>Links</dt>
+    <dd><%= Array(@document["dc_relation_sm"]).join(", ")%></dd>
+
+
     <!--TODO: Fish out the correct links from JSON object here || Check with Don -->
     <% if !@document.references.nil? && !@document.references.url.nil? %>
       <dt>More details at</dt>

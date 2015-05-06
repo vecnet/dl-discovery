@@ -48,7 +48,7 @@ window.VndlMap = function (mapDomId, options) {
 
     this.leafletMap.setView([8, 17], 4);
     // add an OpenStreetMap tile layer
-    L.tileLayer.provider('MapQuestOpen.Aerial').addTo(this.leafletMap);
+    L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(this.leafletMap);
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.clearMarkers = function () {
