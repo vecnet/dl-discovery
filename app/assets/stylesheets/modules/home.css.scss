@@ -164,12 +164,26 @@ $content-h-pad-halved: ceil(2 * $content-pad-unit);
 $disabled-color: #aaa;
 $disabled-color: #aaa;
 
-///////////////////////////////////////////////////////// search result
+///////////////////////////////////////////////////////// search result listing
 
 .result-title {
   margin-top: 0px;
 }
 
+.result-author {
+  font-weight: bold;
+}
+
+// TODO : Limit max height of this when too many tags and do no overflow?
+.tags-text {
+
+}
+
+
+.result-citation {
+  font-style: italic;
+
+}
 .search-result {
   border-bottom: 1px solid $line-color;
   padding: $content-v-pad;
