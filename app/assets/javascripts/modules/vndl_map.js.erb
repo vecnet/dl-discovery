@@ -47,8 +47,16 @@ window.VndlMap = function (mapDomId, options) {
 
 
     this.leafletMap.setView([8, 17], 4);
-    // add an OpenStreetMap tile layer
-    L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(this.leafletMap);
+
+    // add an OpenStreetMap tile layer using providers
+    // L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(this.leafletMap);
+
+    // explicitly for MapQuest requires a -s
+    // un sure why the above
+    // which is the current canonical leaflet way
+    // does not work for dl
+    L.tileLayer('https://otile1-s.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(this.leafletMap);
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.clearMarkers = function () {
