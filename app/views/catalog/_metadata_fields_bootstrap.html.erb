@@ -137,9 +137,15 @@
               <tbody>
 
               <tr>
-                <th style="width:10%">Resource Type</th>
+                <th style="width:10%">Identifier</th>
+                <td><%= @document["dc_identifier_sm"] %></td>
+              </tr>
+
+              <tr>
+                <th>Resource Type</th>
                 <td><%= @document["dc_type_s"] %></td>
               </tr>
+              
 
               <tr>
                 <th>Filename</th>
