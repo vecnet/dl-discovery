@@ -47,6 +47,13 @@ output = []
 
 response.each do |record|
   processed_count += 1
+  # save our progress every so often
+  if processed_count % 100 == 0
+    STDERR.puts "(saving)"
+    enrich.save
+    target.commit if target
+  end
+
   next if record.nil?
   STDERR.puts "#{processed_count}) Processing record #{record['url']}"
 
@@ -67,13 +74,6 @@ response.each do |record|
   end
   if target
     target.add(new_record)
-  end
-
-  # save our progress every so often
-  if processed_count % 100 == 0
-    STDERR.puts "(saving)"
-    enrich.save
-    target.commit if target
   end
 end
 
