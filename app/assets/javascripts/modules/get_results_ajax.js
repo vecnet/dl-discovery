@@ -70,20 +70,17 @@ function getResultsPage(queryString, start, length) {
 
 
 function getSearchParameters(newURL) {
-    var prmstr = window.location.search.substr(1);
-    var urlstr = newURL.substr(1);
-    //var urlstr = newURL.search.substr(1);
-    //return urlstr != null && urlstr != "" ? transformToAssocArray(urlstr) : {};
-    return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+    var paramString = window.location.search.substr(1);
+    return paramString != null && paramString != "" ? transformToAssocArray(paramString) : {};
 }
 
 //----------------------------------------------------------------------------------------------------------------------
 
-function transformToAssocArray( urlstr ) {
+function transformToAssocArray( paramString ) {
     var params = {};
-    var prmarr = urlstr.split("&");
-    for ( var i = 0; i < prmarr.length; i++) {
-        var tmparr = prmarr[i].split("=");
+    var paramArray = paramString.split("&");
+    for ( var i = 0; i < paramArray.length; i++) {
+        var tmparr = paramArray[i].split("=");
         params[tmparr[0]] = tmparr[1];
     }
     return params;

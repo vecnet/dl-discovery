@@ -16,8 +16,6 @@ function changeFormSubmitEventToAjaxCall(formElement) {
         // use the html5 history API to preserve the browser history and back button
         history.pushState(queryString,null,fullPathQueryString);
 
-
-
     });
 }
 
@@ -60,7 +58,6 @@ function searchFormSetup(formElement) {
 
 
     // check the state of the map switch and toggle the hidden checkbox
-
     $('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
 
         setMapVisibility();
@@ -160,8 +157,6 @@ function changeAnchorToUseAjax(elementSelector){
 //
 function addClickEventToRemoveAppliedFacet($links) {
 
-    // TODO: Code review function
-
     var $removeFacetLinks = $links;
 
     $removeFacetLinks.each(function (index, link) {
@@ -220,6 +215,15 @@ function setMapVisibility() {
         window.vndl.theMap.show();
         //enable($('input[name=searchmap]'));
         enable($('button[name=searchmap]'));
+
+        // call function to find every href on the page
+        // turn href into key pair
+        // change the showmap value to on
+        // tell the element its new href is this
+
+
+        // TODO : Use JQUERY BBQ to deparam and then edit each href
+
 
     } else {
         window.vndl.theMap.hide();
