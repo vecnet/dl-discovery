@@ -177,6 +177,9 @@ $disabled-color: #aaa;
 // TODO : Limit max height of this when too many tags and do no overflow?
 .tags-text {
 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
