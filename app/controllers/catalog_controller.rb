@@ -202,6 +202,9 @@ class CatalogController < ApplicationController
     config.add_sort_field 'dc_title_sort asc', :label => 'title'
 
     # newly added fields as per Digital Library previous sort functions
+
+    config.add_sort_field 'dc_source_sort asc', :label => 'journal'
+
     config.add_sort_field 'dc_created_sort asc', :label => 'publish date asc'
     config.add_sort_field 'dc_created_sort desc', :label => 'publish date desc'
 
@@ -211,6 +214,8 @@ class CatalogController < ApplicationController
 
     config.add_sort_field 'dc_date_modified_sort asc', :label => 'modify date asc'
     config.add_sort_field 'dc_date_modified_sort desc', :label => 'modify date desc'
+
+
 
 
 
