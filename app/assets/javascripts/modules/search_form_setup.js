@@ -21,6 +21,27 @@ function changeFormSubmitEventToAjaxCall(formElement) {
 
 function searchFormSetup(formElement) {
 
+
+    $('.flash').animate({opacity: 0.25}, 700 );
+    $('.flash').animate({opacity: 1}, 700 );
+    $('.flash').animate({opacity: 0.25}, 700 );
+    $('.flash').animate({opacity: 1}, 750 );
+
+    //
+    //$.fn.flash = function(duration, iterations) {
+    //    duration = duration || 1000; // Default to 1 second
+    //    iterations = iterations || 1; // Default to 1 iteration
+    //    var iterationDuration = Math.floor(duration / iterations);
+    //
+    //    for (var i = 0; i < iterations; i++) {
+    //        this.fadeOut(iterationDuration).fadeIn(iterationDuration);
+    //    }
+    //    return this;
+    //};
+    //
+    //$(".flash").flash(2000, 2); // Flash 3 times over a period of 3 second
+
+
     changeFormSubmitEventToAjaxCall(formElement);
 
     changeAnchorToUseAjax('a.paginate-next');
