@@ -13,7 +13,7 @@ app_root=$(cd $(dirname $0)/.. && pwd)
 # should a paricular harvest take a long time.
 # The lock is released when this shell exits.
 exec 200> "$app_root/tmp/last-harvest-$which-lock"
-flock -e --nonblock || exit 0
+flock -e --nonblock 200 || exit 0
 
 # mark this time
 new_harvest_mark=$(date '+%Y-%m-%dT%H:%M:%S')
