@@ -221,49 +221,47 @@ function addSerialisedFormToHref($links) {
 function setMapVisibility() {
     var showmap = $('input[name=showmap]').prop('checked');
 
-    console.log('showmap is :' + showmap)
-
     if (showmap) {
         window.vndl.theMap.show();
         //enable($('input[name=searchmap]'));
         enable($('button[name=searchmap]'));
-
-
-        // add showmap=on to hrefs in the page
-
-        $('a[href]').each(function(index,anchor) {
-            var href = $(anchor).attr('href');
-
-            console.log('href is now ' + href);
-
-            if (typeof href !== 'undefined') {
-
-                console.log('current href is : ' + href);
-                if (href.indexOf('?') != -1) {
-                    href = href + '&showmap=on';
-                }
-                else {
-                    href = href + '?showmap=on';
-                }
-                $(this).attr('href', href);
-                console.log('href is now' + href);
-            }
-        });
-
-
+        addShowmapToHrefs();
 
     } else {
         window.vndl.theMap.hide();
         //disable($('input[name=searchmap]'));
         disable($('button[name=searchmap]'));
-
-        // remove all showmap=on to hrefs in the page
-
-        $("a[href*='showmap=']").each(function (index,anchor) {
-            var href = $(anchor).attr('href');
-            $(this).attr('href', href.replace(/&?showmap=\w+/, ''));
-        });
-
+        removeShowmapFromHrefs();
     }
+}
+//----------------------------------------------------------------------------------------------------------------------
+// add showmap=on to hrefs in the page
+
+function addShowmapToHrefs() {
+    $('a[href]').each(function (index, anchor) {
+        var href = $(anchor).attr('href');
+
+        if (typeof href !== 'undefined') {
+
+            if (href.indexOf('?') != -1) {
+                href = href + '&showmap=on';
+            }
+            else {
+                href = href + '?showmap=on';
+            }
+            $(this).attr('href', href);
+
+        }
+    });
+}
+//----------------------------------------------------------------------------------------------------------------------
+// remove all showmap=on to hrefs in the page
+
+function removeShowmapFromHrefs() {
+
+    $("a[href*='showmap=']").each(function (index, anchor) {
+        var href = $(anchor).attr('href');
+        $(this).attr('href', href.replace(/&?showmap=\w+/, ''));
+    });
 }
 //----------------------------------------------------------------------------------------------------------------------
