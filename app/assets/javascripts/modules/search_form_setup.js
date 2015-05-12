@@ -19,28 +19,15 @@ function changeFormSubmitEventToAjaxCall(formElement) {
     });
 }
 
+function flashFeedbackElement() {
+    $('.flash').animate({opacity: 0.25}, 700);
+    $('.flash').animate({opacity: 1}, 700);
+    $('.flash').animate({opacity: 0.25}, 700);
+    $('.flash').animate({opacity: 1}, 750);
+}
 function searchFormSetup(formElement) {
 
-
-    $('.flash').animate({opacity: 0.25}, 700 );
-    $('.flash').animate({opacity: 1}, 700 );
-    $('.flash').animate({opacity: 0.25}, 700 );
-    $('.flash').animate({opacity: 1}, 750 );
-
-    //
-    //$.fn.flash = function(duration, iterations) {
-    //    duration = duration || 1000; // Default to 1 second
-    //    iterations = iterations || 1; // Default to 1 iteration
-    //    var iterationDuration = Math.floor(duration / iterations);
-    //
-    //    for (var i = 0; i < iterations; i++) {
-    //        this.fadeOut(iterationDuration).fadeIn(iterationDuration);
-    //    }
-    //    return this;
-    //};
-    //
-    //$(".flash").flash(2000, 2); // Flash 3 times over a period of 3 second
-
+    flashFeedbackElement();
 
     changeFormSubmitEventToAjaxCall(formElement);
 
@@ -82,6 +69,8 @@ function searchFormSetup(formElement) {
     $('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
 
         setMapVisibility();
+
+
 
     });
 
@@ -232,24 +221,49 @@ function addSerialisedFormToHref($links) {
 function setMapVisibility() {
     var showmap = $('input[name=showmap]').prop('checked');
 
+    console.log('showmap is :' + showmap)
+
     if (showmap) {
         window.vndl.theMap.show();
         //enable($('input[name=searchmap]'));
         enable($('button[name=searchmap]'));
 
-        // call function to find every href on the page
-        // turn href into key pair
-        // change the showmap value to on
-        // tell the element its new href is this
 
+        // add showmap=on to hrefs in the page
 
-        // TODO : Use JQUERY BBQ to deparam and then edit each href
+        $('a[href]').each(function(index,anchor) {
+            var href = $(anchor).attr('href');
+
+            console.log('href is now ' + href);
+
+            if (typeof href !== 'undefined') {
+
+                console.log('current href is : ' + href);
+                if (href.indexOf('?') != -1) {
+                    href = href + '&showmap=on';
+                }
+                else {
+                    href = href + '?showmap=on';
+                }
+                $(this).attr('href', href);
+                console.log('href is now' + href);
+            }
+        });
+
 
 
     } else {
         window.vndl.theMap.hide();
         //disable($('input[name=searchmap]'));
         disable($('button[name=searchmap]'));
+
+        // remove all showmap=on to hrefs in the page
+
+        $("a[href*='showmap=']").each(function (index,anchor) {
+            var href = $(anchor).attr('href');
+            $(this).attr('href', href.replace(/&?showmap=\w+/, ''));
+        });
+
     }
 }
 //----------------------------------------------------------------------------------------------------------------------
