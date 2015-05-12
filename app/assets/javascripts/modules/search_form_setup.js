@@ -20,10 +20,10 @@ function changeFormSubmitEventToAjaxCall(formElement) {
 }
 
 function flashFeedbackElement() {
-    $('.flash').animate({opacity: 0.25}, 700);
-    $('.flash').animate({opacity: 1}, 700);
-    $('.flash').animate({opacity: 0.25}, 700);
-    $('.flash').animate({opacity: 1}, 750);
+    $('.flash').animate({opacity: 0.25}, 1000);
+    $('.flash').animate({opacity: 1}, 1000);
+    $('.flash').animate({opacity: 0.25}, 1000);
+    $('.flash').animate({opacity: 1}, 1000);
 }
 function searchFormSetup(formElement) {
 
