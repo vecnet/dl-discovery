@@ -71,6 +71,8 @@ $(function () {
     // chuck away the previous rectangles
     window.vndl.theMap.clearRectangles();
 
+    // TODO: clear the layers
+
     // parse the inserted content for new map references
     window.vndl.theMap.discoverAndMapGeoDataInResultsHtml($('.contentwrapper > .content'));
 

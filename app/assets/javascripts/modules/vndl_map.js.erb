@@ -21,6 +21,7 @@ window.VndlMap = function (mapDomId, options) {
     // this.opts is our options, there are many like it but this one is ours
     this.opts = options || {};
 
+
     // make a layer for the markers
     // so we can clear them all with a nice function
     markerLayer = new L.FeatureGroup();
@@ -31,6 +32,7 @@ window.VndlMap = function (mapDomId, options) {
     // so we can clear them all with a nice function
     rectangleLayer = new L.FeatureGroup();
     this.leafletMap.addLayer(rectangleLayer);
+
 
 
     // turns on clustering plugin of markers
@@ -61,6 +63,7 @@ window.VndlMap = function (mapDomId, options) {
 VndlMap.prototype.clearMarkers = function () {
 
     markerLayer.clearLayers();
+    markerClusterLayer.clearLayers();
 
 };
 // ------------------------------------------------------------------
@@ -413,8 +416,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         $('#content').scrollTo($r,500,{axis: 'y',interrupt: 'true', duration: 500});
 
         highlightResult();
-
-        // TODO: un highlight on next click event?
     }
 
     //----------------------------
@@ -499,10 +500,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             // Trying out cluster markers
 
                 markerClusterLayer.addLayer(marker);
-                map.addLayer(markerClusterLayer);
 
-
-            // TODO: messing with the default icon causes various issues
 
 
                 var redIcon = L.icon({
