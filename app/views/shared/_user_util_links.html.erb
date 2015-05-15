@@ -72,6 +72,7 @@
                   <li><%= link_to "My Uploads", "/dashboard" %></li>
                   <% if current_user.admin? -%>
                       <li><%= link_to "Admin Dashboard", "/admin_dashboard" %></li>
+                      <li><%= link_to "Usage", "/admin/usage" %></li>
                   <% end -%>
               <% end -%>
             </ul>
