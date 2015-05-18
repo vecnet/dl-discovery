@@ -37,8 +37,8 @@ window.VndlMap = function (mapDomId, options) {
 
     // turns on clustering plugin of markers
     markerClusterLayer = new L.MarkerClusterGroup({
-/// since some markers are all on the exact same point we need to keep clustering all times
-// disableClusteringAtZoom: 8
+/// since some markers are all on the exact same point we need to keep clustering at most times
+disableClusteringAtZoom: 12
     });
     this.leafletMap.addLayer(markerClusterLayer);
 
@@ -49,7 +49,7 @@ window.VndlMap = function (mapDomId, options) {
 
 
     // start map on subset of africa
-    this.leafletMap.setView([8, 17], 4);
+    this.leafletMap.setView([8, 17], 5);
 
     // add an OpenStreetMap tile layer using providers
     // L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(this.leafletMap);
