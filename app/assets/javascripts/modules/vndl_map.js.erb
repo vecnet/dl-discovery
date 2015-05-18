@@ -37,7 +37,9 @@ window.VndlMap = function (mapDomId, options) {
 
     // turns on clustering plugin of markers
     markerClusterLayer = new L.MarkerClusterGroup({
-        disableClusteringAtZoom: 8
+
+/// since some markers are all on the exact same point we need to keep clustering
+// disableClusteringAtZoom: 8
     });
 
 
