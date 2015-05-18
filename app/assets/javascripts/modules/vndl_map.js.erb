@@ -37,10 +37,10 @@ window.VndlMap = function (mapDomId, options) {
 
     // turns on clustering plugin of markers
     markerClusterLayer = new L.MarkerClusterGroup({
-
-/// since some markers are all on the exact same point we need to keep clustering
+/// since some markers are all on the exact same point we need to keep clustering all times
 // disableClusteringAtZoom: 8
     });
+    this.leafletMap.addLayer(markerClusterLayer);
 
 
     // the nice clearing map functions
@@ -496,7 +496,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
             // finally add the marker to the displayed Layer
-            marker.addTo(markerLayer);
+//            marker.addTo(markerLayer);
 
 
             // Trying out cluster markers
@@ -586,9 +586,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     // after completing the building of the item, push it to the big list
     this.resultItems.push(newItem);
-
-    // return newItem
-
+    
     return newItem;
 };
 
