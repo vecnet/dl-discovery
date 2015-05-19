@@ -646,12 +646,7 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
     }.bind(this));
 
     // get the number of markers on the map and add it to pagination text
-<<<<<<< HEAD
-    $('.page_entries span').text(this.resultItems.length + " geolocated");
-
-=======
     $('span.page_entries').append(" ( " + this.resultItems.length + " records mapped )");
->>>>>>> 5bc3281... Add mapped markers text to pagination, test for bad marker data
 
 
     // fit the map bounds to show all the primary markers
