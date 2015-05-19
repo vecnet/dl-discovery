@@ -197,6 +197,9 @@ VndlMap.prototype.parseGeoText = function(text) {
 };
 // ------------------------------------------------------------------
 
+
+
+
 // ------------------------------------------------------------------
 
 VndlMap.prototype.connectSingleResultToMap = function (result) {
@@ -545,8 +548,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             mouseout: unHighlightResult
         });
 
-
-
         //
         // add popup to rectangle
         //
@@ -573,10 +574,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         // finally add the rectangle to the displayed layer
         rect.addTo(rectangleLayer);
     });
-
-
-
-
 
 
     $r.on('mouseover', highlightResult);
@@ -635,6 +632,9 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
 
 
     }.bind(this));
+
+    // get the number of markers on the map and add it to pagination text
+    $('.page_entries span').text(this.resultItems.length + " geolocated");
 
 
     // now pan it like its hot
