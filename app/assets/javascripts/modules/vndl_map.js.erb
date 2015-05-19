@@ -634,7 +634,7 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
     }.bind(this));
 
     // get the number of markers on the map and add it to pagination text
-    $('.page_entries span').text(this.resultItems.length + " geolocated");
+    $('span .page_entries').append("( " + this.resultItems.length + " geolocated )");
 
 
     // now pan it like its hot
