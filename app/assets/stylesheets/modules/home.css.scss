@@ -510,11 +510,11 @@ footer:after {
     background: rgba(0, 0, 0, 0.04);
     border: 1px solid #e0e0e0;
 
-    font-family: "Roboto",sans-serif !important;
+    font-family: "Roboto", sans-serif !important;
 
     .icon {
       position: absolute;
-      top: -0.75 * $icon-size;
+      top: -0.66 * $icon-size;
       left: 50%;
       margin-left: -1 * $icon-size / 2;
       z-index: 2;
@@ -552,21 +552,25 @@ footer:after {
       right: 1.5em;
 
       font-size: 12px;
-      color: #222;
+      color: $icon-box-background;
       line-height: 12px;
       text-transform: uppercase;
       text-decoration: none;
       padding: 6px 8px;
+
+      // border: 1px solid rgba($icon-box-background, 0.2);
     }
 
     &:hover {
       color: #222;
       background: rgba(47,211,133, 0.04);
       border-color: #e0e0e0;
-      .icon { background: $icon-green; }
+      .icon { background-color: $icon-green; }
       .more {
         color: #fff;
-        background-color: $icon-box-background;
+        background-color: rgba($icon-green, 0.8);
+        border-color: $icon-green;
+        &:hover { background-color: $icon-green; }
       }
     }
   }
