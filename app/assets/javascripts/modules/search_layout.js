@@ -73,6 +73,8 @@ $(function () {
 
     // TODO: clear the layers
 
+    window.vndl.theMap.clearClusterLayer();
+
     // parse the inserted content for new map references
     window.vndl.theMap.discoverAndMapGeoDataInResultsHtml($('.contentwrapper > .content'));
 

@@ -24,6 +24,7 @@ window.VndlMap = function (mapDomId, options) {
 
     // make a layer for the markers
     // so we can clear them all with a nice function
+    // as per https://stackoverflow.com/questions/20751523/removing-leaflet-layers-and-l-marker-method
     markerLayer = new L.FeatureGroup();
     this.leafletMap.addLayer(markerLayer);
 
@@ -35,20 +36,23 @@ window.VndlMap = function (mapDomId, options) {
 
 
 
-    // turns on clustering plugin of markers
+    // turn on clustering plugin of markers
     markerClusterLayer = new L.MarkerClusterGroup({
-/// since some markers are all on the exact same point we need to keep clustering at most times
-disableClusteringAtZoom: 12
+
+    //since some markers are all on the exact same point we need to keep clustering at most times
+    disableClusteringAtZoom: 12
     });
+
     this.leafletMap.addLayer(markerClusterLayer);
 
 
     // the nice clearing map functions
     this.clearMarkers();
     this.clearRectangles();
+    this.clearClusterLayer();
 
 
-    // start map on subset of africa
+    // start map on africa
     this.leafletMap.setView([8, 17], 3);
 
     // add an OpenStreetMap tile layer using providers
@@ -57,7 +61,7 @@ disableClusteringAtZoom: 12
     // explicit call; MapQuest requires a -s
     // not sure why the above providers extension
     // - which is the current canonical leaflet way -
-    // does not work for us
+    // does not work for us but geoblacklight does the same
     L.tileLayer('https://otile1-s.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(this.leafletMap);
 };
@@ -65,6 +69,11 @@ disableClusteringAtZoom: 12
 VndlMap.prototype.clearMarkers = function () {
 
     markerLayer.clearLayers();
+
+};
+// ------------------------------------------------------------------
+VndlMap.prototype.clearClusterLayer= function () {
+
     markerClusterLayer.clearLayers();
 
 };
@@ -150,7 +159,7 @@ VndlMap.prototype.getRect = function(text, pointOrder) {
     } else {
 
         // logging which objects don't parse
-        console.debug('expected a rectangle of some kind but got the following not parseable : <' + text + '>');
+        console.debug('expected a rectangle of some kind but got the following data not parseable : <' + text + '>');
         return [];
     }
 };
@@ -195,11 +204,6 @@ VndlMap.prototype.parseGeoText = function(text) {
     // parse returns a GeoJSON object
     return wellknown.parse(text);
 };
-// ------------------------------------------------------------------
-
-
-
-
 // ------------------------------------------------------------------
 
 VndlMap.prototype.connectSingleResultToMap = function (result) {
@@ -253,25 +257,42 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         var uiType = this.parseUiType($ptElem.attr('data-ui-type'));
 
         var pts = this.getPoints($ptElem.attr('data-points'));
+
+        var newPts = pts.filter(function(v){return v!==','});
+
+        console.log("newPts array to string is : " + newPts.toString());
+
+        var jqPts = $.grep(pts,function(n){ return(n) });
+
+        console.log("jqPts array to string is : " + jqPts.toString());
+
+
         for (var p = 0; p < pts.length; p++) {
-            if (pts) {
+
+            // because pts is an array have to check truthy and len
+            if (pts && pts.length != 0) {
+
+                // debugging for when ptElems values are
+                console.log("ptElem microdata by .data is : " + $ptElem.data('points'));
+                console.log("ptElem microdata by attr is : " + $ptElem.attr('data-points'));
+                console.log("pts array to string is : " + pts.toString());
+
+                // make a new marker
                 newItem[uiType].points.push(
                     new L.marker([pts[p][1], pts[p][0]],markerOptions)
+//                        new L.marker([1,1],markerOptions)
+
                 );
             }
             else {
-                console.log("results that are bad points are : " + $r.find('h3').text())
+                console.log("result titles that are badly formatted points are : " + $r.find('h3').text())
             }
         }
     }.bind(this));
 
-
-
-
     //
     // find any rectangles within the result item
     //
-
 
     var $rectElems = $r.find('[data-rectangle]');
 
@@ -312,14 +333,12 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             }
 
             else {
-                console.log("results that are bad rectangles are : " + $r.find('h3').text())
+                console.log("result titles that are badly formatted rectangles are : " + $r.find('h3').text())
             }
         }
 
     }.bind(this));
 
-
-    // ------------------------------------------------------------------
 
 
     // Calculate the BOUNDS for points et al
@@ -356,12 +375,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             }
         });
     }
-
-
-    // ------------------------------------------------------------------
-
-
-
 
     //
     // toggle highlight class on search results and map markers and rectangles
@@ -499,12 +512,11 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
             // finally add the marker to the displayed Layer
-//            marker.addTo(markerLayer);
+            marker.addTo(markerLayer);
 
 
-            // Trying out cluster markers
-
-                markerClusterLayer.addLayer(marker);
+            // Add the marker to the ClusterLayer
+//            markerClusterLayer.addLayer(marker);
 
 
 
@@ -634,23 +646,23 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
     }.bind(this));
 
     // get the number of markers on the map and add it to pagination text
+<<<<<<< HEAD
     $('.page_entries span').text(this.resultItems.length + " geolocated");
 
+=======
+    $('span.page_entries').append(" ( " + this.resultItems.length + " records mapped )");
+>>>>>>> 5bc3281... Add mapped markers text to pagination, test for bad marker data
 
-    // now pan it like its hot
 
     // fit the map bounds to show all the primary markers
     if (boundsThemAll) {
         this.leafletMap.fitBounds(boundsThemAll);
     }
 
-
 };
 // ------------------------------------------------------------------
 
 function highlightIcon(marker) {
-
-
 
     var redIcon = L.icon({
         iconUrl: 'marker-icon-red.png',
@@ -664,7 +676,6 @@ function highlightIcon(marker) {
     });
 
     marker.setIcon(redIcon);
-
 }
 // ------------------------------------------------------------------
 
