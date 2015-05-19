@@ -258,14 +258,23 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         var pts = this.getPoints($ptElem.attr('data-points'));
 
-        var newPts = pts.filter(function(v){return v!==','});
 
-        console.log("newPts array to string is : " + newPts.toString());
 
-        var jqPts = $.grep(pts,function(n){ return(n) });
+        // debug null pts
 
-        console.log("jqPts array to string is : " + jqPts.toString());
+        var filterPts = pts.filter(function(val) { return val !== null; });
 
+        console.log("filterPts array to string is : " + filterPts.toString());
+
+//        var newPts = pts.filter(function(v){return v!==','});
+//
+//        console.log("newPts array to string is : " + newPts.toString());
+//
+//        var jqPts = $.grep(pts,function(n){ return(n) });
+//
+//        console.log("jqPts array to string is : " + jqPts.toString());
+
+        // end debug
 
         for (var p = 0; p < pts.length; p++) {
 
