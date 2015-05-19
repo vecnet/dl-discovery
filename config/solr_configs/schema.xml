@@ -155,4 +155,10 @@
   <copyField source="dc_publisher_s"     dest="dc_publisher_sort"/>
   <copyField source="dc_title_s"         dest="dc_title_sort"/>
 
+  <!--newly created for dl-beta-->
+  <copyField source="dc_source_s"         dest="dc_source_sort"/>
+  <copyField source="dc_created_sm"       dest="dc_created_sort"/>
+  <copyField source="dc_date_uploaded_dt" dest="dc_date_uploaded_sort"/>
+  <copyField source="dc_date_modified_dt" dest="dc_date_modified_sort"/>
+
 </schema>

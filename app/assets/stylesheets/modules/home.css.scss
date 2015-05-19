@@ -174,14 +174,15 @@ $disabled-color: #aaa;
   font-weight: bold;
 }
 
-// TODO : Limit max height of this when too many tags and do no overflow?
+// TODO : Limit max height of this when too many tags
 .tags-text {
-
-  white-space: nowrap;
+  //white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+.flash{
+}
 
 .result-citation {
   font-style: italic;
@@ -511,7 +512,7 @@ footer:after {
 }
 
 #feedback-form {
-  background-color: #f5f5f5;
+  background-color: #fefefe;
 }
 
 

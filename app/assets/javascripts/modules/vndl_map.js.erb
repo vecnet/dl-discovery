@@ -7,12 +7,12 @@ console.log('running vndlmap source');
 
 window.VndlMap = function (mapDomId, options) {
 
-    // TODO: Setup teaspoon js testing framework after feature complete
+    // TODO: Setup mocha js testing for leaflet object
 
     this.leafletMap = L.map(mapDomId, {
-        reuseTiles: true,      // cache tiles
+        reuseTiles: true,       // cache tiles
         worldCopyJump: true,    // keep markers when scroll sideways into a new world
-        scrollWheelZoom: false, // forced to double-click or use the controls so no crazy things
+        scrollWheelZoom: false, // forced to double-click or use the controls so no crazy movement
         maxZoom: 16             // geoblacklight says
 
 
@@ -20,6 +20,7 @@ window.VndlMap = function (mapDomId, options) {
 
     // this.opts is our options, there are many like it but this one is ours
     this.opts = options || {};
+
 
     // make a layer for the markers
     // so we can clear them all with a nice function
@@ -33,12 +34,13 @@ window.VndlMap = function (mapDomId, options) {
     this.leafletMap.addLayer(rectangleLayer);
 
 
-    // allows for clustering of markers if we find it useful?
 
+    // turns on clustering plugin of markers
     markerClusterLayer = new L.MarkerClusterGroup({
-        disableClusteringAtZoom: 8
+/// since some markers are all on the exact same point we need to keep clustering at most times
+disableClusteringAtZoom: 12
     });
-
+    this.leafletMap.addLayer(markerClusterLayer);
 
 
     // the nice clearing map functions
@@ -46,24 +48,24 @@ window.VndlMap = function (mapDomId, options) {
     this.clearRectangles();
 
 
-    this.leafletMap.setView([8, 17], 4);
+    // start map on subset of africa
+    this.leafletMap.setView([8, 17], 3);
 
     // add an OpenStreetMap tile layer using providers
     // L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(this.leafletMap);
 
-    // explicitly for MapQuest requires a -s
-    // un sure why the above
-    // which is the current canonical leaflet way
-    // does not work for dl
+    // explicit call; MapQuest requires a -s
+    // not sure why the above providers extension
+    // - which is the current canonical leaflet way -
+    // does not work for us
     L.tileLayer('https://otile1-s.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(this.leafletMap);
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.clearMarkers = function () {
 
-    // when adding use a layer and so we can call layer.remove
-
     markerLayer.clearLayers();
+    markerClusterLayer.clearLayers();
 
 };
 // ------------------------------------------------------------------
@@ -148,7 +150,7 @@ VndlMap.prototype.getRect = function(text, pointOrder) {
     } else {
 
         // logging which objects don't parse
-        console.debug('expected a rectangle of some kind but got the following rubbish : <' + text + '>');
+        console.debug('expected a rectangle of some kind but got the following not parseable : <' + text + '>');
         return [];
     }
 };
@@ -416,8 +418,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         $('#content').scrollTo($r,500,{axis: 'y',interrupt: 'true', duration: 500});
 
         highlightResult();
-
-        // TODO: un highlight on next click event?
     }
 
     //----------------------------
@@ -496,22 +496,13 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
             // finally add the marker to the displayed Layer
-            marker.addTo(markerLayer);
+//            marker.addTo(markerLayer);
 
 
             // Trying out cluster markers
 
                 markerClusterLayer.addLayer(marker);
-                map.addLayer(markerClusterLayer);
 
-
-
-
-
-
-
-
-            // TODO: messing with the default icon causes various issues
 
 
                 var redIcon = L.icon({
@@ -533,9 +524,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
                     shadowUrl: "<%= asset_path('markers-shadow.png') %>",
                     shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
                 });
-
-
-
 
 
             //
@@ -594,12 +582,10 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
     $r.on('mouseover', highlightResult);
     $r.on('mouseout', unHighlightResult);
 
-    // TODO 5: handle secondary points
+    // TODO: handle secondary points
 
     // after completing the building of the item, push it to the big list
     this.resultItems.push(newItem);
-
-    // return newItem
 
     return newItem;
 };

@@ -201,6 +201,24 @@ class CatalogController < ApplicationController
     config.add_sort_field 'dc_publisher_sort asc, dc_title_sort asc', :label => 'publisher'
     config.add_sort_field 'dc_title_sort asc', :label => 'title'
 
+    # newly added fields as per Digital Library previous sort functions
+
+    config.add_sort_field 'dc_source_sort asc', :label => 'journal'
+
+    config.add_sort_field 'dc_created_sort asc', :label => 'publish date asc'
+    config.add_sort_field 'dc_created_sort desc', :label => 'publish date desc'
+
+    config.add_sort_field 'dc_date_uploaded_sort asc', :label => 'upload date asc'
+    config.add_sort_field 'dc_date_uploaded_sort desc', :label => 'upload date desc'
+
+
+    config.add_sort_field 'dc_date_modified_sort asc', :label => 'modify date asc'
+    config.add_sort_field 'dc_date_modified_sort desc', :label => 'modify date desc'
+
+
+
+
+
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5

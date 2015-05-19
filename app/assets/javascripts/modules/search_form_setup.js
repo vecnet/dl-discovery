@@ -16,12 +16,18 @@ function changeFormSubmitEventToAjaxCall(formElement) {
         // use the html5 history API to preserve the browser history and back button
         history.pushState(queryString,null,fullPathQueryString);
 
-
-
     });
 }
 
+function flashFeedbackElement() {
+    $('.flash').animate({opacity: 0.25}, 1000);
+    $('.flash').animate({opacity: 1}, 1000);
+    $('.flash').animate({opacity: 0.25}, 1000);
+    $('.flash').animate({opacity: 1}, 1000);
+}
 function searchFormSetup(formElement) {
+
+    flashFeedbackElement();
 
     changeFormSubmitEventToAjaxCall(formElement);
 
@@ -60,10 +66,11 @@ function searchFormSetup(formElement) {
 
 
     // check the state of the map switch and toggle the hidden checkbox
-
     $('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
 
         setMapVisibility();
+
+
 
     });
 
@@ -160,8 +167,6 @@ function changeAnchorToUseAjax(elementSelector){
 //
 function addClickEventToRemoveAppliedFacet($links) {
 
-    // TODO: Code review function
-
     var $removeFacetLinks = $links;
 
     $removeFacetLinks.each(function (index, link) {
@@ -220,11 +225,43 @@ function setMapVisibility() {
         window.vndl.theMap.show();
         //enable($('input[name=searchmap]'));
         enable($('button[name=searchmap]'));
+        addShowmapToHrefs();
 
     } else {
         window.vndl.theMap.hide();
         //disable($('input[name=searchmap]'));
         disable($('button[name=searchmap]'));
+        removeShowmapFromHrefs();
     }
+}
+//----------------------------------------------------------------------------------------------------------------------
+// add showmap=on to hrefs in the page
+
+function addShowmapToHrefs() {
+    $('a[href]').each(function (index, anchor) {
+        var href = $(anchor).attr('href');
+
+        if (typeof href !== 'undefined') {
+
+            if (href.indexOf('?') != -1) {
+                href = href + '&showmap=on';
+            }
+            else {
+                href = href + '?showmap=on';
+            }
+            $(this).attr('href', href);
+
+        }
+    });
+}
+//----------------------------------------------------------------------------------------------------------------------
+// remove all showmap=on to hrefs in the page
+
+function removeShowmapFromHrefs() {
+
+    $("a[href*='showmap=']").each(function (index, anchor) {
+        var href = $(anchor).attr('href');
+        $(this).attr('href', href.replace(/&?showmap=\w+/, ''));
+    });
 }
 //----------------------------------------------------------------------------------------------------------------------
