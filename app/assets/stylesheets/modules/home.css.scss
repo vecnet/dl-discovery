@@ -494,7 +494,7 @@ footer:after {
   border-spacing: 2em;
   margin: 0 -2em;
 
-  padding-top: $icon-size; // space for the icon
+  padding-top: 0.75 * $icon-size; // space for the icon
   padding-bottom: 5px;
 
   .box {

@@ -262,6 +262,10 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         // debug null pts
 
+        var numbersOnlyPts = pts.filter(function(val) { return typeof val === "number"; });
+        console.log("numbersOnlyPts array to string is : " + numbersOnlyPts.toString());
+
+
         var filterNullPts = pts.filter(function(val) { return val !== null; });
         console.log("filterPts array to string is : " + filterNullPts.toString());
 
@@ -269,7 +273,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         var filteredEmptyPts = filterNullPts.filter(function(el){ return el !== "" });
         console.log("spaced array to string is : " + filteredEmptyPts.toString());
 
-        newPts = filteredEmptyPts;
+        newPts = numbersOnlyPts;
 
         // end debug
 
