@@ -262,29 +262,31 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         // debug null pts
 
-//        var filterPts = pts.filter(function(val) { return val !== null; });
-//
-//        console.log("filterPts array to string is : " + filterPts.toString());
+        var filterNullPts = pts.filter(function(val) { return val !== null; });
 
-        var filteredPts = pts.filter(function(el){ return el !== "" }).join(" ");
+        console.log("filterPts array to string is : " + filterNullPts.toString());
 
-        console.log("spaced array to string is : " + filteredPts.toString());
+        var filteredEmptyPts = filterNullPts.filter(function(el){ return el !== "" }).join(" ");
+
+        console.log("spaced array to string is : " + filteredEmptyPts.toString());
+
+        newPts = filteredEmptyPts;
 
         // end debug
 
-        for (var p = 0; p < filteredPts.length; p++) {
+        for (var p = 0; p < newPts.length; p++) {
 
             // because pts is an array have to check truthy and len
-            if (filteredPts && filteredPts.length != 0) {
+            if (newPts && newPts.length != 0) {
 
                 // debugging for when ptElems values are
                 console.log("ptElem microdata by .data is : " + $ptElem.data('points'));
                 console.log("ptElem microdata by attr is : " + $ptElem.attr('data-points'));
-                console.log("current filteredpts array to string is : " + filteredPts.toString());
+                console.log("current newpts array to string is : " + newPts.toString());
 
                 // make a new marker
                 newItem[uiType].points.push(
-                    new L.marker([filteredPts[p][1], filteredPts[p][0]],markerOptions)
+                    new L.marker([newPts[p][1], newPts[p][0]],markerOptions)
 //                        new L.marker([1,1],markerOptions)
 
                 );
