@@ -2,7 +2,9 @@
 ## VecNET Discovery
 
 Geospatial discovery layer for VecNET Digital Library.
-// replace with homepage screenshots
+
+![](https://github.com/vecnet/dl-discovery/blob/qa-deploy/screenshots/homepage.png)
+![](https://github.com/vecnet/dl-discovery/blob/qa-deploy/screenshots/homepage-map.png)
 
 Built using:
 
