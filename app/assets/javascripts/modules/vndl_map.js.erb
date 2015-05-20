@@ -25,25 +25,25 @@ window.VndlMap = function (mapDomId, options) {
     // make a layer for the markers
     // so we can clear them all with a nice function
     // as per https://stackoverflow.com/questions/20751523/removing-leaflet-layers-and-l-marker-method
-    markerLayer = new L.FeatureGroup();
+    var markerLayer = new L.FeatureGroup();
     this.leafletMap.addLayer(markerLayer);
 
 
     // make a layer for the rectangles
     // so we can clear them all with a nice function
-    rectangleLayer = new L.FeatureGroup();
+    var rectangleLayer = new L.FeatureGroup();
     this.leafletMap.addLayer(rectangleLayer);
 
 
 
     // turn on clustering plugin of markers
-    markerClusterLayer = new L.MarkerClusterGroup({
-
-    //since some markers are all on the exact same point we need to keep clustering at most times
-    disableClusteringAtZoom: 12
-    });
-
-    this.leafletMap.addLayer(markerClusterLayer);
+//    markerClusterLayer = new L.MarkerClusterGroup({
+//
+//    //since some markers are all on the exact same point we need to keep clustering at most times
+//    disableClusteringAtZoom: 12
+//    });
+//
+//    this.leafletMap.addLayer(markerClusterLayer);
 
 
     // the nice clearing map functions
@@ -327,7 +327,7 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
                     weight: 2,
                     opacity: 0.8,
                     fillOpacity: 0.0025
-                }
+                };
 
                 newRect.setStyle(lighterDefaultStyle);
 
