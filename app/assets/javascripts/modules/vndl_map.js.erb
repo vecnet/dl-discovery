@@ -262,37 +262,29 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         // debug null pts
 
-        var filterPts = pts.filter(function(val) { return val !== null; });
-
-        console.log("filterPts array to string is : " + filterPts.toString());
-
-        var spacedPts = pts.filter(function(el){ return el !== "" }).join(" ");
-
-        console.log("filterPts array to string is : " + spacedPts.toString());
-
-//        var newPts = pts.filter(function(v){return v!==','});
+//        var filterPts = pts.filter(function(val) { return val !== null; });
 //
-//        console.log("newPts array to string is : " + newPts.toString());
-//
-//        var jqPts = $.grep(pts,function(n){ return(n) });
-//
-//        console.log("jqPts array to string is : " + jqPts.toString());
+//        console.log("filterPts array to string is : " + filterPts.toString());
+
+        var filteredPts = pts.filter(function(el){ return el !== "" }).join(" ");
+
+        console.log("spaced array to string is : " + filteredPts.toString());
 
         // end debug
 
-        for (var p = 0; p < pts.length; p++) {
+        for (var p = 0; p < filteredPts.length; p++) {
 
             // because pts is an array have to check truthy and len
-            if (pts && pts.length != 0) {
+            if (filteredPts && filteredPts.length != 0) {
 
                 // debugging for when ptElems values are
                 console.log("ptElem microdata by .data is : " + $ptElem.data('points'));
                 console.log("ptElem microdata by attr is : " + $ptElem.attr('data-points'));
-                console.log("pts array to string is : " + pts.toString());
+                console.log("current filteredpts array to string is : " + filteredPts.toString());
 
                 // make a new marker
                 newItem[uiType].points.push(
-                    new L.marker([pts[p][1], pts[p][0]],markerOptions)
+                    new L.marker([filteredPts[p][1], filteredPts[p][0]],markerOptions)
 //                        new L.marker([1,1],markerOptions)
 
                 );
