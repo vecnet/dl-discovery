@@ -258,22 +258,25 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         var pts = this.getPoints($ptElem.attr('data-points'));
 
+        // formatting out the random noise for the moment
+        var numbersOnlyPts = pts.filter(function(val) { return (val && val[0] && typeof val[0] === "number"); });
+        console.log("numbersOnlyPts array to string is : " + numbersOnlyPts.toString());
+
+        newPts = numbersOnlyPts;
 
 
         // debug null pts
 
-        var numbersOnlyPts = pts.filter(function(val) { return (val && val[0] && typeof val[0] === "number"); });
-        console.log("numbersOnlyPts array to string is : " + numbersOnlyPts.toString());
-
-
-        var filterNullPts = pts.filter(function(val) { return val !== null; });
-        console.log("filterNullPts array to string is : " + filterNullPts.toString());
-
-
-        var filteredEmptyPts = filterNullPts.filter(function(el){ return el !== "" });
-        console.log("filter EmptyPts array to string is : " + filteredEmptyPts.toString());
-
-        newPts = numbersOnlyPts;
+//        var numbersOnlyPts = pts.filter(function(val) { return (val && val[0] && typeof val[0] === "number"); });
+//        console.log("numbersOnlyPts array to string is : " + numbersOnlyPts.toString());
+//
+//
+//        var filterNullPts = pts.filter(function(val) { return val !== null; });
+//        console.log("filterNullPts array to string is : " + filterNullPts.toString());
+//
+//
+//        var filteredEmptyPts = filterNullPts.filter(function(el){ return el !== "" });
+//        console.log("filter EmptyPts array to string is : " + filteredEmptyPts.toString());
 
         // end debug
 
@@ -283,9 +286,9 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             if (newPts && newPts.length != 0) {
 
                 // debugging for when ptElems values are
-                console.log("ptElem microdata by .data is : " + $ptElem.data('points'));
-                console.log("ptElem microdata by attr is : " + $ptElem.attr('data-points'));
-                console.log("current newpts array to string is : " + newPts.toString());
+//                console.log("ptElem microdata by .data is : " + $ptElem.data('points'));
+//                console.log("ptElem microdata by attr is : " + $ptElem.attr('data-points'));
+//                console.log("current newpts array to string is : " + newPts.toString());
 
                 // make a new marker
                 newItem[uiType].points.push(
@@ -522,11 +525,11 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
             // finally add the marker to the displayed Layer
-            marker.addTo(markerLayer);
+//            marker.addTo(markerLayer);
 
 
             // Add the marker to the ClusterLayer
-//            markerClusterLayer.addLayer(marker);
+            markerClusterLayer.addLayer(marker);
 
 
 
