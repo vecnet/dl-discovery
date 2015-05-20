@@ -266,6 +266,10 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
         console.log("filterPts array to string is : " + filterPts.toString());
 
+        var spacedPts = pts.filter(function(el){ return el !== "" }).join(" ");
+
+        console.log("filterPts array to string is : " + spacedPts.toString());
+
 //        var newPts = pts.filter(function(v){return v!==','});
 //
 //        console.log("newPts array to string is : " + newPts.toString());
