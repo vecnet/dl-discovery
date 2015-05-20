@@ -243,11 +243,12 @@ class EnrichSolr
   def enrich_multipoint(geoids)
     return nil if geoids.empty?
     point_list = geoids.map do |_, id|
-      next if id.nil?
+      next if id.nil? || id.empty?
       info = @geonames.lookup_id(id)
+      next if info.nil? || info.empty?
       info["lng"] + " " + info["lat"]
     end
-
+    point_list.compact!
     return nil if point_list.length == 0
     "MULTIPOINT(" + point_list.join(", ") + ")"
   end
