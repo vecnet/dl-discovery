@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   resource :feedback_form, path: 'feedback', only: [:new, :create]
   get 'feedback' => 'feedback_forms#new'
 
+
+  resources :suggest, only: :index, defaults: { format: 'json' }
+
   # since there is no pubtkt login for development
   if Rails.env.development? || Rails.env.jcu?
     match 'development_sessions/log_in' => "development_sessions#new", via: :get

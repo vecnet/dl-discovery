@@ -66,3 +66,6 @@ gem "blacklight"
 gem "geoblacklight"
 gem "jettywrapper"
 gem 'is_it_working'
+
+# search autocomplete
+gem 'twitter-typeahead-rails'
