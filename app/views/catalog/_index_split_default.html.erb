@@ -31,7 +31,7 @@
 
       <%= link_to downloadUrl, class: 'thumbnail', title: 'document thumbnail', alt: 'document thumbnail' do %>
 
-          <img src="<%= thumbnailUrl%>" onError="this.onerror=null;this.src='//assets/placeholder-image.png';" />
+          <img src="<%= thumbnailUrl%>" onError="imgError(this);" />
 
       <% end %>
   </div>
