@@ -171,6 +171,6 @@ function makeHiddenInputElement($link) {
 
 function imgError(image) {
     image.onerror = "";
-    image.src = "/assets/placeholder-image.png";
+    image.src = <%= asset_path ('placeholder-image.png') %>
     return true;
 }
