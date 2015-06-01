@@ -33,7 +33,7 @@
     <dd><%= link_to hash["http://schema.org/url"]%></dd>
 
 
-    <% links = Array(@document["dc_relation_sm"]).join(", ") %>
+    <% links = Array(@document["dc_relation_sm"]) %>
 
     <% links.map{|link| link_to link}.join(', ').html_safe %>
 
