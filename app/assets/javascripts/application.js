@@ -13,6 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 
+// Search autosuggestion
+//= require modules/autocomplete
+//= require twitter/typeahead
+
 //
 // Required by Blacklight
 //= require blacklight/blacklight
@@ -22,12 +26,14 @@
 // Wellknown is a javascript WKT converter that doesn't have a gem.
 // https://github.com/mapbox/wellknown
 //= require modules/wellknown
+
 //= require bootstrap/tab
 //= require bootstrap/tooltip
 //= require modules/vndl_map.js.erb
 //= require modules/buttons
 //= require modules/bootstrap-switch
 //= require modules/metadata_table
+
 //= require modules/leaflet.markercluster
 //= require modules/leaflet-providers
 //= require modules/readmore.min

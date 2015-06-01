@@ -11,9 +11,9 @@ window.VndlMap = function (mapDomId, options) {
 
     this.leafletMap = L.map(mapDomId, {
         reuseTiles: true,       // cache tiles
-        worldCopyJump: true,    // keep markers when scroll sideways into a new world
+//        worldCopyJump: true,    // keep markers when scroll sideways into a new world
         scrollWheelZoom: false, // forced to double-click or use the controls so no crazy movement
-        maxZoom: 16             // geoblacklight says
+        maxZoom: 16            // geoblacklight says
 
 
     });
@@ -62,8 +62,10 @@ window.VndlMap = function (mapDomId, options) {
     // not sure why the above providers extension
     // - which is the current canonical leaflet way -
     // does not work for us but geoblacklight does the same
-    L.tileLayer('https://otile1-s.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(this.leafletMap);
+    L.tileLayer('https://otile1-s.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png',
+            {noWrap: true,
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(this.leafletMap);
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.clearMarkers = function () {

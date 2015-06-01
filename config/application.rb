@@ -11,6 +11,12 @@ module Earthworks
     config.application_name = 'VecNET Digital Library Beta'
 
     require 'rights_metadata'
+
+    require 'suggest/response'
+    require 'suggest/search_helper'
+    require 'suggest'
+
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

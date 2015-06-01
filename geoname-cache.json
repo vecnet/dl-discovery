@@ -79315,5 +79315,723 @@
     "toponymName": "Chiredzi",
     "fcl": "P",
     "continentCode": "AF"
+  },
+  " Swaziland": 934841,
+  "934841": {
+    "timezone": {
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Mbabane",
+      "dstOffset": 2
+    },
+    "bbox": {
+      "east": 32.13726,
+      "south": -27.317101,
+      "north": -25.719648,
+      "west": 30.794107
+    },
+    "asciiName": "Kingdom of Swaziland",
+    "countryId": "934841",
+    "fcl": "A",
+    "srtm3": 538,
+    "countryCode": "SZ",
+    "lat": "-26.5",
+    "fcode": "PCLI",
+    "continentCode": "AF",
+    "adminCode1": "00",
+    "lng": "31.5",
+    "geonameId": 934841,
+    "toponymName": "Kingdom of Swaziland",
+    "population": 1354051,
+    "wikipediaURL": "en.wikipedia.org/wiki/Swaziland",
+    "adminName5": "",
+    "adminName4": "",
+    "adminName3": "",
+    "alternateNames": [
+      {
+        "name": "스와질란드",
+        "lang": "ko"
+      },
+      {
+        "name": "스와질랜드",
+        "lang": "ko"
+      },
+      {
+        "name": "ሱዋዚላንድ",
+        "lang": "am"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ሱዋዚላንድ",
+        "lang": "ti"
+      },
+      {
+        "name": "ስዋዚላንድ",
+        "lang": "am"
+      },
+      {
+        "name": "スワジランド",
+        "lang": "ja"
+      },
+      {
+        "name": "ສະວາຊິແລນ",
+        "lang": "lo"
+      },
+      {
+        "name": "สวาซิแลนด์",
+        "lang": "th"
+      },
+      {
+        "name": "សូហ្ស៉ីឡង់",
+        "lang": "km"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ସ୍ବାଜିଲାଣ୍ଡ",
+        "lang": "or"
+      },
+      {
+        "name": "ประเทศสวาซิแลนด์",
+        "lang": "th"
+      },
+      {
+        "name": "An tSuasalainn",
+        "lang": "ga"
+      },
+      {
+        "name": "Dùthaich nan Suasaidh",
+        "lang": "gd"
+      },
+      {
+        "name": "Gwlad Swazi",
+        "lang": "cy"
+      },
+      {
+        "name": "http://en.wikipedia.org/wiki/Swaziland",
+        "lang": "link"
+      },
+      {
+        "name": "http://ru.wikipedia.org/wiki/%D0%A1%D0%B2%D0%B0%D0%B7%D0%B8%D0%BB%D0%B5%D0%BD%D0%B4",
+        "lang": "link"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Iswaasilaand",
+        "lang": "so"
+      },
+      {
+        "isPreferredName": true,
+        "name": "i-Swaziland",
+        "lang": "zu"
+      },
+      {
+        "name": "Kingdom of Swaziland"
+      },
+      {
+        "name": "Ngwane"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Orílẹ́ède Saṣiland",
+        "lang": "yo"
+      },
+      {
+        "name": "Pow Swati",
+        "lang": "kw"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Soazilandy",
+        "lang": "mg"
+      },
+      {
+        "name": "Souazilande",
+        "lang": "frp"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Suacilandia",
+        "lang": "gl"
+      },
+      {
+        "name": "Suacilandia - Swaziland",
+        "lang": "gl"
+      },
+      {
+        "name": "Suasilandia",
+        "lang": "ilo"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Suasileni",
+        "lang": "to"
+      },
+      {
+        "name": "Suazi",
+        "lang": "pl"
+      },
+      {
+        "name": "Suazilandia",
+        "lang": "ast"
+      },
+      {
+        "isShortName": true,
+        "isPreferredName": true,
+        "name": "Suazilandia",
+        "lang": "es"
+      },
+      {
+        "name": "Suazilândia",
+        "lang": "pt"
+      },
+      {
+        "name": "Suazilendi",
+        "lang": "sq"
+      },
+      {
+        "name": "Suwasilandya",
+        "lang": "tl"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Suwazilan",
+        "lang": "ha"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Suwazilandi",
+        "lang": "rn"
+      },
+      {
+        "name": "Svaasimaa",
+        "lang": "et"
+      },
+      {
+        "name": "Svasiland",
+        "lang": "fo"
+      },
+      {
+        "name": "Svasíland",
+        "lang": "is"
+      },
+      {
+        "name": "Svasiyän",
+        "lang": "vo"
+      },
+      {
+        "name": "Svazi",
+        "lang": "bs"
+      },
+      {
+        "name": "Svazi",
+        "lang": "hr"
+      },
+      {
+        "name": "Svazi",
+        "lang": "sl"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Svazieana",
+        "lang": "se"
+      },
+      {
+        "name": "Svazijsko",
+        "lang": "cs"
+      },
+      {
+        "name": "Svazijsko",
+        "lang": "sk"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Svaziland",
+        "lang": "hr"
+      },
+      {
+        "name": "Svaziland",
+        "lang": "tr"
+      },
+      {
+        "name": "Svazilandas",
+        "lang": "lt"
+      },
+      {
+        "name": "Svazilandë",
+        "lang": "sq"
+      },
+      {
+        "name": "Svazilando",
+        "lang": "eo"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Svazilend",
+        "lang": "bs"
+      },
+      {
+        "name": "Svazilend",
+        "lang": "hbs"
+      },
+      {
+        "isPreferredName": true,
+        "name": "svazilənd",
+        "lang": "az"
+      },
+      {
+        "name": "Svazilenda",
+        "lang": "lv"
+      },
+      {
+        "name": "Svazilendas",
+        "lang": "lt"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swaasilannda",
+        "lang": "ff"
+      },
+      {
+        "name": "Swasieland"
+      },
+      {
+        "name": "Swasiland",
+        "lang": "ang"
+      },
+      {
+        "name": "Swasiland",
+        "lang": "de"
+      },
+      {
+        "name": "Swasiland",
+        "lang": "nds"
+      },
+      {
+        "name": "Swasilandya",
+        "lang": "qu"
+      },
+      {
+        "name": "Swasisuyu",
+        "lang": "qu"
+      },
+      {
+        "name": "Swazia",
+        "lang": "la"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swazijsko",
+        "lang": "cs"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "af"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swaziland",
+        "lang": "ak"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "br"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "cy"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "da"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "en"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "fr"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "id"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "it"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "ms"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "nb"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swaziland",
+        "lang": "nd"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "nl"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "nn"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "no"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "oc"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "pam"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swaziland",
+        "lang": "rm"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "ro"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swaziland",
+        "lang": "sn"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "sv"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "tr"
+      },
+      {
+        "name": "Swaziland",
+        "lang": "vi"
+      },
+      {
+        "name": "Swaziland"
+      },
+      {
+        "name": "Sważiland",
+        "lang": "mt"
+      },
+      {
+        "name": "Swazilande",
+        "lang": "nov"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swäzïlânde",
+        "lang": "sg"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swazilandi",
+        "lang": "bm"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swazilandi",
+        "lang": "kl"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swazilandi",
+        "lang": "ln"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swazilandi",
+        "lang": "lu"
+      },
+      {
+        "name": "Swazilandia",
+        "lang": "an"
+      },
+      {
+        "name": "Swazilandia",
+        "lang": "es"
+      },
+      {
+        "name": "Swazilandia",
+        "lang": "eu"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swazilandia",
+        "lang": "ia"
+      },
+      {
+        "name": "Swazilàndia",
+        "lang": "ca"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swaziland nutome",
+        "lang": "ee"
+      },
+      {
+        "name": "Swazilando",
+        "lang": "io"
+      },
+      {
+        "name": "Swazîlenda",
+        "lang": "ku"
+      },
+      {
+        "name": "Swazimaa",
+        "lang": "fi"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Swazirandi",
+        "lang": "lg"
+      },
+      {
+        "name": "Szváziföld",
+        "lang": "hu"
+      },
+      {
+        "name": "Umbuso weSwatini",
+        "lang": "ss"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Uswazi",
+        "lang": "ki"
+      },
+      {
+        "name": "Uswazi",
+        "lang": "sw"
+      },
+      {
+        "name": "Xoa-di-len",
+        "lang": "vi"
+      },
+      {
+        "name": "سۋازىلېند",
+        "lang": "ug"
+      },
+      {
+        "isPreferredName": true,
+        "name": "سوازیلاند",
+        "lang": "fa"
+      },
+      {
+        "isPreferredName": true,
+        "name": "سوازیلاند",
+        "lang": "ku"
+      },
+      {
+        "name": "سوازیلند",
+        "lang": "fa"
+      },
+      {
+        "isPreferredName": true,
+        "name": "سوازی لینڈ",
+        "lang": "ur"
+      },
+      {
+        "name": "سوازيلاند",
+        "lang": "ar"
+      },
+      {
+        "name": "سوازيلند",
+        "lang": "ar"
+      },
+      {
+        "name": "סוואזילנד",
+        "lang": "he"
+      },
+      {
+        "name": "סווזילנד",
+        "lang": "he"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Ζουαζηλάνδη",
+        "lang": "el"
+      },
+      {
+        "name": "Σουαζιλάνδη",
+        "lang": "el"
+      },
+      {
+        "name": "Свазиленд",
+        "lang": "bg"
+      },
+      {
+        "name": "Свазиленд",
+        "lang": "mk"
+      },
+      {
+        "name": "Свазиленд",
+        "lang": "ru"
+      },
+      {
+        "name": "Свазиленд",
+        "lang": "sr"
+      },
+      {
+        "name": "Свазиленд",
+        "lang": "tg"
+      },
+      {
+        "name": "Свазиленд",
+        "lang": "uk"
+      },
+      {
+        "isPreferredName": true,
+        "name": "Свазіленд",
+        "lang": "be"
+      },
+      {
+        "name": "Свазіленд",
+        "lang": "uk"
+      },
+      {
+        "name": "Суазиленд",
+        "lang": "bg"
+      },
+      {
+        "name": "Սվազիլենդ",
+        "lang": "hy"
+      },
+      {
+        "name": "სვაზილენდი",
+        "lang": "ka"
+      },
+      {
+        "name": "सुआजीलैंड",
+        "lang": "hi"
+      },
+      {
+        "isPreferredName": true,
+        "name": "स्वाजिल्याण्ड",
+        "lang": "ne"
+      },
+      {
+        "name": "स्वाज़ीलैण्ड",
+        "lang": "hi"
+      },
+      {
+        "name": "स्वाजीलैंड",
+        "lang": "sa"
+      },
+      {
+        "isPreferredName": true,
+        "name": "स्वाज़ीलैंड",
+        "lang": "hi"
+      },
+      {
+        "isPreferredName": true,
+        "name": "स्वाझिलँड",
+        "lang": "mr"
+      },
+      {
+        "isPreferredName": true,
+        "name": "સ્વાઝિલેન્ડ",
+        "lang": "gu"
+      },
+      {
+        "isPreferredName": true,
+        "name": "స్వాజీలేండ్",
+        "lang": "te"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ಸ್ವಾಜಿಲ್ಯಾಂಡ್",
+        "lang": "kn"
+      },
+      {
+        "isPreferredName": true,
+        "name": "ஸ்வாஸிலாண்ட்",
+        "lang": "ta"
+      },
+      {
+        "isPreferredName": true,
+        "name": "സ്വാസിലാന്‍റ്",
+        "lang": "ml"
+      },
+      {
+        "isPreferredName": true,
+        "name": "সোয়াজিল্যান্ড",
+        "lang": "bn"
+      },
+      {
+        "name": "斯威士兰",
+        "lang": "zh"
+      },
+      {
+        "isPreferredName": true,
+        "name": "スワジランド王国",
+        "lang": "ja"
+      }
+    ],
+    "adminName2": "",
+    "name": "Swaziland",
+    "fclName": "country, state, region,...",
+    "countryName": "Swaziland",
+    "fcodeName": "independent political entity",
+    "adminName1": ""
+  },
+  "971694": {
+    "timezone": {
+      "gmtOffset": 2,
+      "timeZoneId": "Africa/Johannesburg",
+      "dstOffset": 2
+    },
+    "asciiName": "Ndumu Game Reserve",
+    "countryId": "953987",
+    "fcl": "L",
+    "srtm3": 42,
+    "countryCode": "ZA",
+    "adminId1": "972062",
+    "lat": "-26.88541",
+    "fcode": "RESW",
+    "continentCode": "AF",
+    "adminCode1": "02",
+    "lng": "32.26572",
+    "geonameId": 971694,
+    "toponymName": "Ndumu Game Reserve",
+    "population": 0,
+    "wikipediaURL": "en.wikipedia.org/wiki/Ndumo_Game_Reserve",
+    "adminName5": "",
+    "adminName4": "",
+    "adminName3": "",
+    "alternateNames": [
+      {
+        "name": "http://en.wikipedia.org/wiki/Ndumo_Game_Reserve",
+        "lang": "link"
+      },
+      {
+        "name": "Nduma Game Reserve"
+      },
+      {
+        "name": "Ndumi Game Reserve"
+      },
+      {
+        "name": "Ndumo Game Reserve"
+      },
+      {
+        "name": "Ndumu Game Reserve"
+      }
+    ],
+    "adminName2": "",
+    "name": "Ndumu Game Reserve",
+    "fclName": "parks,area, ...",
+    "countryName": "South Africa",
+    "fcodeName": "wildlife reserve",
+    "adminName1": "KwaZulu-Natal"
   }
 }
