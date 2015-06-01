@@ -23,17 +23,8 @@
     <% hash = JSON.parse(document[:dct_references_s]) %>
     <% thumbnailUrl = hash["http://schema.org/thumbnailUrl"]%>
 
-    <!--TODO: Change this to be correct thumbnail url and logic if no url then default image-->
+    <a href="#" title="document thumbnail" class="thumbnail"><img style=" background-image: url(<%= thumbnailUrl%>), url(<%= asset_path('placeholder-image')%> " alt="document thumbnail"/></a>
 
-    <% if thumbnailUrl.nil? %>
-
-        <!--use the fake thumbnail-->
-        <a href="#" title="Placeholder document thumbnail" class="thumbnail"><img src="<%= asset_path('example-thumbnail.png')%>" alt="Example document thumbnail"/></a>
-
-  <% else %>
-
-    <a href="#" title="Placeholder document thumbnail" class="thumbnail"><img src="<%= thumbnailUrl%>" alt="Example document thumbnail"/></a>
-    <% end %>
   </div>
 
   <div class="col-xs-8 col-md-2">
