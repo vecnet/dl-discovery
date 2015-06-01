@@ -29,17 +29,27 @@
 
 
     <dt>URL</dt>
-    <%# hash = JSON.parse(@document["dct_references_s"]) %>
-    <dd><%# link_to hash["https://schema.org/url"]%></dd>
+    <% hash = JSON.parse(@document["dct_references_s"]) %>
+    <dd><%= link_to hash["http://schema.org/url"]%></dd>
+
+
+    <% links = Array(@document["dc_relation_sm"]).join(", ") %>
+
+    <% links.map{|link| link_to link}.join(', ').html_safe %>
 
 
     <dt>Links</dt>
-    <dd><%= Array(@document["dc_relation_sm"]).join(", ")%></dd>
+    <dd> <%= links.map{|link| link_to link}.join(', ').html_safe %></dd>
 
 
-    <!--TODO: Fish out the correct links from JSON object here || Check with Don -->
-    <% if !@document.references.nil? && !@document.references.url.nil? %>
-      <dt>More details at</dt>
+    <% comment do %>
+        <dd><%= Array(@document["dc_relation_sm"]).join(", ")%></dd>
+
+        <% end %>
+
+
+        <% if !@document.references.nil? && !@document.references.url.nil? %>
+      <dt>URL</dt>
       <dd itemprop="url"><%= link_to @document.references.url.endpoint, @document.references.url.endpoint %></dd>
     <% end %>
   </dl>
