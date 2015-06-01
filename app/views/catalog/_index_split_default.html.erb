@@ -23,7 +23,7 @@
     <% hash = JSON.parse(document[:dct_references_s]) %>
     <% thumbnailUrl = hash["http://schema.org/thumbnailUrl"]%>
 
-    <a href="#" title="document thumbnail" class="thumbnail"><img src="<%= thumbnailUrl%>" onError="this.onerror=null;this.src='placeholder-image.png';" alt="document thumbnail"/></a>
+    <a href="#" title="document thumbnail" class="thumbnail"><img src="<%= thumbnailUrl%>" onError="this.onerror=null;this.src='/assets/placeholder-image.png';" alt="document thumbnail"/></a>
   </div>
 
   <div class="col-xs-8 col-md-2">
