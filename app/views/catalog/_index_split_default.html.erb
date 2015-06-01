@@ -24,12 +24,14 @@
     <% downloadUrl = hash["http://schema.org/downloadUrl"]%>
     <% thumbnailUrl = hash["http://schema.org/thumbnailUrl"]%>
 
-    <!--<a href="#" title="document thumbnail" class="thumbnail">-->
 
+    <% if downloadUrl.nil? %>
+        <% downloadUrl = thumbnailUrl %>
+        <% end %>
 
       <%= link_to downloadUrl, class: 'thumbnail', title: 'document thumbnail', alt: 'document thumbnail' do %>
 
-          <img src="<%= thumbnailUrl%>" onError="this.onerror=null;this.src='/assets/placeholder-image.png';" />
+          <img src="<%= thumbnailUrl%>" onError="this.onerror=null;this.src='//assets/placeholder-image.png';" />
 
       <% end %>
   </div>
@@ -42,7 +44,7 @@
       <% unless document[:layer_geom_type_s].blank? %> <li><i class="glyphicon glyphicon-map-marker"></i> <span><%= document[:layer_geom_type_s] %></span></li><% end %>
     </ul>
   </div>
-  <div class="col-xs-12 col-md-8 excerpet">
+  <div class="col-xs-12 col-md-8 excerpt">
     <h3 class="result-title"><%= link_to_document document, document_show_link_field(document), title: document['dc_title_s'] %></h3>
 
     <h5 class="result-author"><%= Array(document[:dc_creator_sm]).join(", ") %> </h5>
