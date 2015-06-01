@@ -168,3 +168,9 @@ function makeHiddenInputElement($link) {
     $('#ajax-modal').modal('hide');
 }
 // ----------------------------------------------------------------------------
+
+function imgError(image) {
+    image.onerror = "";
+    image.src = "<%= asset_path('placeholder-image.png') %>";
+    return true;
+}
