@@ -20,7 +20,7 @@
 
   <div class="col-xs-4 col-md-2">
 
-    <% hash = JSON.parse(@document["dct_references_s"]) %>
+    <% hash = JSON.parse(document[:dct_references_s]) %>
     <% thumbnailUrl = hash["http://schema.org/thumbnailUrl"]%>
 
     <!--TODO: Change this to be correct thumbnail url and logic if no url then default image-->
