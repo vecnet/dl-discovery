@@ -27,19 +27,25 @@
     <dt>Access</dt>
     <dd><%= @document["dc_rights_s"]%></dd>
 
+    <dt>Download</dt>
+    <% hash = JSON.parse(@document["dct_references_s"]) %>
+    <dd><%= link_to hash["http://schema.org/downloadUrl"]%></dd>
 
-    <dt>URL</dt>
-    <%# hash = JSON.parse(@document["dct_references_s"]) %>
-    <dd><%# link_to hash["https://schema.org/url"]%></dd>
+    <% links = Array(@document["dc_relation_sm"]) %>
+    <% links.map{|link| link_to link}.join(', ').html_safe %>
+
+    <dt>Related Links</dt>
+    <dd> <%= links.map{|link| link_to link}.join(', ').html_safe %></dd>
 
 
-    <dt>Links</dt>
-    <dd><%= Array(@document["dc_relation_sm"]).join(", ")%></dd>
+    <% comment do %>
+        <dd><%= Array(@document["dc_relation_sm"]).join(", ")%></dd>
+
+    <% end %>
 
 
-    <!--TODO: Fish out the correct links from JSON object here || Check with Don -->
-    <% if !@document.references.nil? && !@document.references.url.nil? %>
-      <dt>More details at</dt>
+        <% if !@document.references.nil? && !@document.references.url.nil? %>
+      <dt>Details page</dt>
       <dd itemprop="url"><%= link_to @document.references.url.endpoint, @document.references.url.endpoint %></dd>
     <% end %>
   </dl>
