@@ -2,7 +2,7 @@
 var previewCharsLength = 100;
 
 $('dd').filter(function() {
-    return $(this).text().length > XX;
+    return $(this).text().length > previewCharsLength;
 }).addClass('truncated');
 
 $('.truncated').hide()                       // Hide the text initially

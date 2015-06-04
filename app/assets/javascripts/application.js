@@ -33,7 +33,6 @@
 //= require modules/buttons
 //= require modules/bootstrap-switch
 //= require modules/metadata_table
-
 //= require modules/leaflet.markercluster
 //= require modules/leaflet-providers
 //= require modules/readmore.min
