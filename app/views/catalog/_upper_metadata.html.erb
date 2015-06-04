@@ -32,6 +32,8 @@
 
     <% unless hash["http://schema.org/downloadUrl"].nil? %>
     <dd><%= link_to hash["http://schema.org/downloadUrl"]%></dd>
+        <% else %>
+    <dd></dd>
         <% end %>
 
     <% links = Array(@document["dc_relation_sm"]) %>
