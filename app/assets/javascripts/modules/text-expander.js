@@ -1,12 +1,12 @@
 $(document).ready(function() {
-    $('dd:before').expander({
+    $('dd').expander({
         slicePoint: 100,
-        widow: 2,
+        widow: 4,
         expandEffect: 'show',
         userCollapseText: '[^]'
     });
 
-    $('.truncate:before').expander({
+    $('dd:before').expander({
         slicePoint: 100,
         widow: 2,
         expandEffect: 'show',
