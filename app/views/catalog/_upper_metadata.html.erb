@@ -29,7 +29,10 @@
 
     <dt>Download</dt>
     <% hash = JSON.parse(@document["dct_references_s"]) %>
+
+    <% unless hash["http://schema.org/downloadUrl"].nil? %>
     <dd><%= link_to hash["http://schema.org/downloadUrl"]%></dd>
+        <% end %>
 
     <% links = Array(@document["dc_relation_sm"]) %>
     <% links.map{|link| link_to link}.join(', ').html_safe %>
