@@ -39,9 +39,9 @@
   <div class="col-xs-8 col-md-2">
     <ul class="meta-search">
       <% unless document[:dc_created_sm].blank? %><li title="Date created (dc_created)"><i class="glyphicon glyphicon-time"></i> <span ><%= Array(document[:dc_created_sm]).join(", ") %></span></li><% end %>
-      <% unless document[:dc_type_s].blank? %><li title="Article type (dc_type)"><i class="glyphicon glyphicon-file"></i> <span><%= document[:dc_type_s] %></span></li> <% end %>
-      <% unless document[:vn_keyword_sm].blank? %> <li><i class="glyphicon glyphicon-tags"></i> <span title="<%= Array(document[:vn_keyword_sm]).join(", ") %>" class="tags-text"> <%= Array(document[:vn_keyword_sm]).join(", ") %> </span></li> <% end %>
-      <% unless document[:layer_geom_type_s].blank? %> <li><i class="glyphicon glyphicon-map-marker"></i> <span><%= document[:layer_geom_type_s] %></span></li><% end %>
+      <% unless document[:dc_type_s].blank? %><li title="Item type (dc_type)"><i class="glyphicon glyphicon-file"></i> <span><%= document[:dc_type_s] %></span></li> <% end %>
+      <% unless document[:vn_keyword_sm].blank? %> <li title="Keywords"><i class="glyphicon glyphicon-tags"></i> <span title="<%= Array(document[:vn_keyword_sm]).join(", ") %>" class="tags-text"> <%= Array(document[:vn_keyword_sm]).join(", ") %> </span></li> <% end %>
+      <% unless document[:layer_geom_type_s].blank? %> <li title="GIS data type"><i class="glyphicon glyphicon-map-marker"></i> <span><%= document[:layer_geom_type_s] %></span></li><% end %>
     </ul>
   </div>
   <div class="col-xs-12 col-md-8 excerpt">
