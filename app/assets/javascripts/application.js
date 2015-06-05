@@ -20,7 +20,6 @@
 //
 // Required by Blacklight
 //= require blacklight/blacklight
-
 //= require geoblacklight
 
 // Wellknown is a javascript WKT converter that doesn't have a gem.
@@ -31,7 +30,6 @@
 //= require modules/vndl_map.js.erb
 //= require modules/bootstrap-switch
 //= require modules/leaflet.markercluster
-//= require modules/leaflet-providers
 //= require modules/readmore.min
 //= require modules/jquery.expander.min
 //= require modules/text-expander
