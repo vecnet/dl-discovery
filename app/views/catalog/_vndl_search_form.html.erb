@@ -7,15 +7,25 @@
       <legend class="sr-only">Text searching</legend>
       <label class="sr-only" for="catalog_search">search for records</label>
 
+
       <div class="input-group">
         <input class="form-control input-lg" id="catalog_search" name="q" placeholder="search for records" value="<%= get_search_query_text %>" tabindex="1" type="text"/>
 
+        <!-- /btn-group -->
         <div class="input-group-btn">
           <button type="submit" class="search-submit btn-lg btn btn-primary" id="search-submit-header" tabindex="2">
-             Search
+          Search
           </button>
+          <button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+            <span class="caret"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Search full text</a></li>
+          </ul>
         </div>
       </div>
+
     </div>
   </fieldset>
 

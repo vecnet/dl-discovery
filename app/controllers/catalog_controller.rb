@@ -217,6 +217,7 @@ class CatalogController < ApplicationController
     config.add_sort_field 'dc_date_modified_sort desc', :label => 'modify date desc'
 
 
+    config.basemap_provider = 'mapquest'
 
 
 
