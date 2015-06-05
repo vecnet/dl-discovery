@@ -34,5 +34,6 @@
 //= require modules/leaflet-providers
 //= require modules/readmore.min
 //= require modules/jquery.expander.min
+//= require modules/text-expander
 //= require modules/jquery.scrollTo.min
 //= require_tree .
