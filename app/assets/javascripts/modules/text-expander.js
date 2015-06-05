@@ -1,26 +1,18 @@
 $(document).ready(function() {
     $('dd').expander({
-        slicePoint: 100,
+        slicePoint: 300,
         widow: 4,
         expandEffect: 'show',
-        userCollapseText: '[^]'
-    });
-
-    $('dd:before').expander({
-        slicePoint: 100,
-        widow: 2,
-        expandEffect: 'show',
-        userCollapseText: '[^]'
+        userCollapseText: 'Read less',
+        sliceOn: '.  '
     });
 
 });
 
-
-
 //// The number of characters
 //var XX = 100;
 //
-//$('dd:before').filter(function() {
+//$('dd').filter(function() {
 //    return $(this).text().length > XX;
 //}).wrap('<span></span>.addClass('truncated');
 //
