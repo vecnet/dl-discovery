@@ -10,9 +10,11 @@ dd[itemprop='url'] a {
 //dl {
 //  background-color: #fff;
 //}
-dt:nth-child(2n), dd:nth-child(2n) {
+
+
+dt:nth-child(4n), dd:nth-child(4n) {
    background-color: $line-color;
- }
+}
 
 .dl-horizontal dd {
   min-height: 1em; // this hack is due to a strange bootstrap clearfix issue (https://github.com/twbs/bootstrap/issues/4062)
