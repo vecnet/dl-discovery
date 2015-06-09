@@ -168,6 +168,10 @@ $disabled-color: #aaa;
 
 .result-title {
   margin-top: 0px;
+  font-size:16px;
+  :first-line{
+    font-size: 24px;
+  }
 }
 
 .result-author {
