@@ -31,20 +31,20 @@
     <% end -%>
   </div>
 
-  <div class="col-xs-8 col-md-1">
+  <div class="col-xs-8 col-md-2">
     <ul class="meta-search">
       <% unless document[:dc_created_sm].blank? %><li title="Date created (dc_created)"><i class="glyphicon glyphicon-time"></i> <span ><%= Array(document[:dc_created_sm]).join(", ") %></span></li><% end %>
       <% unless document[:dc_type_s].blank? %><li title="Item type (dc_type)"><i class="glyphicon glyphicon-file"></i> <span><%= document[:dc_type_s] %></span></li> <% end %>
       <% unless document[:vn_keyword_sm].blank? %> <li title="Keywords"><i class="glyphicon glyphicon-tags"></i> <span title="<%= Array(document[:vn_keyword_sm]).join(", ") %>" class="tags-text"> <%= Array(document[:vn_keyword_sm]).join(", ") %> </span></li> <% end %>
     </ul>
   </div>
-  <div class="col-xs-12 col-md-9 excerpt">
+  <div class="col-xs-12 col-md-8 excerpt">
     <h3 class="result-title"><%= link_to_document document, document_show_link_field(document), title: document['dc_title_s'] %></h3>
 
     <h5 class="result-author"><%= Array(document[:dc_creator_sm]).join(", ") %> </h5>
     <h5 class="result-citation"><%= document[:dc_bibliographic_citation_s] %> </h5>
 
-    <p><%= snippet(document['dc_description_s']) %></p>
+    <p class="description-text"><%= snippet(document['dc_description_s']) %></p>
   </div>
   <span class="clearfix"></span>
 </article>

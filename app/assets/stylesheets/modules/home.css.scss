@@ -169,13 +169,23 @@ $disabled-color: #aaa;
 .result-title {
   margin-top: 0px;
   font-size:16px;
-  :first-line{
+
+  &:first-line{
     font-size: 24px;
   }
 }
 
 .result-author {
   font-weight: bold;
+  float:left;
+}
+
+.result-citation {
+  float:right;
+}
+
+.description-text {
+  clear:both;
 }
 
 // TODO : Limit max height of this when too many tags
