@@ -4,17 +4,27 @@ dd[itemprop='url'] a {
     display: block;
 }
 
+
+// one attempt at striping dd
+
+//dl {
+//  background-color: #fff;
+//}
+dt:nth-child(2n), dd:nth-child(2n) {
+   background-color: $line-color;
+ }
+
 .dl-horizontal dd {
   min-height: 1em; // this hack is due to a strange bootstrap clearfix issue (https://github.com/twbs/bootstrap/issues/4062)
 }
 
-  
-  dt:nth-child(odd){
-    background-color: $white;
-  }
-  dd:nth-child(even) {
-    background-color: $line-color;
-  }
+//
+//  dt:nth-child(odd){
+//    background-color: $white;
+//  }
+//  dd:nth-child(even) {
+//    background-color: $line-color;
+//  }
 
 
 
