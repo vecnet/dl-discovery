@@ -18,6 +18,17 @@
   <% end %>
   <!--End of data-ptdata-->
 
+
+
+  <div class="col-xs-12 col-md-8 excerpt">
+    <h3 class="result-title"><%= link_to_document document, document_show_link_field(document), title: document['dc_title_s'] %></h3>
+
+    <h5 class="result-author"><%= Array(document[:dc_creator_sm]).join(", ") %> </h5>
+    <h5 class="result-citation"><%= document[:dc_bibliographic_citation_s] %> </h5>
+
+    <p class="description-text"><%= snippet(document['dc_description_s']) %></p>
+  </div>
+
   <div class="col-xs-4 col-md-2">
 
     <% hash = JSON.parse(document[:dct_references_s]) %>
@@ -27,17 +38,8 @@
     <% downloadUrl = url_for_document(document) if downloadUrl.nil? -%>
 
     <%= link_to downloadUrl, class: 'thumbnail', title: 'document thumbnail', alt: 'document thumbnail' do %>
-      <img src="<%= thumbnailUrl%>" onError="imgError(this);" />
+        <img src="<%= thumbnailUrl%>" onError="imgError(this);" />
     <% end -%>
-  </div>
-
-  <div class="col-xs-12 col-md-8 excerpt">
-    <h3 class="result-title"><%= link_to_document document, document_show_link_field(document), title: document['dc_title_s'] %></h3>
-
-    <h5 class="result-author"><%= Array(document[:dc_creator_sm]).join(", ") %> </h5>
-    <h5 class="result-citation"><%= document[:dc_bibliographic_citation_s] %> </h5>
-
-    <p class="description-text"><%= snippet(document['dc_description_s']) %></p>
   </div>
 
   <div class="col-xs-8 col-md-2">
@@ -50,6 +52,8 @@
 
     </ul>
   </div>
+
+
 
   <span class="clearfix"></span>
 </article>

@@ -3,7 +3,8 @@ $(document).ready(function() {
         slicePoint: 300,
         widow: 4,
         expandEffect: 'show',
-        userCollapseText: 'Read less',
+        expandText: ' Read more >>',
+        userCollapseText: '<< Read less',
         sliceOn: '.  '
     });
 
