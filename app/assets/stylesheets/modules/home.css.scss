@@ -190,7 +190,12 @@ $disabled-color: #aaa;
 }
 .search-result {
   border-bottom: 1px solid $line-color;
-  padding: $content-v-pad;
+
+  //  original padding
+  //  padding: $content-v-pad;
+
+  // make less padding for nmyers
+  padding: $content-pad-unit;
   padding-left: 0px;
 }
 
