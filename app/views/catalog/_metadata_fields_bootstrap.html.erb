@@ -63,7 +63,7 @@
 
               <tr>
                 <th>Time periods</th>
-                <td><%=@document["dct_temporal_sm"] %></td>
+                <td><%=Array(@document["dct_temporal_sm"]).join(", ") %></td>
               </tr>
 
               <tr>
