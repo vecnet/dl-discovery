@@ -8,13 +8,13 @@ dd[itemprop='url'] a {
   min-height: 1em; // this hack is due to a strange bootstrap clearfix issue (https://github.com/twbs/bootstrap/issues/4062)
 }
 
-  // TODO: style this for line reading easier?
-  //dt:nth-child(odd){
-  //  background-color: $white;
-  //}
-  //dd:nth-child(even) {
-  //  background-color: $line-color;
-  //}
+  
+  dt:nth-child(odd){
+    background-color: $white;
+  }
+  dd:nth-child(even) {
+    background-color: $line-color;
+  }
 
 
 
