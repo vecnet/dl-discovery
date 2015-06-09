@@ -189,11 +189,13 @@ $disabled-color: #aaa;
 .result-citation {
   float:right;
   margin: 0;
+  margin-top:0.2em;
 }
 
 .description-text {
   clear:both;
   text-align: justify;
+  padding-top: 0.5em;
 }
 
 // TODO : Limit max height of this when too many tags
