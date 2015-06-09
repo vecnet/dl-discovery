@@ -1,6 +1,7 @@
 <% document ||= @document %>
 
 <div class="geoblacklight-view-panel" >
+<% comment do %>
   <dl class="dl-horizontal col-lg-10">
 
     <dt>Description</dt>
@@ -55,7 +56,11 @@
   </dl>
 
 
-  <table class="table-bordered table table-striped" id="summary-table">
+      
+      <% comment end %>
+
+
+  <table class="table table-striped" id="summary-table">
     <thead>
     </thead>
     <tbody>
@@ -76,7 +81,7 @@
 
     <tr>
       <th>Author Facet</th>
-      <td><%= @document["dc_creator_facet"]%> %></td>
+      <td><%= @document["dc_creator_facet"]%>></td>
     </tr>
 
     <tr>
@@ -120,10 +125,10 @@
 
         <% links = Array(@document["dc_relation_sm"]) %>
         <% links.map{|link| link_to link}.join(', ').html_safe %>
-        <td> <%= links.map{|link| link_to link}.join(', ').html_safe %></td>
+        <td> <%= links.map{|link| link_to link}.join("\n").html_safe %></td>
 
     </tr>
-    
+
 
     <% if !@document.references.nil? && !@document.references.url.nil? %>
         <th>Details page</th>

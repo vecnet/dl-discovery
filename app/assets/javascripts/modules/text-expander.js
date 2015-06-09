@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('dd').expander({
+    $('td').expander({
         slicePoint: 300,
         widow: 4,
         expandEffect: 'show',
