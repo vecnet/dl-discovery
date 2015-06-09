@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $('td').expander({
-        slicePoint: 300,
+        slicePoint: 400,
         widow: 4,
         expandEffect: 'show',
         expandText: ' Read more >>',
