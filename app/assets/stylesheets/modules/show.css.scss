@@ -13,13 +13,14 @@ dt:nth-child(4n+1), dd:nth-child(4n+2),  {
     min-height: 1em; // this hack is due to a strange bootstrap clearfix issue (https://github.com/twbs/bootstrap/issues/4062)
 
     margin: 0;
+    margin-bottom: 0px; !important;
     padding: 0.3em 1em;
     margin-left: 160px;
 
   }
 
   dt {
-
+    margin: 0;
     padding: 0.3em 1em;
 
   }
