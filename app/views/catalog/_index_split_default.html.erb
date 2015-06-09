@@ -31,6 +31,15 @@
     <% end -%>
   </div>
 
+  <div class="col-xs-12 col-md-8 excerpt">
+    <h3 class="result-title"><%= link_to_document document, document_show_link_field(document), title: document['dc_title_s'] %></h3>
+
+    <h5 class="result-author"><%= Array(document[:dc_creator_sm]).join(", ") %> </h5>
+    <h5 class="result-citation"><%= document[:dc_bibliographic_citation_s] %> </h5>
+
+    <p class="description-text"><%= snippet(document['dc_description_s']) %></p>
+  </div>
+
   <div class="col-xs-8 col-md-2">
     <ul class="meta-search">
       <% unless document[:dc_created_sm].blank? %><li title="Date created (dc_created)"><i class="glyphicon glyphicon-time"></i> <span ><%= Array(document[:dc_created_sm]).join(", ") %></span></li><% end %>
@@ -41,14 +50,7 @@
 
     </ul>
   </div>
-  <div class="col-xs-12 col-md-8 excerpt">
-    <h3 class="result-title"><%= link_to_document document, document_show_link_field(document), title: document['dc_title_s'] %></h3>
 
-    <h5 class="result-author"><%= Array(document[:dc_creator_sm]).join(", ") %> </h5>
-    <h5 class="result-citation"><%= document[:dc_bibliographic_citation_s] %> </h5>
-
-    <p class="description-text"><%= snippet(document['dc_description_s']) %></p>
-  </div>
   <span class="clearfix"></span>
 </article>
 <!-- results list item end -->
