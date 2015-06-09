@@ -168,24 +168,32 @@ $disabled-color: #aaa;
 
 .result-title {
   margin-top: 0px;
-  font-size:16px;
+  font-size:20px;
 
   &:first-line{
+//    font-weight: bold;
     font-size: 24px;
   }
 }
 
 .result-author {
   font-weight: bold;
+
+  // make them on the same line if possible
   float:left;
+
+  // minimise gap and use line height instead.
+  margin: 0;
 }
 
 .result-citation {
   float:right;
+  margin: 0;
 }
 
 .description-text {
   clear:both;
+  text-align: justify;
 }
 
 // TODO : Limit max height of this when too many tags
