@@ -81,11 +81,6 @@
     </tr>
 
     <tr>
-      <th>Author Facet</th>
-      <td><%= @document["dc_creator_facet"]%></td>
-    </tr>
-
-    <tr>
       <th>Contributor</th>
       <td><%=Array(@document["dc_contributor_sm"]).join(", ") %></td>
     </tr>
@@ -121,7 +116,7 @@
 
     <tr>
       <th>
-      Related Links
+      Links
       </th>
 
         <% links = Array(@document["dc_relation_sm"]) %>
@@ -132,7 +127,7 @@
 
 
     <% if !@document.references.nil? && !@document.references.url.nil? %>
-        <th>Details page</th>
+        <th>Details</th>
         <td itemprop="url"><%= link_to @document.references.url.endpoint, @document.references.url.endpoint %></td>
     <% end %>
 
