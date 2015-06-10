@@ -1,7 +1,6 @@
 <div class="col-xs-4 col-md-2">
 
   <% hash = JSON.parse(@document[:dct_references_s]) %>
-  <% downloadUrl = hash["http://schema.org/downloadUrl"]%>
   <% thumbnailUrl = hash["http://schema.org/thumbnailUrl"]%>
 
   <% downloadUrl = url_for_document(@document) if downloadUrl.nil? -%>
