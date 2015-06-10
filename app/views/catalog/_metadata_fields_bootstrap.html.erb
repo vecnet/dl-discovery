@@ -63,7 +63,7 @@
 
               <tr>
                 <th>Time periods</th>
-                <td><%=@document["dct_temporal_sm"] %></td>
+                <td><%=Array(@document["dct_temporal_sm"]).join(", ") %></td>
               </tr>
 
               <tr>
@@ -138,7 +138,7 @@
 
               <tr>
                 <th style="width:10%">Identifier</th>
-                <td><%= @document["dc_identifier_sm"] %></td>
+                <td><%= Array(@document["dc_identifier_sm"]).join("\n") %></td>
               </tr>
 
               <tr>
@@ -164,7 +164,7 @@
 
               <tr>
                 <th>Vecnet modifier</th>
-                <td><%= @document["edit_access_group_sm"] %></td>
+                <td><%= Array(@document["edit_access_group_sm"]).join("\n") %></td>
               </tr>
 
               <tr>

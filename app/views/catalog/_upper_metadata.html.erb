@@ -1,6 +1,7 @@
 <% document ||= @document %>
 
 <div class="geoblacklight-view-panel" >
+<% comment do %>
   <dl class="dl-horizontal col-lg-10">
 
     <dt>Description</dt>
@@ -53,5 +54,88 @@
       <dd itemprop="url"><%= link_to @document.references.url.endpoint, @document.references.url.endpoint %></dd>
     <% end %>
   </dl>
+
+
+
+      <% comment end %>
+
+
+  <div class="col-lg-10" >
+  <table class="table table-bordered table-striped" id="summary-table">
+    <thead>
+    </thead>
+    <tbody>
+    <tr>
+      <th style="width:10%">Description</th>
+      <td><%= @document["dc_description_s"]%></td>
+    </tr>
+
+    <tr>
+      <th>Alternate title</th>
+      <td><%= @document["dc_alternate_sm"]%></td>
+    </tr>
+
+    <tr>
+      <th>Author</th>
+      <td><%= Array(@document["dc_creator_sm"]).join(", ")%></td>
+    </tr>
+
+    <tr>
+      <th>Contributor</th>
+      <td><%=Array(@document["dc_contributor_sm"]).join(", ") %></td>
+    </tr>
+
+
+    <tr>
+      <th>Date</th>
+      <td><%= Array(@document["dc_created_sm"]).join(", ")%></td>
+    </tr>
+
+    <tr>
+      <th>Data Type</th>
+      <td><%= @document["dc_type_s"]%></td>
+    </tr>
+
+    <tr>
+      <th>Access</th>
+      <td><%= @document["dc_rights_s"]%></td>
+    </tr>
+
+    <tr>
+      <th>Download</th>
+
+        <% hash = JSON.parse(@document["dct_references_s"]) %>
+
+
+        <% unless hash["http://schema.org/downloadUrl"].nil? %>
+            <td><%= link_to hash["http://schema.org/downloadUrl"]%></td>
+        <% else %>
+            <td></td>
+        <% end %>
+    </tr>
+
+    <tr>
+      <th>
+      Links
+      </th>
+
+        <% links = Array(@document["dc_relation_sm"]) %>
+        <% links.map{|link| link_to link}.join(', ').html_safe %>
+        <td> <%= links.map{|link| link_to link}.join("\n").html_safe %></td>
+
+    </tr>
+
+
+    <% if !@document.references.nil? && !@document.references.url.nil? %>
+        <th>Details</th>
+        <td itemprop="url"><%= link_to @document.references.url.endpoint, @document.references.url.endpoint %></td>
+    <% end %>
+
+
+    </tbody>
+  </table>
+  </div>
+
+  <%= render 'show_thumbnail' %>
 </div>
 

@@ -8,3 +8,6 @@
     <%= content_tag :div, '', id: 'map', data: {map: 'index', 'catalog-path' => catalog_index_path, 'map-bbox' => params[:bbox]} %>
 
 <% comment end %>
+
+<!--Pagination at the bottom of the search results-->
+<%= render 'sort_and_per_page' %>
