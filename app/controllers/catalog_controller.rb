@@ -4,6 +4,11 @@ require 'blacklight/catalog'
 class CatalogController < ApplicationController
 
   include Blacklight::Catalog
+  include ::ShowAccessControls
+
+  before_filter :enforce_show_permissions, only: :show
+
+  self.search_params_logic += [:apply_authz]
 
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
@@ -32,7 +37,7 @@ class CatalogController < ApplicationController
     config.show.display_type_field = 'format'
 
 
-    config.search_builder_class = Geoblacklight::SearchBuilder
+    config.search_builder_class = SearchBuilder
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
