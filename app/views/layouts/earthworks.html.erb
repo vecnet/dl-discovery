@@ -23,19 +23,30 @@
   <![endif]-->
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= render_body_class %>">
+<body class=" <%= render_body_class %>">
   <div id="su-wrap"> <!-- #su-wrap start -->
     <div id="su-content"> <!-- #su-content start -->
-      <%= render 'shared/top_navbar' %>
+
+      <!--header_navbar start-->
       <%= render 'shared/header_navbar' %>
+      <!--header_navbar end-->
+
+      <!--ajax_modal start-->
       <%= render partial: 'shared/ajax_modal' %>
+      <!--ajax_modal start-->
+
+
+      <!--main-container start-->
+
       <div id='main-container' role='main' class='container' data-analytics-id="<%= Settings.GOOGLE_ANALYTICS_ID %>">
-        <h1 class="sr-only">EarthWorks Geospatial Catalog</h1>
+        <h1 class="sr-only">VecNET Digital Library beta </h1>
         <%= render :partial=>'/flash_msg', layout: 'shared/flash_messages' %>
         <div class='row'>
           <%= yield %>
         </div>
       </div>
+      <!--main-container end-->
+
     </div> <!-- #su-content end -->
   </div> <!-- #su-wrap end -->
   
@@ -43,26 +54,35 @@
   <div id="global-footer">
     <div class="container">
       <div class="row">
-        <div id="bottom-logo" class="span2">
-          <a href="https://vecnet.org">
-            <img src="https://www.stanford.edu/su-identity/images/footer-stanford-logo@2x.png" alt="Stanford University" width="105" height="49"/>
-          </a>
-        </div>
+
+
+        <% vecnet_host = Rails.env == 'production' ? 'https://vecnet.org' : 'https://dev.vecnet.org' -%>
+        <p>
+          <%= link_to "Contact us", "#{vecnet_host}/index.php/about-vecnet/contact-vecnet" %>
+          | <%= link_to "FAQ", "#{vecnet_host}/index.php/about-vecnet/faq" %>
+          | <%= link_to "User Privacy Policy", "#{vecnet_host}/index.php/user-privacy-policy" %>
+          | <%= link_to "Terms of Use", "#{vecnet_host}/index.php/terms-of-use" %>
+          <br/>
+          <span class="fine-print">Copyright &copy;
+            2014 <%= link_to "Vector-Borne Disease Network (VecNet)", "#{vecnet_host}/" %></span>
+          <br/>
+          Powered by <%= link_to "Sufia", "https://github.com/projecthydra/sufia" %>,
+          a <%= link_to "Hydra", "http://projecthydra.org" %>
+          <footer id="footer" class="footer container">
+
+            <%= image_tag 'vecnet_logo_footer.jpg' %>
+
+          </footer>
+
+
         <!-- #bottom-logo end -->
-        <div id="bottom-text" class="span10">
-          <ul>
-            <li class="home"><a href="https://dl.vecnet.org">SU Home</a></li>
-            <li class="maps alt"><a href="http://visit.stanford.edu/plan/maps.html">Maps &amp; Directions</a></li>
-            <li class="search-stanford"><a href="http://www.stanford.edu/search/">Search Stanford</a></li>
-            <li class="terms alt"><a href="http://www.stanford.edu/site/terms.html">Terms of Use</a></li>
-            <li class="emergency-info"><a href="http://emergency.stanford.edu">Emergency Info</a></li>
-          </ul>
-        </div> <!-- .bottom-text end -->
-        <div class="clear"></div>
-        <p class="copyright vcard">&copy; <span class="fn org">Stanford University</span>, <span class="adr"> <span class="locality">Stanford</span>, <span class="region">California</span> <span class="postal-code">94305</span></span>.&nbsp;&nbsp;
-          <span id="copyright-complaint"><a href="http://www.stanford.edu/group/security/dmca.html" class="copyright-complaint" >Copyright Complaints</a></span>
-        </p>
-      </div> <!-- .row end --> 
+
+      </div>
+      <!-- .bottom-text end -->
+
+
+    </div>
+    <!-- .row end -->
     </div> <!-- .container end --> 
   </div> <!-- global-footer end -->
   <!-- Global footer snippet end -->

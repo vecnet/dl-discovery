@@ -75,8 +75,13 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  
+
   config.action_mailer.default_options = {
     :from => 'no-reply@vecnet.org'
   }
+
+  pubtkt_key_file = "this/will/be/replaced.pem"
+  config.pubtkt_public_key = OpenSSL::PKey.read(IO.read(pubtkt_key_file))
+  config.pubtkt_login_url = 'https://www.vecnet.org/index.php/sso-login'
+  config.pubtkt_logout_url = 'https://www.vecnet.org/index.php/log-out'
 end

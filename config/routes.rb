@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'download/file/:id' => 'download#file', as: :download_file
-  get 'download/hgl/:id' => 'download#hgl', as: :download_hgl
   resources :download, only: [:show, :file]
   post "wms/handle"
   root :to => "catalog#index"
@@ -8,6 +6,9 @@ Rails.application.routes.draw do
 
   resource :feedback_form, path: 'feedback', only: [:new, :create]
   get 'feedback' => 'feedback_forms#new'
+
+
+  resources :suggest, only: :index, defaults: { format: 'json' }
 
   # since there is no pubtkt login for development
   if Rails.env.development? || Rails.env.jcu?

@@ -2,13 +2,14 @@
 
 <% @page_title = t 'blacklight.search.show.title_html', :document_title => document_show_html_title, :application_name => application_name %>
 
+
+
 <%= render 'upper_metadata', locals: { document: document} %>
 
 <%= render 'rights_metadata', locals: { document: document } %>
 
-<%= render 'show_message' %>
-
 <div class='row'>
-  <%= render 'show_default_viewer_container' %>
-  <%= render 'show_default_attribute_table' %>
+
+  <%# render 'show_default_attribute_table' %>
+
 </div>

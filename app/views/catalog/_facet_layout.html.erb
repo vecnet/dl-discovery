@@ -1,0 +1,23 @@
+
+<%= link_to catalog_facet_path(display_facet.name), class: 'more_facets_link' do %>
+    <div class="btn-group blacklight-<%= facet_field.field.parameterize %> <%= 'facet_limit-active' if facet_field_in_params?(facet_field.field) %>" role="group" aria-label="location filter">
+
+        <div class="btn-group" >
+            <button class="btn btn-default " type="button">
+
+                <%= facet_field_label(facet_field.field)%>
+
+            </button>
+
+        </div>
+
+        <div class="btn-group" role="group">
+
+            <button class="btn fa fa-plus btn-default" type="button">
+
+            </button>
+
+        </div>
+
+    </div>
+<% end %>

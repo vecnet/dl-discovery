@@ -1,0 +1,83 @@
+
+<form class="vndl-search">
+
+  <!-- text search -->
+  <fieldset>
+    <div class="form-group">
+      <legend class="sr-only">Text searching</legend>
+      <label class="sr-only" for="catalog_search">search for records</label>
+
+
+      <div class="input-group">
+        <input class="form-control input-lg" id="catalog_search" name="q" placeholder="search for records" value="<%= get_search_query_text %>" tabindex="1" type="text"/>
+
+        <!-- /btn-group -->
+        <div class="input-group-btn">
+          <button type="submit" class="search-submit btn-lg btn btn-primary" id="search-submit-header" tabindex="2">
+          Search
+          </button>
+
+          <!--the dropdown caret for advanced search options-->
+          <!--<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false">-->
+            <!--<span class="caret"></span>-->
+            <!--<span class="sr-only">Toggle Dropdown</span>-->
+          <!--</button>-->
+          <!--<ul class="dropdown-menu" role="menu">-->
+            <!--<li><a href="#">Search full text</a></li>-->
+          <!--</ul>-->
+        </div>
+      </div>
+
+    </div>
+  </fieldset>
+
+  <!-- map search -->
+  <fieldset id="mapfieldset">
+
+
+    <legend class="col-md-2">Map</legend>
+    <div class="mapnotch"></div>
+    <div class="col-md-10 form-group">
+
+
+
+      <div class="checkbox">
+        <label>
+        <input id="map-checkbox" type="checkbox" class="switch" name="showmap" data-label-text="Show Map"  <%= get_map_checkbox %> />
+      </label>
+      </div>
+
+
+      <div id="search-map-area" class="btn-group searchmap-group">
+
+        <div class=" btn-group" role="group" >
+          <button name="searchmap" class="btn btn-default " type="button">
+            Search map area
+          </button>
+        </div>
+
+        <div class="btn-group" role="group">
+          <button class="btn fa fa-search btn-default" type="button">
+          </button>
+        </div>
+
+      </div>
+
+
+    </div>
+  </fieldset>
+
+
+  <%= render 'did_you_mean' %>
+
+
+  <%= render 'constraints' %>
+
+
+  <%= render 'facets' %>
+
+
+  <%= render 'sort_and_per_page' %>
+
+
+</form>

@@ -3,15 +3,15 @@ GEOMONITOR_TOLERANCE: 0.8
 GOOGLE_ANALYTICS_ID: 'UA-XXXXX-X'
 GOOGLE_SITE_VERIFICATION: 'I1DQ46tUnPOrYpnhDUsy5tOL22oywWb2LyUTwT8M-HU'
 HOSTNAME: 'HOST'
-INSTITUTION: 'Stanford'
+INSTITUTION: 'Vecnet'
+
+GEOMETRY_FIELD: solr_bbox
 
 PROXY_URL: 'http://www.example.com/restricted'
-
 RESTRICTED_URL: 'http://www.example-services.com'
 
 # (For external Download) timeout and open_timeout parameters for Faraday
 TIMEOUT_DOWNLOAD: 16
-
 # (For WMS inspection) timeout and open_timeout parameters for Faraday
 TIMEOUT_WMS: 4
 
@@ -23,4 +23,4 @@ WMS_PARAMS:
   :SRS: 'EPSG:4326'
   :EXCEPTIONS: 'application/json'
   :INFO_FORMAT: 'text/html'
-  
+

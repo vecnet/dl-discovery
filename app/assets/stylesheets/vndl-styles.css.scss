@@ -1,0 +1,20 @@
+
+// make responsive containers
+
+
+.map-active #main-container.container {
+  // width: 100%;
+}
+
+// results trial
+
+.thumbnail {
+
+  padding: 1px;
+}
+
+#mapfieldset .form-group div.checkbox {
+	// this is the wrapper div for the show-the-map checkbox
+	display: inline-block;
+	padding-right: 2em;
+}

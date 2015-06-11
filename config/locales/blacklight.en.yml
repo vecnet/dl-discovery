@@ -1,8 +1,14 @@
 en:
   blacklight:
-    application_name: 'EarthWorks'
+    application_name: 'VecNET Digital Library Beta'
+    header_links:
+      search_history: 'Searches'
     search:
       form:
         q: ''
       show:
         title_html: '%{document_title} in %{application_name}'
+      facets:
+        more: ''
+      zero_results:
+        use_fewer_keywords: 'Use fewer keywords to start, then refine your search with the buttons above.'

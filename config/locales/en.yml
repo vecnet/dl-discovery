@@ -23,3 +23,10 @@ en:
   earthworks:
     feedback_form:
       success: 'Thank you! Your feedback has been sent.'
+  discovery:
+    access_label:
+      public: "Global Access"
+      public_embargo: "Global Access with embargo"
+      registered: "Vecnet Users"
+      private: "Private"
+

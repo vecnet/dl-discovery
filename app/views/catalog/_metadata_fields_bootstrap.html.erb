@@ -1,0 +1,187 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <!--<div class="page-header">-->
+        <!--<h1>Metadata</h1>-->
+      <!--</div>-->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+
+    </div>
+  </div>
+
+
+  <div id="table-div" role="tabpanel">
+
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#geospatial-tab" aria-controls="Geospatial" role="tab" data-toggle="tab">Geospatial</a></li>
+      <li role="presentation"><a href="#subject-tab" aria-controls="Subject" role="tab" data-toggle="tab">Subject</a></li>
+      <li role="presentation"><a href="#rights-tab" aria-controls="Rights" role="tab" data-toggle="tab">Rights</a></li>
+      <li role="presentation"><a href="#record-tab" aria-controls="Record Information" role="tab" data-toggle="tab">Record Information</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="geospatial-tab">
+
+
+        <div class="row">
+          <%= render 'show_default_viewer_container' %>
+        </div>
+      </div>
+
+
+      <div role="tabpanel" class="tab-pane" id="subject-tab">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <table class="table-bordered table table-striped" id="subject-table">
+              <thead>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <th style="width:10%">Subject</th>
+                <td><%=Array(@document["dc_subject_sm"]).join(", ") %></td>
+              </tr>
+
+              <tr>
+                <th>Keywords</th>
+                <td><%=Array(@document["vn_keyword_sm"]).join(", ") %></td>
+              </tr>
+
+              <tr>
+                <th>Publisher</th>
+                <td><%=@document["dc_publisher_s"] %></td>
+              </tr>
+
+              <tr>
+                <th>Time periods</th>
+                <td><%=Array(@document["dct_temporal_sm"]).join(", ") %></td>
+              </tr>
+
+              <tr>
+                <th>Species</th>
+                <td><%=Array(@document["dwc_scientificname_sm"]).join(", ") %></td>
+              </tr>
+
+              </tbody>
+            </table>
+            <hr>
+          </div>
+        </div>
+
+      </div>
+      <div role="tabpanel" class="tab-pane" id="rights-tab">
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <table class="fixed-table-layout table table-bordered table-striped" id="rights-table">
+              <thead>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+
+              </tr>
+              </thead>
+              <tbody>
+
+              <tr>
+                <th style="width:10%">Intellectual Rights</th>
+                <td><%= @document["dc_rights_s"] %></td>
+              </tr>
+
+              <tr>
+                <th>Access Rights (Record)</th>
+                <td><%= permission_badge_for(@document) %>
+                  </br>
+                  Read Only: <%= read_only_users(@document) %>
+                  </br>
+                  Read and Edit: <%= edit_users(@document) %>
+                </td>
+              </tr>
+
+              <tr>
+                <th>Access Rights (File)</th>
+                <td></td>
+              </tr>
+
+              </tbody>
+            </table>
+            <hr>
+          </div>
+        </div>
+      </div>
+
+
+      <div role="tabpanel" class="tab-pane" id="record-tab">
+
+
+        <div class="row">
+          <div class="col-lg-12">
+            <table class="fixed-table-layout table table-striped table-bordered" id="record-table">
+              <thead>
+              <tr>
+                <th>Field</th>
+                <th>Value</th>
+
+              </tr>
+              </thead>
+              <tbody>
+
+              <tr>
+                <th style="width:10%">Identifier</th>
+                <td><%= Array(@document["dc_identifier_sm"]).join("\n") %></td>
+              </tr>
+
+              <tr>
+                <th>Resource Type</th>
+                <td><%= @document["dc_type_s"] %></td>
+              </tr>
+              
+
+              <tr>
+                <th>Filename</th>
+                <td><%= @document["vn_filename_s"] %></td>
+              </tr>
+
+              <tr>
+                <th>Data Ingested</th>
+                <td><%= @document["dc_date_uploaded_dt"] %></td>
+              </tr>
+
+              <tr>
+                <th>Date Modified</th>
+                <td><%= @document["dc_date_modified_dt"] %></td>
+              </tr>
+
+              <tr>
+                <th>Vecnet modifier</th>
+                <td><%= Array(@document["edit_access_group_sm"]).join("\n") %></td>
+              </tr>
+
+              <tr>
+                <th>Content version number</th>
+                <td><%= @document["vn_content_version_s"] %></td>
+              </tr>
+
+              </tbody>
+            </table>
+            <hr>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+</div>

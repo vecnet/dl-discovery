@@ -22,6 +22,8 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'warden'
 
+gem 'nokogiri'
+
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
@@ -61,6 +63,9 @@ gem 'unicorn'
 
 
 gem "blacklight"
-gem "geoblacklight", '~> 0.6.2'
+gem "geoblacklight"
 gem "jettywrapper"
 gem 'is_it_working'
+
+# search autocomplete
+gem 'twitter-typeahead-rails'

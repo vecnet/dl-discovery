@@ -1,11 +1,622 @@
-.category-block {
-  .category-icon {
-    .glyphicon {
-      color: $gray-90-percent;
-    }
+
+
+
+////////////////////////////////////////////// some unimportant stuff
+footer {
+  text-align: center;
+  color: #999;
+  padding: 1em 0;
+  background-color: $content-bg;
+  background-color: $line-color;
+  background-image: linear-gradient(to bottom, darken($content-bg, 1%) 0%, $content-bg 100%);
+  background-image: linear-gradient(to bottom, lighten($line-color, 2%) 0%, $content-bg 100%);
+}
+
+#title-bar {
+  padding: 0 10px;
+}
+
+.page_entries {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.page_links {
+  padding-left: 15px;
+}
+
+.content {
+  height: inherit;
+}
+/////////////////////////////////////////////// various page elements
+/* adjust header to be a bit slimmer */
+header.jumbotron {
+  color: white;
+  background-color: $header-bg;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  h1 {
+    font-size: 54px;
+    font-weight: bold;
   }
-  
-  h3 {
-    margin-top: 0px;
+  * {
+    color: inherit;
+  }
+  //  hgroup {
+  //    margin: 0 auto;
+  //    transition: 0.33s ease-in-out;
+  //  }
+}
+
+.map-inactive header {
+  // width: ($result-column-width + $inactive-map-width);
+}
+
+.map-active header {
+  width: 100%;
+}
+
+/////////////////////////////////////////////// map-and-column layout
+
+/* sort out z-index */
+$header-z: 100;
+$map-z: 1;
+$content-z: 10;
+header {
+  position: relative;
+  z-index: $header-z;
+}
+
+.mapwrapper {
+  padding: 0;
+  position: relative;
+  z-index: $map-z;
+  // background-image: image_url('OrteliusWorldMap1570.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.content {
+  padding: 0;
+  position: relative;
+  z-index: $content-z;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+
+/* contentwrapper surrounds the map and the content */
+.contentwrapper {
+  position: relative;
+  margin: 0 auto;
+  transition: all 0.66s ease-in-out;
+  overflow: hidden;
+  /* height is set in js to fill the browser window */
+}
+
+/* the body has a class that determines if the map is showing */
+.map-inactive .contentwrapper {
+  // the map JS toggles the wrapper's CSS classes between .container and .container-fluid
+}
+.map-active .contentwrapper {
+  // width: 100%;
+}
+
+/* the content has a fixed width */
+.content {
+  float: right;
+  // width: $result-column-width;
+  // overlap the map so we can make the map notch
+  margin-left: (-1 * $map-notch-width);
+  // gotta be transparent so the map can be seen through the notch
+  background-color: transparent;
+  // unless they contain the map notch, things in the content
+  // column should use a background rule like this:
+  //     background-color: $content-bg
+}
+
+/* the map lives inside this wrapper which stays in a
+   fixed position relative to the contentwrapper */
+.mapwrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  // width is set by the bookstrap column width class (e.g. col-md-1)
+}
+
+.map {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: (-1 * $map-notch-width);
+  transition: opacity 1.5s ease-in-out;
+  height: 100%;
+}
+
+.map-inactive .map {
+  opacity: 0.25;
+}
+
+.map-active .map {
+  opacity: 1;
+}
+
+/* adjust leaflet's components to avoid drawing stuff like the
+   attribution text under the covered-up right edge strip */
+.leaflet-right {
+  right: $map-notch-width;
+}
+
+.map-inactive .leaflet-control-container {
+  display: none;
+}
+
+//////////////////////////////////////// content column LESS vars $$$
+
+$content-pad-unit: ceil(0.66 * $map-notch-width);
+$content-h-pad: ceil(3 * $content-pad-unit);
+$content-v-pad: ceil(2 * $content-pad-unit);
+
+$content-h-pad-halved: ceil(2 * $content-pad-unit);
+
+$disabled-color: #aaa;
+$disabled-color: #aaa;
+
+///////////////////////////////////////////////////////// search result listing
+
+.result-title {
+  margin-top: 0px;
+  font-size:20px;
+
+  &:first-line{
+//    font-weight: bold;
+    font-size: 24px;
   }
 }
+
+.result-author {
+  font-weight: bold;
+
+  // make them on the same line if possible
+  float:left;
+
+  // minimise gap and use line height instead.
+  margin: 0.1em 0;
+}
+
+.result-citation {
+  float:right;
+  margin: 0.1em 0;
+
+}
+
+.description-text {
+  clear:both;
+  text-align: justify;
+  padding-top: 0.5em;
+}
+
+// TODO : Limit max height of this when too many tags
+.tags-text {
+  //white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.flash{
+}
+
+.result-citation {
+  font-style: italic;
+
+}
+.search-result {
+  border-bottom: 1px solid $line-color;
+
+  //  original padding
+  //  padding: $content-v-pad;
+
+  // make less padding for nmyers
+  padding: $content-pad-unit;
+  padding-left: 0px;
+}
+
+.meta-search {
+  list-style-type: none;
+  line-height: 2em;
+}
+
+/// trial
+
+.search-result .thumbnail {
+  border-radius: 0 !important;
+}
+
+.search-result:first-child {
+  margin-top: 0 !important;
+}
+
+.search-result {
+  margin-top: 20px;
+}
+
+//.search-result .col-md-2 { border-right: 1px dotted #ccc; min-height: 140px; }
+.search-result ul {
+  padding-left: 0 !important;
+  list-style: none;
+}
+
+//.search-result ul li { font: 400 normal .85em "Roboto",Arial,Verdana,sans-serif;  line-height: 30px; }
+.search-result ul li i {
+  padding-right: 5px;
+}
+
+.search-result .col-md-7 {
+  position: relative;
+}
+
+#documents.vndl-results .document {
+  padding: 0;
+  margin: 0;
+  border-bottom: none;
+}
+
+//.search-result h3 { font: 500 normal 1.375em "Roboto",Arial,Verdana,sans-serif; margin-top: 0 !important; margin-bottom: 10px !important; }
+//.search-result h3 > a, .search-result i { color: #248dc1 !important; }
+//.search-result p { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; }
+//.search-result span.plus { position: absolute; right: 0; top: 126px; }
+//.search-result span.plus a { background-color: #248dc1; padding: 5px 5px 3px 5px; }
+//.search-result span.plus a:hover { background-color: #414141; }
+//.search-result span.plus a i { color: #fff !important; }
+//.search-result span.border { display: block; width: 97%; margin: 0 15px; border-bottom: 1px dotted #ccc; }
+
+/// end trial
+///////////////////////////////////////////////////////// search form
+.vndl-search {
+  margin: 0;
+  // the search form contains the map notch, so we gotta stay
+  // transparent.
+  background: transparent;
+  padding: 0;
+}
+.vndl-search fieldset {
+  // NORMAL fieldsets can have a background
+  background-color: $content-bg;
+  // position: relative;
+  // z-index: $content-z;
+  padding: $content-v-pad $content-h-pad-halved;
+  border-bottom: 1px solid $line-color;
+  &:first-of-type {
+    // the first thing in the search form gets extra top padding
+    padding-top: (1.5 * $content-v-pad);
+  }
+
+  div.checkbox {
+    // this is the "map results on/off" element
+    width: 33%; // dirty hack to make the following button line up nicer
+    label {
+      padding-left: 0;
+    }
+  }
+
+  // the legends
+  legend {
+    border: none;
+    font-size: 133%;
+    color: #777;
+    padding-top: $fieldset-child-padding + 6px; // extra 6px to match button content pad
+
+  }
+}
+.vndl-search fieldset#mapfieldset {
+  // this is the special fieldset with the map notch in it.
+  // it's transparent, but everything in it gets the content bg.
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  & > * {
+    position: relative;
+    z-index: $content-z;
+    background-color: $content-bg;
+  }
+}
+
+//// the map notch ////
+//
+// The notch is an element with a transparent background and a
+// fat, rounded white border.  This means it's basically the right
+// half of a white donut.
+//
+// Above and below the donut I've added additional white rectangles
+// using :before and :after pseudoelements.
+// The donut and the rectangles cover up a strip on the right edge
+// of the map.  The only bit of the map that shows through is the
+// hole in middle of the donut.
+//
+//           width is set by the LESS
+//            variable $map-notch-width
+//                   \----\
+//
+//                     .----.
+//                      \    \  top rectangle covering up
+// .---------------------\--. \  covers the upper part of the
+//  \                     \  \ \  map's right edge
+//   \                     \  \ \
+//    \    the              '----'
+//     \      map              #\###   donut reveals a semicircle
+//      \                        \ ###  of the map's right edge
+//       \                       #\###
+//        \                     .----.
+//         \                     \  \ \
+//          \                     \  \ \ bottom rectangle covering
+//           \                     \  \ \ the lower part of the
+//            \                     \  \ \ map's right edge
+//             \                     '----'
+//              \                        \
+//               '------------------------'
+//
+// The content column is positioned so that *ALL* elements in the
+// content column overlap the edge of the map.  Elements that DON'T
+// need a map notch (which is all but one) just have a background
+// that covers up the overlapped strip of map.  Only the notch-
+// carrying element uses this trick with the donut and rectangles
+// to let some of the map show through.
+//
+// The Donut looks like this. Note that a lot of the donut doesn't
+// show on screen; the donut is just there so its inner ring can
+// give the map "notch" its concave shape.
+// The visible bits are rendered below using #; the bits drawn with
+// % are not visible because they're behind other parts of the page.
+//
+//                  width = w
+//             .---------------.
+//             :               :
+//         .-  %%%%%%%%%%%%%%% :
+//  border |   %%%%%%%%%%%%%%%%%%%%%
+//   width |   %%%%%%%%%%%%%%%%:%%%%%%%%
+//     = w |   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//         |   %%%%%%%%%%%%%%%%:%%%%%%%%%%%%%
+//         |   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//         '-  #################%%-%%-%%-%%-%%-  -  -.
+//                     #########%%%%%%%%%%%%%%%%     |
+//                         #####%%%%%%%%%%%%%%%%     |
+//                           ###%%%%%%%%%%%%%%%%%    |
+//                            ##%%%%%%%%%%%%%%%%%    | height = 2w
+//                             #%%%%%%%%%%%%%%%%%    |
+//             \  border       #%%%%%%%%%%%%%%%%%    |
+//              \ radius      ##%%%%%%%%%%%%%%%%%    |
+//               \  = 2w     ###%%%%%%%%%%%%%%%%%    |
+//                \        #####%%%%%%%%%%%%%%%%     |
+//                 \   #########%%%%%%%%%%%%%%%%     |
+//             #####\###########%%-%%-%%-%%-%%-  -  -'
+//             .-----\---------.%%%%%%%%%%%%%%
+//             |%%%%%%\%%%%%%%%|%%%%%%%%%%%%
+//             |%%%%%%%\%%%%%%%|%%%%%%%%%%%
+//             |%%%%%%%%\%%%%%%|%%%%%%%%
+//             |%%%%%%%%%\%%%%%|%%%%
+//             |%%%%%%%%%%\%%% |
+//             |               |
+//             | this is where |
+//             |  the bottom   |
+//             | rectangle is  |
+//             :  positioned.  :
+//             .(top rectangle .
+//              is similar but
+//               not drawn in
+//               this diagram)
+//
+.mapnotch {
+  position: absolute ! important;
+  z-index: ($content-z - 1) ! important;
+  box-sizing: content-box;
+  height: (2 * $map-notch-width);
+  width: $map-notch-width;
+  pointer-events: none;
+  background-color: transparent ! important;
+  left: 0;
+  // top 50% + margin-top -halfheight = vertically centered
+  top: 50%;
+  margin-top: (-2 * $map-notch-width);
+  border: $map-notch-width solid $content-bg;
+  border-left-width: 0;
+  border-top-right-radius: (2 * $map-notch-width);
+  border-bottom-right-radius: (2 * $map-notch-width);
+}
+
+// the upper and lower rectangles
+.mapnotch:before, .mapnotch:after {
+  content: '';
+  position: absolute;
+  width: ($map-notch-width + 1px);
+  height: 1000%; // IE 8 and some others don't understand vh units
+  height: 100vh;
+  background-color: $content-bg;
+}
+
+.mapnotch:before {
+  bottom: (2 * $map-notch-width);
+}
+
+.mapnotch:after {
+  top: (2 * $map-notch-width);
+}
+
+/* footer needs to have a bit that covers up the map overlap */
+footer {
+  position: relative
+}
+footer:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: ($map-notch-width + 1px);
+  height: 1000%; // IE 8 and some others don't understand vh units
+  height: 100vh;
+  background-color: $content-bg;
+}
+
+.vndl-search button .fa {
+  // icons are too close for some reason
+  // cheat by presuming it's on the right
+  margin: 0 -0.33em 0 0.33em;
+}
+
+.vndl-search .disabled {
+  color: $disabled-color;
+
+
+}
+
+.disabled .searchmap-group {
+
+  opacity: 0.50;
+}
+
+.vndl-search .form-group {
+  // even out top and bottom margins
+  // Bookstrap by default has only bottom margin
+  margin: 0;
+}
+
+////////////////////////////////////////////////////// search results
+
+#sortAndPerPage {
+  padding-left: 15px;
+  padding-bottom: 0 ! important;
+  margin-bottom: 0 ! important;
+}
+
+.vndl-results {
+  padding: 2em $content-h-pad;
+  background-color: $content-bg;
+  article {
+    opacity: 0.8;
+  }
+  article.vndl-results-highlight {
+    opacity: 1;
+    position: relative;
+    box-shadow: 0 0 20px #ccc;
+  }
+}
+
+.vndl-search-result {
+  transition: 0.3s;
+}
+
+.vndl-results-index {
+  background-color: $content-bg;
+}
+
+
+
+////////////////////////////////////////////////////// text hero
+
+.about-text {
+
+  $icon-size: 88px;
+
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2em;
+  margin: 0 -2em;
+
+  padding-top: 0.75 * $icon-size; // space for the icon
+  padding-bottom: 5px;
+
+  .box {
+    display: table-cell;
+    position: relative;
+    width: 33%;
+
+    text-align: center;
+    border: 1px dotted green;
+    padding: 2em;
+    padding-bottom: 3em; // room for the more link
+
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid #e0e0e0;
+
+    font-family: "Roboto",sans-serif !important;
+
+    .icon {
+      position: absolute;
+      top: -0.75 * $icon-size;
+      left: 50%;
+      margin-left: -1 * $icon-size / 2;
+      z-index: 2;
+      width: $icon-size;
+      height: $icon-size;
+      border: $icon-size/11 solid white;
+      line-height: $icon-size;
+      border-radius: 50%;
+      background: $icon-box-background;
+      vertical-align: middle;
+      i {
+        font-size: 36px !important;
+        color: #fff !important;
+      }
+    }
+
+    h3 {
+      font-size: 16px;
+      color: #222;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5em;
+    }
+
+    .more {
+      display: block;
+      position: absolute;
+      height: 2em;
+      bottom: 1.5em;
+      left: 1.5em;
+      right: 1.5em;
+
+      font-size: 12px;
+      color: #222;
+      line-height: 12px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 6px 8px;
+    }
+
+    &:hover {
+      color: #222;
+      background: rgba(47,211,133, 0.04);
+      border-color: #e0e0e0;
+      .icon { background: $icon-green; }
+      .more {
+        color: #fff;
+        background-color: $icon-box-background;
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#feedback-form {
+  background-color: #fefefe;
+}
+
+
+.tab-pane {
+  padding-top: 1em;
+}
+
+.search-icon {
+  padding-left:0.2em;
+}
+
+
+

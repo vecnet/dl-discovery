@@ -4,6 +4,11 @@ require 'blacklight/catalog'
 class CatalogController < ApplicationController
 
   include Blacklight::Catalog
+  include ::ShowAccessControls
+
+  before_filter :enforce_show_permissions, only: :show
+
+  self.search_params_logic += [:apply_authz]
 
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
@@ -13,7 +18,7 @@ class CatalogController < ApplicationController
       'q.alt' => '*:*'
     }
 
-    ## Default parameters to send on single-document requests to Solr. These settings are the Blackligt defaults (see SolrHelper#solr_doc_params) or
+    ## Default parameters to send on single-document requests to Solr. These settings are the Blacklight defaults (see SolrHelper#solr_doc_params) or
     ## parameters included in the Blacklight-jetty document requestHandler.
     #
     config.default_document_solr_params = {
@@ -32,6 +37,7 @@ class CatalogController < ApplicationController
     config.show.display_type_field = 'format'
 
 
+    config.search_builder_class = SearchBuilder
 
     # solr fields that will be treated as facets by the blacklight application
     #   The ordering of the field names is the order of the display
@@ -67,28 +73,20 @@ class CatalogController < ApplicationController
     #    :years_10 => { :label => 'within 10 Years', :fq => "pub_date:[#{Time.now.year - 10 } TO *]" },
     #    :years_25 => { :label => 'within 25 Years', :fq => "pub_date:[#{Time.now.year - 25 } TO *]" }
     # }
+    config.add_facet_field 'dc_type_s', label: 'Resource Type', limit: 10
+    config.add_facet_field 'dc_creator_sm', label: 'Author', limit: 6
+    config.add_facet_field 'vn_keyword_sm', label: 'Keyword', limit: 10
+    config.add_facet_field 'dct_spatial_sm', label: 'Place', limit: 10
+    config.add_facet_field 'dc_publisher_s', label: 'Publisher', limit: 6
+    #config.add_facet_field 'dc_subject_h_facet'
+    #config.add_facet_field 'dwc_scientificname_h_facet'
+    #config.add_facet_field 'dct_spatial_h_facet'
 
-    config.add_facet_field 'dct_provenance_s', label: 'Institution', limit: 8, partial: "icon_facet"
-    config.add_facet_field 'dc_creator_sm', :label => 'Author', :limit => 6
-    config.add_facet_field 'dc_publisher_s', :label => 'Publisher', :limit => 6
-    config.add_facet_field 'dc_subject_sm', :label => 'Subject', :limit => 6
-    config.add_facet_field 'dct_spatial_sm', :label => 'Place', :limit => 6
-    # config.add_facet_field 'dct_isPartOf_sm', :label => 'Collection', :limit => 6
-
-    config.add_facet_field 'solr_year_i', :label => 'Year', :limit => 10, :range => {
-      # :num_segments => 6,
-      :assumed_boundaries => [1100, 2015]
-      # :segments => true
-    }
-
-    config.add_facet_field 'dc_rights_s', label: 'Access', limit: 8, partial: "icon_facet"
     # config.add_facet_field 'layer_availability_score_f', :label => 'Availability', :query => {
     #   offline: { label: 'Offline', fq: "layer_availability_score_f:[0 TO #{Settings.GEOMONITOR_TOLERANCE}]" },
     #   online: { label: 'Online', fq: "(*:* AND -layer_availability_score_f:[* TO *] AND -layer_geom_type_s:\"Paper Map\") OR (layer_availability_score_f:[#{Settings.GEOMONITOR_TOLERANCE} TO 1])" }
     # }
-    config.add_facet_field 'layer_geom_type_s', label: 'Data type', limit: 8, partial: "icon_facet"
     config.add_facet_field 'dc_format_s', :label => 'Format', :limit => 3
-
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request
@@ -206,15 +204,32 @@ class CatalogController < ApplicationController
     # whether the sort is ascending or descending (it must be asc or desc
     # except in the relevancy case).
     config.add_sort_field 'score desc, dc_title_sort asc', :label => 'relevance'
-    config.add_sort_field 'solr_year_i desc, dc_title_sort asc', :label => 'year'
     config.add_sort_field 'dc_publisher_sort asc, dc_title_sort asc', :label => 'publisher'
     config.add_sort_field 'dc_title_sort asc', :label => 'title'
+
+    # newly added fields as per Digital Library previous sort functions
+
+    config.add_sort_field 'dc_source_sort asc', :label => 'journal'
+
+    config.add_sort_field 'dc_created_sort asc', :label => 'publish date asc'
+    config.add_sort_field 'dc_created_sort desc', :label => 'publish date desc'
+
+    config.add_sort_field 'dc_date_uploaded_sort asc', :label => 'upload date asc'
+    config.add_sort_field 'dc_date_uploaded_sort desc', :label => 'upload date desc'
+
+
+    config.add_sort_field 'dc_date_modified_sort asc', :label => 'modify date asc'
+    config.add_sort_field 'dc_date_modified_sort desc', :label => 'modify date desc'
+
+
+    config.basemap_provider = 'mapquest'
+
+
 
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5
   end
-
 
 
 end

@@ -16,7 +16,6 @@
 /tmp
 
 # Ignore .idea files
-
 .idea/*
 
 /coverage

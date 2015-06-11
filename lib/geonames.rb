@@ -40,8 +40,8 @@ class Geonames
       end
     end
 
-    def lookup(key)
-      @cache[key]
+    def lookup(key, &block)
+      @cache.fetch(key, &block)
     end
 
     def insert(key, value)
@@ -97,8 +97,8 @@ class Geonames
       # which minimizes the new side length
       @north = [@north, point["lat"].to_f].max
       @south = [@south, point["lat"].to_f].min
-      lat = point["lng"].to_f
-      @east, @west = optimize_east_west_add(lat, lat)
+      lng = point["lng"].to_f
+      @east, @west = optimize_east_west_add(lng, lng)
       normalize
     end
 
@@ -160,19 +160,21 @@ class Geonames
     @cache.save
   end
 
-  def lookup_name(place_name)
-    id = @cache.lookup(place_name)
-    if id.nil?
-      id = find_name_in_geonames(place_name)
-      @cache.insert(place_name, id)
-    end
-    return {} if id.nil?
-    result = @cache.lookup(id.to_s)
-    if result.nil?
+  def lookup_id(id)
+    result = @cache.lookup(id.to_s) do
       result = load_feature_info(id)
       @cache.insert(id.to_s, result)
     end
     result
+  end
+
+  def lookup_name(place_name)
+    id = @cache.lookup(place_name) do
+      id = find_name_in_geonames(place_name)
+      @cache.insert(place_name, id)
+    end
+    return {} if id.nil?
+    lookup_id(id)
   end
 
   private
@@ -182,6 +184,7 @@ class Geonames
       { params: { name: place_name, username: 'banu' }}
     result = JSON.parse(data)
     if result['totalResultsCount'] == 0
+      STDERR.puts "No location found for: '#{place_name}'"
       id = nil
     elsif result['totalResultsCount'] == 1
       id = result['geonames'].first['geonameId']

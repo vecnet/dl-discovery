@@ -1,6 +1,14 @@
 .leaflet-container {
-  background: $beige-10-percent;
+  background: $map-bg-color;
   
   // Needed to overwrite a font set by Leaflet-Rails
   font-family: 'Source Sans Pro', sans-serif;
 }
+// TODO : Determine
+
+
+//.leaflet-zoom-animated {
+//
+//transition: 0.25s;
+//
+//}

@@ -1,0 +1,49 @@
+<% document ||= @document %>
+<div id='viewer-container' class="col-md-8">
+  <%= content_tag :div, id: 'map', data: { map: 'item', protocol: document.viewer_protocol, url: document.viewer_endpoint, 'layer-id' => document[:layer_id_s], 'map-bbox' => document[:solr_bbox], 'catalog-path'=> catalog_index_path, available: document_available? } do %>
+  <% end %>
+</div>
+
+<div id="map-metadata-container" class="col-md-4">
+
+
+  <div class="metadata-relative">
+    <ul class="timeline">
+      <li>
+        <div class="timeline-badge primary"><i class="glyphicon glyphicon-fullscreen"></i></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4 class="field-title">Bounding Box</h4>
+            <h4 class="timeline-title"><%= @document["solr_bbox"]%></h4>
+          </div>
+
+        </div>
+      </li>
+      <li>
+        <div class="timeline-badge success"><i class="glyphicon glyphicon-globe"></i></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4 class="field-title">Location(s)</h4>
+            <h4 class="timeline-title">
+              <%= @document["dct_spatial_sm"].to_a * "\n" %>
+            </h4>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="timeline-badge danger"><i class="glyphicon glyphicon-map-marker"></i></div>
+        <div class="timeline-panel">
+          <div class="timeline-heading">
+            <h4 class="field-title">Latitude & Longitude</h4>
+            <h4 class="timeline-title"><%=Array(@document["point_list_s"]).join("\n") %></h4>
+          </div>
+
+        </div>
+      </li>
+
+
+    </ul>
+  </div>
+
+
+</div>

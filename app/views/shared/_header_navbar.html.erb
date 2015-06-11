@@ -7,19 +7,20 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to (image_tag 'earthworks-beta.svg', {:"data-svg-fallback" => "#{image_path('earthworks-beta.png')}", :alt => 'EarthWorks'}), root_path, :class => 'navbar-brand' %>
+
+      <a  href="<%= root_path %>">
+        <div>
+          <%= image_tag 'original@110.png', class: 'logo-image'%>
+        </div>
+      <h1 class="navbar-brand-name">Digital Library</h1><span><p class="superscript beta-tag">beta</p></span>
+      </a>
     </div>
-    
+
+
     <div class="collapse navbar-collapse" id="user-util-collapse">
-      <%= render :partial=>'/user_util_links' %>
+
+
+      <%= render :partial=>'/shared/user_util_links' %>
     </div>
   </div>
 </div>
-
-<% if controller_name == 'catalog' && has_search_parameters? %>
-  <div id="search-navbar" class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="container">
-      <%= render_search_bar  %>
-    </div>
-  </div>
-<% end %>

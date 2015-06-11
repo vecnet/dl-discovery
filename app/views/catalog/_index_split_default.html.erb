@@ -1,0 +1,60 @@
+<% document ||= @document %>
+
+<!-- results list item start -->
+<article class="vndl-search-result search-result row">
+
+  <%= content_tag :data, class: 'xvndl-results', data: {layer_id: document[:uuid], bbox: document[:solr_bbox], geom: document[:solr_geom], ptdata: document[:solr_point_list_s]} do %><% end %>
+
+  <!--Start of data-ptdata-->
+  <%= content_tag :div, hidden: true do %>
+      <li data-layer-id="<%= document[:uuid] %>">
+      <!--TODO change type=primary to :solr_point_type or whatever field is called-->
+      <li data-rectangle="<%= document[:solr_bbox] %>" data-ui-type="primary">
+      <li data-dunno="<%= document[:solr_geom] %>" data-ui-type="secondary">
+      <li data-points="<%= document[:point_list_s] %>" data-ui-type="primary">
+      <li data-placename="<%= document[:dct_spatial_sm] %>" data-ui-type="text">
+      <li data-title="<%= document[:dc_title_s] %>" data-ui-type="text">
+      <li data-link="<%= link_to_document document%>" data-ui-type="text">
+  <% end %>
+  <!--End of data-ptdata-->
+
+
+
+  <div class="col-xs-12 col-md-8 excerpt">
+    <h3 class="result-title"><%= link_to_document document, document_show_link_field(document), title: document['dc_title_s'] %></h3>
+
+    <h5 class="result-author"><%= Array(document[:dc_creator_sm]).join(", ") %> </h5>
+    <h5 class="result-citation"><%= document[:dc_bibliographic_citation_s] %> </h5>
+
+    <p class="description-text"><%= snippet(document['dc_description_s']) %></p>
+  </div>
+
+  <div class="col-xs-4 col-md-2">
+
+    <% hash = JSON.parse(document[:dct_references_s]) %>
+    <% downloadUrl = hash["http://schema.org/downloadUrl"]%>
+    <% thumbnailUrl = hash["http://schema.org/thumbnailUrl"]%>
+
+    <% downloadUrl = url_for_document(document) if downloadUrl.nil? -%>
+
+    <%= link_to downloadUrl, class: 'thumbnail', title: 'document thumbnail', alt: 'document thumbnail' do %>
+        <img src="<%= thumbnailUrl%>" onError="imgError(this);" />
+    <% end -%>
+  </div>
+
+  <div class="col-xs-8 col-md-2">
+    <ul class="meta-search">
+      <% unless document[:dc_created_sm].blank? %><li title="Date created (dc_created)"><i class="glyphicon glyphicon-time"></i> <span ><%= Array(document[:dc_created_sm]).join(", ") %></span></li><% end %>
+      <% unless document[:dc_type_s].blank? %><li title="Item type (dc_type)"><i class="glyphicon glyphicon-file"></i> <span><%= document[:dc_type_s] %></span></li> <% end %>
+      <% unless document[:vn_keyword_sm].blank? %> <li title="Keywords"><i class="glyphicon glyphicon-tags"></i> <span title="<%= Array(document[:vn_keyword_sm]).join(", ") %>" class="tags-text"> <%= Array(document[:vn_keyword_sm]).join(", ") %> </span></li> <% end %>
+      <% unless document[:dc_source_s].blank? %><li title="Journal/Source "><i class="glyphicon glyphicon-book"></i> <span><%= document[:dc_source_s] %></span></li> <% end %>
+      <% unless document[:dc_publisher_s].blank? %><li title="Publisher "><i class="glyphicon glyphicon-user"></i> <span><%= document[:dc_publisher_s] %></span></li> <% end %>
+
+    </ul>
+  </div>
+
+
+
+  <span class="clearfix"></span>
+</article>
+<!-- results list item end -->
