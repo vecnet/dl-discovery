@@ -69,3 +69,6 @@ gem 'is_it_working'
 
 # search autocomplete
 gem 'twitter-typeahead-rails'
+
+# hierarchical facets
+gem 'blacklight-hierarchy'
