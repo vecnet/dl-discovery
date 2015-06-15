@@ -90,6 +90,7 @@ def translate_record_to_xml(record)
         map.call("dc:relation",       "Parameters of Interest")
         map.call("vn:purl",           "URL")
         map.call("dc:relation",       "Model")
+        xml['dc'].send("access.read.group", "public")
       }
     }
   end
