@@ -29,19 +29,16 @@
     <dd><%= @document["dc_rights_s"]%></dd>
 
     <dt>Download</dt>
-    <% hash = JSON.parse(@document["dct_references_s"]) %>
-
-
-    <% unless hash["http://schema.org/downloadUrl"].nil? %>
-        <dd><%= link_to hash["http://schema.org/downloadUrl"]%></dd>
-    <% else %>
-        <dd></dd>
-    <% end %>
+    <dd>
+      <% hash = JSON.parse(@document["dct_references_s"]) %>
+      <% Array(hash["http://schema.org/downloadUrl"]).each do |download| -%>
+        <%= link_to download %><br/>
+      <% end -%>
+    </dd>
 
     <dt>Related Links</dt>
 
     <% links = Array(@document["dc_relation_sm"]) %>
-    <% links.map{|link| link_to link}.join(', ').html_safe %>
     <dd> <%= links.map{|link| link_to link}.join(', ').html_safe %></dd>
 
 
@@ -103,25 +100,18 @@
 
     <tr>
       <th>Download</th>
-
+      <td>
         <% hash = JSON.parse(@document["dct_references_s"]) %>
-
-
-        <% unless hash["http://schema.org/downloadUrl"].nil? %>
-            <td><%= link_to hash["http://schema.org/downloadUrl"]%></td>
-        <% else %>
-            <td></td>
-        <% end %>
+        <% Array(hash["http://schema.org/downloadUrl"]).each do |download| -%>
+          <%= link_to download %><br/>
+        <% end -%>
+      </td>
     </tr>
 
     <tr>
-      <th>
-      Links
-      </th>
-
-        <% links = Array(@document["dc_relation_sm"]) %>
-        <% links.map{|link| link_to link}.join(', ').html_safe %>
-        <td> <%= links.map{|link| link_to link}.join("\n").html_safe %></td>
+      <th>Links</th>
+      <% links = Array(@document["dc_relation_sm"]) %>
+      <td> <%= links.map{|link| link_to link}.join("\n").html_safe %></td>
 
     </tr>
 

@@ -152,8 +152,7 @@ class EnrichSolr
     new_record[:dwc_scientificname_h_facet] = h_facet
 
     references = {
-      # TODO: have the DL export download links
-      #"http://schema.org/downloadUrl" => ,
+      "http://schema.org/downloadUrl" => all_or_nil(xml, "//vn:download"),
       "http://schema.org/url" => first_or_nil(xml, "//vn:purl"),
       "http://schema.org/thumbnailUrl" => first_or_nil(xml, "//vn:thumbnail")
     }
