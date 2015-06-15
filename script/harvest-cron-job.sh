@@ -33,6 +33,7 @@ fi
 
 case $which in
     dl)
+        export APIKEY
         bundle exec $app_root/script/harvest-dl.rb $DL_SOURCE $DISCOVERY_SOLR $last_harvest
         ;;
     ci)
