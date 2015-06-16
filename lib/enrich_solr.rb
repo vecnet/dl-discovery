@@ -108,6 +108,7 @@ class EnrichSolr
       # dc_alternate is not exported by the xml
 
       dc_created_sm:    all_or_nil(xml,   '//dc:date_created'),
+      dc_created_sort:  first_or_nil(xml, '//dc:date_created'),
 
       dc_type_s:        first_or_nil(xml, '//dc:type'),
       dc_format_s:      first_or_nil(xml, '//dc:format'),
