@@ -61,7 +61,12 @@ class EnrichSolr
     end
   end
 
-  def initialize(cache_filename=nil, harvest_url=nil)
+  # cache_filename is the local JSON geonames cache file
+  # harvest_url points to our source for authorities, and the source
+  #   for extra info, such as full text items.
+  # headers are additional headers we should pass for harvesting
+  #   full text from the harvest_url (such as API keys)
+  def initialize(cache_filename=nil, harvest_url=nil, headers={})
     # look up place names and info from geonames
     # But use the application authority to resolve place names into geonameids
     @geonames = Geonames.new(cache_filename)
@@ -73,6 +78,7 @@ class EnrichSolr
     else
       @subjects = @species = @locations = ZeroAuthorityCache.new
     end
+    @headers = headers
   end
 
   def process_one(record_xml)
@@ -277,7 +283,7 @@ class EnrichSolr
   def children_full_text(child_noids)
     child_noids.map do |child_record|
       begin
-        response = RestClient.get(@harvest_url + "/files/#{child_record}.xml")
+        response = RestClient.get(@harvest_url + "/files/#{child_record}.xml", @headers)
       rescue RestClient::Exception
         next
       end

@@ -39,13 +39,14 @@ headers[:'api-key'] = ENV['APIKEY'] if ENV['APIKEY']
 headers[:params] = {since: ARGV[2]} if ARGV[2]
 response = RestClient.get(ARGV[0] + "/harvest", headers)
 response = JSON.parse(response)
+headers.delete(:params)   # prepare for reuse below
 
 def first_or_nil(lst)
   return nil if lst.nil?
   lst.first
 end
 
-enrich = EnrichSolr.new('geoname-cache.json', ARGV[0])
+enrich = EnrichSolr.new('geoname-cache.json', ARGV[0], headers)
 processed_count = 0
 output = []
 
@@ -63,7 +64,7 @@ response.each do |record|
 
   # get full record from source
   begin
-    dl_record = RestClient.get(record["url"] + ".xml")
+    dl_record = RestClient.get(record["url"] + ".xml", headers)
   rescue RestClient::Exception => e
     STDERR.puts " ...received error #{e.inspect}"
     next
