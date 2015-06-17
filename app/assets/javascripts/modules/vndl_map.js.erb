@@ -659,7 +659,7 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
     }.bind(this));
 
     // get the number of markers on the map and add it to pagination text
-    $('span.page_entries').append(" ( " + this.resultItems.length + " records mapped )");
+    $('span.page_entries').append(" ( Points from " + this.resultItems.length + " records mapped )");
 
 
     // fit the map bounds to show all the primary markers
