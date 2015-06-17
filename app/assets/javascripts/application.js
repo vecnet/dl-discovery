@@ -31,6 +31,7 @@
 //= require modules/bootstrap-switch
 //= require modules/leaflet.markercluster
 //= require modules/readmore.min
+//= require modules/intro.min
 //= require modules/jquery.expander.min
 //= require modules/text-expander
 //= require modules/jquery.scrollTo.min
