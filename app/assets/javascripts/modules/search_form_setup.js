@@ -44,7 +44,9 @@ function searchFormSetup(formElement) {
 
 
     // turn the checkbox into a pumpkin everytime
-    $("[name='showmap']").bootstrapSwitch();
+    $("[name='showmap']").checkboxpicker();
+
+    //$("[name='showmap']").bootstrapSwitch();
 
 
     // start the page with the map and switch turned on per Natalie request
