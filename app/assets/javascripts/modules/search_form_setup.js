@@ -42,15 +42,11 @@ function searchFormSetup(formElement) {
     // box.
     $('input[name=showmap]').change(setMapVisibility);
 
-
     // turn the checkbox into a pumpkin everytime
-    $("[name='showmap']").checkboxpicker();
-
-    //$("[name='showmap']").bootstrapSwitch();
+    $('.bootstrap-checkbox').checkboxpicker();
 
 
     // start the page with the map and switch turned on per Natalie request
-    //$("[name='showmap']").bootstrapSwitch('toggleState');
     //window.vndl.theMap.show();
 
 
@@ -67,14 +63,14 @@ function searchFormSetup(formElement) {
     });
 
 
-    // check the state of the map switch and toggle the hidden checkbox
-    $('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
-
-        setMapVisibility();
-
-
-
-    });
+    //// check the state of the map switch and toggle the hidden checkbox
+    //$('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
+    //
+    //    setMapVisibility();
+    //
+    //
+    //
+    //});
 
 
     // if a facet has already been applied

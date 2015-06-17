@@ -28,11 +28,10 @@
 //= require bootstrap/tab
 //= require bootstrap/tooltip
 //= require modules/vndl_map.js.erb
-//= require modules/bootstrap-switch
-//= require modules/bootstrap-checkbox.min
 //= require modules/leaflet.markercluster
 //= require modules/readmore.min
 //= require modules/jquery.expander.min
+//= require modules/bootstrap-checkbox.min
 //= require modules/text-expander
 //= require modules/jquery.scrollTo.min
 //= require_tree .
