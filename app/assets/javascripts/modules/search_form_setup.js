@@ -43,7 +43,7 @@ function searchFormSetup(formElement) {
     $('input[name=showmap]').change(setMapVisibility);
 
     // turn the checkbox into a pumpkin everytime
-    //$("[name='showmap']").checkboxpicker();
+    $("[name='showmap']").checkboxpicker();
 
     //$("[name='showmap']").bootstrapSwitch();
 
