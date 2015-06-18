@@ -369,20 +369,20 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
                 // if there's not already a bound, make one that includes this point
                 flavour.bounds = L.latLngBounds(point.getLatLng(), point.getLatLng());
             } else {
-                // make the bound object include each point of the results so the final bound object
+                // make the bound object include each point of the result's points so the final bound object
                 // covers all the points
                 flavour.bounds.extend(point.getLatLng());
             }
         });
 
 
-        // loop through each rectangle and extend flavour.bounds by the latlng of each point
+        // loop through each rectangle and extend flavour.bounds by the latlng of each rectangle
         $.each(flavour.rectangles, function (index, rect) {
             if (!flavour.bounds) {
                 // if there's not already a bound, make one that includes this point
                 flavour.bounds = L.latLngBounds(rect.getBounds());
             } else {
-                // make the bound object include each point of the results so the final bound object
+                // make the bound object include each point of the result's rectangle so the final bound object
                 // covers all the points
                 flavour.bounds.extend(rect.getBounds());
             }
