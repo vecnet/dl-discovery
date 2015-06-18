@@ -39,8 +39,8 @@
     <div class="mapnotch"></div>
     <div class="col-md-10 form-group">
 
-      <div class="col-sm-3">
-        <input type="checkbox" class="bootstrap-checkbox" data-off-label="Map Off" data-on-label="Map On" data-style="btn-group-justified"  data-on-class="btn-primary">
+      <div class="col-md-3">
+        <input type="checkbox" name="showmap" <%= get_map_checkbox %> class="bootstrap-checkbox" data-off-label="Map Off" data-on-label="Map On" data-style="btn-group-justified"  data-on-class="btn-primary">
       </div>
 
       <!--<div class="checkbox checkbox-slider--b checkbox-slider-lg">-->
@@ -49,9 +49,9 @@
         <!--</label>-->
       <!--</div>-->
 
-      <div id="search-map-area" class="btn-group searchmap-group">
+      <div id="search-map-area" class="col-md-7 btn-group searchmap-group">
 
-        <div class=" btn-group" role="group" >
+        <div class="btn-group" role="group" >
           <button name="searchmap" class="btn btn-primary " type="button">
             Search Visible Map Area Only
           </button>
