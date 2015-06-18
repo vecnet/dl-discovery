@@ -6,6 +6,10 @@ class CatalogController < ApplicationController
   include Blacklight::Catalog
   include ::ShowAccessControls
 
+
+  # handle basic authorization exception with #access_denied
+  rescue_from Blacklight::Exceptions::AccessDenied, :with => :access_denied
+
   before_filter :enforce_show_permissions, only: :show
 
   self.search_params_logic += [:apply_authz]
@@ -236,6 +240,28 @@ class CatalogController < ApplicationController
     # If there are more than this many search results, no spelling ("did you
     # mean") suggestion is offered.
     config.spell_max = 5
+  end
+
+  ##
+  # To handle failed authorization attempts, redirect the user to the
+  # login form and persist the current request uri as a parameter
+  def access_denied
+    # send the user home if the access was previously denied by the same
+    # request to avoid sending the user back to the login page
+    #   (e.g. protected page -> logout -> returned to protected page -> home)
+    redirect_to root_url and flash.discard and return if request.referer and request.referer.ends_with? request.fullpath
+
+    redirect_to root_url and return unless has_user_authentication_provider?
+
+    redirect_to new_user_session_url(:referer => request.fullpath)
+  end
+
+  def has_user_authentication_provider?
+    respond_to? :current_user
+  end
+
+  def require_user_authentication_provider
+    raise ActionController::RoutingError.new('Not Found') unless has_user_authentication_provider?
   end
 
 
