@@ -8,13 +8,12 @@
   <!--Start of data-ptdata-->
   <%= content_tag :div, hidden: true do %>
       <li data-layer-id="<%= document[:uuid] %>">
-      <!--TODO change type=primary to :solr_point_type or whatever field is called-->
       <li data-rectangle="<%= document[:solr_bbox] %>" data-ui-type="primary">
       <li data-dunno="<%= document[:solr_geom] %>" data-ui-type="secondary">
       <li data-points="<%= document[:point_list_s] %>" data-ui-type="primary">
       <li data-placename="<%= document[:dct_spatial_sm] %>" data-ui-type="text">
       <li data-title="<%= document[:dc_title_s] %>" data-ui-type="text">
-      <li data-link="<%= link_to_document document%>" data-ui-type="text">
+      <li data-link="<%= link_to_document document document[:dc_title_s]%>" data-ui-type="text">
   <% end %>
   <!--End of data-ptdata-->
 
