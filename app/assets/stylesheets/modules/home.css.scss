@@ -284,9 +284,9 @@ $disabled-color: #aaa;
   div.checkbox .map-checkbox {
     // this is the "map results on/off" element
 //    width: 33%; // dirty hack to make the following button line up nicer
-    padding-left: 0;
+    padding-left: 0px;
     label {
-      padding-left: 0;
+      padding-left: 0px;
     }
   }
 
