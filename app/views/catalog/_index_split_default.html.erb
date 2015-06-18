@@ -13,7 +13,8 @@
       <li data-points="<%= document[:point_list_s] %>" data-ui-type="primary">
       <li data-placename="<%= document[:dct_spatial_sm] %>" data-ui-type="text">
       <li data-title="<%= document[:dc_title_s] %>" data-ui-type="text">
-      <li data-link="<%= link_to_document document document[:dc_title_s]%>" data-ui-type="text">
+      <li data-link="<%= link_to_document document, document_show_link_field(document) %>
+" data-ui-type="text">
   <% end %>
   <!--End of data-ptdata-->
 
