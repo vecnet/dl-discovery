@@ -16,6 +16,15 @@
           <button type="submit" class="search-submit btn-lg btn btn-primary" id="search-submit-header" tabindex="2">
           Search
           </button>
+
+          <!--the dropdown caret for advanced search options-->
+          <!--<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false">-->
+            <!--<span class="caret"></span>-->
+            <!--<span class="sr-only">Toggle Dropdown</span>-->
+          <!--</button>-->
+          <!--<ul class="dropdown-menu" role="menu">-->
+            <!--<li><a href="#">Search full text</a></li>-->
+          <!--</ul>-->
         </div>
       </div>
 
@@ -25,21 +34,27 @@
   <!-- map search -->
   <fieldset id="mapfieldset">
 
+
     <legend class="col-md-2">Map</legend>
     <div class="mapnotch"></div>
-        <div class="col-md-10 form-group">
-          <div class="col-md-5">
-            <input type="checkbox" name="showmap" <%= get_map_checkbox %> class="bootstrap-checkbox" data-off-label="Map Off" data-on-label="Map On"  data-on-class="btn-primary">
-          </div>
-          <div class="col-md-5 btn-group">
-              <button name="searchmap" class="btn btn-primary" type="button">
-                Search Visible Map Area Only
-              </button>
-          </div>
+    <div class="col-md-10 form-group">
+
+      <div>
+        <input type="checkbox" name="showmap" <%= get_map_checkbox %> class="bootstrap-checkbox" data-off-label="Map Off" data-on-label="Map On"  data-on-class="btn-primary">
+      </div>
+
+      <div id="search-map-area" class="btn-group searchmap-group">
+
+        <div class="btn-group" role="group" >
+          <button name="searchmap" class="btn btn-primary" type="button">
+            Search Visible Map Area Only
+          </button>
         </div>
+      </div>
     </div>
 
   </fieldset>
+
 
   <%= render 'did_you_mean' %>
 
@@ -51,5 +66,6 @@
 
 
   <%= render 'sort_and_per_page' %>
+
 
 </form>
