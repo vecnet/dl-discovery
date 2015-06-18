@@ -41,22 +41,22 @@
 
 
 
-      <!--<div class="checkbox">-->
-        <!--<label>-->
-        <!--<input id="map-checkbox" type="checkbox" class="switch" name="showmap" data-label-text="Show Map"  <%= get_map_checkbox %> />-->
-      <!--</label>-->
-      <!--</div>-->
 
-      <label class="checkbox-inline">
-        <input type="checkbox" checked data-toggle="toggle"> First
-      </label>
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-default active">
+          <input name="hidemap" id="map-off" type="checkbox"> Map Off
+        </label>
+        <label class="btn btn-primary">
+          <input name="showmap" id="map-on" type="checkbox"> Map On
+        </label>
+      </div>
 
 
       <div id="search-map-area" class="btn-group searchmap-group">
 
         <div class=" btn-group" role="group" >
-          <button name="searchmap" class="btn btn-default " type="button">
-            Search map area
+          <button name="searchmap" class="btn btn-primary " type="button">
+            Search Visible Map Area Only
           </button>
         </div>
       </div>
