@@ -38,7 +38,7 @@ window.VndlMap = function (mapDomId, options) {
     markerClusterLayer = new L.MarkerClusterGroup({
 
     //since some markers are all on the exact same point we need to keep clustering at most times
-    disableClusteringAtZoom: 12
+    disableClusteringAtZoom: 10
     });
 
     this.leafletMap.addLayer(markerClusterLayer);
@@ -629,8 +629,7 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
     // loop through results - find each ones map location and adding it to the map
     $results.each(function (index, result) {
 
-        // the following is a huge function that does most of the map work for the single result
-
+        // the following function call is unfortunately for a huge function that does most of the map work for the single result
        var currentResult = this.connectSingleResultToMap(result);
 
 
@@ -659,7 +658,8 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
     }.bind(this));
 
     // get the number of markers on the map and add it to pagination text
-    $('span.page_entries').append(" ( Points from " + this.resultItems.length + " records mapped )");
+    $('span.page_entries').append(" (Points from " + this.resultItems.length + " records mapped )");
+
 
 
     // fit the map bounds to show all the primary markers

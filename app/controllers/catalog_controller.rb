@@ -78,15 +78,22 @@ class CatalogController < ApplicationController
     config.add_facet_field 'vn_keyword_sm', label: 'Keyword', limit: 10
     config.add_facet_field 'dct_spatial_sm', label: 'Place', limit: 10
     config.add_facet_field 'dc_publisher_s', label: 'Publisher', limit: 6
-    #config.add_facet_field 'dc_subject_h_facet'
-    #config.add_facet_field 'dwc_scientificname_h_facet'
-    #config.add_facet_field 'dct_spatial_h_facet'
-
+    config.add_facet_field 'dc_format_s', :label => 'Format', :limit => 3
+    # Hierarchy Facets
+    config.add_facet_field 'dc_subject_h_facet', label: 'Subject', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> false, :sort => 'index'
+    config.add_facet_field 'dwc_scientificname_h_facet', label: 'Species', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> false, :sort => 'index'
+    config.add_facet_field 'dct_spatial_h_facet', label: 'Location', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> false, :sort => 'index'
+    config.facet_display = {
+        :hierarchy => {
+            'dc_subject_h_facet' => [nil],
+            'dwc_scientificname_h_facet' => [nil],
+            'dct_spatial_h_facet' => [nil]
+        }
+    }
     # config.add_facet_field 'layer_availability_score_f', :label => 'Availability', :query => {
     #   offline: { label: 'Offline', fq: "layer_availability_score_f:[0 TO #{Settings.GEOMONITOR_TOLERANCE}]" },
     #   online: { label: 'Online', fq: "(*:* AND -layer_availability_score_f:[* TO *] AND -layer_geom_type_s:\"Paper Map\") OR (layer_availability_score_f:[#{Settings.GEOMONITOR_TOLERANCE} TO 1])" }
     # }
-    config.add_facet_field 'dc_format_s', :label => 'Format', :limit => 3
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request

@@ -39,32 +39,19 @@
     <div class="mapnotch"></div>
     <div class="col-md-10 form-group">
 
-
-
-      <div class="checkbox">
-        <label>
-        <input id="map-checkbox" type="checkbox" class="switch" name="showmap" data-label-text="Show Map"  <%= get_map_checkbox %> />
-      </label>
+      <div class="col-md-4 map-checkbox">
+        <input type="checkbox" name="showmap" <%= get_map_checkbox %> class="bootstrap-checkbox" data-off-label="Map Off" data-on-label="Map On"  data-on-class="btn-primary">
       </div>
 
 
-      <div id="search-map-area" class="btn-group searchmap-group">
 
-        <div class=" btn-group" role="group" >
-          <button name="searchmap" class="btn btn-default " type="button">
-            Search map area
+        <div class="btn-group  col-md-offset-1 col-md-3">
+          <button name="searchmap" class="btn btn-primary" type="button">
+            Search Visible Map Area Only
           </button>
         </div>
-
-        <div class="btn-group" role="group">
-          <button class="btn fa fa-search btn-default" type="button">
-          </button>
-        </div>
-
       </div>
 
-
-    </div>
   </fieldset>
 
 
