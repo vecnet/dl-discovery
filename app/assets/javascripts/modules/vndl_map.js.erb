@@ -572,14 +572,12 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             mouseover: highlightResult,
             mouseout: unHighlightResult
         });
-
         //
         // add popup to rectangle
         //
-
         var link = newItem.link;
 
-        var link = newItem.title;
+        var title = newItem.title;
 
         // Insert html placeholders into the popup container to be edited
         var container = $("<div> <h3 class='result-title'> <a href='' class='rectangleLink'>Click me </a></div>");

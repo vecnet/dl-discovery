@@ -454,15 +454,18 @@ footer:after {
 
 .vndl-search .disabled {
   color: $disabled-color;
-
-
 }
 
-.disabled .searchmap-group {
+.disabled .searchmap {
 
   opacity: 0.50;
 }
 
+
+.searchmap {
+  padding-left: 0px !important;
+
+}
 .vndl-search .form-group {
   // even out top and bottom margins
   // Bookstrap by default has only bottom margin
