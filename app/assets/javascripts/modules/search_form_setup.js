@@ -46,7 +46,7 @@ function searchFormSetup(formElement) {
     $('#tour').crumble();
 
     // turn the checkbox into a pumpkin everytime
-    $("[name='showmap']").checkboxpicker();
+    //$("[name='showmap']").checkboxpicker();
 
     //$("[name='showmap']").bootstrapSwitch();
 

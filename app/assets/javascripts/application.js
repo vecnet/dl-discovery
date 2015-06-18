@@ -32,6 +32,7 @@
 //=require  modules/jquery.grumble.min
 //= require modules/bootstrap-switch
 //= require modules/bootstrap-checkbox.min
+//= require modules/bootstrap-toggle.min
 //= require modules/leaflet.markercluster
 //= require modules/readmore.min
 //= require modules/jquery.expander.min
