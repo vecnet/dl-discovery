@@ -63,14 +63,14 @@ function searchFormSetup(formElement) {
     });
 
 
-    // check the state of the map switch and toggle the hidden checkbox
-    $('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
-
-        setMapVisibility();
-
-
-
-    });
+    //// check the state of the map switch and toggle the hidden checkbox
+    //$('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
+    //
+    //    setMapVisibility();
+    //
+    //
+    //
+    //});
 
 
     // if a facet has already been applied

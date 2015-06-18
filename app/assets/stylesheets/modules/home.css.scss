@@ -228,8 +228,6 @@ $disabled-color: #aaa;
   line-height: 2em;
 }
 
-/// trial
-
 .search-result .thumbnail {
   border-radius: 0 !important;
 }
@@ -263,16 +261,6 @@ $disabled-color: #aaa;
   border-bottom: none;
 }
 
-//.search-result h3 { font: 500 normal 1.375em "Roboto",Arial,Verdana,sans-serif; margin-top: 0 !important; margin-bottom: 10px !important; }
-//.search-result h3 > a, .search-result i { color: #248dc1 !important; }
-//.search-result p { font: normal normal 1.125em "Roboto",Arial,Verdana,sans-serif; }
-//.search-result span.plus { position: absolute; right: 0; top: 126px; }
-//.search-result span.plus a { background-color: #248dc1; padding: 5px 5px 3px 5px; }
-//.search-result span.plus a:hover { background-color: #414141; }
-//.search-result span.plus a i { color: #fff !important; }
-//.search-result span.border { display: block; width: 97%; margin: 0 15px; border-bottom: 1px dotted #ccc; }
-
-/// end trial
 ///////////////////////////////////////////////////////// search form
 .vndl-search {
   margin: 0;
@@ -293,7 +281,7 @@ $disabled-color: #aaa;
     padding-top: (1.5 * $content-v-pad);
   }
 
-  div.checkbox {
+  div.checkbox .bootstrap-checkbox {
     // this is the "map results on/off" element
     width: 33%; // dirty hack to make the following button line up nicer
     label {
