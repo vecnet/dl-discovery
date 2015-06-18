@@ -281,9 +281,10 @@ $disabled-color: #aaa;
     padding-top: (1.5 * $content-v-pad);
   }
 
-  div.checkbox .bootstrap-checkbox {
+  div.checkbox .map-checkbox {
     // this is the "map results on/off" element
-    width: 33%; // dirty hack to make the following button line up nicer
+//    width: 33%; // dirty hack to make the following button line up nicer
+    padding-left: 0;
     label {
       padding-left: 0;
     }
