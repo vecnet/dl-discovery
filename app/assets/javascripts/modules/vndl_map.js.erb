@@ -617,7 +617,7 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
         // the following function call is unfortunately for a huge function that does most of the map work for the single result
        var currentResult = this.connectSingleResultToMap(result);
 
-        // getting bounds
+        // getting bounds so we can auto zoom the map to include the points/rects that have been mapped
 
         // testing if the correct data
         if (currentResult.primary.bounds) {
@@ -633,6 +633,8 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
             // matching the current items bound. um ok.
 
             else {
+                console.log("hit the else in the extending bounds loop");
+                debugger;
                 boundsThemAll = L.latLngBounds(currentResult.primary.bounds);
             }
         }
