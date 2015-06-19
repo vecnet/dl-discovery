@@ -655,8 +655,17 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
 
     }.bind(this));
 
+
+    var counter = 0;
+
+    numberOfPointsMapped = this.resultItems.forEach(function (resultItem){
+
+        counter += resultItem.primary.points.length;
+        console.log(counter);
+    });
+
     // get the number of markers on the map and add it to pagination text
-    $('span.page_entries').append(" (Points from " + this.resultItems.length + " records mapped )");
+    $('span.page_entries').append(" (" + counter + " points mapped from " + this.resultItems.length + " records )");
 
 
 
