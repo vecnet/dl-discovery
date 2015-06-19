@@ -642,9 +642,11 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
 
 
     var counter = 0;
+
     numberOfPointsMapped = this.resultItems.forEach(function (resultItem){
 
-        counter =+ resultItem.primary.points.length;
+        counter += resultItem.primary.points.length;
+        console.log(counter);
     });
 
     // get the number of markers on the map and add it to pagination text
