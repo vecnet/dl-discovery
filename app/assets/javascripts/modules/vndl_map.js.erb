@@ -32,8 +32,6 @@ window.VndlMap = function (mapDomId, options) {
     rectangleLayer = new L.FeatureGroup();
     this.leafletMap.addLayer(rectangleLayer);
 
-
-
 //    turn on clustering plugin of markers
     markerClusterLayer = new L.MarkerClusterGroup({
 
@@ -518,20 +516,14 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
             container.find('a').attr('target', "_blank");
 
-
-
             // Insert the container into the popup
             marker.bindPopup(container[0]);
-
 
             // finally add the marker to the displayed Layer
 //            marker.addTo(markerLayer);
 
-
             // Add the marker to the ClusterLayer
             markerClusterLayer.addLayer(marker);
-
-
 
                 var redIcon = L.icon({
                     iconUrl: "<%= asset_path('marker-icon-red.png') %>",
@@ -557,8 +549,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             //
             // set the default marker
             marker.setIcon(blueIcon);
-
-
         })) {
 
     }
@@ -598,11 +588,8 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         rect.addTo(rectangleLayer);
     });
 
-
     $r.on('mouseover', highlightResult);
     $r.on('mouseout', unHighlightResult);
-
-    // TODO: handle secondary points
 
     // after completing the building of the item, push it to the big list
     this.resultItems.push(newItem);
@@ -630,7 +617,6 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
         // the following function call is unfortunately for a huge function that does most of the map work for the single result
        var currentResult = this.connectSingleResultToMap(result);
 
-
         // getting bounds
 
         // testing if the correct data
@@ -641,7 +627,6 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
 
                 // extend the bound with the new results bounds
                 boundsThemAll.extend(currentResult.primary.bounds);
-
             }
 
             // if the bounds object doesn't already exist or is null then create one
@@ -655,8 +640,15 @@ VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
 
     }.bind(this));
 
+
+    var counter = 0;
+    numberOfPointsMapped = this.resultItems.forEach(function (value,index){
+
+        counter =+ this.primary.points.length;
+    });
+
     // get the number of markers on the map and add it to pagination text
-    $('span.page_entries').append(" (Points from " + this.resultItems.length + " records mapped )");
+    $('span.page_entries').append(" (" + counter + "Points from " + this.resultItems.length + " records mapped )");
 
 
 
