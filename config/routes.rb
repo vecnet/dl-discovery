@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get 'feedback' => 'feedback_forms#new'
 
 
+  #define a catchall route so Rails will send the request or render the public/404.html page (in production)
+  match "*path", to: "errors#catch_404", via: :all
+
   resources :suggest, only: :index, defaults: { format: 'json' }
 
   # since there is no pubtkt login for development
