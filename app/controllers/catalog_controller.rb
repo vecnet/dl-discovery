@@ -85,9 +85,9 @@ class CatalogController < ApplicationController
     config.add_facet_field 'dct_spatial_h_facet', label: 'Location', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> false, :sort => 'index'
     config.facet_display = {
         :hierarchy => {
-            'dc_subject_h_facet' => [nil],
-            'dwc_scientificname_h_facet' => [nil],
-            'dct_spatial_h_facet' => [nil]
+            'dc_subject_h' => [['facet'],':'],
+            'dwc_scientificname_h' => [['facet'], ':'],
+            'dct_spatial_h' => [['facet'], ':']
         }
     }
     # config.add_facet_field 'layer_availability_score_f', :label => 'Availability', :query => {
