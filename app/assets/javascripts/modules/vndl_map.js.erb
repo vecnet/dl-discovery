@@ -38,7 +38,7 @@ window.VndlMap = function (mapDomId, options) {
     markerClusterLayer = new L.MarkerClusterGroup({
 
     //since some markers are all on the exact same point we need to keep clustering at most times
-    disableClusteringAtZoom: 10
+    disableClusteringAtZoom: 5
     });
 
     this.leafletMap.addLayer(markerClusterLayer);
