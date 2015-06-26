@@ -12,13 +12,13 @@ app_root=$(cd $(dirname $0)/.. && pwd)
 # This keeps a lot of harvest processes from spawning
 # should a paricular harvest take a long time.
 # The lock is released when this shell exits.
-exec 200> "$app_root/tmp/last-harvest-$which-lock"
+exec 200> "$app_root/tmp/indexing/last-harvest-$which-lock"
 flock -e --nonblock 200 || exit 0
 
 # mark this time
 new_harvest_mark=$(date '+%Y-%m-%dT%H:%M:%S')
 
-last_harvest_file="$app_root/tmp/last-harvest-$which"
+last_harvest_file="$app_root/tmp/indexing/last-harvest-$which"
 last_harvest=""
 if [ -e $last_harvest_file ]; then
     last_harvest=$(cat $last_harvest_file)
