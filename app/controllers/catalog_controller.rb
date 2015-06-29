@@ -8,6 +8,11 @@ class CatalogController < ApplicationController
 
   before_filter :enforce_show_permissions, only: :show
 
+  # handle basic authorization exception with #access_denied
+  rescue_from RuntimeError::AccessDenied, :with => :access_denied
+
+  rescue_from ActionController::RoutingError, :with => :access_denied
+
   self.search_params_logic += [:apply_authz]
 
   configure_blacklight do |config|
