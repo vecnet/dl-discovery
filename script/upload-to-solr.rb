@@ -19,7 +19,7 @@ data = File.read(ARGV[0])
 source = JSON.parse(data)
 
 STDERR.puts "Target is #{ARGV[1]}"
-target = RSolr.connect ({url=> ARGV[1]})
+target = RSolr.connect ({:url=> ARGV[1]})
 
 processed_count = 0
 source.each do |record|
