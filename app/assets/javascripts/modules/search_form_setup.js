@@ -68,7 +68,6 @@ function searchFormSetup(formElement) {
     // Toggle the map visibility for the Geospatial 'Show Me' link
     $('.geospatial-readmore').click(function(e) {
 
-        e.preventDefault();
         $( "input[type='checkbox']" ).prop( "checked", function( i, val ) {
             return !val;
         });
