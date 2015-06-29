@@ -40,6 +40,9 @@ function searchFormSetup(formElement) {
     // set up the "show map" checkbox to switch the map on and off
     // and also to allow/disallow the "search map area only" check
     // box.
+
+    setMapVisibility();
+    
     $('input[name=showmap]').change(setMapVisibility);
 
     // turn the checkbox into a pumpkin everytime
