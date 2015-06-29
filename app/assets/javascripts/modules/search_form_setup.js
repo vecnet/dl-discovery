@@ -65,6 +65,16 @@ function searchFormSetup(formElement) {
 
     });
 
+    // Toggle the map visibility for the Geospatial 'Show Me' link
+    $('.geospatial-readmore').click(function(e) {
+
+        e.preventDefault();
+        $( "input[type='checkbox']" ).prop( "checked", function( i, val ) {
+            return !val;
+        });
+
+    });
+
 
     //// check the state of the map switch and toggle the hidden checkbox
     //$('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
