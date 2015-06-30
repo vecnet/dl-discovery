@@ -49,6 +49,10 @@ function searchFormSetup(formElement) {
     $('.bootstrap-checkbox').checkboxpicker();
 
 
+
+    Blacklight.do_hierarchical_facet_expand_contract_behavior();
+    alert("firing Blacklight onload from searchform js");
+
     // start the page with the map and switch turned on per Natalie request
     //window.vndl.theMap.show();
 
