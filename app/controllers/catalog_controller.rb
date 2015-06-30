@@ -85,9 +85,9 @@ class CatalogController < ApplicationController
     config.add_facet_field 'dc_publisher_s', label: 'Publisher', limit: 6
     config.add_facet_field 'dc_format_s', :label => 'Format', :limit => 3
     # Hierarchy Facets
-    config.add_facet_field 'dc_subject_h_facet', :label => 'Subject', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> true, :sort => 'index'
-    config.add_facet_field 'dwc_scientificname_h_facet', :label => 'Species', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> true, :sort => 'index'
-    config.add_facet_field 'dct_spatial_h_facet', :label => 'Location', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> true, :sort => 'index'
+    config.add_facet_field 'dc_subject_h_facet', :label => 'Subject', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> true
+    config.add_facet_field 'dwc_scientificname_h_facet', :label => 'Species', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> true
+    config.add_facet_field 'dct_spatial_h_facet', :label => 'Location', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> true
     config.facet_display = {
         :hierarchy => {
             'dc_subject_h' => [['facet'],':'],
