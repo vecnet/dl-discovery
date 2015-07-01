@@ -51,13 +51,10 @@ $(function () {
     // attach the ajax events to it's add and remove facet links
     $('#ajax-modal').on('show.bs.modal', function(e) {
 
-
         $('.modal-body a.facet_select').each(function (index, link) {
 
             attachEventsToFacetLink(link);
         });
-
-
 
         $('.modal-body a.remove').each(function (index, link) {
 

@@ -35,9 +35,6 @@ function searchFormSetup(formElement) {
 
   changeAnchorToUseAjax('a.paginate-prev');
 
-  // the modal hierarchy nodes
-  changeAnchorToUseAjax('a.facet-select');
-
   changeAnchorToUseAjax('div.search-widgets .dropdown-menu li a');
 
   // set up the "show map" checkbox to switch the map on and off
@@ -162,6 +159,7 @@ function changeAnchorToUseAjax(elementSelector){
         // or alert($(this).hash();
 
         getResultsPage(ajaxLink);
+        console.log("the href just submitted by ajax is" + ajaxLink);
     });
 }
 //----------------------------------------------------------------------------------------------------------------------
