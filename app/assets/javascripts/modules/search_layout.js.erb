@@ -52,12 +52,16 @@ $(function () {
     $('#ajax-modal').on('show.bs.modal', function(e) {
 
 
+        // ensure the hierarchy facets in modals fire when shown
+
+        console.log("pre hierarchy function counter is :");
+        console.log("firing hierarchy facet js formatting code");
+        Blacklight.do_hierarchical_facet_expand_contract_behavior();
+
         $('.modal-body a.facet_select').each(function (index, link) {
 
             attachEventsToFacetLink(link);
         });
-
-
 
         $('.modal-body a.remove').each(function (index, link) {
 
@@ -65,6 +69,7 @@ $(function () {
             // then trigger a resubmit
             removeFacetWithAjax(link);
         });
+
 
     });
 
