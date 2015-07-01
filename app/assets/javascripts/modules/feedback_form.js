@@ -1,7 +1,6 @@
 Blacklight.onLoad(function() {
   //Instantiates plugin for feedback form
   $('#feedback-form').feedbackForm();
-  alert('does Blacklight.load ever fire?');
 })
 
 ;(function($, window, document, undefined) {
