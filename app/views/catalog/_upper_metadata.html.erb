@@ -1,62 +1,6 @@
 <% document ||= @document %>
 
 <div class="geoblacklight-view-panel" >
-<% comment do %>
-  <dl class="dl-horizontal col-lg-10">
-
-    <dt>Description</dt>
-    <dd><%= @document["dc_description_s"]%></dd>
-
-    <dt>Alternate title</dt>
-    <dd><%= @document["dc_alternate_sm"]%></dd>
-
-    <dt>Author</dt>
-    <dd><%= Array(@document["dc_creator_sm"]).join(", ")%></dd>
-
-    <dt>Author Facet</dt>
-    <dd><%= @document["dc_creator_facet"]%></dd>
-
-    <dt>Contributor</dt>
-    <dd><%= @document["dc_contributor_sm"]%></dd>
-
-    <dt>Date</dt>
-    <dd><%= Array(@document["dc_created_sm"]).join(", ")%></dd>
-
-    <dt>Data Type</dt>
-    <dd><%= @document["dc_type_s"]%></dd>
-
-    <dt>Access</dt>
-    <dd><%= @document["dc_rights_s"]%></dd>
-
-    <dt>Download</dt>
-    <dd>
-      <% hash = JSON.parse(@document["dct_references_s"]) %>
-      <% Array(hash["http://schema.org/downloadUrl"]).each do |download| -%>
-        <%= link_to download %><br/>
-      <% end -%>
-    </dd>
-
-    <dt>Related Links</dt>
-
-    <% links = Array(@document["dc_relation_sm"]) %>
-    <dd> <%= links.map{|link| link_to link}.join(', ').html_safe %></dd>
-
-
-    <% comment do %>
-        <dd><%= Array(@document["dc_relation_sm"]).join(", ")%></dd>
-    <% end %>
-
-    <% if !@document.references.nil? && !@document.references.url.nil? %>
-      <dt>Details page</dt>
-      <dd itemprop="url"><%= link_to @document.references.url.endpoint, @document.references.url.endpoint %></dd>
-    <% end %>
-  </dl>
-
-
-
-      <% comment end %>
-
-
   <div class="col-lg-10" >
   <table class="table table-bordered table-striped" id="summary-table">
     <thead>
@@ -101,18 +45,21 @@
     <tr>
       <th>Download</th>
       <td>
-        <% hash = JSON.parse(@document["dct_references_s"]) %>
+        <% hash = JSON.parse(@document["dct_references_s"]) -%>
         <% Array(hash["http://schema.org/downloadUrl"]).each do |download| -%>
-          <%= link_to download %><br/>
+          <%= link_to download, download %><br/>
         <% end -%>
       </td>
     </tr>
 
     <tr>
       <th>Links</th>
-      <% links = Array(@document["dc_relation_sm"]) %>
-      <td> <%= links.map{|link| link_to link}.join("\n").html_safe %></td>
-
+      <td>
+        <% links = Array(@document["dc_relation_sm"]) -%>
+        <% links.each do |link| -%>
+          <%= link_to link, link %><br/>
+        <% end -%>
+      </td>
     </tr>
 
 
