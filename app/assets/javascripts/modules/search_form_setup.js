@@ -27,42 +27,43 @@ function flashFeedbackElement() {
 }
 function searchFormSetup(formElement) {
 
-    flashFeedbackElement();
+  flashFeedbackElement();
 
-    changeFormSubmitEventToAjaxCall(formElement);
+  changeFormSubmitEventToAjaxCall(formElement);
 
-    changeAnchorToUseAjax('a.paginate-next');
+  changeAnchorToUseAjax('a.paginate-next');
 
-    changeAnchorToUseAjax('a.paginate-prev');
+  changeAnchorToUseAjax('a.paginate-prev');
 
-    changeAnchorToUseAjax('div.search-widgets .dropdown-menu li a');
+  // the modal hierarchy nodes
+  changeAnchorToUseAjax('a.facet-select');
 
-    // set up the "show map" checkbox to switch the map on and off
-    // and also to allow/disallow the "search map area only" check
-    // box.
+  changeAnchorToUseAjax('div.search-widgets .dropdown-menu li a');
 
-    setMapVisibility();
-    
-    $('input[name=showmap]').change(setMapVisibility);
+  // set up the "show map" checkbox to switch the map on and off
+  // and also to allow/disallow the "search map area only" check
+  // box.
 
-    // turn the checkbox into a pumpkin everytime
-    $('.bootstrap-checkbox').checkboxpicker();
+  setMapVisibility();
 
+  $('input[name=showmap]').change(setMapVisibility);
 
+  // turn the checkbox into a pumpkin everytime
+  $('.bootstrap-checkbox').checkboxpicker();
 
-  $('#ajax-modal').on('show.bs.modal', function () {
-    Blacklight.do_hierarchical_facet_expand_contract_behavior();
-    console.log("firing hierarchy facet js formatting code");
-  });
-
-    // start the page with the map and switch turned on per Natalie request
-    //window.vndl.theMap.show();
 
 
     //
     // Event Handling
     // -----------------------------------------------------------
     //
+
+
+    // ensure the hierarchy facets in modals fire when shown
+    $('#ajax-modal').on('show.bs.modal', function () {
+      Blacklight.do_hierarchical_facet_expand_contract_behavior();
+      console.log("firing hierarchy facet js formatting code");
+    });
 
     // use the shown map area as a search parameter
     $('#search-map-area').on("click", function() {
@@ -79,17 +80,6 @@ function searchFormSetup(formElement) {
         });
 
     });
-
-
-    //// check the state of the map switch and toggle the hidden checkbox
-    //$('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
-    //
-    //    setMapVisibility();
-    //
-    //
-    //
-    //});
-
 
     // if a facet has already been applied
     if ($('#appliedParams').length) {
@@ -201,7 +191,7 @@ function addClickEventToRemoveAppliedFacet($links) {
 
             $('form.vndl-search').trigger('submit');
 
-        })
+        });
     });
 }
 //----------------------------------------------------------------------------------------------------------------------
