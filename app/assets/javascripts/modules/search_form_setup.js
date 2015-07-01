@@ -50,8 +50,10 @@ function searchFormSetup(formElement) {
 
 
 
+  $('#ajax-modal').on('show.bs.modal', function () {
     Blacklight.do_hierarchical_facet_expand_contract_behavior();
-    alert("firing Blacklight onload from searchform js");
+    console.log("firing hierarchy facet js formatting code");
+  });
 
     // start the page with the map and switch turned on per Natalie request
     //window.vndl.theMap.show();

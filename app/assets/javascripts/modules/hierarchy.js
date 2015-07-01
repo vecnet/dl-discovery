@@ -8,8 +8,6 @@
   Blacklight.do_hierarchical_facet_expand_contract_behavior.selector = 'li.h-node';
 
   Blacklight.hierarchical_facet_expand_contract = function() {
-
-    alert("printf should be called once");
     var li = $(this);
 
     $('ul', this).each(function() {
