@@ -1,15 +1,11 @@
-Blacklight.onLoad(function(){
-  Blacklight.do_hierarchical_facet_expand_contract_behavior();
-});
-
-Blacklight.do_hierarchical_facet_expand_contract_behavior.selector = 'li.h-node';
-
 (function($) {
   Blacklight.do_hierarchical_facet_expand_contract_behavior = function() {
     $( Blacklight.do_hierarchical_facet_expand_contract_behavior.selector ).each (
       Blacklight.hierarchical_facet_expand_contract
     );
   };
+
+  Blacklight.do_hierarchical_facet_expand_contract_behavior.selector = 'li.h-node';
 
   Blacklight.hierarchical_facet_expand_contract = function() {
 

@@ -49,6 +49,9 @@ function searchFormSetup(formElement) {
     $('.bootstrap-checkbox').checkboxpicker();
 
 
+  Blacklight.onLoad(function(){
+    Blacklight.do_hierarchical_facet_expand_contract_behavior();
+  });
     // start the page with the map and switch turned on per Natalie request
     //window.vndl.theMap.show();
 
