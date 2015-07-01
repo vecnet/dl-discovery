@@ -16,11 +16,11 @@ Blacklight.onLoad(function(){
     var li = $(this);
 
     $('ul', this).each(function() {
-      li.addClass('twiddle');
+      this.addClass('twiddle');
       if($('span.selected', this).length == 0){
         $(this).hide();
       } else {
-        li.addClass('twiddle-open');
+        this.addClass('twiddle-open');
       }
     });
 
