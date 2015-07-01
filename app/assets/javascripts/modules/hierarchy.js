@@ -1,9 +1,9 @@
-Blacklight.onLoad(function () {
-  Blacklight.do_hierarchical_facet_expand_contract_behavior();
-  alert('window ready event fired, modal shown event fired and called initial function');
-});
-
 (function ($) {
+  Blacklight.onLoad(function () {
+    Blacklight.do_hierarchical_facet_expand_contract_behavior();
+    alert('window ready event fired, modal shown event fired and called initial function');
+  });
+
   Blacklight.do_hierarchical_facet_expand_contract_behavior = function () {
     $(Blacklight.do_hierarchical_facet_expand_contract_behavior.selector).each(
       Blacklight.hierarchical_facet_expand_contract()
