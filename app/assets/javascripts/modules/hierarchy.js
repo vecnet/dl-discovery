@@ -1,8 +1,7 @@
-$(window).onload(function(){
+$(window).ready(function(){
   Blacklight.do_hierarchical_facet_expand_contract_behavior();
     console.log('ran hierarchy facet code on Blacklight load');
     alert('Blacklight load');
-    debugger;
 });
 
 (function($) {
@@ -10,6 +9,7 @@ $(window).onload(function(){
     $( Blacklight.do_hierarchical_facet_expand_contract_behavior.selector ).each (
         Blacklight.hierarchical_facet_expand_contract
      );
+      console.log('print for each selector expand contract function call');
   };
   Blacklight.do_hierarchical_facet_expand_contract_behavior.selector = 'li.h-node';
 
@@ -18,6 +18,7 @@ $(window).onload(function(){
     
     $('ul', this).each(function() {
       li.addClass('twiddle');
+        console.log('added twiddle class to li');
       if($('span.selected', this).length == 0){
         $(this).hide();
       } else {
@@ -34,4 +35,4 @@ $(window).onload(function(){
       }
     });
   };
-})($);
+})(jQuery);
