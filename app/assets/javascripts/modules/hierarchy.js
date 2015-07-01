@@ -1,14 +1,12 @@
-$(document).ready(function(){
-    $('.modal-content').on('shown.bs.modal', function() {
+$('.modal-content').on('shown.bs.modal', function() {
   Blacklight.do_hierarchical_facet_expand_contract_behavior();
     console.log('window ready event fired, modal shown event fired and called initial function');
-    })
 });
 
 (function($) {
   Blacklight.do_hierarchical_facet_expand_contract_behavior = function() {
     $( Blacklight.do_hierarchical_facet_expand_contract_behavior.selector ).each (
-        Blacklight.hierarchical_facet_expand_contract()
+        Blacklight.hierarchical_facet_expand_contract
      );
       console.log('print for each selector expand contract function call');
   };
