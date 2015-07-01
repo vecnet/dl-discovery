@@ -19,7 +19,7 @@ Blacklight.onLoad(function () {
     $('ul', this).each(function () {
       li.addClass('twiddle');
       console.log('added twiddle class to li');
-      if ($('span.selected', this).length == 0) {
+      if ($('span.selected', this).length === 0) {
         $(this).hide();
       } else {
         li.addClass('twiddle-open');
@@ -35,4 +35,4 @@ Blacklight.onLoad(function () {
       }
     });
   };
-})($);
+})(jQuery);

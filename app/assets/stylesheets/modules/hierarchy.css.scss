@@ -8,8 +8,8 @@ ul.facet-hierarchy {
       li {
         margin-left: 8px; } }
     li.h-node {
-      list-style-image: url('../../assets/images/collapsed.png'); }
+      list-style-image: url(image-path('collapsed.png')); }
     li.h-node.twiddle-open {
-      list-style-image: url('../../assets/images/expanded.png');
+      list-style-image: url(image-path('expanded.png'));
     }
 }
