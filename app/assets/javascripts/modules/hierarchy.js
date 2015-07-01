@@ -1,6 +1,8 @@
 $(document).ready(function(){
+    $('.modal-content').on('shown.bs.modal', function() {
   Blacklight.do_hierarchical_facet_expand_contract_behavior();
-    console.log('window ready event fired and called initial function');
+    console.log('window ready event fired, modal shown event fired and called initial function');
+    })
 });
 
 (function($) {
