@@ -1,19 +1,19 @@
-$(window).ready(function(){
+$(document).ready(function(){
   Blacklight.do_hierarchical_facet_expand_contract_behavior();
-    console.log('ran hierarchy facet code on Blacklight load');
-    alert('Blacklight load');
+    console.log('window ready event fired and called initial function');
 });
 
 (function($) {
   Blacklight.do_hierarchical_facet_expand_contract_behavior = function() {
     $( Blacklight.do_hierarchical_facet_expand_contract_behavior.selector ).each (
-        Blacklight.hierarchical_facet_expand_contract
+        Blacklight.hierarchical_facet_expand_contract()
      );
       console.log('print for each selector expand contract function call');
   };
   Blacklight.do_hierarchical_facet_expand_contract_behavior.selector = 'li.h-node';
 
   Blacklight.hierarchical_facet_expand_contract = function() {
+      console.log("inside expand contract function");
     var li = $(this);
     
     $('ul', this).each(function() {
