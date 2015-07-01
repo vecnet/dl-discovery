@@ -1,4 +1,4 @@
-document.onload(function(){
+window.onload(function(){
   Blacklight.do_hierarchical_facet_expand_contract_behavior();
     console.log('ran hierarchy facet code on Blacklight load');
     alert('Blacklight load');
