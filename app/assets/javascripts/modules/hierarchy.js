@@ -1,5 +1,8 @@
 Blacklight.onLoad(function(){
   Blacklight.do_hierarchical_facet_expand_contract_behavior();
+    console.log('ran hierarchy facet code on Blacklight load');
+    alert('Blacklight load');
+    debugger;
 });
 
 (function($) {
@@ -7,7 +10,7 @@ Blacklight.onLoad(function(){
     $( Blacklight.do_hierarchical_facet_expand_contract_behavior.selector ).each (
         Blacklight.hierarchical_facet_expand_contract
      );
-  }
+  };
   Blacklight.do_hierarchical_facet_expand_contract_behavior.selector = 'li.h-node';
 
   Blacklight.hierarchical_facet_expand_contract = function() {
@@ -31,4 +34,4 @@ Blacklight.onLoad(function(){
       }
     });
   };
-})(jQuery);
+})($);
