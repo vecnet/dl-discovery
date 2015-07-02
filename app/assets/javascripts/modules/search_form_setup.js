@@ -55,17 +55,13 @@ function searchFormSetup(formElement) {
     // -----------------------------------------------------------
     //
 
-
-    var counter = 0;
-    // ensure the hierarchy facets in modals fire when shown
-    $('#ajax-modal').one('show.bs.modal', function () {
-      console.log("pre hierarchy function counter is :" + counter);
-      console.log("firing hierarchy facet js formatting code");
-        Blacklight.do_hierarchical_facet_expand_contract_behavior();
-        modalShown = true;
-        counter += 1;
-        console.log("counter is :" + counter);
-    });
+  //  // ensure the hierarchy facets in modals fire when shown
+  //  $('#ajax-modal').one('shown.bs.modal', function () {
+  //  console.log("pre hierarchy function counter is :" + counter);
+  //  console.log("firing hierarchy facet js formatting code");
+  //  Blacklight.do_hierarchical_facet_expand_contract_behavior();
+  //
+  //});
 
     // use the shown map area as a search parameter
     $('#search-map-area').on("click", function() {
