@@ -27,36 +27,41 @@ function flashFeedbackElement() {
 }
 function searchFormSetup(formElement) {
 
-    flashFeedbackElement();
+  flashFeedbackElement();
 
-    changeFormSubmitEventToAjaxCall(formElement);
+  changeFormSubmitEventToAjaxCall(formElement);
 
-    changeAnchorToUseAjax('a.paginate-next');
+  changeAnchorToUseAjax('a.paginate-next');
 
-    changeAnchorToUseAjax('a.paginate-prev');
+  changeAnchorToUseAjax('a.paginate-prev');
 
-    changeAnchorToUseAjax('div.search-widgets .dropdown-menu li a');
+  changeAnchorToUseAjax('div.search-widgets .dropdown-menu li a');
 
-    // set up the "show map" checkbox to switch the map on and off
-    // and also to allow/disallow the "search map area only" check
-    // box.
+  // set up the "show map" checkbox to switch the map on and off
+  // and also to allow/disallow the "search map area only" check
+  // box.
 
-    setMapVisibility();
-    
-    $('input[name=showmap]').change(setMapVisibility);
+  setMapVisibility();
 
-    // turn the checkbox into a pumpkin everytime
-    $('.bootstrap-checkbox').checkboxpicker();
+  $('input[name=showmap]').change(setMapVisibility);
 
+  // turn the checkbox into a pumpkin everytime
+  $('.bootstrap-checkbox').checkboxpicker();
 
-    // start the page with the map and switch turned on per Natalie request
-    //window.vndl.theMap.show();
 
 
     //
     // Event Handling
     // -----------------------------------------------------------
     //
+
+  //  // ensure the hierarchy facets in modals fire when shown
+  //  $('#ajax-modal').one('shown.bs.modal', function () {
+  //  console.log("pre hierarchy function counter is :" + counter);
+  //  console.log("firing hierarchy facet js formatting code");
+  //  Blacklight.do_hierarchical_facet_expand_contract_behavior();
+  //
+  //});
 
     // use the shown map area as a search parameter
     $('#search-map-area').on("click", function() {
@@ -73,17 +78,6 @@ function searchFormSetup(formElement) {
         });
 
     });
-
-
-    //// check the state of the map switch and toggle the hidden checkbox
-    //$('.switch').on('switchChange.bootstrapSwitch', function (event,state) {
-    //
-    //    setMapVisibility();
-    //
-    //
-    //
-    //});
-
 
     // if a facet has already been applied
     if ($('#appliedParams').length) {
@@ -166,6 +160,7 @@ function changeAnchorToUseAjax(elementSelector){
         // or alert($(this).hash();
 
         getResultsPage(ajaxLink);
+        console.log("the href just submitted by ajax is" + ajaxLink);
     });
 }
 //----------------------------------------------------------------------------------------------------------------------
@@ -195,7 +190,7 @@ function addClickEventToRemoveAppliedFacet($links) {
 
             $('form.vndl-search').trigger('submit');
 
-        })
+        });
     });
 }
 //----------------------------------------------------------------------------------------------------------------------

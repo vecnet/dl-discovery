@@ -28,6 +28,7 @@
 //= require bootstrap/tab
 //= require bootstrap/tooltip
 //= require modules/vndl_map.js.erb
+//= require modules/hierarchy
 //= require modules/leaflet.markercluster
 //= require modules/readmore.min
 //= require modules/jquery.expander.min
