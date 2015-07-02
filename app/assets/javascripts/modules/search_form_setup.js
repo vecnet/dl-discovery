@@ -56,13 +56,15 @@ function searchFormSetup(formElement) {
     //
 
 
-  var counter = 0;
+    var counter = 0;
     // ensure the hierarchy facets in modals fire when shown
-    $('#ajax-modal').on('show.bs.modal', function () {
-      Blacklight.do_hierarchical_facet_expand_contract_behavior();
-      counter += 1;
+    $('#ajax-modal').one('show.bs.modal', function () {
+      console.log("pre hierarchy function counter is :" + counter);
       console.log("firing hierarchy facet js formatting code");
-      console.log("counter is :" + counter);
+        Blacklight.do_hierarchical_facet_expand_contract_behavior();
+        modalShown = true;
+        counter += 1;
+        console.log("counter is :" + counter);
     });
 
     // use the shown map area as a search parameter
