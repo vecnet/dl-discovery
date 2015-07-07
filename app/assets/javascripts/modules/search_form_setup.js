@@ -4,7 +4,10 @@ function changeFormSubmitEventToAjaxCall(formElement) {
 
         event.preventDefault();
 
-        var queryString = $('form.vndl-search').serialize();
+
+      checkMapSearchStateAndAppendBBox();
+
+      var queryString = $('form.vndl-search').serialize();
 
         console.log('the serialized form make the following query string : ' + queryString);
 
@@ -143,7 +146,7 @@ function searchMapAreaUsingFormSubmit() {
     // add fake bounding box value to form
     $('form.vndl-search').append('<input id="bbox-input-field" type="hidden" name="bbox" value="' + spacedString + '">');
 
-    $('form.vndl-search').trigger('submit');
+    //$('form.vndl-search').trigger('submit');
 }
 
 //
@@ -238,6 +241,16 @@ function setMapVisibility() {
         disable($('.searchmap input[type="checkbox"]'));
         removeShowmapFromHrefs();
     }
+}
+//----------------------------------------------------------------------------------------------------------------------
+// add a bounding box to the search params if 'search map area' checkbox checked.
+//
+function checkMapSearchStateAndAppendBBox() {
+  var searchmap = $('.searchmap input[type="checkbox"]').prop('checked');
+
+  if (searchmap) {
+    searchMapAreaUsingFormSubmit();
+  }
 }
 //----------------------------------------------------------------------------------------------------------------------
 // add showmap=on to hrefs in the page
