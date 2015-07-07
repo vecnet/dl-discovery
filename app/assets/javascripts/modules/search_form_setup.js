@@ -229,13 +229,13 @@ function setMapVisibility() {
     if (showmap) {
         window.vndl.theMap.show();
         //enable($('input[name=searchmap]'));
-        enable($('button[name=searchmap]'));
+        enable($('.searchmap input[type="checkbox"]'));
         addShowmapToHrefs();
 
     } else {
         window.vndl.theMap.hide();
         //disable($('input[name=searchmap]'));
-        disable($('button[name=searchmap]'));
+        disable($('.searchmap input[type="checkbox"]'));
         removeShowmapFromHrefs();
     }
 }
