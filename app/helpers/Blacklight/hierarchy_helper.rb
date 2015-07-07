@@ -49,8 +49,10 @@ module Blacklight::HierarchyHelper
 
   # Standard display of a SELECTED facet value, no link, special span with class, and 'remove' button.
   def render_selected_qfacet_value(facet_solr_field, item)
-    content_tag(:span,  render_qfacet_value(facet_solr_field, item, :suppress_link => true), :class => "selected") + " " +
-      link_to(content_tag(:span, '', :class => "glyphicon glyphicon-remove") + content_tag(:span, '[remove]', :class => 'sr-only'), remove_facet_params(facet_solr_field, item.qvalue, params), :class=>"remove")
+    content_tag(:span,  render_qfacet_value(facet_solr_field, item, :suppress_link => true), :class => "selected")
+    # Commenting out the removal X span because getting the correct url into the ajax setup of dl-discovery is a huge pain with this gem... apologies.
+    # + " " +
+    #  link_to(content_tag(:span, '', :class => "glyphicon glyphicon-remove") + content_tag(:span, '[remove]', :class => 'sr-only'), remove_facet_params(facet_solr_field, item.qvalue, params), :class=>"remove")
   end
 
   HierarchicalFacetItem = Struct.new :qvalue, :value, :hits
