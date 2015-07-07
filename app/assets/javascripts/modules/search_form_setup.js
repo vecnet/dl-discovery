@@ -2,26 +2,26 @@ function changeFormSubmitEventToAjaxCall(formElement) {
 
     $(formElement).on("submit", function (event) {
 
-        event.preventDefault();
-
+      event.preventDefault();
 
       checkMapSearchStateAndAppendBBox();
 
       var queryString = $('form.vndl-search').serialize();
 
-        console.log('the serialized form make the following query string : ' + queryString);
+      console.log('Serialized form makes the following query string : ' + queryString);
 
-        getResultsPage(queryString);
+      getResultsPage(queryString);
 
-        // because servers understand URLs differently
-        var fullPathQueryString = "?" + queryString;
+      // because servers understand URLs differently
+      var fullPathQueryString = "?" + queryString;
 
-        // use the html5 history API to preserve the browser history and back button
-        history.pushState(queryString,null,fullPathQueryString);
+      // use the html5 history API to preserve the browser history and back button
+      history.pushState(queryString,null,fullPathQueryString);
 
     });
 }
 
+// Small UI prompting of the Feedback link
 function flashFeedbackElement() {
     $('.flash').animate({opacity: 0.5}, 500);
     $('.flash').animate({opacity: 1}, 500);
@@ -67,11 +67,11 @@ function searchFormSetup(formElement) {
   //});
 
     // use the shown map area as a search parameter
-    $('#search-map-area').on("click", function() {
-
-        searchMapAreaUsingFormSubmit();
-
-    });
+    //$('#search-map-area').on("click", function() {
+    //
+    //    searchMapAreaUsingFormSubmit();
+    //
+    //});
 
     // Toggle the map visibility for the Geospatial 'Show Me' link
     $('.geospatial-readmore').click(function(e) {
@@ -122,17 +122,12 @@ function searchFormSetup(formElement) {
 // trigger form submit
 //
 function searchMapAreaUsingFormSubmit() {
-    
 
     var currentMapBounds = window.vndl.theMap.leafletMap.getBounds();
-
-
-    // TODO: Do some rounding on the output so can be readable in the UI?
 
     var currentMapBoundsString = currentMapBounds.toBBoxString();
 
     console.log('toBBoxString output : ' + currentMapBoundsString);
-
 
     var spacedString = currentMapBoundsString.split(',').join(' ');
 
@@ -142,13 +137,11 @@ function searchMapAreaUsingFormSubmit() {
 
     console.log('setting the search bounds to : ' + spacedString);
 
-
-    // add fake bounding box value to form
+    // add hidden bounding box value to form
     $('form.vndl-search').append('<input id="bbox-input-field" type="hidden" name="bbox" value="' + spacedString + '">');
 
     //$('form.vndl-search').trigger('submit');
 }
-
 //
 //----------------------------------------------------------------------------------------------------------------------
 //
@@ -250,6 +243,7 @@ function checkMapSearchStateAndAppendBBox() {
 
   if (searchmap) {
     searchMapAreaUsingFormSubmit();
+    console.log('Added a map area bbox to the search form');
   }
 }
 //----------------------------------------------------------------------------------------------------------------------
