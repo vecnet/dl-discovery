@@ -72,14 +72,15 @@ $(function () {
     });
 
     // chuck away the previous map markers
-    window.vndl.theMap.clearMarkers();
+//    window.vndl.theMap.clearMarkers();
 
     // chuck away the previous rectangles
-    window.vndl.theMap.clearRectangles();
+//    window.vndl.theMap.clearRectangles();
+    VndlMap.prototype.clearClusterLayer();
 
     // TODO: clear the layers
     VndlMap.prototype.clearClusterLayer();
-    window.vndl.theMap.clearClusterLayer();
+//    window.vndl.theMap.clearClusterLayer();
 
     // parse the inserted content for new map references
     window.vndl.theMap.discoverAndMapGeoDataInResultsHtml($('.contentwrapper > .content'));
