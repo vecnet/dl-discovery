@@ -430,19 +430,15 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
         // in case the bounds are null and prevent leaflet from erroring
         if (newItem.primary.bounds) {
 
-            // turn off the map panning to results
+            // map panning to results
             //map.fitBounds(newItem.primary.bounds);
         }
 
         $r.addClass("vndl-results-highlight");
 
-
-
     }
 
-
     function scrollToResult(){
-
 
         $('#content').scrollTo($r,500,{axis: 'y',interrupt: 'true', duration: 500});
 
@@ -453,7 +449,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 
     function unHighlightResult() {
 
-
         // default leaflet polygon style made lighter
         var defaultStyle = {
             color: "#578ce3",
@@ -462,7 +457,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             fillOpacity: 0.0025
 
         };
-
 
         $.each(newItem.primary.points, function (index, marker) {
 
