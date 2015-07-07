@@ -29,8 +29,9 @@ $(function () {
     // they're coming, everyone hide and get ready to yell "surprise!"
     // (initialise things to their start up values)
     window.vndl.theMap.hide();
-    disable($('input[name=searchmap]'));
-    disable($('.searchmap input[type="checkbox"]'));
+//    disable($('input[name=searchmap]'));
+//    disable($('.searchmap input[type="checkbox"]'));
+    disable($('#search-map-checkbox'));
 
     // turn the checkbox into a fancy switch
 //    $("[name='showmap']").bootstrapSwitch();
@@ -96,14 +97,16 @@ $(function () {
 function disable(element) {
     var $elem = $(element);
     $elem.prop('disabled', true);
-    $elem.parent().closest('.searchmap-group .btn-group .checkbox, .checkbox-inline, .radio, .radio-inline, fieldset').addClass('disabled');
+    $elem.addClass('disabled');
+//    $elem.parent().closest('.searchmap-group .btn-group .checkbox, .checkbox-inline, .radio, .radio-inline, fieldset').addClass('disabled');
 }
 // ------------------------------------------------------------------
 // un-disables an input AND removes the "disabled" class from its wrapper.
 function enable(element) {
     var $elem = $(element);
     $elem.prop('disabled', false);
-    $elem.parent().closest('.disabled').removeClass('disabled');
+    $elem.removeClass('disabled');
+//    $elem.parent().closest('.disabled').removeClass('disabled');
 }
 
 // ------------------------------------------------------------------
