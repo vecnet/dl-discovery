@@ -19,7 +19,7 @@ class CatalogController < ApplicationController
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
       :start => 0,
-      :rows => 10,
+      :rows => 25,
       'q.alt' => '*:*'
     }
 

@@ -225,13 +225,15 @@ function setMapVisibility() {
     if (showmap) {
         window.vndl.theMap.show();
         //enable($('input[name=searchmap]'));
-        enable($('.searchmap input[type="checkbox"]'));
+        //enable($('.searchmap input[type="checkbox"]'));
+        enable($('#search-map-checkbox-div'));
         addShowmapToHrefs();
 
     } else {
         window.vndl.theMap.hide();
         //disable($('input[name=searchmap]'));
-        disable($('.searchmap input[type="checkbox"]'));
+        //disable($('.searchmap input[type="checkbox"]'));
+        disable($('#search-map-checkbox-div'));
         removeShowmapFromHrefs();
     }
 }
@@ -239,7 +241,7 @@ function setMapVisibility() {
 // add a bounding box to the search params if 'search map area' checkbox checked.
 //
 function checkMapSearchStateAndAppendBBox() {
-  var searchmap = $('.searchmap input[type="checkbox"]').prop('checked');
+  var searchmap = $('#search-map-checkbox').prop('checked');
 
   if (searchmap) {
     searchMapAreaUsingFormSubmit();

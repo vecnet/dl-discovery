@@ -46,10 +46,12 @@ function getResultsPage(queryString, start, length) {
 
 
             // chuck away the previous map markers
-            window.vndl.theMap.clearMarkers();
+            //window.vndl.theMap.clearMarkers();
+            VndlMap.prototype.clearClusterLayer();
 
             // chuck away the previous rectangles
-            window.vndl.theMap.clearRectangles();
+            //window.vndl.theMap.clearRectangles();
+            VndlMap.prototype.clearRectangles();
 
             // parse the inserted content for new map references
             window.vndl.theMap.discoverAndMapGeoDataInResultsHtml($('.contentwrapper > .content'));
