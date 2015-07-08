@@ -226,14 +226,14 @@ function setMapVisibility() {
         window.vndl.theMap.show();
         //enable($('input[name=searchmap]'));
         //enable($('.searchmap input[type="checkbox"]'));
-        enable($('#search-map-checkbox'));
+        enable($('#search-map-checkbox-div'));
         addShowmapToHrefs();
 
     } else {
         window.vndl.theMap.hide();
         //disable($('input[name=searchmap]'));
         //disable($('.searchmap input[type="checkbox"]'));
-        disable($('#search-map-checkbox'));
+        disable($('#search-map-checkbox-div'));
         removeShowmapFromHrefs();
     }
 }
