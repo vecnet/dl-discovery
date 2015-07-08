@@ -248,7 +248,7 @@ function setMapVisibility() {
 // add a text span showing map bbox if 'search map area' checkbox checked.
 //
 function setBboxVisibility() {
-  var searchmap = $('#search-map-checkbox').prop('checked');
+  var searchmap = $('input[name=showmap]').prop('checked');
 
   if (searchmap) {
 
