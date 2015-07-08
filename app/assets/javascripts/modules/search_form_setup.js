@@ -262,7 +262,17 @@ function setBboxVisibility() {
 
     var spacedString = currentMapBoundsString.split(',').join(' ');
 
-    $('.bbox-feedback span').text('Map Bounds : SW NE Pts : ' + spacedString);
+    var arrayString =  currentMapBoundsString.split(',');
+
+    $(arrayString).each(function(index,el){
+      el = el.substr(0,7);
+      console.log(el);
+    });
+
+    textString = arrayString.toString();
+    console.log("UI text string of bbox will be : " + textString);
+
+    $('.bbox-feedback span').text('Map Bounds : SW NE Pts : ' + textString);
 
     console.log('Added a text bbox to the search form');
 
@@ -277,7 +287,17 @@ function setBboxVisibility() {
 
       var spacedString = currentMapBoundsString.split(',').join(' ');
 
-      $('.bbox-feedback span').text('Map Bounds : SW NE Pts : ' + spacedString);
+      var arrayString =  currentMapBoundsString.split(',');
+
+      $(arrayString).each(function(index,el){
+        el = el.substr(0,7);
+        console.log(el);
+      });
+
+      textString = arrayString.toString();
+      console.log("UI text string of bbox will be : " + textString);
+
+      $('.bbox-feedback span').text('Map Bounds : SW NE Pts : ' + textString);
 
     });
 
