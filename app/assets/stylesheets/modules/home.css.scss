@@ -279,7 +279,8 @@ $disabled-color: #aaa;
   border-bottom: 1px solid $line-color;
   &:first-of-type {
     // the first thing in the search form gets extra top padding
-    padding-top: (1.5 * $content-v-pad);
+//    padding-top: (1.5 * $content-v-pad);
+    padding-top: $content-v-pad;
   }
 
  .map-checkbox {
