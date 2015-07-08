@@ -275,7 +275,7 @@ function setBboxVisibility() {
 
     console.log("UI text string of bbox will be : " + textString);
 
-    $('.bbox-feedback span').text('Bbox : ' + textString);
+    $('.bbox-feedback span').text('Visible Map : ' + textString);
 
     console.log('Added a text bbox to the search form');
 
@@ -303,7 +303,7 @@ function setBboxVisibility() {
 
       console.log("UI text string of bbox will be : " + textString);
 
-      $('.bbox-feedback span').text('Bbox : ' + textString);
+      $('.bbox-feedback span').text('Visible Map : ' + textString);
 
     });
 
