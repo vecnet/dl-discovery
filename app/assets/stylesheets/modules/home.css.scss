@@ -159,6 +159,7 @@ $content-pad-unit: ceil(0.66 * $map-notch-width);
 $content-h-pad: ceil(3 * $content-pad-unit);
 $content-v-pad: ceil(2 * $content-pad-unit);
 
+$content-v-pad-halved: ceil(1.5 * $content-pad-unit);
 $content-h-pad-halved: ceil(2 * $content-pad-unit);
 
 $disabled-color: #aaa;
@@ -274,7 +275,7 @@ $disabled-color: #aaa;
   background-color: $content-bg;
   // position: relative;
   // z-index: $content-z;
-  padding: $content-v-pad $content-h-pad-halved;
+  padding: $content-v-pad-halved $content-h-pad-halved;
   border-bottom: 1px solid $line-color;
   &:first-of-type {
     // the first thing in the search form gets extra top padding
