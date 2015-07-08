@@ -43,10 +43,13 @@ function searchFormSetup(formElement) {
   // set up the "show map" checkbox to switch the map on and off
   // and also to allow/disallow the "search map area only" check
   // box.
-
   setMapVisibility();
 
   $('input[name=showmap]').change(setMapVisibility);
+
+  // set up the "show " checkbox to switch the bbox on and off
+  setBboxVisibility();
+  $('input[name=showmap]').change(setBboxVisibility);
 
   // turn the checkbox into a pumpkin everytime
   $('.bootstrap-checkbox').checkboxpicker();
@@ -72,6 +75,10 @@ function searchFormSetup(formElement) {
     //    searchMapAreaUsingFormSubmit();
     //
     //});
+
+
+//<br>
+//  <span>Bounding Box of Visible Map</span>
 
     // Toggle the map visibility for the Geospatial 'Show Me' link
     $('.geospatial-readmore').click(function(e) {
@@ -237,6 +244,50 @@ function setMapVisibility() {
         removeShowmapFromHrefs();
     }
 }
+//----------------------------------------------------------------------------------------------------------------------
+// add a text span showing map bbox if 'search map area' checkbox checked.
+//
+function setBboxVisibility() {
+  var searchmap = $('#search-map-checkbox').prop('checked');
+
+  if (searchmap) {
+
+    $('.bbox-feedback').removeClass('hidden');
+
+    var currentMapBounds = window.vndl.theMap.leafletMap.getBounds();
+
+    var currentMapBoundsString = currentMapBounds.toBBoxString();
+
+    console.log('toBBoxString output : ' + currentMapBoundsString);
+
+    var spacedString = currentMapBoundsString.split(',').join(' ');
+
+    $('.bbox-feedback span').text('Map Bounds : SW NE Pts : ' + spacedString);
+
+    console.log('Added a text bbox to the search form');
+
+    // as map moves update the ui text values
+    window.vndl.theMap.leafletMap.on('moveend', function(e) {
+
+      var currentMapBounds = window.vndl.theMap.leafletMap.getBounds();
+
+      var currentMapBoundsString = currentMapBounds.toBBoxString();
+
+      console.log('toBBoxString output : ' + currentMapBoundsString);
+
+      var spacedString = currentMapBoundsString.split(',').join(' ');
+
+      $('.bbox-feedback span').text('Map Bounds : SW NE Pts : ' + spacedString);
+
+    });
+
+  }
+  else {
+    $('.bbox-feedback').addClass('hidden');
+  }
+}
+//----------------------------------------------------------------------------------------------------------------------
+
 //----------------------------------------------------------------------------------------------------------------------
 // add a bounding box to the search params if 'search map area' checkbox checked.
 //
