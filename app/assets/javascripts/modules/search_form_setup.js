@@ -275,7 +275,7 @@ function setBboxVisibility() {
 
     console.log("UI text string of bbox will be : " + textString);
 
-    $('.bbox-feedback span').text('Map Bounds : SW NE Pts : ' + textString);
+    $('.bbox-feedback span').text('Bbox : ' + textString);
 
     console.log('Added a text bbox to the search form');
 
@@ -300,10 +300,10 @@ function setBboxVisibility() {
         textString += " " + el;
         console.log("textString is now : " + textString);
       });
-      
+
       console.log("UI text string of bbox will be : " + textString);
 
-      $('.bbox-feedback span').text('Map Bounds : SW NE Pts : ' + textString);
+      $('.bbox-feedback span').text('Bbox : ' + textString);
 
     });
 
