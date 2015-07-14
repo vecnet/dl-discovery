@@ -1,13 +1,13 @@
 <!--Overriding blacklight's pagination in case preferred to GeoBlacklight style.-->
 
 <% if show_pagination? and @response.total_pages > 1 %>
- <fieldset>
+  <fieldset>
     <div class="row">
-  <div class="col-md-9"> 
-    <div class="pagination">
-      <%= paginate @response, :outer_window => 2, :theme => 'blacklight' %>
+      <div class="col-md-9">
+        <div class="pagination">
+          <%= paginate @response, :outer_window => 2, :theme => 'blacklight' %>
+        </div>
+      </div>
     </div>
-  </div>
- </div>
- </fieldset>
+  </fieldset>
 <% end %>

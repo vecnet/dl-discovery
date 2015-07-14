@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-12">
       <!--<div class="page-header">-->
-        <!--<h1>Metadata</h1>-->
+      <!--<h1>Metadata</h1>-->
       <!--</div>-->
     </div>
   </div>
@@ -16,10 +16,14 @@
   <div id="table-div" role="tabpanel">
 
     <ul class="nav nav-tabs" role="tablist">
-      <li role="presentation" class="active"><a href="#geospatial-tab" aria-controls="Geospatial" role="tab" data-toggle="tab">Geospatial</a></li>
-      <li role="presentation"><a href="#subject-tab" aria-controls="Subject" role="tab" data-toggle="tab">Subject</a></li>
+      <li role="presentation" class="active">
+        <a href="#geospatial-tab" aria-controls="Geospatial" role="tab" data-toggle="tab">Geospatial</a></li>
+      <li role="presentation"><a href="#subject-tab" aria-controls="Subject" role="tab" data-toggle="tab">Subject</a>
+      </li>
       <li role="presentation"><a href="#rights-tab" aria-controls="Rights" role="tab" data-toggle="tab">Rights</a></li>
-      <li role="presentation"><a href="#record-tab" aria-controls="Record Information" role="tab" data-toggle="tab">Record Information</a></li>
+      <li role="presentation">
+        <a href="#record-tab" aria-controls="Record Information" role="tab" data-toggle="tab">Record Information</a>
+      </li>
     </ul>
 
     <!-- Tab panes -->
@@ -48,27 +52,27 @@
               <tbody>
               <tr>
                 <th style="width:10%">Subject</th>
-                <td><%=Array(@document["dc_subject_sm"]).join(", ") %></td>
+                <td><%= Array(@document["dc_subject_sm"]).join(", ") %></td>
               </tr>
 
               <tr>
                 <th>Keywords</th>
-                <td><%=Array(@document["vn_keyword_sm"]).join(", ") %></td>
+                <td><%= Array(@document["vn_keyword_sm"]).join(", ") %></td>
               </tr>
 
               <tr>
                 <th>Publisher</th>
-                <td><%=@document["dc_publisher_s"] %></td>
+                <td><%= @document["dc_publisher_s"] %></td>
               </tr>
 
               <tr>
                 <th>Time periods</th>
-                <td><%=Array(@document["dct_temporal_sm"]).join(", ") %></td>
+                <td><%= Array(@document["dct_temporal_sm"]).join(", ") %></td>
               </tr>
 
               <tr>
                 <th>Species</th>
-                <td><%=Array(@document["dwc_scientificname_sm"]).join(", ") %></td>
+                <td><%= Array(@document["dwc_scientificname_sm"]).join(", ") %></td>
               </tr>
 
               </tbody>
@@ -145,7 +149,7 @@
                 <th>Resource Type</th>
                 <td><%= @document["dc_type_s"] %></td>
               </tr>
-              
+
 
               <tr>
                 <th>Filename</th>
@@ -178,7 +182,6 @@
           </div>
         </div>
       </div>
-
 
 
     </div>
