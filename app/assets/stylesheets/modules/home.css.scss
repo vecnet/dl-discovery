@@ -1,54 +1,57 @@
 ////////////////////////////////////////////// some unimportant stuff
 footer {
   padding: 1em 0;
+
   text-align: center;
+
   color: #999;
   background-color: $content-bg;
   background-color: $line-color;
   background-image: linear-gradient(to bottom, darken($content-bg, 1%) 0%, $content-bg 100%);
   background-image: linear-gradient(to bottom, lighten($line-color, 2%) 0%, $content-bg 100%);
-}
+  }
 #title-bar {
   padding: 0 10px;
-}
+  }
 .page_entries {
   padding-right: 15px;
   padding-left: 15px;
-}
+  }
 .page_links {
   padding-left: 15px;
-}
+  }
 .content {
   height: inherit;
-}
+  }
 
 /////////////////////////////////////////////// various page elements
 /* adjust header to be a bit slimmer */
 header.jumbotron {
   margin-bottom: 0;
   padding-bottom: 10px;
+
   color: white;
   background-color: $header-bg;
   h1 {
     font-size: 54px;
     font-weight: bold;
-  }
+    }
   * {
     color: inherit;
-  }
+    }
 
   //  hgroup {
   //    margin: 0 auto;
   //    transition: 0.33s ease-in-out;
   //  }
-}
+  }
 .map-inactive header {
 
   // width: ($result-column-width + $inactive-map-width);
-}
+  }
 .map-active header {
   width: 100%;
-}
+  }
 
 /////////////////////////////////////////////// map-and-column layout
 /* sort out z-index */
@@ -58,58 +61,64 @@ $content-z: 10;
 header {
   position: relative;
   z-index: $header-z;
-}
+  }
 .mapwrapper {
   position: relative;
   z-index: $map-z;
-  padding: 0;
 
+  padding: 0;
   // background-image: image_url('OrteliusWorldMap1570.jpg');
+
   background-position: center;
   background-size: cover;
-}
+  }
 .content {
   position: relative;
   z-index: $content-z;
+
   overflow-x: hidden;
   overflow-y: scroll;
+
   padding: 0;
-}
+  }
 
 /* contentwrapper surrounds the map and the content */
 .contentwrapper {
   position: relative;
+
   overflow: hidden;
+
   margin: 0 auto;
-  transition: all 0.66s ease-in-out;
+
+  transition: all .66s ease-in-out;
   /* height is set in js to fill the browser window */
-}
+  }
 
 /* the body has a class that determines if the map is showing */
 .map-inactive .contentwrapper {
 
   // the map JS toggles the wrapper's CSS classes between .container and .container-fluid
-}
+  }
 .map-active .contentwrapper {
 
   // width: 100%;
-}
+  }
 
 /* the content has a fixed width */
 .content {
   float: right;
-
   // width: $result-column-width;
   // overlap the map so we can make the map notch
-  margin-left: (-1 * $map-notch-width);
 
+  margin-left: (-1 * $map-notch-width);
   // gotta be transparent so the map can be seen through the notch
+
   background-color: transparent;
 
   // unless they contain the map notch, things in the content
   // column should use a background rule like this:
   //     background-color: $content-bg
-}
+  }
 
 /* the map lives inside this wrapper which stays in a
    fixed position relative to the contentwrapper */
@@ -120,31 +129,33 @@ header {
   left: 0;
 
   // width is set by the bookstrap column width class (e.g. col-md-1)
-}
+  }
 .map {
   position: absolute;
   top: 0;
   right: (-1 * $map-notch-width);
   bottom: 0;
   left: 0;
+
   height: 100%;
+
   transition: opacity 1.5s ease-in-out;
-}
+  }
 .map-inactive .map {
-  opacity: 0.25;
-}
+  opacity: .25;
+  }
 .map-active .map {
   opacity: 1;
-}
+  }
 
 /* adjust leaflet's components to avoid drawing stuff like the
    attribution text under the covered-up right edge strip */
 .leaflet-right {
   right: $map-notch-width;
-}
+  }
 .map-inactive .leaflet-control-container {
   display: none;
-}
+  }
 
 //////////////////////////////////////// content column LESS vars $$$
 $content-pad-unit: ceil(.66 * $map-notch-width);
@@ -158,157 +169,164 @@ $disabled-color: #aaa;
 ///////////////////////////////////////////////////////// search result listing
 .result-title {
   font-size: 20px;
+
   margin-top: 0;
   &:first-line {
-
     //    font-weight: bold;
     font-size: 24px;
+    }
   }
-}
 .result-author {
   font-weight: bold;
-
   // make them on the same line if possible
-  float: left;
 
+  float: left;
   // minimise gap and use line height instead.
-  margin: 0.1em 0;
-}
+
+  margin: .1em 0;
+  }
 .result-citation {
   float: right;
-  margin: 0.1em 0;
-}
+
+  margin: .1em 0;
+  }
 .description-text {
   clear: both;
-  padding-top: 0.5em;
+
+  padding-top: .5em;
+
   text-align: justify;
-}
+  }
 
 // TODO : Limit max height of this when too many tags
 .tags-text {
-
   //white-space: nowrap;
   overflow: hidden;
+
   text-overflow: ellipsis;
-}
+  }
 .result-citation {
   font-style: italic;
-}
+  }
 .search-result {
-
   //  original padding
   //  padding: $content-v-pad;
   // make less padding for nmyers
   padding: $content-pad-unit $content-pad-unit $content-pad-unit 0;
+
   border-bottom: 1px solid $line-color;
-}
+  }
 .meta-search {
   line-height: 2em;
+
   list-style-type: none;
-}
+  }
 .search-result .thumbnail {
   border-radius: 0 !important;
-}
+  }
 .search-result:first-child {
   margin-top: 0 !important;
-}
+  }
 .search-result {
   margin-top: 20px;
-}
+  }
 
 //.search-result .col-md-2 { border-right: 1px dotted #ccc; min-height: 140px; }
 .search-result ul {
   padding-left: 0 !important;
+
   list-style: none;
-}
+  }
 
 //.search-result ul li { font: 400 normal .85em "Roboto",Arial,Verdana,sans-serif;  line-height: 30px; }
 .search-result ul li i {
   padding-right: 5px;
-}
+  }
 .search-result .col-md-7 {
   position: relative;
-}
+  }
 #documents.vndl-results .document {
   margin: 0;
   padding: 0;
+
   border-bottom: none;
-}
+  }
 
 ///////////////////////////////////////////////////////// search form
 .vndl-search {
   margin: 0;
   padding: 0;
-
   // the search form contains the map notch, so we gotta stay
   // transparent.
-  background: transparent;
-}
-.vndl-search fieldset {
 
+  background: transparent;
+  }
+.vndl-search fieldset {
   // position: relative;
   // z-index: $content-z;
   padding: $content-v-pad-halved $content-h-pad-halved;
-  border-bottom: 1px solid $line-color;
 
+  border-bottom: 1px solid $line-color;
   // NORMAL fieldsets can have a background
   background-color: $content-bg;
   &:first-of-type {
-
     // the first thing in the search form gets extra top padding
     //    padding-top: (1.5 * $content-v-pad);
     padding-top: $content-v-pad;
-  }
+    }
   .map-checkbox {
-
     // this is the "map results on/off" element
     padding-left: 0 !important;
     label {
       padding-left: 0;
+      }
     }
-  }
 
   /// the restrict search to map area checkbox
   .form-group input[type='checkbox'] {
     display: none;
-  }
+    }
   .form-group input[type='checkbox'] + .btn-group > label span {
     width: 20px;
-  }
+    }
   .form-group input[type='checkbox'] + .btn-group > label span:first-child {
     display: none;
-  }
+    }
   .form-group input[type='checkbox'] + .btn-group > label span:last-child {
     display: inline-block;
-  }
+    }
   .form-group input[type='checkbox']:checked + .btn-group > label span:first-child {
     display: inline-block;
-  }
+    }
   .form-group input[type='checkbox']:checked + .btn-group > label span:last-child {
     display: none;
-  }
+    }
 
   // the legends
   legend {
     font-size: 133%;
+
     padding-top: $fieldset-child-padding + 6px; // extra 6px to match button content pad
+
     color: #777;
     border: none;
+    }
   }
-}
 .vndl-search fieldset#mapfieldset {
   position: relative;
-  overflow: hidden;
 
+  overflow: hidden;
   // this is the special fieldset with the map notch in it.
   // it's transparent, but everything in it gets the content bg.
+
   background-color: transparent;
   & > * {
     position: relative;
     z-index: $content-z;
+
     background-color: $content-bg;
+    }
   }
-}
 
 //// the map notch ////
 //
@@ -397,184 +415,212 @@ $disabled-color: #aaa;
 .mapnotch {
   position: absolute ! important;
   z-index: ($content-z - 1) ! important;
-
   // top 50% + margin-top -halfheight = vertically centered
   top: 50%;
   left: 0;
+
   box-sizing: content-box;
   width: $map-notch-width;
   height: (2 * $map-notch-width);
   margin-top: (-2 * $map-notch-width);
+
   pointer-events: none;
+
   border: $map-notch-width solid $content-bg;
   border-left-width: 0;
   border-top-right-radius: (2 * $map-notch-width);
   border-bottom-right-radius: (2 * $map-notch-width);
   background-color: transparent ! important;
-}
+  }
 
 // the upper and lower rectangles
 .mapnotch:before,
 .mapnotch:after {
   position: absolute;
+
   width: ($map-notch-width + 1px);
   height: 1000%; // IE 8 and some others don't understand vh units
   height: 100vh;
+
   content: '';
+
   background-color: $content-bg;
-}
+  }
 .mapnotch:before {
   bottom: (2 * $map-notch-width);
-}
+  }
 .mapnotch:after {
   top: (2 * $map-notch-width);
-}
+  }
 
 /* footer needs to have a bit that covers up the map overlap */
 footer {
   position: relative;
-}
+  }
 footer:after {
   position: absolute;
   top: 100%;
   left: 0;
+
   width: ($map-notch-width + 1px);
   height: 1000%; // IE 8 and some others don't understand vh units
   height: 100vh;
-  content: '';
-  background-color: $content-bg;
-}
-.vndl-search button .fa {
 
+  content: '';
+
+  background-color: $content-bg;
+  }
+.vndl-search button .fa {
   // icons are too close for some reason
   // cheat by presuming it's on the right
-  margin: 0 -.33em 0 0.33em;
-}
+  margin: 0 -.33em 0 .33em;
+  }
 .vndl-search .disabled {
   color: $disabled-color;
-}
+  }
 .disabled {
-  opacity: 0.50;
-}
+  opacity: .50;
+  }
 .searchmap {
   padding-left: 0 !important;
-}
+  }
 .vndl-search .form-group {
-
   // even out top and bottom margins
   // Bookstrap by default has only bottom margin
   margin: 0;
-}
+  }
 
 ////////////////////////////////////////////////////// search results
 #sortAndPerPage {
   margin-bottom: 0 ! important;
   padding-bottom: 0 ! important;
   padding-left: 15px;
-}
+  }
 .vndl-results {
   padding: 2em $content-h-pad;
+
   background-color: $content-bg;
   article {
-    opacity: 0.8;
-  }
+    opacity: .8;
+    }
   article.vndl-results-highlight {
     position: relative;
+
     opacity: 1;
     box-shadow: 0 0 20px #ccc;
+    }
   }
-}
 .vndl-search-result {
-  transition: 0.3s;
-}
+  transition: .3s;
+  }
 .vndl-results-index {
   background-color: $content-bg;
-}
+  }
 
 ////////////////////////////////////////////////////// text hero
 .about-text {
   display: table;
+
   margin: 0 -2em;
-  padding-top: 0.75 * $icon-size; // space for the icon
+  padding-top: .75 * $icon-size; // space for the icon
   padding-bottom: 5px;
+
   border-spacing: 2em;
   border-collapse: separate;
+
   $icon-size: 88px;
   .box {
     font-family: 'Roboto',sans-serif !important;
+
     position: relative;
+
     display: table-cell;
+
     width: 33%;
     padding: 2em 2em 3em; // room for the more link
+
     text-align: center;
+
     border: 1px dotted green;
     border: 1px solid #e0e0e0;
     background: rgba(0, 0, 0, .04);
     .icon {
       line-height: $icon-size;
+
       position: absolute;
       z-index: 2;
       top: -.75 * $icon-size;
       left: 50%;
+
       width: $icon-size;
       height: $icon-size;
       margin-left: -1 * $icon-size / 2;
+
       vertical-align: middle;
+
       border: $icon-size/11 solid white;
       border-radius: 50%;
       background: $icon-box-background;
       i {
         font-size: 36px !important;
+
         color: #fff !important;
+        }
       }
-    }
     h3 {
       font-size: 16px;
       font-weight: 500;
+
       color: #222;
-    }
+      }
     p {
       font-size: 13px;
       line-height: 1.5em;
+
       color: #666;
-    }
+      }
     .more {
       font-size: 12px;
       line-height: 12px;
+
       position: absolute;
       right: 1.5em;
       bottom: 1.5em;
       left: 1.5em;
+
       display: block;
+
       height: 2em;
       padding: 6px 8px;
+
       text-decoration: none;
       text-transform: uppercase;
+
       color: #222;
-    }
+      }
     &:hover {
       color: #222;
       border-color: #e0e0e0;
       background: rgba(47,211,133, .04);
       .icon {
         background: $icon-green;
-      }
+        }
       .more {
         color: #fff;
         background-color: $icon-box-background;
+        }
       }
     }
   }
-}
 .hidden {
   display: none;
-}
+  }
 #feedback-form {
   background-color: #fefefe;
-}
+  }
 .tab-pane {
   padding-top: 1em;
-}
+  }
 .search-icon {
-  padding-left: 0.2em;
-}
+  padding-left: .2em;
+  }
