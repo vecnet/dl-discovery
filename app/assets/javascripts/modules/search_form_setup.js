@@ -50,10 +50,8 @@ function searchFormSetup(formElement) {
   changeAnchorToUseAjax('div.search-widgets .dropdown-menu li a');
 
   // set up the "show map" checkbox to switch the map on and off
-  // and also to allow/disallow the "search map area only" check
-  // box.
+  // and also enable/disable the "search map area only" checkbox.
   setMapVisibility();
-
   $('input[name=showmap]').change(setMapVisibility);
 
   // set up the "show " checkbox to switch the bbox on and off
