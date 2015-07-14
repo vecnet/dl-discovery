@@ -1,6 +1,6 @@
 function changeFormSubmitEventToAjaxCall(formElement) {
 
-  $(formElement).on("submit", function(event) {
+  $(formElement).on("submit", function (event) {
 
     event.preventDefault();
 
@@ -64,13 +64,12 @@ function searchFormSetup(formElement) {
   $('.bootstrap-checkbox').checkboxpicker();
 
 
-
   //
   // Event Handling
   // -----------------------------------------------------------
   //
 
-  //  // ensure the hierarchy facets in modals fire when shown
+  //  // DEBUGGING: ensure the hierarchy facets in modals fire when shown
   //  $('#ajax-modal').one('shown.bs.modal', function () {
   //  console.log("pre hierarchy function counter is :" + counter);
   //  console.log("firing hierarchy facet js formatting code");
@@ -78,21 +77,10 @@ function searchFormSetup(formElement) {
   //
   //});
 
-  // use the shown map area as a search parameter
-  //$('#search-map-area').on("click", function() {
-  //
-  //    searchMapAreaUsingFormSubmit();
-  //
-  //});
-
-
-  //<br>
-  //  <span>Bounding Box of Visible Map</span>
-
   // Toggle the map visibility for the Geospatial 'Show Me' link
-  $('.geospatial-readmore').click(function(e) {
+  $('.geospatial-readmore').click(function (e) {
 
-    $("input[type='checkbox']").prop("checked", function(i, val) {
+    $("input[type='checkbox']").prop("checked", function (i, val) {
       return !val;
     });
 
@@ -165,7 +153,7 @@ function searchMapAreaUsingFormSubmit() {
 // Prevent the normal link action and make an ajax call to original href instead
 function changeAnchorToUseAjax(elementSelector) {
 
-  $(elementSelector).click(function() {
+  $(elementSelector).click(function () {
     event.preventDefault();
 
     var ajaxLink = ($(this).attr('href'));
@@ -186,11 +174,11 @@ function addClickEventToRemoveAppliedFacet($links) {
 
   var $removeFacetLinks = $links;
 
-  $removeFacetLinks.each(function(index, link) {
+  $removeFacetLinks.each(function (index, link) {
 
     var $newLink = $(link);
 
-    $newLink.on("click", function(event) {
+    $newLink.on("click", function (event) {
 
       event.preventDefault();
 
@@ -212,7 +200,7 @@ function addClickEventToRemoveAppliedFacet($links) {
 //
 function addSerialisedFormToHref($links) {
 
-  $links.each(function(i, link) {
+  $links.each(function (i, link) {
 
     $link = $(link);
 
@@ -240,15 +228,11 @@ function setMapVisibility() {
 
   if (showmap) {
     window.vndl.theMap.show();
-    //enable($('input[name=searchmap]'));
-    //enable($('.searchmap input[type="checkbox"]'));
     enable($('#search-map-checkbox-div'));
     addShowmapToHrefs();
 
   } else {
     window.vndl.theMap.hide();
-    //disable($('input[name=searchmap]'));
-    //disable($('.searchmap input[type="checkbox"]'));
     disable($('#search-map-checkbox-div'));
     removeShowmapFromHrefs();
   }
@@ -275,7 +259,7 @@ function setBboxVisibility() {
 
     var textString = '';
 
-    $(arrayString).each(function(index, el) {
+    $(arrayString).each(function (index, el) {
       el = el.substring(0, 7);
       console.log(el);
       textString += " " + el;
@@ -289,7 +273,7 @@ function setBboxVisibility() {
     console.log('Added a text bbox to the search form');
 
     // as map moves update the ui text values
-    window.vndl.theMap.leafletMap.on('moveend', function(e) {
+    window.vndl.theMap.leafletMap.on('moveend', function (e) {
 
       var currentMapBounds = window.vndl.theMap.leafletMap.getBounds();
 
@@ -303,7 +287,7 @@ function setBboxVisibility() {
 
       var textString = '';
 
-      $(arrayString).each(function(index, el) {
+      $(arrayString).each(function (index, el) {
         el = el.substring(0, 7);
         console.log(el);
         textString += " " + el;
@@ -337,7 +321,7 @@ function checkMapSearchStateAndAppendBBox() {
 // add showmap=on to hrefs in the page
 
 function addShowmapToHrefs() {
-  $('a[href]').each(function(index, anchor) {
+  $('a[href]').each(function (index, anchor) {
     var href = $(anchor).attr('href');
 
     if (typeof href !== 'undefined') {
@@ -357,7 +341,7 @@ function addShowmapToHrefs() {
 
 function removeShowmapFromHrefs() {
 
-  $("a[href*='showmap=']").each(function(index, anchor) {
+  $("a[href*='showmap=']").each(function (index, anchor) {
     var href = $(anchor).attr('href');
     $(this).attr('href', href.replace(/&?showmap=\w+/, ''));
   });

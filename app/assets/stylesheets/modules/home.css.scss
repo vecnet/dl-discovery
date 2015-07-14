@@ -253,14 +253,12 @@ $disabled-color: #aaa;
   margin-top: 20px;
 }
 
-//.search-result .col-md-2 { border-right: 1px dotted #ccc; min-height: 140px; }
 .search-result ul {
   padding-left: 0 !important;
 
   list-style: none;
 }
 
-//.search-result ul li { font: 400 normal .85em "Roboto",Arial,Verdana,sans-serif;  line-height: 30px; }
 .search-result ul li i {
   padding-right: 5px;
 }
@@ -520,7 +518,7 @@ footer:after {
 
 .vndl-search .form-group {
   // even out top and bottom margins
-  // Bookstrap by default has only bottom margin
+  // Bootstrap by default has only bottom margin
   margin: 0;
 }
 
