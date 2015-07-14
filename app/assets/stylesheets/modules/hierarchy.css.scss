@@ -1,15 +1,18 @@
-
 ul.facet-hierarchy {
-    margin-left: 8px;
-    ul {
-      margin-left: 0;
-      border-bottom: none;
-      padding-bottom: 0;
-      li {
-        margin-left: 8px; } }
-    li.h-node {
-      list-style-image: url(image-path('collapsed.png')); }
-    li.h-node.twiddle-open {
-      list-style-image: url(image-path('expanded.png'));
+  margin-left: 8px;
+  ul {
+    margin-left: 0;
+    padding-bottom: 0;
+
+    border-bottom: none;
+    li {
+      margin-left: 8px;
+      }
     }
-}
+  li.h-node {
+    list-style-image: url('image-path(\'collapsed.png\')');
+    }
+  li.h-node.twiddle-open {
+    list-style-image: url('image-path(\'expanded.png\')');
+    }
+  }
