@@ -7,12 +7,12 @@ ul.facet-hierarchy {
     border-bottom: none;
     li {
       margin-left: 8px;
-      }
-    }
-  li.h-node {
-    list-style-image: url('image-path(\'collapsed.png\')');
-    }
-  li.h-node.twiddle-open {
-    list-style-image: url('image-path(\'expanded.png\')');
     }
   }
+  li.h-node {
+    list-style-image: url('image-path(\'collapsed.png\')');
+  }
+  li.h-node.twiddle-open {
+    list-style-image: url('image-path(\'expanded.png\')');
+  }
+}

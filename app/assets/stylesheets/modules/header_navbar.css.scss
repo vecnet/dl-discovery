@@ -12,8 +12,9 @@
   box-shadow: 0 4px 8px -2px rgba(0, 0, 0, .2);
   @media screen and (max-width: $screen-sm) {
     height: 26px;
-    }
   }
+}
+
 #header-navbar {
   margin-bottom: 0;
 
@@ -40,10 +41,11 @@
       box-shadow: 0 4px 8px -2px rgba(0, 0, 0, .2);
       @media screen and (max-width: $screen-sm) {
         height: 26px;
-        }
       }
     }
   }
+}
+
 .nav.navbar-nav > li > a {
   margin-top: 25.5px;
   margin-right: 15px;
@@ -55,8 +57,9 @@
   &:hover,
   &:focus {
     border-bottom: 2px solid white;
-    }
   }
+}
+
 .navbar-brand-name {
   font-family: sans-serif;
 
@@ -67,7 +70,8 @@
   color: white;
 
   //outline: solid 3px red;
-  }
+}
+
 .beta-tag {
   font-family: $font-family-betatag;
 
@@ -78,13 +82,15 @@
   vertical-align: super;
 
   color: white;
-  }
+}
+
 .superscript {
   font-size: 120%;
 
   position: relative;
   top: -.5em;
-  }
+}
+
 .vecnet-home-link {
   position: relative;
   top: -3px;
@@ -97,8 +103,9 @@
   border-radius: 2px;
 
   //background-image: linear-gradient(to top, white, white 20px, #00a3bb 20px);
-  }
+}
+
 .vecnet-home-link:hover {
   opacity: 1;
   border-bottom: none;
-  }
+}

@@ -1,17 +1,19 @@
 $add-facet-plus-button-width: 38px;
 .panel-title a {
   text-decoration: none;
-  }
+}
+
 .fieldset-columns {
   -webkit-column-width: $column-width;
-     -moz-column-width: $column-width;
-          column-width: $column-width;
+  -moz-column-width: $column-width;
+  column-width: $column-width;
   -webkit-column-gap: 0;
-     -moz-column-gap: 0;
-          column-gap: 0;
+  -moz-column-gap: 0;
+  column-gap: 0;
 
   //    text-align: center;
-  }
+}
+
 .fieldset-columns > a {
   display: inline-block;
 
@@ -20,9 +22,9 @@ $add-facet-plus-button-width: 38px;
   .btn-group {
     padding-top: 0;
     padding-bottom: 0;
-    }
+  }
   > .btn-group > .btn-group:first-of-type > .btn {
     // this is the facet name text, to the left of the plus button
     min-width: $column-width - $fieldset-child-padding - $fieldset-child-padding - $add-facet-plus-button-width;
-    }
   }
+}

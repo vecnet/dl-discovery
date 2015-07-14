@@ -6,10 +6,10 @@
   width: 100%;
   .tt-input.form-control {
     width: 100%;
-    }
+  }
   .tt-hint.form-control {
     width: 100%;
-    }
+  }
   .tt-dropdown-menu {
     font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 
@@ -20,15 +20,15 @@
       font-size: 14px;
 
       padding-left: 10px;
-      }
+    }
     .tt-cursor {
       text-decoration: none;
 
       color: $dropdown-link-hover-color;
       background-color: $dropdown-link-hover-bg;
-      }
     }
   }
+}
 
 //.dropdown-menu, .twitter-typeahead .tt-dropdown-menu {
 //

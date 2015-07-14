@@ -3,61 +3,67 @@ dd[itemprop='url'] a {
   overflow: hidden;
 
   text-overflow: ellipsis;
-  }
+}
+
 dt:nth-child(4n+1),
 dd:nth-child(4n+2),
- {
+{
   background-color: $line-color;
-  }
+}
+
 .dl-horizontal {
   dd {
     min-height: 1em; // this hack is due to a strange bootstrap clearfix issue (https://github.com/twbs/bootstrap/issues/4062)
     margin: 0 0 0 !important;
     margin-left: 160px;
     padding: .3em 1em;
-    }
+  }
   dt {
     margin: 0;
     padding: .3em 1em;
-    }
   }
+}
+
 .fixed-table-layout {
   .table {
     table-layout: fixed;
-    }
+  }
   table th {
     width: 10%;
-    }
-
   }
+
+}
+
 .metadata {
   .row {
     margin-top: 40px;
     padding: 0 10px;
-    }
+  }
   .clickable {
     cursor: pointer;
-    }
+  }
   .panel-heading div {
     font-size: 15px;
 
     margin-top: -18px;
-    }
+  }
   .panel-heading div span {
     margin-left: 5px;
-    }
+  }
   .panel-body {
     display: none;
-    }
   }
+}
+
 #sidebar {
   padding-top: 10px;
-  }
+}
 
 // map metadata icons and panels
 .metadata-relative {
   position: relative;
-  }
+}
+
 .field-title {
   font-size: 125%;
   font-weight: bold;
@@ -67,14 +73,16 @@ dd:nth-child(4n+2),
   letter-spacing: .05em;
 
   color: #ccc;
-  }
+}
+
 .timeline {
   position: relative;
 
   padding: 20px 0;
 
   list-style: none;
-  }
+}
+
 .timeline:before {
   position: absolute;
   top: 0;
@@ -87,43 +95,50 @@ dd:nth-child(4n+2),
   content: ' ';
 
   background-color: #eee;
-  }
+}
+
 .timeline > li {
   position: relative;
 
   margin-bottom: 20px;
-  }
+}
+
 .timeline > li:before,
 .timeline > li:after {
   display: table;
 
   content: ' ';
-  }
+}
+
 .timeline > li:after {
   clear: both;
-  }
+}
+
 .timeline > li:before,
 .timeline > li:after {
   display: table;
 
   content: ' ';
-  }
+}
+
 .timeline > li:after {
   clear: both;
-  }
+}
+
 .timeline > li > .timeline-panel {
   position: relative;
 
   float: right;
 
-  width: calc( 100% - 75px );
+  width: calc(100% - 75px);
   padding: 22px 20px 12px;
 
   border: 1px solid #d4d4d4;
   border-radius: 2px;
   -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, .175);
-          box-shadow: 0 1px 6px rgba(0, 0, 0, .175);
-  }
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .175);
+}
+
 .timeline > li > .timeline-panel:before {
   position: absolute;
   top: 26px;
@@ -137,7 +152,8 @@ dd:nth-child(4n+2),
   border-right: 15px solid #ccc;
   border-bottom: 15px solid transparent;
   border-left: 0 solid #ccc;
-  }
+}
+
 .timeline > li > .timeline-panel:after {
   position: absolute;
   top: 27px;
@@ -151,7 +167,8 @@ dd:nth-child(4n+2),
   border-right: 14px solid #fff;
   border-bottom: 14px solid transparent;
   border-left: 0 solid #fff;
-  }
+}
+
 .timeline > li > .timeline-badge {
   font-size: 1.4em;
   line-height: 50px;
@@ -173,51 +190,63 @@ dd:nth-child(4n+2),
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
   background-color: #999;
-  }
+}
+
 .timeline > li.timeline-inverted > .timeline-panel {
   float: left;
-  }
+}
+
 .timeline > li.timeline-inverted > .timeline-panel:before {
   right: -15px;
   left: auto;
 
   border-right-width: 0;
   border-left-width: 15px;
-  }
+}
+
 .timeline > li.timeline-inverted > .timeline-panel:after {
   right: -14px;
   left: auto;
 
   border-right-width: 0;
   border-left-width: 14px;
-  }
+}
+
 .timeline-badge.primary {
   background-color: #2e6da4 !important;
-  }
+}
+
 .timeline-badge.success {
   background-color: #3f903f !important;
-  }
+}
+
 .timeline-badge.warning {
   background-color: #f0ad4e !important;
-  }
+}
+
 .timeline-badge.danger {
   background-color: #d9534f !important;
-  }
+}
+
 .timeline-badge.info {
   background-color: #5bc0de !important;
-  }
+}
+
 .timeline-title {
   margin-top: 0;
 
   color: inherit;
-  }
+}
+
 .timeline-body > p,
 .timeline-body > ul {
   margin-bottom: 0;
-  }
+}
+
 .timeline-body > p + p {
   margin-top: 5px;
-  }
+}
+
 .timeline-body {
   display: none;
-  }
+}
