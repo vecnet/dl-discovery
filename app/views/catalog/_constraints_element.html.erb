@@ -1,10 +1,10 @@
-<%  # local params:
-    # label
-    # value
-    # options =>
-    #   :remove => url for a remove constraint link
-    #   :classes => array of classes to add to container span
-    options ||= {}
+<% # local params:
+   # label
+   # value
+   # options =>
+   #   :remove => url for a remove constraint link
+   #   :classes => array of classes to add to container span
+   options ||= {}
 %>
 
 
@@ -13,34 +13,34 @@
 <% unless label.blank? %>
 
 
-<div data-facetvalue="<%= value %>" class="btn-group" role="group" aria-label="location-filter">
+  <div data-facetvalue="<%= value %>" class="btn-group" role="group" aria-label="location-filter">
     <div class="btn-group appliedFilter constraint <%= options[:classes].join(" ") if options[:classes] %>" role="group">
       <button class="btn btn-info dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
 
         <% unless label.blank? %>
 
 
-            <span class="filterName"><%= label %></span>
+          <span class="filterName"><%= label %></span>
 
-            <!--For some ungodly reason we need f[<facet_name>][] in the search form for facets...-->
-            <input type="hidden" name="f[<%= (options[:classes].join(" ").split(/-/).last if options[:classes]) %>][]"class="hidden" value="<%= value %>">
+          <!--For some ungodly reason we need f[<facet_name>][] in the search form for facets...-->
+          <input type="hidden" name="f[<%= (options[:classes].join(" ").split(/-/).last if options[:classes]) %>][]" class="hidden" value="<%= value %>">
         <% end %>
       </button>
       <ul class="facet-button-dropdown dropdown-menu dropdown-menu" role="menu">
-        <li><a class= "removeFacet" href="#">Remove this filter</a></li>
+        <li><a class="removeFacet" href="#">Remove this filter</a></li>
       </ul>
     </div>
 
     <div class="btn-group appliedFilter constraint <%= options[:classes].join(" ") if options[:classes] %>" role="group">
       <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
         <% unless value.blank? %>
-            <%= content_tag :span, value, class: 'filterValue', title: value %>
+          <%= content_tag :span, value, class: 'filterValue', title: value %>
         <% end %>
         <i class="fa fa-angle-down" aria-hidden="true"></i>
       </button>
       <ul class="facet-button-dropdown dropdown-menu dropdown-menu-right" role="menu">
-        <li><a class= "removeFacet" href="#">Remove this filter</a></li>
+        <li><a class="removeFacet" href="#">Remove this filter</a></li>
       </ul>
     </div>
-</div>
+  </div>
 <% end %>

@@ -1,12 +1,12 @@
-$(document).ready(function() {
-    $('td').expander({
-        slicePoint: 400,
-        widow: 4,
-        expandEffect: 'show',
-        expandText: ' Read more >>',
-        userCollapseText: '<< Read less',
-        sliceOn: '.  '
-    });
+$(document).ready(function () {
+  $('td').expander({
+    slicePoint: 400,
+    widow: 4,
+    expandEffect: 'show',
+    expandText: ' Read more >>',
+    userCollapseText: '<< Read less',
+    sliceOn: '.  '
+  });
 
 });
 

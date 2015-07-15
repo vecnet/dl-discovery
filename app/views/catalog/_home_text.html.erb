@@ -8,17 +8,17 @@
 
 
     <% unless has_search_parameters? %>
-        <%# if there are no input/search related params, display the "home" partial %>
+      <%# if there are no input/search related params, display the "home" partial %>
 
-        <%= render 'vndl_search_form' %>
+      <%= render 'vndl_search_form' %>
 
-        <!--example front page text start-->
-        <%= render 'example_front_page_text' %>
-        <!--example front page text end -->
+      <!--example front page text start-->
+      <%= render 'example_front_page_text' %>
+      <!--example front page text end -->
 
     <% else %>
 
-          <%= render 'search_results' %>
+      <%= render 'search_results' %>
 
     <% end %>
 
