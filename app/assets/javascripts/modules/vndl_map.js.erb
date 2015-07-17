@@ -7,80 +7,80 @@ console.log('running vndlmap source');
 
 window.VndlMap = function (mapDomId, options) {
 
-    this.leafletMap = L.map(mapDomId, {
-        reuseTiles: true,       // cache tiles
+  this.leafletMap = L.map(mapDomId, {
+    reuseTiles: true,       // cache tiles
 //        worldCopyJump: true,    // keep markers when scroll sideways into a new world
-        scrollWheelZoom: false, // forced to double-click or use the controls so no crazy movement
-        maxZoom: 16            // geoblacklight says
+    scrollWheelZoom: false, // forced to double-click or use the controls so no crazy movement
+    maxZoom: 16            // geoblacklight says
 
 
-    });
+  });
 
-    // this.opts is our options, there are many like it but this one is ours
-    this.opts = options || {};
-
-
-    // make a layer for the markers
-    // so we can clear them all with a nice function
-    // as per https://stackoverflow.com/questions/20751523/removing-leaflet-layers-and-l-marker-method
-    markerLayer = new L.FeatureGroup();
-    this.leafletMap.addLayer(markerLayer);
+  // this.opts is our options, there are many like it but this one is ours
+  this.opts = options || {};
 
 
-    // make a layer for the rectangles
-    // so we can clear them all with a nice function
-    rectangleLayer = new L.FeatureGroup();
-    this.leafletMap.addLayer(rectangleLayer);
+  // make a layer for the markers
+  // so we can clear them all with a nice function
+  // as per https://stackoverflow.com/questions/20751523/removing-leaflet-layers-and-l-marker-method
+  markerLayer = new L.FeatureGroup();
+  this.leafletMap.addLayer(markerLayer);
 
+
+  // make a layer for the rectangles
+  // so we can clear them all with a nice function
+  rectangleLayer = new L.FeatureGroup();
+  this.leafletMap.addLayer(rectangleLayer);
 
 
 //    turn on clustering plugin of markers
-    markerClusterLayer = new L.MarkerClusterGroup({
+  markerClusterLayer = new L.MarkerClusterGroup({
 
     //since some markers are all on the exact same point we need to keep clustering at most times
     disableClusteringAtZoom: 5
-    });
+  });
 
-    this.leafletMap.addLayer(markerClusterLayer);
-
-
-    // the nice clearing map functions
-    this.clearMarkers();
-    this.clearRectangles();
-    this.clearClusterLayer();
+  this.leafletMap.addLayer(markerClusterLayer);
 
 
-    // start map on africa
-    this.leafletMap.setView([8, 17], 3);
+  // the nice clearing map functions
+  this.clearMarkers();
+  this.clearRectangles();
+  this.clearClusterLayer();
 
-    // add an OpenStreetMap tile layer using providers
-    // L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(this.leafletMap);
 
-    // explicit call; MapQuest requires a -s
-    // not sure why the above providers extension
-    // - which is the current canonical leaflet way -
-    // does not work for us but geoblacklight does the same
-    L.tileLayer('https://otile1-s.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png',
-            {noWrap: true,
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(this.leafletMap);
+  // start map on africa
+  this.leafletMap.setView([8, 17], 3);
+
+  // add an OpenStreetMap tile layer using providers
+  // L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(this.leafletMap);
+
+  // explicit call; MapQuest requires a -s
+  // not sure why the above providers extension
+  // - which is the current canonical leaflet way -
+  // does not work for us but geoblacklight does the same
+  L.tileLayer('https://otile1-s.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png',
+          {
+            noWrap: true,
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          }).addTo(this.leafletMap);
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.clearMarkers = function () {
 
-    markerLayer.clearLayers();
+  markerLayer.clearLayers();
 
 };
 // ------------------------------------------------------------------
-VndlMap.prototype.clearClusterLayer= function () {
+VndlMap.prototype.clearClusterLayer = function () {
 
-    markerClusterLayer.clearLayers();
+  markerClusterLayer.clearLayers();
 
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.clearRectangles = function () {
 
-    rectangleLayer.clearLayers();
+  rectangleLayer.clearLayers();
 
 };
 // ------------------------------------------------------------------
@@ -103,169 +103,170 @@ VndlMap.prototype.clearRectangles = function () {
 
 // can pass in four letters as pointOrder to specify the point order
 // otherwise defaults to "WSEN" which is solr_bbox
-VndlMap.prototype.getRect = function(text, pointOrder) {
-    // WOOT GET RECKT RIGHT AWAY!!
+VndlMap.prototype.getRect = function (text, pointOrder) {
+  // WOOT GET RECKT RIGHT AWAY!!
 
 
-    if (!pointOrder){
+  if (!pointOrder) {
 
-        pointOrder = "WSEN";
+    pointOrder = "WSEN";
 
+  }
+
+  // regardless of where we get the string, make it uniform
+
+  pointOrder.toUpperCase();
+
+  // regex to change from SOLR's ENVELOP to our format
+
+  text = text.replace(/\,/g, ' ');
+  text = text.replace(/ENVELOPE/g, ' ');
+  text = text.replace(/\(/g, ' ');
+  text = text.replace(/\)/g, ' ');
+  var points = this.getPoints('POINT(' + text + ')');
+
+
+  if (points && points.length == 1 && points[0].length == 4) {
+
+
+    var E = points[0][pointOrder.indexOf('E')];
+    var W = points[0][pointOrder.indexOf('W')];
+    var N = points[0][pointOrder.indexOf('N')];
+    var S = points[0][pointOrder.indexOf('S')];
+
+
+    if (W <= E) {
+
+      return [[[S, W], [N, E]]];
     }
 
-    // regardless of where we get the string, make it uniform
+    else {
 
-    pointOrder.toUpperCase();
-
-    // regex to change from SOLR's ENVELOP to our format
-
-    text = text.replace(/\,/g       , ' ');
-    text = text.replace(/ENVELOPE/g , ' ');
-    text = text.replace(/\(/g       , ' ');
-    text = text.replace(/\)/g       , ' ');
-    var points = this.getPoints( 'POINT(' + text + ')' );
-
-
-    if (points && points.length == 1 && points[0].length == 4) {
-
-
-        var E = points[0][pointOrder.indexOf('E')];
-        var W = points[0][pointOrder.indexOf('W')];
-        var N = points[0][pointOrder.indexOf('N')];
-        var S = points[0][pointOrder.indexOf('S')];
-
-
-
-        if (W <= E){
-
-            return [[[S,W],[N,E]]];
-        }
-
-        else {
-
-            // return two rectangles, one for meridian and one for anti-meridian
-            return [
-                [[S,W],[N,180]],
-                [[S,-180],[N,E]]
-            ];
-        }
-
-
-        //return [
-        //
-        //    [[points[0][pointOrder.indexOf('S')], points[0][pointOrder.indexOf('W')]],
-        //    [points[0][pointOrder.indexOf('N')], points[0][pointOrder.indexOf('E')]]]
-        //];
-    } else {
-
-        // logging which objects don't parse
-        console.debug('expected a rectangle of some kind but got the following data not parseable : <' + text + '>');
-        return [];
+      // return two rectangles, one for meridian and one for anti-meridian
+      return [
+        [[S, W], [N, 180]],
+        [[S, -180], [N, E]]
+      ];
     }
+
+
+    //return [
+    //
+    //    [[points[0][pointOrder.indexOf('S')], points[0][pointOrder.indexOf('W')]],
+    //    [points[0][pointOrder.indexOf('N')], points[0][pointOrder.indexOf('E')]]]
+    //];
+  } else {
+
+    // logging which objects don't parse
+    console.debug('expected a rectangle of some kind but got the following data not parseable : <' + text + '>');
+    return [];
+  }
 };
 // ------------------------------------------------------------------
 // takes Well Known Text that's either a point or a multipoint,
 // and returns a flat array of point(s).
-VndlMap.prototype.getPoints = function(text) {
-    var geoObject = this.parseGeoText(text);
+VndlMap.prototype.getPoints = function (text) {
+  var geoObject = this.parseGeoText(text);
 
-    // if there are no points or unparseable from the text
-    // fail gracefully please
+  // if there are no points or unparseable from the text
+  // fail gracefully please
 
-    if (!geoObject) {
+  if (!geoObject) {
 
-        // show objects that don't parse
-        console.debug('expected POINTS but got the following rubbish : <' + text + '>');
+    // show objects that don't parse
+    console.debug('expected POINTS but got the following rubbish : <' + text + '>');
 
-        return [];
-    }
+    return [];
+  }
 
-    if (geoObject.type == 'Point') {
+  if (geoObject.type == 'Point') {
 
-        return [geoObject.coordinates];
-    } else if (geoObject.type == 'MultiPoint') {
-        return geoObject.coordinates;
-    } else {
-        return [];
-    }
+    return [geoObject.coordinates];
+  } else if (geoObject.type == 'MultiPoint') {
+    return geoObject.coordinates;
+  } else {
+    return [];
+  }
 };
 // ------------------------------------------------------------------
-VndlMap.prototype.parseUiType = function(text) {
-    // default to 'primary' if data-ui-type isn't set
-    var uiType = text;
-    if (!uiType) {
-        uiType = 'primary';
-    }
-    return uiType.toLowerCase();
+VndlMap.prototype.parseUiType = function (text) {
+  // default to 'primary' if data-ui-type isn't set
+  var uiType = text;
+  if (!uiType) {
+    uiType = 'primary';
+  }
+  return uiType.toLowerCase();
 };
 // ------------------------------------------------------------------
-VndlMap.prototype.parseGeoText = function(text) {
-    // use the wellknown library to parse the text
-    // parse returns a GeoJSON object
-    return wellknown.parse(text);
+VndlMap.prototype.parseGeoText = function (text) {
+  // use the wellknown library to parse the text
+  // parse returns a GeoJSON object
+  return wellknown.parse(text);
 };
 // ------------------------------------------------------------------
 
 VndlMap.prototype.connectSingleResultToMap = function (result) {
 
 
-    // TODO : REFACTOR
-    // Break into several methods that accept two params
-    // newItem as the data state
-    // $r is the input for the function to add to the newItem store
-    // the functions alter newItem which can then be passed around in any order
+  // TODO : REFACTOR
+  // Break into several methods that accept two params
+  // newItem as the data state
+  // $r is the input for the function to add to the newItem store
+  // the functions alter newItem which can then be passed around in any order
 
-    var map = this.leafletMap;  // saving keystrokes when calling mappy
+  var map = this.leafletMap;  // saving keystrokes when calling mappy
 
-    var $r = $(result);  // jQuery-ify the result element
+  var $r = $(result);  // jQuery-ify the result element
 
-    // represents a single result entry (a thing in the Digital Library)
-    var newItem = {
-        id: null,
-        title: null,
-        link: null,
-        element: $r,
-        primary: {points: [], rectangles: [], titles: [], bounds: null},
-        secondary: {points: [], rectangles: [], titles: [], bounds: null},
-        tertiary: {points: [], rectangles: [], titles: [], bounds: null}
-    };
+  // represents a single result entry (a thing in the Digital Library)
+  var newItem = {
+    id: null,
+    title: null,
+    link: null,
+    element: $r,
+    primary: {points: [], rectangles: [], titles: [], bounds: null},
+    secondary: {points: [], rectangles: [], titles: [], bounds: null},
+    tertiary: {points: [], rectangles: [], titles: [], bounds: null}
+  };
 
-    // find the id
-    var id = $r.find('[data-layer-id]').attr('data-layer-id');
-    newItem.id = id;
+  // find the id
+  var id = $r.find('[data-layer-id]').attr('data-layer-id');
+  newItem.id = id;
 
-    // find the title
-    var title = $r.find('[data-title]').attr('data-title');
-    newItem.title = title;
-
-
-    // find the catalog link
-    var link = $r.find('[data-link]').attr('href');
-    newItem.link = link;
+  // find the title
+  var title = $r.find('[data-title]').attr('data-title');
+  newItem.title = title;
 
 
-    // make markers be on top layer when hovered over
-    var markerOptions = {riseOnHover: 'true'};
-
-    //
-    // find any points
-    //
-    var $points = $r.find('[data-points]');
-    $points.each(function (i, ptElem) {
-        var $ptElem = $(ptElem);
-
-        var uiType = this.parseUiType($ptElem.attr('data-ui-type'));
-
-        var pts = this.getPoints($ptElem.attr('data-points'));
-
-        // formatting out the random noise for the moment
-        var numbersOnlyPts = pts.filter(function(val) { return (val && val[0] && typeof val[0] === "number"); });
-        console.log("numbersOnlyPts array to string is : " + numbersOnlyPts.toString());
-
-        newPts = numbersOnlyPts;
+  // find the catalog link
+  var link = $r.find('[data-link]').attr('href');
+  newItem.link = link;
 
 
-        // debug null pts
+  // make markers be on top layer when hovered over
+  var markerOptions = {riseOnHover: 'true'};
+
+  //
+  // find any points
+  //
+  var $points = $r.find('[data-points]');
+  $points.each(function (i, ptElem) {
+    var $ptElem = $(ptElem);
+
+    var uiType = this.parseUiType($ptElem.attr('data-ui-type'));
+
+    var pts = this.getPoints($ptElem.attr('data-points'));
+
+    // formatting out the random noise for the moment
+    var numbersOnlyPts = pts.filter(function (val) {
+      return (val && val[0] && typeof val[0] === "number");
+    });
+    console.log("numbersOnlyPts array to string is : " + numbersOnlyPts.toString());
+
+    newPts = numbersOnlyPts;
+
+
+    // debug null pts
 
 //        var numbersOnlyPts = pts.filter(function(val) { return (val && val[0] && typeof val[0] === "number"); });
 //        console.log("numbersOnlyPts array to string is : " + numbersOnlyPts.toString());
@@ -278,222 +279,221 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
 //        var filteredEmptyPts = filterNullPts.filter(function(el){ return el !== "" });
 //        console.log("filter EmptyPts array to string is : " + filteredEmptyPts.toString());
 
-        // end debug
+    // end debug
 
-        for (var p = 0; p < newPts.length; p++) {
+    for (var p = 0; p < newPts.length; p++) {
 
-            // because pts is an array have to check truthy and len
-            if (newPts && newPts.length != 0) {
+      // because pts is an array have to check truthy and len
+      if (newPts && newPts.length != 0) {
 
-                // debugging for when ptElems values are
+        // debugging for when ptElems values are
 //                console.log("ptElem microdata by .data is : " + $ptElem.data('points'));
 //                console.log("ptElem microdata by attr is : " + $ptElem.attr('data-points'));
 //                console.log("current newpts array to string is : " + newPts.toString());
 
-                // make a new marker
-                newItem[uiType].points.push(
-                    new L.marker([newPts[p][1], newPts[p][0]],markerOptions)
+        // make a new marker
+        newItem[uiType].points.push(
+                new L.marker([newPts[p][1], newPts[p][0]], markerOptions)
 //                        new L.marker([1,1],markerOptions)
 
-                );
-            }
-            else {
-                console.log("result titles that are badly formatted points are : " + $r.find('h3').text())
-            }
-        }
-    }.bind(this));
-
-    //
-    // find any rectangles within the result item
-    //
-
-    var $rectElems = $r.find('[data-rectangle]');
-
-    $rectElems.each(function (i, rectElem){
-
-        var $rectElem = $(rectElem);
-
-        var uiType = this.parseUiType($rectElem.attr('data-ui-type'));
-
-
-        var rects = this.getRect($rectElem.attr('data-rectangle'));
-
-        for (var r = 0; r < rects.length; r++) {
-
-
-            if (rects) {
-
-                // make a leaflet object from the first rectangle in the rects list
-                var newRect = L.rectangle(rects[r]);
-
-
-                // default leaflet polygon style
-                var lighterDefaultStyle = {
-                    color: "#578ce3",
-                    weight: 2,
-                    opacity: 0.8,
-                    fillOpacity: 0.0025
-                };
-
-                newRect.setStyle(lighterDefaultStyle);
-
-                // store the original string to check with rectangle debugging
-                newRect.originalString = $rectElem.attr('data-rectangle');
-
-                // store the newRect leaflet object in the correct uiType structure
-                newItem[uiType].rectangles.push(newRect);
-
-            }
-
-            else {
-                console.log("result titles that are badly formatted rectangles are : " + $r.find('h3').text())
-            }
-        }
-
-    }.bind(this));
-
-
-
-    // Calculate the BOUNDS for points et al
-    //
-
-    var flavours = ['primary','secondary', 'tertiary'];
-    for (var f=0; f < flavours.length; f++) {
-        var flavourWord = flavours[f];
-        var flavour = newItem[flavourWord];
-
-
-        // loop through each point and extend flavour.bounds by the latlng of each point
-        $.each(flavour.points, function (index, point) {
-            if (!flavour.bounds) {
-                // if there's not already a bound, make one that includes this point
-                flavour.bounds = L.latLngBounds(point.getLatLng(), point.getLatLng());
-            } else {
-                // make the bound object include each point of the result's points so the final bound object
-                // covers all the points
-                flavour.bounds.extend(point.getLatLng());
-            }
-        });
-
-
-        // loop through each rectangle and extend flavour.bounds by the latlng of each rectangle
-        $.each(flavour.rectangles, function (index, rect) {
-            if (!flavour.bounds) {
-                // if there's not already a bound, make one that includes this point
-                flavour.bounds = L.latLngBounds(rect.getBounds());
-            } else {
-                // make the bound object include each point of the result's rectangle so the final bound object
-                // covers all the points
-                flavour.bounds.extend(rect.getBounds());
-            }
-        });
+        );
+      }
+      else {
+        console.log("result titles that are badly formatted points are : " + $r.find('h3').text())
+      }
     }
+  }.bind(this));
 
-    //
-    // toggle highlight class on search results and map markers and rectangles
-    //
+  //
+  // find any rectangles within the result item
+  //
 
-    function highlightResult() {
+  var $rectElems = $r.find('[data-rectangle]');
 
-        $.each(newItem.primary.points, function (index, marker) {
+  $rectElems.each(function (i, rectElem) {
 
+    var $rectElem = $(rectElem);
 
-            var redIcon = L.icon({
-                iconUrl: "<%= asset_path('marker-icon-red.png') %>",
-                iconSize:    [25, 41],
-                iconAnchor:  [12, 41],
-                popupAnchor: [1, -34],
-                shadowSize:  [41, 41],
-                shadowUrl: "<%= asset_path('markers-shadow.png') %>",
-                shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
-            });
-
-            marker.setIcon(redIcon);
+    var uiType = this.parseUiType($rectElem.attr('data-ui-type'));
 
 
-        });
+    var rects = this.getRect($rectElem.attr('data-rectangle'));
 
-        // set each relevant rectangle to the higlight style
-        $.each(newItem.primary.rectangles, function (index, rect) {
-
-            rect.setStyle({
-                color: '#ff7f7f',
-                weight: 2,
-                opacity: 0.5,
-                fillColor: false,
-                fillOpacity: 0.025
-            });
-            console.log('original string of rectangle is : ' + rect.originalString);
-        });
+    for (var r = 0; r < rects.length; r++) {
 
 
-        // in case the bounds are null and prevent leaflet from erroring
-        if (newItem.primary.bounds) {
+      if (rects) {
 
-            // map panning to results
-            //map.fitBounds(newItem.primary.bounds);
-        }
+        // make a leaflet object from the first rectangle in the rects list
+        var newRect = L.rectangle(rects[r]);
 
-        $r.addClass("vndl-results-highlight");
 
-    }
-
-    function scrollToResult(){
-
-        $('#content').scrollTo($r,500,{axis: 'y',interrupt: 'true', duration: 500});
-
-        highlightResult();
-    }
-
-    //----------------------------
-
-    function unHighlightResult() {
-
-        // default leaflet polygon style made lighter
-        var defaultStyle = {
-            color: "#578ce3",
-            weight: 2,
-            opacity: 0.8,
-            fillOpacity: 0.0025
-
+        // default leaflet polygon style
+        var lighterDefaultStyle = {
+          color: "#578ce3",
+          weight: 2,
+          opacity: 0.8,
+          fillOpacity: 0.0025
         };
 
-        $.each(newItem.primary.points, function (index, marker) {
+        newRect.setStyle(lighterDefaultStyle);
 
-            var blueIcon = L.icon({
-                iconUrl: "<%= asset_path('leaflet-marker-icon.png') %>",
-                iconSize:    [25, 41],
-                iconAnchor:  [12, 41],
-                popupAnchor: [1, -34],
-                shadowSize:  [41, 41],
-                shadowUrl: "<%= asset_path('markers-shadow.png') %>",
-                shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
-            });
+        // store the original string to check with rectangle debugging
+        newRect.originalString = $rectElem.attr('data-rectangle');
 
-            marker.setIcon(blueIcon);
+        // store the newRect leaflet object in the correct uiType structure
+        newItem[uiType].rectangles.push(newRect);
 
-        });
+      }
 
-        $.each(newItem.primary.rectangles, function (index, rect) {
-
-            rect.setStyle(defaultStyle);
-
-        });
-
-        $r.removeClass("vndl-results-highlight");
-
+      else {
+        console.log("result titles that are badly formatted rectangles are : " + $r.find('h3').text())
+      }
     }
 
+  }.bind(this));
 
-    // add points to FeatureGroup layer and connect highlight functions
-    if (!$.each(newItem.primary.points, function (index, marker) {
+
+  // Calculate the BOUNDS for points et al
+  //
+
+  var flavours = ['primary', 'secondary', 'tertiary'];
+  for (var f = 0; f < flavours.length; f++) {
+    var flavourWord = flavours[f];
+    var flavour = newItem[flavourWord];
+
+
+    // loop through each point and extend flavour.bounds by the latlng of each point
+    $.each(flavour.points, function (index, point) {
+      if (!flavour.bounds) {
+        // if there's not already a bound, make one that includes this point
+        flavour.bounds = L.latLngBounds(point.getLatLng(), point.getLatLng());
+      } else {
+        // make the bound object include each point of the result's points so the final bound object
+        // covers all the points
+        flavour.bounds.extend(point.getLatLng());
+      }
+    });
+
+
+    // loop through each rectangle and extend flavour.bounds by the latlng of each rectangle
+    $.each(flavour.rectangles, function (index, rect) {
+      if (!flavour.bounds) {
+        // if there's not already a bound, make one that includes this point
+        flavour.bounds = L.latLngBounds(rect.getBounds());
+      } else {
+        // make the bound object include each point of the result's rectangle so the final bound object
+        // covers all the points
+        flavour.bounds.extend(rect.getBounds());
+      }
+    });
+  }
+
+  //
+  // toggle highlight class on search results and map markers and rectangles
+  //
+
+  function highlightResult() {
+
+    $.each(newItem.primary.points, function (index, marker) {
+
+
+      var redIcon = L.icon({
+        iconUrl: "<%= asset_path('marker-icon-red.png') %>",
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41],
+        shadowUrl: "<%= asset_path('markers-shadow.png') %>",
+        shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
+      });
+
+      marker.setIcon(redIcon);
+
+
+    });
+
+    // set each relevant rectangle to the higlight style
+    $.each(newItem.primary.rectangles, function (index, rect) {
+
+      rect.setStyle({
+        color: '#ff7f7f',
+        weight: 2,
+        opacity: 0.5,
+        fillColor: false,
+        fillOpacity: 0.025
+      });
+      console.log('original string of rectangle is : ' + rect.originalString);
+    });
+
+
+    // in case the bounds are null and prevent leaflet from erroring
+    if (newItem.primary.bounds) {
+
+      // map panning to results
+      //map.fitBounds(newItem.primary.bounds);
+    }
+
+    $r.addClass("vndl-results-highlight");
+
+  }
+
+  function scrollToResult() {
+
+    $('#content').scrollTo($r, 500, {axis: 'y', interrupt: 'true', duration: 500});
+
+    highlightResult();
+  }
+
+  //----------------------------
+
+  function unHighlightResult() {
+
+    // default leaflet polygon style made lighter
+    var defaultStyle = {
+      color: "#578ce3",
+      weight: 2,
+      opacity: 0.8,
+      fillOpacity: 0.0025
+
+    };
+
+    $.each(newItem.primary.points, function (index, marker) {
+
+      var blueIcon = L.icon({
+        iconUrl: "<%= asset_path('leaflet-marker-icon.png') %>",
+        iconSize: [25, 41],
+        iconAnchor: [12, 41],
+        popupAnchor: [1, -34],
+        shadowSize: [41, 41],
+        shadowUrl: "<%= asset_path('markers-shadow.png') %>",
+        shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
+      });
+
+      marker.setIcon(blueIcon);
+
+    });
+
+    $.each(newItem.primary.rectangles, function (index, rect) {
+
+      rect.setStyle(defaultStyle);
+
+    });
+
+    $r.removeClass("vndl-results-highlight");
+
+  }
+
+
+  // add points to FeatureGroup layer and connect highlight functions
+  if (!$.each(newItem.primary.points, function (index, marker) {
 
 
             // add event listeners for mouseover and mouseout
             marker.on({
-                mouseover: highlightResult,
-                click: scrollToResult,
-                mouseout: unHighlightResult
+              mouseover: highlightResult,
+              click: scrollToResult,
+              mouseout: unHighlightResult
             });
 
 
@@ -513,7 +513,6 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             container.find('a').attr('target', "_blank");
 
 
-
             // Insert the container into the popup
             marker.bindPopup(container[0]);
 
@@ -526,26 +525,25 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             markerClusterLayer.addLayer(marker);
 
 
+            var redIcon = L.icon({
+              iconUrl: "<%= asset_path('marker-icon-red.png') %>",
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34],
+              shadowSize: [41, 41],
+              shadowUrl: "<%= asset_path('markers-shadow.png') %>",
+              shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
+            });
 
-                var redIcon = L.icon({
-                    iconUrl: "<%= asset_path('marker-icon-red.png') %>",
-                    iconSize:    [25, 41],
-                    iconAnchor:  [12, 41],
-                    popupAnchor: [1, -34],
-                    shadowSize:  [41, 41],
-                    shadowUrl: "<%= asset_path('markers-shadow.png') %>",
-                    shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
-                });
-
-                var blueIcon = L.icon({
-                    iconUrl: "<%= asset_path('leaflet-marker-icon.png') %>",
-                    iconSize:    [25, 41],
-                    iconAnchor:  [12, 41],
-                    popupAnchor: [1, -34],
-                    shadowSize:  [41, 41],
-                    shadowUrl: "<%= asset_path('markers-shadow.png') %>",
-                    shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
-                });
+            var blueIcon = L.icon({
+              iconUrl: "<%= asset_path('leaflet-marker-icon.png') %>",
+              iconSize: [25, 41],
+              iconAnchor: [12, 41],
+              popupAnchor: [1, -34],
+              shadowSize: [41, 41],
+              shadowUrl: "<%= asset_path('markers-shadow.png') %>",
+              shadowRetinaUrl: "<%= asset_path('markers-shadow@2x.png')%>"
+            });
 
 
             //
@@ -553,180 +551,179 @@ VndlMap.prototype.connectSingleResultToMap = function (result) {
             marker.setIcon(blueIcon);
 
 
-        })) {
+          })) {
 
-    }
-
-
-    // add rects to rectangleLayer and connect highlight functions
-
-    $.each(newItem.primary.rectangles, function (index, rect) {
-
-        rect.on({
-            mouseover: highlightResult,
-            mouseout: unHighlightResult
-        });
-        //
-        // add popup to rectangle
-        //
-        var link = newItem.link;
-
-        var title = newItem.title;
-
-        // Insert html placeholders into the popup container to be edited
-        var container = $("<div> <h3 class='result-title'> <a href='' class='rectangleLink'>Click me </a></div>");
-
-        container.find('a').attr('href', link);
-
-        container.find('a').attr('target', "_blank");
-
-        container.find('a').text(title);
+  }
 
 
-        // Insert the container into the popup
-        rect.bindPopup(container[0]);
+  // add rects to rectangleLayer and connect highlight functions
 
-        // finished adding popups to rectangles
+  $.each(newItem.primary.rectangles, function (index, rect) {
 
-        // finally add the rectangle to the displayed layer
-        rect.addTo(rectangleLayer);
+    rect.on({
+      mouseover: highlightResult,
+      mouseout: unHighlightResult
     });
+    //
+    // add popup to rectangle
+    //
+    var link = newItem.link;
+
+    var title = newItem.title;
+
+    // Insert html placeholders into the popup container to be edited
+    var container = $("<div> <h3 class='result-title'> <a href='' class='rectangleLink'>Click me </a></div>");
+
+    container.find('a').attr('href', link);
+
+    container.find('a').attr('target', "_blank");
+
+    container.find('a').text(title);
 
 
-    $r.on('mouseover', highlightResult);
-    $r.on('mouseout', unHighlightResult);
+    // Insert the container into the popup
+    rect.bindPopup(container[0]);
 
-    // TODO: handle secondary points
+    // finished adding popups to rectangles
 
-    // after completing the building of the item, push it to the big list
-    this.resultItems.push(newItem);
+    // finally add the rectangle to the displayed layer
+    rect.addTo(rectangleLayer);
+  });
 
-    return newItem;
+
+  $r.on('mouseover', highlightResult);
+  $r.on('mouseout', unHighlightResult);
+
+  // TODO: handle secondary points
+
+  // after completing the building of the item, push it to the big list
+  this.resultItems.push(newItem);
+
+  return newItem;
 };
 
 // ------------------------------------------------------------------
 
 VndlMap.prototype.discoverAndMapGeoDataInResultsHtml = function (domElement) {
 
-    var $elem = $(domElement);
-    var $results = $elem.find('.vndl-search-result');
-    this.resultItems = [];
+  var $elem = $(domElement);
+  var $results = $elem.find('.vndl-search-result');
+  this.resultItems = [];
 
-    // to zoom the map to surround all results
-    //var boundsThemAll = L.latLngBounds();
+  // to zoom the map to surround all results
+  //var boundsThemAll = L.latLngBounds();
 
-    var boundsThemAll = null;
-
-
-    // loop through results - find each ones map location and adding it to the map
-    $results.each(function (index, result) {
-
-        // the following function call is unfortunately for a huge function that does most of the map work for the single result
-       var currentResult = this.connectSingleResultToMap(result);
+  var boundsThemAll = null;
 
 
-        // getting bounds
+  // loop through results - find each ones map location and adding it to the map
+  $results.each(function (index, result) {
 
-        // testing if the correct data
-        if (currentResult.primary.bounds) {
-
-            // if a bound already exists
-            if (boundsThemAll) {
-
-                // extend the bound with the new results bounds
-                boundsThemAll.extend(currentResult.primary.bounds);
-
-            }
-
-            // if the bounds object doesn't already exist or is null then create one
-            // matching the current items bound. um ok.
-
-            else {
-                boundsThemAll = L.latLngBounds(currentResult.primary.bounds);
-            }
-        }
+    // the following function call is unfortunately for a huge function that does most of the map work for the single result
+    var currentResult = this.connectSingleResultToMap(result);
 
 
-    }.bind(this));
+    // getting bounds
 
+    // testing if the correct data
+    if (currentResult.primary.bounds) {
 
-    var counter = 0;
+      // if a bound already exists
+      if (boundsThemAll) {
 
-    numberOfPointsMapped = this.resultItems.forEach(function (resultItem){
+        // extend the bound with the new results bounds
+        boundsThemAll.extend(currentResult.primary.bounds);
 
-        counter += resultItem.primary.points.length;
-        console.log(counter);
-    });
+      }
 
-    // get the number of markers on the map and add it to pagination text
-    $('span.page_entries').append(" (" + counter + " points mapped from " + this.resultItems.length + " records )");
+      // if the bounds object doesn't already exist or is null then create one
+      // matching the current items bound. um ok.
 
-
-
-    // fit the map bounds to show all the primary markers
-    if (boundsThemAll) {
-        this.leafletMap.fitBounds(boundsThemAll);
+      else {
+        boundsThemAll = L.latLngBounds(currentResult.primary.bounds);
+      }
     }
+
+
+  }.bind(this));
+
+
+  var counter = 0;
+
+  numberOfPointsMapped = this.resultItems.forEach(function (resultItem) {
+
+    counter += resultItem.primary.points.length;
+    console.log(counter);
+  });
+
+  // get the number of markers on the map and add it to pagination text
+  $('span.page_entries').append(" (" + counter + " points mapped from " + this.resultItems.length + " records )");
+
+
+  // fit the map bounds to show all the primary markers
+  if (boundsThemAll) {
+    this.leafletMap.fitBounds(boundsThemAll);
+  }
 
 };
 // ------------------------------------------------------------------
 
 function highlightIcon(marker) {
 
-    var redIcon = L.icon({
-        iconUrl: 'marker-icon-red.png',
-        iconSize: [38, 95],
-        iconAnchor: [22, 94],
-        popupAnchor: [-3, -76],
-        shadowUrl: 'markers-shadow.png',
-        shadowRetinaUrl: 'markers-shadow@2x.png',
-        shadowSize: [68, 95],
-        shadowAnchor: [22, 94]
-    });
+  var redIcon = L.icon({
+    iconUrl: 'marker-icon-red.png',
+    iconSize: [38, 95],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+    shadowUrl: 'markers-shadow.png',
+    shadowRetinaUrl: 'markers-shadow@2x.png',
+    shadowSize: [68, 95],
+    shadowAnchor: [22, 94]
+  });
 
-    marker.setIcon(redIcon);
+  marker.setIcon(redIcon);
 }
 // ------------------------------------------------------------------
 
 VndlMap.prototype.leaflet = function () {
-    return this.leafletMap;
+  return this.leafletMap;
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.resizeFor = function (duration) {
-    // repeatedly tell the map it has resized, for <duration> seconds
-    duration = +duration || 1;
-    var interval = 100; // milliseconds
+  // repeatedly tell the map it has resized, for <duration> seconds
+  duration = +duration || 1;
+  var interval = 100; // milliseconds
 
-    // start resizing repeatedly
-    var me = this;
-    var resizingId = setInterval(function () {
-        me.leafletMap.invalidateSize(true);
-    }, interval);
+  // start resizing repeatedly
+  var me = this;
+  var resizingId = setInterval(function () {
+    me.leafletMap.invalidateSize(true);
+  }, interval);
 
-    // stop resizing in <duration> seconds
-    setTimeout(function () {
-        clearInterval(resizingId);
-    }, duration * 1000);
+  // stop resizing in <duration> seconds
+  setTimeout(function () {
+    clearInterval(resizingId);
+  }, duration * 1000);
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.show = function () {
-    $('body').removeClass('map-inactive').addClass('map-active');
-    $('#main-container').removeClass('container').addClass('container-fluid');
-    $('.mapwrapper').removeClass('col-xs-1 col-sm-1 col-md-1 col-lg-1');
-    $('.mapwrapper').addClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
-    $('.content').removeClass('col-xs-11 col-sm-11 col-md-11 col-lg-11');
-    $('.content').addClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
-    this.resizeFor(2);
+  $('body').removeClass('map-inactive').addClass('map-active');
+  $('#main-container').removeClass('container').addClass('container-fluid');
+  $('.mapwrapper').removeClass('col-xs-1 col-sm-1 col-md-1 col-lg-1');
+  $('.mapwrapper').addClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
+  $('.content').removeClass('col-xs-11 col-sm-11 col-md-11 col-lg-11');
+  $('.content').addClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
+  this.resizeFor(2);
 };
 // ------------------------------------------------------------------
 VndlMap.prototype.hide = function () {
-    $('body').removeClass('map-active').addClass('map-inactive');
-    $('#main-container').removeClass('container-fluid').addClass('container');
-    $('.mapwrapper').removeClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
-    $('.mapwrapper').addClass('col-xs-1 col-sm-1 col-md-1 col-lg-1');
-    $('.content').removeClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
-    $('.content').addClass('col-xs-11 col-sm-11 col-md-11 col-lg-11');
-    this.resizeFor(2);
+  $('body').removeClass('map-active').addClass('map-inactive');
+  $('#main-container').removeClass('container-fluid').addClass('container');
+  $('.mapwrapper').removeClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
+  $('.mapwrapper').addClass('col-xs-1 col-sm-1 col-md-1 col-lg-1');
+  $('.content').removeClass('col-xs-6 col-sm-6 col-md-6 col-lg-6');
+  $('.content').addClass('col-xs-11 col-sm-11 col-md-11 col-lg-11');
+  this.resizeFor(2);
 };
 // ------------------------------------------------------------------
 // ------------------------------------------------------------------
