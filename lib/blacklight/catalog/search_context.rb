@@ -106,8 +106,9 @@ module Blacklight::Catalog::SearchContext
 
       debug @search_context_response
 
-      byebug
+      Rails.logger.debug{"Search_context_response hash: #{@search_context_response.inspect}"}
 
+      byebug
 
       logger.debug @search_context_response.inspect
 

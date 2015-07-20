@@ -68,6 +68,7 @@ gem "jettywrapper"
 gem 'is_it_working'
 gem 'byebug'
 
+
 # search autocomplete
 gem 'twitter-typeahead-rails'
 
