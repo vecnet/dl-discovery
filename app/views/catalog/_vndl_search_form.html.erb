@@ -1,4 +1,3 @@
-
 <form class="vndl-search">
 
   <!-- text search -->
@@ -14,16 +13,16 @@
         <!-- /btn-group -->
         <div class="input-group-btn">
           <button type="submit" class="search-submit btn-lg btn btn-primary" id="search-submit-header" tabindex="2">
-          Search
+            Search
           </button>
 
           <!--the dropdown caret for advanced search options-->
           <!--<button type="button" class="btn btn-primary btn-lg dropdown-toggle" data-toggle="dropdown" aria-expanded="false">-->
-            <!--<span class="caret"></span>-->
-            <!--<span class="sr-only">Toggle Dropdown</span>-->
+          <!--<span class="caret"></span>-->
+          <!--<span class="sr-only">Toggle Dropdown</span>-->
           <!--</button>-->
           <!--<ul class="dropdown-menu" role="menu">-->
-            <!--<li><a href="#">Search full text</a></li>-->
+          <!--<li><a href="#">Search full text</a></li>-->
           <!--</ul>-->
         </div>
       </div>
@@ -39,29 +38,30 @@
     <div class="mapnotch"></div>
     <div class="col-md-10 form-group">
       <div class="col-md-4 map-checkbox">
-        <input type="checkbox" name="showmap" <%= get_map_checkbox %> class="bootstrap-checkbox" data-off-label="Map Off" data-on-label="Map On"  data-on-class="btn-primary">
+        <input type="checkbox" name="showmap" <%= get_map_checkbox %> class="bootstrap-checkbox" data-off-label="Map Off" data-on-label="Map On" data-on-class="btn-primary">
       </div>
 
-      <input type="checkbox" name="search-map-checkbox" id="search-map-checkbox" autocomplete="off" />
+      <input type="checkbox" name="search-map-checkbox" id="search-map-checkbox" autocomplete="off"/>
+
       <div id="search-map-checkbox-div" class="[ btn-group ] col-md-7 searchmap">
         <label for="search-map-checkbox" class="[ btn btn-default ]">
-            <span class="[ glyphicon glyphicon-ok ]"></span>
-            <span> </span>
+          <span class="[ glyphicon glyphicon-ok ]"></span>
+          <span> </span>
         </label>
-          <label for="search-map-checkbox" class="[ btn btn-default ]">
-            Limit Search to Visible Map Area
-          </label>
+        <label for="search-map-checkbox" class="[ btn btn-default ]">
+          Limit Search to Visible Map Area
+        </label>
 
         <!--Hide the bbox feedback element as no feedback as yet-->
-        
+
         <!--<div class="hidden bbox-feedback">-->
-          <!--<br>-->
-          <!--<span class="[ btn btn-default active ]">-->
-            <!--Map coords : -46.054 -26.588 80.1562 40.1788-->
-          <!--</span>-->
+        <!--<br>-->
+        <!--<span class="[ btn btn-default active ]">-->
+        <!--Map coords : -46.054 -26.588 80.1562 40.1788-->
+        <!--</span>-->
         <!--</div>-->
 
-        </div>
+      </div>
     </div>
 
   </fieldset>
