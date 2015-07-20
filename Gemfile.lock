@@ -154,7 +154,6 @@ GEM
     kgio (2.9.3)
     leaflet-rails (0.7.4)
     libv8 (3.16.14.7)
-    log_buddy (0.7.0)
     logger (1.2.8)
     loofah (2.0.2)
       nokogiri (>= 1.5.9)
@@ -321,7 +320,6 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jettywrapper
   jquery-rails
-  log_buddy
   lyberteam-capistrano-devel
   nokogiri
   pg

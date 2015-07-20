@@ -22,6 +22,11 @@ module Blacklight::Catalog::SearchContext
   def search_session
     session[:search] ||= {}
     puts "SESSION DEBUGGING ***** SESSION KEY SEARCH IS : #{session[:search]} *************"
+    debug session[:search]
+
+    Rails.logger.debug{"session search is hash: #{session[:search]}"}
+
+    logger.debug session[:search].inspect
 
   end
 
@@ -107,10 +112,6 @@ module Blacklight::Catalog::SearchContext
       debug @search_context_response
 
       Rails.logger.debug{"Search_context_response hash: #{@search_context_response.inspect}"}
-
-      byebug
-
-      debugger
 
       logger.debug @search_context_response.inspect
 

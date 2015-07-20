@@ -66,7 +66,6 @@ gem "blacklight"
 gem "geoblacklight"
 gem "jettywrapper"
 gem 'is_it_working'
-gem 'log_buddy'
 
 
 
