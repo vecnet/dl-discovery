@@ -66,7 +66,8 @@ gem "blacklight"
 gem "geoblacklight"
 gem "jettywrapper"
 gem 'is_it_working'
-gem 'byebug'
+gem 'log_buddy'
+
 
 
 # search autocomplete
