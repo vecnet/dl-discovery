@@ -102,6 +102,15 @@ module Blacklight::Catalog::SearchContext
       search_session['total'] = response.total
       @search_context_response = response
 
+      logger.debug {"Search_context_response hash: #{@search_context_response.inspect}"}
+
+      debug @search_context_response
+
+      byebug
+
+
+      logger.debug @search_context_response.inspect
+
       puts "SESSION DEBUGGING ***** SEARCH SESSION KEY TOTAL IS : #{search_session['total']} *************"
 
 
