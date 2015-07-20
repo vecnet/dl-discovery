@@ -110,6 +110,8 @@ module Blacklight::Catalog::SearchContext
 
       byebug
 
+      debugger
+
       logger.debug @search_context_response.inspect
 
       puts "SESSION DEBUGGING ***** SEARCH SESSION KEY TOTAL IS : #{search_session['total']} *************"
