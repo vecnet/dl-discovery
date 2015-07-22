@@ -1,10 +1,10 @@
 module Blacklight::Catalog::SearchContext
   extend ActiveSupport::Concern
 
-  logger.debug "inside a search context"
   # The following code is executed when someone includes blacklight::catalog::search_session in their
   # own controller.
   included do
+    Rails.logger.debug "inside a search context"
     helper_method :current_search_session, :search_session
 
   end
@@ -97,7 +97,7 @@ module Blacklight::Catalog::SearchContext
   # calls setup_previous_document then setup_next_document.
   # used in the show action for single view pagination.
   def setup_next_and_previous_documents
-    logger.debug "inside a search next prev setup before if statement"
+    Rails.logger.debug "inside a search next prev setup before if statement"
 
     if search_session['counter'] and current_search_session
       index = search_session['counter'].to_i - 1
