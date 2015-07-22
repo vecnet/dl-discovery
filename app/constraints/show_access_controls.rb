@@ -7,18 +7,6 @@ module ShowAccessControls
   # catalog controller.
   def enforce_show_permissions(opts={})
 
-
-
-    puts "SESSION DEBUGGING ***** SESSION KEY SEARCH IS : *************"
-
-    Rails.logger.debug{"session search is hash"}
-
-    logger.debug "adfladfkjaldjfalkdj"
-
-    logger.fatal "i should die"
-
-
-
     _, doc = fetch params[:id]
     ok = false
     if current_user

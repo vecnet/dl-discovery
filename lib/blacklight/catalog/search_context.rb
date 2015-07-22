@@ -1,7 +1,7 @@
 module Blacklight::Catalog::SearchContext
   extend ActiveSupport::Concern
 
-
+  logger.debug "inside a search context"
   # The following code is executed when someone includes blacklight::catalog::search_session in their
   # own controller.
   included do
@@ -20,6 +20,9 @@ module Blacklight::Catalog::SearchContext
 
   # sets up the session[:search] hash if it doesn't already exist
   def search_session
+
+    logger.debug "inside a search session"
+
     session[:search] ||= {}
 
 
@@ -94,23 +97,19 @@ module Blacklight::Catalog::SearchContext
   # calls setup_previous_document then setup_next_document.
   # used in the show action for single view pagination.
   def setup_next_and_previous_documents
+    logger.debug "inside a search next prev setup before if statement"
+
     if search_session['counter'] and current_search_session
       index = search_session['counter'].to_i - 1
       response, documents = get_previous_and_next_documents_for_search index, current_search_session.query_params.with_indifferent_access
-
-
       search_session['total'] = response.total
       @search_context_response = response
 
-      logger.debug {"Search_context_response hash: #{@search_context_response.inspect}"}
+      logger.debug "Search_context_response hash: #{@search_context_response.inspect}"
 
-      debug @search_context_response
 
-      Rails.logger.debug{"Search_context_response hash: #{@search_context_response.inspect}"}
-
+      logger.debug "inside a search next prev setup"
       logger.debug @search_context_response.inspect
-
-      puts "SESSION DEBUGGING ***** SEARCH SESSION KEY TOTAL IS : #{search_session['total']} *************"
 
 
       @previous_document = documents.first
