@@ -105,11 +105,9 @@ module Blacklight::Catalog::SearchContext
       search_session['total'] = response.total
       @search_context_response = response
 
-      logger.debug "Search_context_response hash: #{@search_context_response.inspect}"
 
 
-      logger.debug "inside a search next prev setup"
-      logger.debug @search_context_response.inspect
+      Rails.logger.debug @search_context_response.inspect
 
 
       @previous_document = documents.first
