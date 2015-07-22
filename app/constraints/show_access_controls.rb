@@ -6,6 +6,16 @@ module ShowAccessControls
   # intended to be used to guard the show method in the blacklight
   # catalog controller.
   def enforce_show_permissions(opts={})
+
+
+
+    puts "SESSION DEBUGGING ***** SESSION KEY SEARCH IS : *************"
+
+    Rails.logger.debug{"session search is hash"}
+
+    logger.debug{"adfladfkjaldjfalkdj"}
+
+
     _, doc = fetch params[:id]
     ok = false
     if current_user

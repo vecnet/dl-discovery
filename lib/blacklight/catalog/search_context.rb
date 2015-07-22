@@ -21,12 +21,7 @@ module Blacklight::Catalog::SearchContext
   # sets up the session[:search] hash if it doesn't already exist
   def search_session
     session[:search] ||= {}
-    puts "SESSION DEBUGGING ***** SESSION KEY SEARCH IS : #{session[:search]} *************"
-    debug session[:search]
 
-    Rails.logger.debug{"session search is hash: #{session[:search]}"}
-
-    logger.debug session[:search].inspect
 
   end
 
