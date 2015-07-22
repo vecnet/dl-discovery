@@ -20,7 +20,7 @@ module Blacklight::Catalog::SearchContext
 
   # sets up the session[:search] hash if it doesn't already exist
   def search_session
-    
+
     session[:search] ||= {}
 
 
@@ -112,7 +112,6 @@ module Blacklight::Catalog::SearchContext
       @next_document = documents.last
     end
   rescue Blacklight::Exceptions::InvalidRequest => e
-    logger.warn "Unable to setup next and previous documents: #{e}"
   end
 
 end
