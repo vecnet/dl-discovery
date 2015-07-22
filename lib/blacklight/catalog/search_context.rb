@@ -20,9 +20,7 @@ module Blacklight::Catalog::SearchContext
 
   # sets up the session[:search] hash if it doesn't already exist
   def search_session
-
-    logger.debug "inside a search session"
-
+    
     session[:search] ||= {}
 
 
