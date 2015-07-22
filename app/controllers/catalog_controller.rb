@@ -15,6 +15,10 @@ class CatalogController < ApplicationController
 
   self.search_params_logic += [:apply_authz]
 
+  logger.debug "adfladfkjaldjfalkdj"
+
+  logger.fatal "i should die"
+
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {

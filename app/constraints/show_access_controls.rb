@@ -13,7 +13,10 @@ module ShowAccessControls
 
     Rails.logger.debug{"session search is hash"}
 
-    logger.debug{"adfladfkjaldjfalkdj"}
+    logger.debug "adfladfkjaldjfalkdj"
+
+    logger.fatal "i should die"
+
 
 
     _, doc = fetch params[:id]
