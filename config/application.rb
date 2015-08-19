@@ -8,7 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Earthworks
   class Application < Rails::Application
-    config.application_name = 'VecNET Digital Library Beta'
+    config.application_name = 'VecNet Digital Library'
 
     require 'rights_metadata'
 
