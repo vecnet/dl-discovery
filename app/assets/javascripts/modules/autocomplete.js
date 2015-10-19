@@ -11,7 +11,7 @@ $(document).on('ready page:load', function () {
 
   // TODO: Change this selector to correct
   $('input.input-lg').typeahead({
-        hint: true,
+        hint: false,
         highlight: true,
         minLength: 2
       },
