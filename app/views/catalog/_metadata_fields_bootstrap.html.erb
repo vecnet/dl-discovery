@@ -141,7 +141,17 @@
               <tbody>
 
               <tr>
-                <th style="width:10%">Identifier</th>
+                <th style="width:10%">ID</th>
+                <td><%= @document["layer_id_s"] %></td>
+              </tr>
+
+              <tr>
+                <th>ID With Version</th>
+                <td><%= @document["layer_id_s"] %>/<%= @document["vn_content_version_s"] %></td>
+              </tr>
+
+              <tr>
+                <th>Other Identifiers</th>
                 <td><%= Array(@document["dc_identifier_sm"]).join("\n") %></td>
               </tr>
 
@@ -149,7 +159,6 @@
                 <th>Resource Type</th>
                 <td><%= @document["dc_type_s"] %></td>
               </tr>
-
 
               <tr>
                 <th>Filename</th>
@@ -167,13 +176,8 @@
               </tr>
 
               <tr>
-                <th>Vecnet modifier</th>
+                <th>Edit Access Group</th>
                 <td><%= Array(@document["edit_access_group_sm"]).join("\n") %></td>
-              </tr>
-
-              <tr>
-                <th>Content version number</th>
-                <td><%= @document["vn_content_version_s"] %></td>
               </tr>
 
               </tbody>
