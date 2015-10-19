@@ -16,6 +16,9 @@ module Earthworks
     require 'suggest/search_helper'
     require 'suggest'
 
+    # render error pages dynamically instead of from static files
+    config.exceptions_app = self.routes
+
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

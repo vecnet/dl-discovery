@@ -1,9 +1,10 @@
 <% content_for :page_title, "#{response.status} Authorization Error" %>
 
-<div class="content">
+<div class="error-text">
   <h1>Unauthorized</h1>
-<p>You are not authorized to access the page.</p>
-<% unless current_user -%>
-  <p><%= link_to 'Login', user_login_url(request.original_url), :class => 'btn' %></p>
-<% end -%>
+  <p>You are not authorized to access this page.</p>
+  <% unless current_user -%>
+    <p>Try logging in first.<p>
+    <p><%= link_to 'Login', user_login_url(request.original_url), :class => 'btn btn-default' %></p>
+  <% end -%>
 </div>

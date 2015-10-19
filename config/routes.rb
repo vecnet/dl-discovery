@@ -9,6 +9,10 @@ Rails.application.routes.draw do
 
   resources :suggest, only: :index, defaults: { format: 'json' }
 
+  %w(401 404 500).each do |code|
+    get code, to: "errors#show", code: code
+  end
+
   # since there is no pubtkt login for development
   if Rails.env.development? || Rails.env.jcu?
     match 'development_sessions/log_in' => "development_sessions#new", via: :get
