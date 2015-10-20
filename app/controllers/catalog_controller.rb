@@ -9,9 +9,14 @@ class CatalogController < ApplicationController
   before_filter :enforce_show_permissions, only: :show
 
   # handle basic authorization exception with #access_denied
-  rescue_from RuntimeError::AccessDenied, :with => :access_denied
-
+  rescue_from ::AccessDenied, :with => :access_denied
   rescue_from ActionController::RoutingError, :with => :access_denied
+
+  # handle bad identifiers. Blacklight catches the exception and calls
+  # this instead.
+  def invalid_document_id_error(*args)
+    render "errors/404", status: 404
+  end
 
   self.search_params_logic += [:apply_authz]
 
