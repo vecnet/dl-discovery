@@ -18,6 +18,12 @@ class CatalogController < ApplicationController
     render "errors/404", status: 404
   end
 
+  # overwrite blacklight method to display our own error page. Blacklight
+  # tries to redirect to the login screen...we don't do that.
+  def access_denied
+    render "errors/401", status: 401
+  end
+
   self.search_params_logic += [:apply_authz]
 
   configure_blacklight do |config|
