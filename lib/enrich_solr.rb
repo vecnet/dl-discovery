@@ -61,7 +61,12 @@ class EnrichSolr
     end
   end
 
-  def initialize(cache_filename=nil, harvest_url=nil)
+  # cache_filename is the local JSON geonames cache file
+  # harvest_url points to our source for authorities, and the source
+  #   for extra info, such as full text items.
+  # headers are additional headers we should pass for harvesting
+  #   full text from the harvest_url (such as API keys)
+  def initialize(cache_filename=nil, harvest_url=nil, headers={})
     # look up place names and info from geonames
     # But use the application authority to resolve place names into geonameids
     @geonames = Geonames.new(cache_filename)
@@ -73,6 +78,7 @@ class EnrichSolr
     else
       @subjects = @species = @locations = ZeroAuthorityCache.new
     end
+    @headers = headers
   end
 
   def process_one(record_xml)
@@ -102,6 +108,7 @@ class EnrichSolr
       # dc_alternate is not exported by the xml
 
       dc_created_sm:    all_or_nil(xml,   '//dc:date_created'),
+      dc_created_sort:  first_or_nil(xml, '//dc:date_created'),
 
       dc_type_s:        first_or_nil(xml, '//dc:type'),
       dc_format_s:      first_or_nil(xml, '//dc:format'),
@@ -152,8 +159,7 @@ class EnrichSolr
     new_record[:dwc_scientificname_h_facet] = h_facet
 
     references = {
-      # TODO: have the DL export download links
-      #"http://schema.org/downloadUrl" => ,
+      "http://schema.org/downloadUrl" => all_or_nil(xml, "//vn:download"),
       "http://schema.org/url" => first_or_nil(xml, "//vn:purl"),
       "http://schema.org/thumbnailUrl" => first_or_nil(xml, "//vn:thumbnail")
     }
@@ -278,7 +284,7 @@ class EnrichSolr
   def children_full_text(child_noids)
     child_noids.map do |child_record|
       begin
-        response = RestClient.get(@harvest_url + "/files/#{child_record}.xml")
+        response = RestClient.get(@harvest_url + "/files/#{child_record}.xml", @headers)
       rescue RestClient::Exception
         next
       end

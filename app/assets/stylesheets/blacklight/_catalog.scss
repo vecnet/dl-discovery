@@ -1,40 +1,33 @@
-.ajax_form
-{
+.ajax_form {
   margin-bottom: 0;
 }
 
-#librarian_view
-{
-	left:-17%;
-	text-align:left;
-	top:10%;
-	width:700px;
+#librarian_view {
+  left: -17%;
+  text-align: left;
+  top: 10%;
+  width: 700px;
 }
 
-#marc_view
-{
-	text-align:left;
+#marc_view {
+  text-align: left;
 
-  .field
-  {
+  .field {
     border-bottom: $marc_item_separator;
-    clear:both;
+    clear: both;
   }
 
-  .ind1, .ind2
-  {
-    display:inline;
-    padding:0 $padding-xs-horizontal;
+  .ind1, .ind2 {
+    display: inline;
+    padding: 0 $padding-xs-horizontal;
   }
 
-  .subfields
-  {
-    padding-left:5em;
+  .subfields {
+    padding-left: 5em;
   }
 
-  .tag_ind
-  {
-    float:left;
+  .tag_ind {
+    float: left;
   }
 }
 
@@ -48,8 +41,7 @@ span.constraints-label {
   @extend .h5;
 }
 
-.appliedFilter
-{
+.appliedFilter {
   .constraint-value {
     cursor: default;
     text-overflow: ellipsis;
@@ -78,8 +70,7 @@ span.constraints-label {
     }
   }
 
-  .filterName:after
-  {
+  .filterName:after {
     @extend .text-muted;
     font-family: 'Glyphicons Halflings';
     /* glyphicon-chevron-right */
@@ -98,10 +89,10 @@ span.constraints-label {
   .document {
     margin-top: $padding-base-vertical;
     padding-top: $padding-base-vertical;
-    border-bottom:1px dotted $table-border-color;
+    border-bottom: 1px dotted $table-border-color;
     @extend .clearfix;
   }
-} 
+}
 
 // Tools link on documetn show page
 .show-tools {
@@ -119,13 +110,11 @@ span.constraints-label {
   }
 }
 
-
 #sidebar form {
   margin: 0;
 }
 
-.page_links
-{
+.page_links {
   display: inline-block;
   border: 1px solid transparent;
   padding: $padding-base-vertical $padding-base-horizontal;
@@ -133,11 +122,10 @@ span.constraints-label {
 }
 
 .pagination {
-  text-align: center ;
+  text-align: center;
 }
 
-.dl-horizontal
-{
+.dl-horizontal {
   dd {
     margin-bottom: $padding-base-vertical;
 
@@ -154,10 +142,9 @@ span.constraints-label {
   }
 }
 
-label.toggle_bookmark
-{
-	font-weight: inherit;
-	min-width: 8.5em;
+label.toggle_bookmark {
+  font-weight: inherit;
+  min-width: 8.5em;
 }
 
 #sidebar-mlt li {
@@ -165,8 +152,8 @@ label.toggle_bookmark
 }
 
 #sortAndPerPage, #previousNextDocument {
-//  change this to fit with fieldset theming
-//  border-bottom: 1px solid $pagination-border;
+  //  change this to fit with fieldset theming
+  //  border-bottom: 1px solid $pagination-border;
   margin-bottom: 1em;
   padding-bottom: 1em;
 }
@@ -217,7 +204,6 @@ label.toggle_bookmark
     color: $text-color;
   }
 }
-
 
 .search-input-group {
   width: 80%;

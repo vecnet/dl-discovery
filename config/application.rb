@@ -8,13 +8,16 @@ Bundler.require(*Rails.groups)
 
 module Earthworks
   class Application < Rails::Application
-    config.application_name = 'VecNET Digital Library Beta'
+    config.application_name = 'VecNet Digital Library'
 
     require 'rights_metadata'
 
     require 'suggest/response'
     require 'suggest/search_helper'
     require 'suggest'
+
+    # render error pages dynamically instead of from static files
+    config.exceptions_app = self.routes
 
 
     # Settings in config/environments/* take precedence over those specified here.

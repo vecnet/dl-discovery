@@ -6,7 +6,7 @@ module ShowAccessControls
   # intended to be used to guard the show method in the blacklight
   # catalog controller.
   def enforce_show_permissions(opts={})
-    doc = fetch params[:id]
+    _, doc = fetch params[:id]
     ok = false
     if current_user
       ok ||= current_user.admin?

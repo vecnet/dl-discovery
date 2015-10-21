@@ -8,13 +8,29 @@ class CatalogController < ApplicationController
 
   before_filter :enforce_show_permissions, only: :show
 
+  # handle basic authorization exception with #access_denied
+  rescue_from ::AccessDenied, :with => :access_denied
+  rescue_from ActionController::RoutingError, :with => :access_denied
+
+  # handle bad identifiers. Blacklight catches the exception and calls
+  # this instead.
+  def invalid_document_id_error(*args)
+    render "errors/404", status: 404
+  end
+
+  # overwrite blacklight method to display our own error page. Blacklight
+  # tries to redirect to the login screen...we don't do that.
+  def access_denied
+    render "errors/401", status: 401
+  end
+
   self.search_params_logic += [:apply_authz]
 
   configure_blacklight do |config|
     ## Default parameters to send to solr for all search-like requests. See also SolrHelper#solr_search_params
     config.default_solr_params = {
       :start => 0,
-      :rows => 10,
+      :rows => 25,
       'q.alt' => '*:*'
     }
 
@@ -78,15 +94,22 @@ class CatalogController < ApplicationController
     config.add_facet_field 'vn_keyword_sm', label: 'Keyword', limit: 10
     config.add_facet_field 'dct_spatial_sm', label: 'Place', limit: 10
     config.add_facet_field 'dc_publisher_s', label: 'Publisher', limit: 6
-    #config.add_facet_field 'dc_subject_h_facet'
-    #config.add_facet_field 'dwc_scientificname_h_facet'
-    #config.add_facet_field 'dct_spatial_h_facet'
-
+    config.add_facet_field 'dc_format_s', :label => 'Format', :limit => 3
+    # Hierarchy Facets
+    config.add_facet_field 'dc_subject_h_facet', :label => 'Subject', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> true, :sort => 'count'
+    config.add_facet_field 'dwc_scientificname_h_facet', :label => 'Species', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> true, :sort => 'count'
+    config.add_facet_field 'dct_spatial_h_facet', :label => 'Location', :partial => 'blacklight/hierarchy/facet_hierarchy', :limit => 100000, :show=> true, :sort => 'count'
+    config.facet_display = {
+        :hierarchy => {
+            'dc_subject_h' => [['facet'],':'],
+            'dwc_scientificname_h' => [['facet'], ':'],
+            'dct_spatial_h' => [['facet'], ':']
+        }
+    }
     # config.add_facet_field 'layer_availability_score_f', :label => 'Availability', :query => {
     #   offline: { label: 'Offline', fq: "layer_availability_score_f:[0 TO #{Settings.GEOMONITOR_TOLERANCE}]" },
     #   online: { label: 'Online', fq: "(*:* AND -layer_availability_score_f:[* TO *] AND -layer_geom_type_s:\"Paper Map\") OR (layer_availability_score_f:[#{Settings.GEOMONITOR_TOLERANCE} TO 1])" }
     # }
-    config.add_facet_field 'dc_format_s', :label => 'Format', :limit => 3
 
     # Have BL send all facet field names to Solr, which has been the default
     # previously. Simply remove these lines if you'd rather use Solr request

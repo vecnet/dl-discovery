@@ -1,4 +1,3 @@
-
 <% vecnet_domain = 'https://www.vecnet.org'
    ci_domain = 'https://ci.vecnet.org'
 -%>
@@ -9,23 +8,27 @@
     <div class="icon"><i class="glyphicon glyphicon-book"></i></div>
     <div class="info">
       <h3 class="title">What is the Digital Library?</h3>
+
       <p>
-        The VecNet Digital Library contains curated data, tagged citations, articles and reports on entomology, epidemiology, demography and interventions to support malaria eradication.
+        The VecNet Digital Library contains curated data, tagged citations, articles and reports on entomology,
+        epidemiology, demography and interventions to support malaria eradication.
       </p>
-      <a class="more" href="<%="#{vecnet_domain}/index.php/about-vecnet/vecnet-how-to" %>" title="Title Link">
+      <a class="more" href="<%= "#{vecnet_domain}/index.php/about-vecnet/vecnet-how-to" %>" title="Title Link">
         Read More <i class="fa fa-angle-double-right"></i>
       </a>
     </div>
   </div>
 
-  <div class="box">
+  <div class="box geospatial-readmore">
     <div class="icon"><i class="glyphicon glyphicon-globe"></i></div>
     <div class="info">
       <h3 class="title">Geospatially Aware</h3>
+
       <p>
-        The VecNet Digital Library can find records by location or just browse around the big friendly map.  Use filters  to narrow down results and plot them on a map.
+        The VecNet Digital Library can find records by location or just browse around the big friendly map. Use filters
+        to narrow down results and plot them on a map.
       </p>
-      <a class="more" href="#" title="Geospatial read more">
+      <a class="more geospatial-readmore" href="http://geoblacklight.org/tutorial/2015/02/09/geoblacklight-overview.html" title="Geospatial read more">
         Read More <i class="fa fa-angle-double-right"></i>
       </a>
     </div>
@@ -35,8 +38,10 @@
     <div class="icon"><i class="glyphicon glyphicon-ok"></i></div>
     <div class="info">
       <h3 class="title">Contributor Friendly</h3>
+
       <p>
-        VecNet Digital Library users are encouraged to give feedback and upload documents while using the Digital Library. Contact us anytime using the Contact link.
+        VecNet Digital Library users are encouraged to give feedback and upload documents while using the Digital
+        Library. Contact us anytime using the Contact link.
       </p>
       <a class="more" href="<%= "#{vecnet_domain}/index.php/about-vecnet/information-sharing" %>" title="Contributor read more">
         Read More <i class="fa fa-angle-double-right"></i>
@@ -48,7 +53,7 @@
 
 <% comment do %>
 
-<!--TODO: Put this into a flexbox to avoid height issues-->
+  <!--TODO: Put this into a flexbox to avoid height issues-->
   <div class="about-text flexbox vndl-results row">
     <div class="col-xs-12 col-sm-12 col-lg-4">
       <div class="box">
@@ -56,10 +61,13 @@
           <div class="image"><i class="glyphicon glyphicon-book"></i></div>
           <div class="info">
             <h3 class="title">What is the Digital Library?</h3>
+
             <p>
-              The VecNet Digital Library contains curated data, tagged citations, articles and reports on entomology, epidemiology, demography and interventions to support malaria eradication. </p>
+              The VecNet Digital Library contains curated data, tagged citations, articles and reports on entomology,
+              epidemiology, demography and interventions to support malaria eradication. </p>
+
             <div class="more">
-              <a href="<%="#{vecnet_domain}/index.php/about-vecnet/vecnet-how-to" %>" title="Title Link">
+              <a href="<%= "#{vecnet_domain}/index.php/about-vecnet/vecnet-how-to" %>" title="Title Link">
                 Read More <i class="fa fa-angle-double-right"></i>
               </a>
             </div>
@@ -75,9 +83,12 @@
           <div class="image"><i class="glyphicon glyphicon-globe"></i></div>
           <div class="info">
             <h3 class="title">Geospatially Aware</h3>
+
             <p>
-              The VecNet Digital Library can find records by location or just browse around the big friendly map.  Use filters  to narrow down results and plot them on a map.
+              The VecNet Digital Library can find records by location or just browse around the big friendly map. Use
+              filters to narrow down results and plot them on a map.
             </p>
+
             <div class="more">
               <a href="#" title="Geospatial read more">
                 Read More <i class="fa fa-angle-double-right"></i>
@@ -95,9 +106,12 @@
           <div class="image"><i class="glyphicon glyphicon-ok"></i></div>
           <div class="info">
             <h3 class="title">Contributor Friendly</h3>
+
             <p>
-              VecNet Digital Library users are encouraged to give feedback and upload documents while using the Digital Library. Contact us anytime using the Contact link.
+              VecNet Digital Library users are encouraged to give feedback and upload documents while using the Digital
+              Library. Contact us anytime using the Contact link.
             </p>
+
             <div class="more">
               <a href="<%= "#{vecnet_domain}/index.php/about-vecnet/information-sharing" %>" title="Contributor read more">
                 Read More <i class="fa fa-angle-double-right"></i>
@@ -110,5 +124,5 @@
     </div>
   </div>
 
-  <% end %>
+<% end %>
 

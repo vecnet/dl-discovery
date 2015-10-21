@@ -1,4 +1,3 @@
-
 //Colors
 $pantone-405: #5f574f;
 $beige-20-percent: #e9e6df;
@@ -7,8 +6,9 @@ $vecnet-blue: #00a3bb;
 $beige-10-percent: #f2f1eb;
 $dark-red: #820000;
 $gray-90-percent: #565347;
-$white: #F8F8FF;
+$white: #f8f8ff;
 $button-notch-thing: #5f574f;
+
 //$icon-box-background: #63B76C;
 $icon-box-background: #337ab7;
 $icon-green: #0f9d58;
@@ -16,7 +16,7 @@ $icon-green: #0f9d58;
 // map and page layout vars
 // $result-column-width: 700px;
 $inactive-map-width: 60px;
-$map-notch-width: ceil(0.33 * $inactive-map-width);
+$map-notch-width: ceil(.33 * $inactive-map-width);
 $content-bg: #fff;
 $search-result-highlight: #ffffc4;
 $search-result-highlight: #e8f8ff;
@@ -32,5 +32,3 @@ $column-width: 210px;
 
 //override some blacklight/geoblacklight defaults
 $logo_image: null;
-
-$font-family-betatag: Lato;

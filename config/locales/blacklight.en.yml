@@ -1,6 +1,6 @@
 en:
   blacklight:
-    application_name: 'VecNET Digital Library Beta'
+    application_name: 'VecNet Digital Library'
     header_links:
       search_history: 'Searches'
     search:

@@ -1,21 +1,22 @@
-Blacklight.onLoad(function() {
+Blacklight.onLoad(function () {
   //Instantiates plugin for feedback form
   $('#feedback-form').feedbackForm();
 })
 
-;(function($, window, document, undefined) {
+;
+(function ($, window, document, undefined) {
   /*
-  jQuery plugin that handles some of the feedback form functionality
+   jQuery plugin that handles some of the feedback form functionality
 
-  Usage: $(selector).feedbackForm();
+   Usage: $(selector).feedbackForm();
 
-  No available options
+   No available options
 
-  This plugin :
-  - changes feedback form link to button
-  - submits an ajax request for the feedback form
-  - displays alert on response from feedback form
-  */
+   This plugin :
+   - changes feedback form link to button
+   - submits an ajax request for the feedback form
+   - displays alert on response from feedback form
+   */
 
   var pluginName = 'feedbackForm';
 
@@ -23,24 +24,24 @@ Blacklight.onLoad(function() {
     this.element = element;
     var $el, $form;
 
-    this.options = $.extend({}, options) ;
+    this.options = $.extend({}, options);
     this._name = pluginName;
     this.init();
   }
 
   function submitListener() {
     // Serialize and submit form if not on action url
-    $form.each(function(i, form) {
+    $form.each(function (i, form) {
       if (location !== form.action) {
         $('#user_agent').val(navigator.userAgent);
         $('#viewport').val('width:' + window.innerWidth + ' height:' + innerHeight);
-        $(form).on('submit', function() {
+        $(form).on('submit', function () {
           var valuesToSubmit = $(this).serialize();
           $.ajax({
             url: form.action,
             data: valuesToSubmit,
             type: 'post'
-          }).success(function(response) {
+          }).success(function (response) {
             if (isSuccess(response)) {
               $($el).collapse('hide');
               $($form)[0].reset();
@@ -54,7 +55,7 @@ Blacklight.onLoad(function() {
   }
 
   function isSuccess(response) {
-    switch (response[0][0]){
+    switch (response[0][0]) {
       case 'success':
         return true;
       default:
@@ -63,7 +64,7 @@ Blacklight.onLoad(function() {
   }
 
   function renderFlashMessages(response) {
-    $.each(response, function(i, val) {
+    $.each(response, function (i, val) {
       var flashHtml = '<div class="alert alert-' + val[0] + '"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>' + val[1] + '</div>';
 
       // Show the flash message
@@ -73,25 +74,25 @@ Blacklight.onLoad(function() {
 
   function replaceLink(form, link) {
     var attrs = {};
-    $.each(link[0].attributes, function(idx, attr) {
+    $.each(link[0].attributes, function (idx, attr) {
       attrs[attr.nodeName] = attr.value;
     });
     attrs.class = 'cancel-link btn btn-link';
 
     // Replace the cancel link with a button
-    link.replaceWith(function() {
+    link.replaceWith(function () {
       return $('<button />', attrs).append($(this).contents());
     });
 
     // Cancel link should not submit form
-    form.find('button.cancel-link').on('click', function(e) {
+    form.find('button.cancel-link').on('click', function (e) {
       e.preventDefault();
     });
   }
 
   Plugin.prototype = {
 
-    init: function() {
+    init: function () {
       $el = $(this.element);
       $form = $($el).find('form');
       $cancelLink = $($el).find('.cancel-link');
@@ -110,7 +111,7 @@ Blacklight.onLoad(function() {
       $('input.reporting-from-field').val(location.href);
 
       // Listen for form open and then add focus to message
-      $('#feedback-form').on('shown.bs.collapse', function() {
+      $('#feedback-form').on('shown.bs.collapse', function () {
         $('textarea#message').focus();
       });
     }
@@ -118,11 +119,11 @@ Blacklight.onLoad(function() {
 
   // A really lightweight plugin wrapper around the constructor,
   // preventing against multiple instantiations
-  $.fn[pluginName] = function(options) {
-    return this.each(function() {
+  $.fn[pluginName] = function (options) {
+    return this.each(function () {
       if (!$.data(this, 'plugin_' + pluginName)) {
         $.data(this, 'plugin_' + pluginName,
-        new Plugin(this, options));
+            new Plugin(this, options));
       }
     });
   };

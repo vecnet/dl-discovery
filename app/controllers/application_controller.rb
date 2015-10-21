@@ -26,6 +26,30 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  # handle errors
+  rescue_from StandardError, with: :exception_handler
+  def exception_handler(exception)
+    #raise exception if Rails.configuration.consider_all_requests_local
+    raise exception unless ActionDispatch::ExceptionWrapper.rescue_responses[exception.class.name]
+
+    wrapper = ActionDispatch::ExceptionWrapper.new(env, exception)
+    render_response_for_error(wrapper)
+  end
+  protected :exception_handler
+
+  def set_return_location_from_status_code(status_code)
+    if status_code == 401
+      session['user_return_to'] = env['ORIGINAL_FULLPATH']
+    end
+  end
+  protected :set_return_location_from_status_code
+
+  def render_response_for_error(exception)
+    set_return_location_from_status_code(exception.status_code)
+    render "/errors/#{exception.status_code}", status: exception.status_code, layout: !request.xhr?
+  end
+  protected :render_response_for_error
+
   # provide the "devise API" for 'user'
 
   def current_user
