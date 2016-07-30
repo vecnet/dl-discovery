@@ -8,14 +8,14 @@
 
 GeoBlacklight.Viewer.Map = GeoBlacklight.Viewer.Map.extend({
   /**
-   * Selects basemap if specified in data options, if not return mapquest
+   * Selects basemap if specified in data options, if not return positron
    */
   selectBasemap: function () {
     var _this = this;
     if (_this.data.basemap) {
       return GeoBlacklight.Basemaps[_this.data.basemap];
     } else {
-      return GeoBlacklight.Basemaps.mapquest;
+      return GeoBlacklight.Basemaps.positron;
     }
   }
 });
