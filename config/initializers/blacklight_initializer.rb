@@ -8,3 +8,6 @@
 # Remove SMS Functionality
 CatalogController.blacklight_config.show.document_actions.delete(:sms)
 CatalogController.blacklight_config.show.document_actions.delete(:citation)
+
+# Remove email Functionality
+CatalogController.blacklight_config.show.document_actions.delete(:email)
