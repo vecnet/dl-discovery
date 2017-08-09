@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   resources :download, only: [:show, :file]
   post "wms/handle"
   root :to => "catalog#index"
-  blacklight_for :catalog
+  # use all of blacklight except the email, and sms routes
+  blacklight_for :catalog, except: [:export]
 
   resource :feedback_form, path: 'feedback', only: [:new, :create]
   get 'feedback' => 'feedback_forms#new'
